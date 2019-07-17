@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Vinit Kumar`,
+    author: `Vinit Kumar`,
+    description: `Blog on programming, technology and life`,
+    siteUrl: `https://vinitkumar.me`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `vinitkme`,
     },
   },
   plugins: [
@@ -26,6 +26,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        gfm: true,
         plugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -42,6 +43,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-reading-time`,
         ],
       },
     },
