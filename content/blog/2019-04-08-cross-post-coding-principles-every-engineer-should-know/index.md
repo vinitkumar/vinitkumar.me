@@ -5,11 +5,10 @@ date: 2019-04-08 18:18 +0530
 tags: tech coding advice puregold
 ---
 
-<strong>IMPORTANT<strong>: Cross posting from this medium article https://medium.com/@sschillace/coding-principles-every-engineer-should-know-b946b48cc946 since I do not like medium as a platform and I do not want to loose this post in the matrix :)
+IMPORTANT: Cross posting from this medium article https://medium.com/@sschillace/coding-principles-every-engineer-should-know-b946b48cc946 since I do not like medium as a platform and I do not want to loose this post in the matrix :)
 
-<p>
-<i>The post has been written by [Sam Schillace](https://medium.com/@sschillace) and all references to me/I is referenced to Mr. Sam</i>
-</p>
+<p><i>The post has been written by [Sam Schillace](https://medium.com/@sschillace) and all references to me/I is referenced to Mr. Sam</i></p>
+
 
 Throughout my engineering career, I’ve had the opportunity work alongside and learn from many incredibly talented people, solve some serious technical challenges, and scale several successful companies. Recently, I was talking with the engineering team at Box about what I’ve learned along this journey, and what came out of that conversation were my personal engineering principals. These aren’t rules or engineering guidelines. They’re simply the principles that I pay attention to when I write and operate code.
 
