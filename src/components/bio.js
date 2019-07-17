@@ -8,6 +8,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import { Link } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 
@@ -54,21 +55,24 @@ const Bio = () => {
         }}
       />
       <p>
-        Blog by <strong>{author}</strong> who loves creating useful things with his bare hands.
+        Blog by <strong><a href="https://twitter.com/vinitkme">{author}</a></strong> who loves creating useful things with his bare hands.
+        <Link to="/about"> Read more 👉 </Link>
       </p>
       <p>
-        You can
-        {` `}
-        <a href="/about">
-          read more
-        </a> about him here and his
+        His
         {` `}
         <a href="http://vinitkumar.me/vinit_kumar.pdf">
          resume
-        </a> and
+        </a> ,
         {` `}
         <a href="/values">
          values
+        </a>
+        {` `}
+        and
+        {` `}
+        <a href="https://github.com/vinitkumar">
+         code
         </a> here.
       </p>
     </div>
