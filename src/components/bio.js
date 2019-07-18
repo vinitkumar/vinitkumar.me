@@ -34,6 +34,7 @@ const Bio = () => {
   `)
 
   const { author, social } = data.site.siteMetadata
+  const twitterUrl = `https://twitter.com/${social.twitter}`
   return (
     <div
       style={{
@@ -55,8 +56,8 @@ const Bio = () => {
         }}
       />
       <p>
-        Blog by <strong><a href="https://twitter.com/vinitkme">{author}</a></strong> who loves creating useful things with his bare hands.
-        <Link to="/about"> Read more 👉 </Link>
+        Blog by <strong><a href={twitterUrl}>{author}</a></strong> who loves creating useful things with his bare hands.
+        <Link to="/about"> Read more <span role="img" aria-label="read more">👉</span> </Link>
       </p>
       <p>
         His
