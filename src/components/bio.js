@@ -61,7 +61,7 @@ const Bio = () => {
       <p>
         His
         {` `}
-        <a href="http://vinitkumar.me/vinit_kumar.pdf">
+        <a href="https://vinitkumar.github.io/vinit_kumar.pdf">
          resume
         </a> ,
         {` `}
