@@ -13,7 +13,7 @@ __Kubernetes__ is one of the hottest techs at this point. I have to try to get a
 
 - Understand the networking stack, subnets, DNS
 - Understand containers, docker
-- Many commands for the tools required to talk to Kubernetes kubectl, kubens, and kubectx to name a few.
+- Many commands for the tools required to talk to Kubernetes `kubectl`, `kubens`, and `kubectx` to name a few.
 - YAML (you need to get proficient writing, reading and debugging YAML)
 - Understand latency, redundancy, and scalability.
 - Write and Understand Go(Kubernetes is built using Go) so it will help you to know go so that you can script some part of it using the same stack.
