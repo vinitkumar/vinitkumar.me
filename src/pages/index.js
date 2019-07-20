@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import { Helmet } from "react-helmet"
 
 class BlogIndex extends React.Component {
   render() {
@@ -14,6 +15,9 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <Helmet>
+          <meta name="google-site-verification" content="aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI" />
+        </Helmet>
         <SEO title="Vinit Kumar - Blog on Programming" />
         <Bio />
         {posts.map(({ node }) => {
