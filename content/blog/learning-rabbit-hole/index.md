@@ -5,7 +5,7 @@ date: "2019-07-18T12:43"
 
 We live in an age where if we set out to learn something new, you need to learn basics first. This is true when you are out to learn it deeply.
 
-A shallow understanding won't take you far. But deep knowledge takes considerable effort and requires you to learn consistently for a long time.
+A shallow understanding won't take you far. But acquiring deep knowledge takes considerable effort and requires you to learn consistently for a long time.
 
 Let me present an example:
 
@@ -30,5 +30,5 @@ Django comes with batteries included, but they are not free. The features come a
 - Learn important libraries like DRF(Django Rest Framework) to build correct and RESTful APIs.
 - Authentication. Authorization and Security are important as well.
 
-The key here is to plan for the long term and not short term learning. Shallow/Little knowledge is dangerous and always comes to bit back.
+The key here is to plan for the long term and not short term learning. Shallow/Little knowledge is dangerous and always comes back to bite.
 
