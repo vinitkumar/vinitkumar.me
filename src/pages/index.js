@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout"
+import HomeLayout from "../components/homelayout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 import { Helmet } from "react-helmet"
@@ -14,7 +14,7 @@ class BlogIndex extends React.Component {
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <HomeLayout location={this.props.location} title={siteTitle}>
         <Helmet>
           <meta name="google-site-verification" content="aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI" />
         </Helmet>
@@ -42,7 +42,7 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
-      </Layout>
+      </HomeLayout>
     )
   }
 }

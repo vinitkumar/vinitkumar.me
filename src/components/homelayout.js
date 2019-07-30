@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
 
-class Layout extends React.Component {
+class HomeLayout extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -60,7 +60,6 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <a href="/" class="back-link"> <span role="img" aria-label="back to home">👈 </span>back to home</a>
         <header>{header}</header>
         <main>{children}</main>
         <footer>
@@ -71,4 +70,4 @@ class Layout extends React.Component {
   }
 }
 
-export default Layout
+export default HomeLayout
