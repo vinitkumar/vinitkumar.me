@@ -56,8 +56,8 @@ const Bio = () => {
         }}
       />
       <p>
-        Blog by <strong><a href={twitterUrl}>{author}</a></strong> who loves creating useful things with his bare hands.
-        <Link to="/about"> Read more <span role="img" aria-label="read more">👉</span> </Link>
+        Blog by <strong><a href={twitterUrl}>{author}</a></strong>.
+        Read more <Link to="/about">about Vinit here<span role="img" aria-label="read more">👉</span> </Link>
       </p>
       <p>
         His
@@ -73,7 +73,7 @@ const Bio = () => {
         and
         {` `}
         <a href="https://github.com/vinitkumar">
-         code
+         github
         </a> here.
       </p>
     </div>

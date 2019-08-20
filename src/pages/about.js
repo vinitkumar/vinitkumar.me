@@ -14,15 +14,21 @@ class AboutIndex extends React.Component {
         </div>
       <h1> About </h1>
       <p>
-        Vinit Kumar is a Senior Engineer at Socialschools B.V with over 7 years of experience writing fast and scalable backend in Python (django & flask), Go and node.js. He has built services that use Postgres, RabbitMQ, Redis, ElasticSearch at scale.
+        Hi,
       </p>
       <p>
-        His speciality is coming up with simple solutions to difficult problems. He has an affinity towards writing quality code and admires code that shows good taste.
-
+        My name is <strong>Vinit Kumar</strong> and I'm a Sofware Engineer.
+        I am mainly interested in building scalable backend in Django, Python, Node, Go, Tooling, Vim and Coffee. In my personal website, you will find my thoughts and musings about a range of topics..
       </p>
       <p>
-        He has plenty of experience writing beautiful and functional UI with React.
+        My strength is in coming up with simple solutions to difficult problems. I specially enjoy reading books, and spending time with my family.
       </p>
+      <p>Currently, I lead the development of multi-tenant CMS system at Socialschools B..V. I have 7 years of experience writing backend in Django for a successful product and numerous service projects.</p>
+      <p>I do plenty of OSS work and you find the interesting projects at my Github profile <a href="https://github.com/vinitkumar" target="_blank">vinitkumar</a>.</p>
+      <p>
+        For keeping up with me on twitter, follow me <a target="_blank" href="https://twitter.com/vinitkme">@vinitkme</a>
+      </p>
+      <p> And to keep up with me on the professional front, connect with me on <a target="_blank" href="https://www.linkedin.com/in/vinitatlinkedin/">LinkedIn</a> here.</p>
       </Layout>
     );
   }
