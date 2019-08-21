@@ -24,11 +24,11 @@ class AboutIndex extends React.Component {
         My strength is in coming up with simple solutions to difficult problems. I specially enjoy reading books, and spending time with my family.
       </p>
       <p>Currently, I lead the development of multi-tenant CMS system at Socialschools B..V. I have 7 years of experience writing backend in Django for a successful product and numerous service projects.</p>
-      <p>I do plenty of OSS work and you find the interesting projects at my Github profile <a href="https://github.com/vinitkumar" target="_blank">vinitkumar</a>.</p>
+      <p>I do plenty of OSS work and you find the interesting projects at my Github profile <a href="https://github.com/vinitkumar" target="_blank" rel="noopener noreferrer">vinitkumar</a>.</p>
       <p>
-        For keeping up with me on twitter, follow me <a target="_blank" href="https://twitter.com/vinitkme">@vinitkme</a>
+        For keeping up with me on twitter, follow me <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinitkme">@vinitkme</a>
       </p>
-      <p> And to keep up with me on the professional front, connect with me on <a target="_blank" href="https://www.linkedin.com/in/vinitatlinkedin/">LinkedIn</a> here.</p>
+      <p> And to keep up with me on the professional front, connect with me on <a target="_blank"  rel="noopener noreferrer" href="https://www.linkedin.com/in/vinitatlinkedin/">LinkedIn</a> here.</p>
       </Layout>
     );
   }
