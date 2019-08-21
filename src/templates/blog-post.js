@@ -6,15 +6,20 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import Unsplash from "react-unsplash-wrapper"
+import GetUnsplashURL from '../components/unsplash';
+import { Helmet } from "react-helmet"
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-
+    let unsplashURL = GetUnsplashURL("programming");
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <Helmet>
+          <meta name="twitter:image" content={unsplashURL}/>
+        </Helmet>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
