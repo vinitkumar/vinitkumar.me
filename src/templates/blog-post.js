@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    let unsplashURL = GetUnsplashURL("programming");
+    let unsplashURL = `https://images.unsplash.com/photo-1508643315917-6688bbbb4cb5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80`;
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet>
