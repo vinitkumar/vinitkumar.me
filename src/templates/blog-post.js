@@ -8,6 +8,7 @@ import { rhythm, scale } from "../utils/typography"
 import Unsplash from "react-unsplash-wrapper"
 import GetUnsplashURL from '../components/unsplash';
 import { Helmet } from "react-helmet"
+import blog from "../../content/assets/blog.jpg";
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -18,7 +19,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet>
-          <meta name="twitter:image" content={unsplashURL}/>
+          <meta name="twitter:image" content={blog}/>
         </Helmet>
         <SEO
           title={post.frontmatter.title}
