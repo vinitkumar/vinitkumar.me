@@ -17,8 +17,8 @@ class AboutIndex extends React.Component {
         Hi,
       </p>
       <p>
-        My name is <strong>Vinit Kumar</strong> and I'm a Sofware Engineer.
-        I am mainly interested in building scalable backend in Django, Python, Node, Go, Tooling, Vim and Coffee. In my personal website, you will find my thoughts and musings about a range of topics..
+        My name is <strong>Vinit Kumar</strong> and I'm a Software Engineer.
+        I am mainly interested in building scalable backend in Python, Node.js, and Go. I like Vim and Coffee. In my personal website, you will find my thoughts and musings about a range of topics..
       </p>
       <p>
         My strength is in coming up with simple solutions to difficult problems. I specially enjoy reading books, and spending time with my family.
