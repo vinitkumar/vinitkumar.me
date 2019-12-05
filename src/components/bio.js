@@ -57,7 +57,7 @@ const Bio = () => {
       />
       <p>
         Blog by <strong><a href={twitterUrl}>{author}</a></strong>.
-        Read more <Link to="/about">about him here<span role="img" aria-label="read more">👉</span> </Link>
+        Read more <Link to="/about">about him here.</Link>
       </p>
       <p>
         Find
