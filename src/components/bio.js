@@ -42,6 +42,13 @@ const Bio = () => {
         marginBottom: rhythm(2.5),
       }}
     >
+      <p>
+        Hi there, I am <strong><a href={twitterUrl}>{author}</a></strong>. I am a software
+        Engineer from India.
+        I make computers do things and have fun while doing it.
+        I admire good art, music and good coffee.
+        You can read more about me <Link to="/about">here.</Link>
+      </p>
       <Image
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
@@ -55,12 +62,9 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
+
       <p>
-        Blog by <strong><a href={twitterUrl}>{author}</a></strong>.
-        Read more <Link to="/about">about him here.</Link>
-      </p>
-      <p>
-        Find
+        Find my
         {` `}
         <a href="https://vinitkumar.github.io/vinit_kumar.pdf">
          Resume
