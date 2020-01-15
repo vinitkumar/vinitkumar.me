@@ -45,7 +45,7 @@ const Bio = () => {
       <p>
         Hi there, I am <strong><a href={twitterUrl}>{author}</a></strong>. I am a software
         Engineer from India.
-        I make computers do things and have fun while doing it.
+        I make computers do things and I have plenty of fun doing it.
         I admire good art, music and good coffee.
         You can read more about me <Link to="/about">here.</Link>
       </p>
