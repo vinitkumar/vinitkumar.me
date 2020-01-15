@@ -1,6 +1,6 @@
 ---
 title: Self Assurance and Fighting Imposter Syndrome
-date: "2019-07-18T12:43"
+date: "2019-12-14T12:43"
 ---
 
 Everybody faces their demons once in a while. I did too and probably continue to do so in future as well.
