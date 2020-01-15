@@ -66,7 +66,7 @@ const Bio = () => {
         Find my
         {` `}
         <a href="https://vinitkumar.github.io/vinit_kumar.pdf">
-         Resume
+         resume
         </a> ,
         {` `}
         <a href="/values">
