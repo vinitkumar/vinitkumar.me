@@ -56,7 +56,7 @@ class HomeLayout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
+          maxWidth: `56.3rem`,
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
