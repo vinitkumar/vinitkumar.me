@@ -42,7 +42,9 @@ const Bio = () => {
         marginBottom: rhythm(2.5),
       }}
     >
-      <p>
+      <p style={{
+        width: `80%`,
+      }}>
         Hi there, I am <strong><a href={twitterUrl}>{author}</a></strong>. I am a software
         engineer from India who loves making computers do things and admires good books, music, art
     and coffee.
