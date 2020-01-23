@@ -3,7 +3,7 @@ title: Programming Heroes I admire
 date: "2020-01-23"
 ---
 
-This is a WIP List. Let's call it a day after adding 9 people to the list. Probably the most number of people I can get inspired by in programming.
+This is a WIP List. These are some of the people I remembered on top of my head. Will update it soon.
 
 This essay will focus on these things:
 
@@ -16,19 +16,19 @@ This essay will focus on these things:
 
 - [Daniel Stenberg (C)](https://twitter.com/bagder)
 
-Daniel is the lead author and creator of the CURL project. If you deal with any web-services as a developer or as an end-user, you must have used his code. Not only does he spearheads the development of CURL, but he also live-streams his coding sessions for us mere mortals to learn from. His streams are always to the point and are high in educational content.
+Daniel is the lead author and creator of the CURL project. If you deal with any web-services as a developer or end-user, you must have used his code. Not only does he leads the development of CURL, but he also live-streams his coding sessions for us mere mortals to learn from. His streams are always to the point and are high in educational content.
 
-Daniel is exceptionally good at system programming, C and networking in particular.
+Daniel is excellent at system programming, C and networking in particular.
 
 We can learn from Daniel is that we can succeed and have a lasting impact if we stick to a goal and purpose long enough and work hard.
 
 - [Brad FitzPatrick (Go)](https://twitter.com/bradfitz)
 
-Brad currently works with the Go team. In a previous life, he had founded LiveJournal, wrote Memcached and many other OSS tools that he gave away for free. He is probably my personal favorite and it is always nice to see how he approaches programming and his personal life.
+Brad currently works with the Go team. In a previous life, he had founded LiveJournal, wrote Memcached and many other free software that he gave away for free. He is probably my personal favorite and it is always nice to see how he approaches programming and his personal life.
 
-He is one of the most accomplished programmers of the recent generation and he just keeps on writing code that matters and mostly gives it away for free.
+He is one of the most accomplished programmers of the recent generation, and he just keeps on writing code that matters and mostly gives it away for free.
 
-He also seems like an excellent dad and family man (from his twitter feed) and it is especially inspiring to me as a Dad and family man too.
+Brad also seems like an excellent dad and family man (from his twitter feed) and it is especially inspiring to me as a Dad and family man too.
 
 - [Salvatore Sanfilippo aka antirez (C)](https://twitter.com/antirez)
 
@@ -39,37 +39,37 @@ He writes his code in C "that almost reads like poetry" in Vim. He is very stron
 
 - [Jonathan Blow (Jai, The Witness game)](https://twitter.com/Jonathan_Blow)
 
-Game developer of great games like "The Witness", he highly opinionated, charismatic and speaks what is in his mind. He mostly has very good advice about programming and doesn't hesitate to call a spade a spade. Recently, in addition to his game. he has also been writing a new programming language called Jai. It is a system programming language that compiles fast and aims at replacing C++ in writing the game engines. He regularly live-streams his coding sessions, where he sometimes works on the engines and sometimes even on the compiler.
+Game developer of great games like "The Witness", he is highly opinionated, charismatic and speaks what's on his mind. He mostly has very good advice about programming and doesn't hesitate to call a spade a spade. In addition to working on this new game, he has also been writing a new programming language called Jai. It's a Systems programming language that compiles fast and aims to replace C++ for writing the game engines. He also regularly live-streams his coding sessions, where he sometimes works on the engine and on the compiler.
 
 Listening and reading to him, inspires me to think deeply and work hard on improving my craft.
 
 - [David Beazely (Python)](https://twitter.com/dabeaz)
 
-David Beazely is one of the best teachers of Python in the world. He is this Mad Computer Scientist that just keeps on producing great software and resources regularly and every time he surpasses his past standards that are already very high.
+David Beazely is one of the best teachers of Python in the world. He is like this mad Computer Scientist that just keeps on producing great software and resources regularly and every time he surpasses his past standards that are already very high.
 
-I also relate and learn more from him as he is a Python Guru and Python has been the source of all my income to date. His enthusiasm and spirit towards programming and Python are infectious and I love watching his talks and learnings tonnes of stuff from them.
+I also relate and learn more from him as he is a Python Guru and Python has been the source of most of my income to date. His enthusiasm and spirit towards programming and Python are infectious and I love watching his talks and learn tonnes of stuff from them.
 
 - [Raymond hettinger (Python)](https://twitter.com/raymondh)
 
-Raymond as been on Python Code for a decade or more and is a fantastic Python educator. His talks show his deep knowledge of Python and programming in general.
-Plus, he is a fantastic speaker. He is probably one of my favorite speakers in any programming language topic. People like him are a gift for people like me who are self-taught
+Raymond as been a Python Core Developer for over a decade or more and is a fantastic Python educator. His talks show his deep knowledge of Python and programming in general.
+Plus, he is a fantastic speaker. He is probably one of my favorite speakers in any programming language community. People like him are a gift for people like me who are self-taught
 and can't afford the costly training materials or courses.
 
 - [Bryan Cantrill (C, Dtrace)](https://twitter.com/bcantrill)
 
-He is probably one of the most gifted System programmers. Recently he has been programming a lot in Rust and his talks are always filled with a lot of useful information.
-I have not done a lot of System Programming in my daily work but it always fancies me and I am sure going to do more of it in the future.
+He is probably one of the most gifted Systems programmers. Recently, he has been programming a lot in Rust and his talks are always filled with a lot of useful information.
+I have not done a lot of System Programming in my daily work but it always fancies me, and I am sure going to do more of it in the future.
 
 - [Guido Van Rossum](https://twitter.com/gvanrossum)
 
-Guido is simply awesome. He changed the lives of many people including me. In a world filled with different programming languages, he made a simple and powerful programming language
-that was welcoming and gave me the confidence of implementing my idea into code. He is not just technically very strong, but he is also a very nice person and is doing a lot for diversity and inclusiveness. He also gave up his BDFL status last year and Python is being run by an elected group of people (core devs).
+Guido is simply amazing. His work changed the lives of many people including me. In a world filled with difficult programming languages, he made a simple and powerful programming language
+that was welcoming and gave me the confidence of implementing my ideas into code. He is not just very technically strong, but he is also a very nice person and is doing a lot for diversity and inclusiveness. He also gave up his BDFL status last year and Python is being run by an elected group of people (core devs).
 
-Python has been the key point in my life. It has provided me with a respectable job and has enabled me to provide for my family.
+Python has been the key point in my life. It has provided me with a respectable job and has enabled me to provide for my family. I will always thank Guido for that.
 
 - [Remy Sharp](https://twitter.com/rem)
 
-Remy is a British programmer and an all-around great guy. He runs his company and has been on the JavaScript scene since pretty early on. He writes very useful tools and services (like nodemon, jsbin and gives it all for free). He also blogs and streams and it is always wonderful watching him code and solve problems in realtime. I give him credit for a lot of my JS knowledge. I have been following and learning from him a lot from the start of my professional programming journey since(2012). I remember him using Chrome dev tools as an editor for development. He is also a family man and is a great chap to look up to.
+Remy is an awesome British programmer and an all-around great guy. He runs his company and has been on the JavaScript scene since pretty early on. He writes very useful tools and services (like nodemon, jsbin and gives it all for free) and also blogs and do live-streams and it is always wonderful watching him code and solve problems in realtime. I give him credit for a lot of my JS knowledge. I have been following and learning from him a lot from the start of my professional programming journey since(2012). I remember him using Chrome dev tools as an editor for development. He is also a family man and is a great chap to look up to.
 
 
 
