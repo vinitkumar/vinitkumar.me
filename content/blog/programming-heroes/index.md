@@ -3,7 +3,7 @@ title: Programming Heroes I admire
 date: "2020-01-23"
 ---
 
-This is a WIP List. These are some of the people I remembered on top of my head. Will update it soon.
+This is a WIP List. These are some people I remembered on top of my head. I will be updating it soon.
 
 This essay will focus on these things:
 
@@ -16,7 +16,7 @@ This essay will focus on these things:
 
 - [Daniel Stenberg (C)](https://twitter.com/bagder)
 
-Daniel is the lead author and creator of the CURL project. If you deal with any web-services as a developer or end-user, you must have used his code. Not only does he leads the development of CURL, but he also live-streams his coding sessions for us mere mortals to learn from. His streams are always to the point and are high in educational content.
+Daniel is the lead author and creator of the CURL project. If you deal with any web-services as a developer or end-user, you must have used his code. Not only does he lead the development of CURL, but he also live-streams his coding sessions for us mere mortals to learn from. His streams are always to the point and are high in educational content.
 
 Daniel is excellent at system programming, C and networking in particular.
 
@@ -47,7 +47,7 @@ Listening and reading to him, inspires me to think deeply and work hard on impro
 
 David Beazely is one of the best teachers of Python in the world. He is like this mad Computer Scientist that just keeps on producing great software and resources regularly and every time he surpasses his past standards that are already very high.
 
-I also relate and learn more from him as he is a Python Guru and Python has been the source of most of my income to date. His enthusiasm and spirit towards programming and Python are infectious and I love watching his talks and learn tonnes of stuff from them.
+I also relate and learn more from him as he is a Python Guru and Python has been the source of most of my income to date. His enthusiasm and spirit towards programming and Python are infectious and I just love watching his talks.
 
 - [Raymond hettinger (Python)](https://twitter.com/raymondh)
 
@@ -57,7 +57,7 @@ and can't afford the costly training materials or courses.
 
 - [Bryan Cantrill (C, Dtrace)](https://twitter.com/bcantrill)
 
-He is probably one of the most gifted Systems programmers. Recently, he has been programming a lot in Rust and his talks are always filled with a lot of useful information.
+He is probably one of the most gifted systems programmer. Recently, he has been programming a lot in Rust and his talks are always filled with a lot of useful information.
 I have not done a lot of System Programming in my daily work but it always fancies me, and I am sure going to do more of it in the future.
 
 - [Guido Van Rossum](https://twitter.com/gvanrossum)
@@ -69,7 +69,7 @@ Python has been the key point in my life. It has provided me with a respectable 
 
 - [Remy Sharp](https://twitter.com/rem)
 
-Remy is an awesome British programmer and an all-around great guy. He runs his company and has been on the JavaScript scene since pretty early on. He writes very useful tools and services (like nodemon, jsbin and gives it all for free) and also blogs and do live-streams and it is always wonderful watching him code and solve problems in realtime. I give him credit for a lot of my JS knowledge. I have been following and learning from him a lot from the start of my professional programming journey since(2012). I remember him using Chrome dev tools as an editor for development. He is also a family man and is a great chap to look up to.
+Remy is an awesome British programmer and an all-around great guy. He runs his own company and has been one of most influential JavaScript programmers. He writes useful tools and services (like nodemon, jsbin and gives it all for free). His livestreams are also informative and there is a lot you can learn from watching him code and debug. I give him credit for a lot of my JS knowledge. I have been following and learning from him a lot from the start of my professional programming journey since(2012) and remember him using Chrome dev tools as an editor for development. He is also a family man and is a great chap to look up to.
 
 
 
