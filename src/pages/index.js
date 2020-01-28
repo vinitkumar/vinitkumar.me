@@ -18,7 +18,7 @@ class BlogIndex extends React.Component {
         <Helmet>
           <meta name="google-site-verification" content="aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI" />
         </Helmet>
-        <SEO title="Vinit Kumar - Blog on Programming" />
+        <SEO title="Vinit Kumar - Blog on Programming & Software Development" />
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
