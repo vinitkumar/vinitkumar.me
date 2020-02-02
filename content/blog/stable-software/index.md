@@ -1,4 +1,4 @@
--
+---
 title: How to build stable software
 date: "2020-02-02"
 ---
