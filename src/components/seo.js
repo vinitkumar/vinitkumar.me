@@ -25,6 +25,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -32,6 +33,7 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || data.site.siteMetadata.description
+  console.log(data)
   return (
     <Helmet
       htmlAttributes={{
@@ -58,7 +60,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: data.avatar.childImageSharp.fixed.src,
+          content: `${data.site.siteMetadata.siteUrl}${data.avatar.childImageSharp.fixed.src}`,
         },
         {
           name: `twitter:card`,

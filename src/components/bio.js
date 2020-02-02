@@ -35,6 +35,7 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   const twitterUrl = `https://twitter.com/${social.twitter}`
+  console.log(data.avatar);
   return (
     <div
       style={{
