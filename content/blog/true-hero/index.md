@@ -6,9 +6,9 @@ date: "2020-01-30"
 
 On 26th Jan, everybody woke up to the shocking news of the untimely demise of Kobe Bryant and his daughter Gianna
 in a helicopter accident. Until that day, I had no idea who Kobe Bryant was. I am not very much into Basketball but
-occassionaly do check out the news.
+occasionally do check out the news.
 
-As embarassing as it is, I was wondering who this person was and why everybody was so much in grief. The more I read and understood, the
+As embarrassing as it is, I was wondering who this person was and why everybody was so much in grief. The more I read and understood, the
 more I regretted not knowing about him earlier. Even though, it's such a tragic loss, his life was an exemplar example and there is so much to
 learn from Kobe. He didn't only excel and was one of the all-time greats but also he was such a nice human being and a total inspiration.
 
