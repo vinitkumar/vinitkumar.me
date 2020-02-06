@@ -236,7 +236,7 @@ git push origin develop
 - Prefer using `PureComponent` instead of `Component` while using Class based components.
 - Cleanup eventhandler set in `ComponentDidMount` in `ComponentWillUmount` because not doing so can cause memory leaks.
 - Type check the components with PropTypes.
-- Write simple components that do one thing and only one thing well. Make it composable so that it can be reused with ease.
+- Write simple components that do one thing and only one thing well. Make it composeable so that it can be reused with ease.
 - Think about the stability, popularity and trade-offs while using a new library and if you can justify increasing the bundle-size.
 
 
