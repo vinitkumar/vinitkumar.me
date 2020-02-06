@@ -16,7 +16,7 @@ The guide is divided into following sections:
 
 # Git
 
-Version control is one of the most important things while doing professional software development. Following are some tips and techniques to get better at using GIT.
+Mastering version control such as Git is very important. Following are some tips and techniques to get better at using Git.
 
 
 - Commit early, commit often. There is no shame in committing code that is work in progress. Infact, early commits help spot design issues very early in the development.
@@ -25,7 +25,7 @@ Version control is one of the most important things while doing professional sof
 - Avoid doing multiple things and do things in a proper flow.
 - Write good commit messages. A good guide is here https://chris.beams.io/posts/git-commit/
 - Setup your git properly with correct emails (For eg: your git config should be setup to use `@example.com` emails.
-- **Don't get high on your own supply** : Unless absolutely urgent do not merge your own PRs. Ask a coworker to review the code.
+- **Don't get high on your own supply**. Unless absolutely urgent do not merge your own PRs. Ask a coworker to review the code.
 - Create release and tags when doing a production release. No code gets pushed to production without doing this.
 - Write good release notes mentioning the bugs fixed and the features built.
 - Commit message contains reference to the github issue.
@@ -62,6 +62,7 @@ Edit your `~/.gitconfig` file
   gpgsign = true
   template = ~/.gitcommitmessage
 ```
+
 The full template could be invoked using `git commit`. You can always use the `git commit -m "commit message"`.
 Just try to prefix the commit with one of these (build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test: subject), so
 that the context is clear.
@@ -226,6 +227,10 @@ git push origin develop
 
 ## Frontend development guidelines
 
+- Focus on accessibility while building UIs.
+- Master SASS and modern CSS. It helps write better structured CSS code.
+- Focus on learning build tools such as Webpack/Parcel. It is how CSS and JavaScript bundled these days and mastering them will help you modify their configuration as per your taste.
+- Read JavaScript basics at Mozilla Developer Network.
 - Reads the docs at reactjs.org and their release notes to learn the latest trends and correct patterns.
 - Use `eslint` to lint your code and get rid of most of the silly mistakes and syntax errors.
 - Write DRY code(DRY = Do not repeat yourself). If you are copy pasting same logic in two places, better make a function out of it.
