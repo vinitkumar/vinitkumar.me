@@ -249,7 +249,7 @@ git push origin develop
 
 - Use standard, stable and well documented platform.
 - Use multi-zone DB to embrace for regional failures and quick failover.
-- Have DB backups scheduled to a different cloud service security (for eg: s3 in case the db is hosted on GCE/GKE)
+- Have Database scheduled to a different cloud service securely (for example: Use s3 in case the database is hosted on Google Cloud and Vice Versa)
 - Test the restore and snapshots. Maintain automatic backups.
 - Backup Database, Put apps and services on maintenance while doing major upgrades/migrations.
 - The Configuration should definitely be version controlled and tags are maintained. (follow semantic versioning)
