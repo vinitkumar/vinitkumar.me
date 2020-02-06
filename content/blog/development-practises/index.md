@@ -218,7 +218,7 @@ git push origin develop
 - Write DRY, reusable and testable code.
 - The most critical parts of the system must be unit tested. If it is not easy to test a part of code it is indicative of code smell and a refactor must be done.
 - Write test with code. Use assertions to enforce correct behaviour. Fail early, fail loudly so that we can figure and fix the errors.
-- Use tools like newrelic (for performance) and sentry(for error tracking) so that we are aware of the issues before our customers report them. Really helps when there is a not a big QA team in place.
+- Use tools like newrelic (for performance) and sentry(for error tracking) so that we are aware of the issues before our customers report them. Really helps when there is not a big QA team in place.
 - Version the APIs that you produce **very important** since we in a SOA architecture, you can't push an incompatible change that will break other services. If required, they will be done in a separate version (like apiv2/)
 - Clear responsibility is enforced within the services. For eg: No two services write to the same table concurrently. This causes deadlocks and is bad for performance.
 - Long running processes are delegated to background jobs and are not run on the main thread.
