@@ -235,7 +235,7 @@ git push origin develop
 - Use `eslint` to lint your code and get rid of most of the silly mistakes and syntax errors.
 - Write DRY code(DRY = Do not repeat yourself). If you are copy pasting same logic in two places, better make a function out of it.
 - Write reasonable and simple code that is easy to reason about. Keeping things simple is helpful in debugging.
-- If the component is very large(more than 200 LOC) and is doing a lot of things at once, try splitting it into smaller components.
+- If the component is very large(more than 200 Lines Of Code) and is doing a lot of things at once, try splitting it into smaller components.
 - Separate logic from presentation. The presentation components shoulb be dump and just depend on the data for presentation.
 - Try not to write a lot of `if`, `ternary operators` inside the render method. Use a boolean flag for that and keep the logic inside the templating to the minimum.
 - Prefer using `PureComponent` instead of `Component` while using Class based components.
