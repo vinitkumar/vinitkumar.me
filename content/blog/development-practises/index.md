@@ -3,8 +3,7 @@ title: A Somewhat Sane Guide for Software Development
 date: "2020-02-06"
 ---
 
-I have been writing code professionally for around 8 years now. Throughout this period, I have acquired some knowledge and formed
-some opinions on how software should be written and what practices to follow.
+I have been writing code professionally for around 8 years now. In this period, I have acquired some knowledge and formed some opinions on how software should be written and what practices to follow.
 
 The guide is divided into following sections:
 
@@ -24,20 +23,21 @@ Mastering version control such as Git is very important. Following are some tips
 - Make atomic commits(meaning the code in the commit is doing one thing). Do not add a diff of 20 files doing all different things. It just make things very noisy and makes hard for reviewer to do their job.
 - Avoid doing multiple things and do things in a proper flow.
 - Write good commit messages. A good guide is here https://chris.beams.io/posts/git-commit/
-- Setup your git properly with correct emails (For eg: your git config should be setup to use `@example.com` emails.
+- Setup your git properly with correct emails (For eg: your git configuration should be setup to use the work and personal emails depending upon what project you are on.
 - **Don't get high on your own supply**. Unless absolutely urgent do not merge your own PRs. Ask a coworker to review the code.
-- Create release and tags when doing a production release. No code gets pushed to production without doing this.
-- Write good release notes mentioning the bugs fixed and the features built.
-- Commit message contains reference to the github issue.
-- Sign git commits using GPG(helps ensure the authenticity of the person doing the commit. (Good to have). Refer link here. https://help.github.com/en/articles/signing-commits
+- Always **create** release and tags while doing a production release. No code gets pushed to production without doing this.
+- Write good release notes clearly mentioning the fixed bugs and the features built.
+- Commit message should contains reference to the github issue.
+- Sign git commits using GPG. It helps ensure the authenticity of the person doing the commit. Refer link here. https://help.github.com/en/articles/signing-commits
 - Be honest, direct and respectful while reviewing the code. If you think something could be better (give a meaningful & logical explanation supplemented by suitable code and source)
-- Use a commit message template. Use something like this:
+- Try to use a commit message template for consistent commit messages. You can use something like this:
 
 
 Save the below as a file named `.gitcommitmessage` in your home directory, replace the `Authored-by` and `Signed-off-by` with your email
 
-```sh
-# build, chore, ci, docs, feat, fix, perf, refactor, revert, style, test: subject
+```git
+# build, chore, ci, docs, feat, fix, perf,
+# refactor, revert, style, test: subject
 
 
 # Body
@@ -56,8 +56,7 @@ You this template while commiting like this:
 
 Edit your `~/.gitconfig` file
 
-```
-
+```git
 [commit]
   gpgsign = true
   template = ~/.gitcommitmessage
@@ -80,7 +79,7 @@ This workflow is based on an important concept. There are two kinds of repos her
 - Developer Repo (For eg: https://github.com/vinitkumar/django)
 
 
-Ground rules are:
+Some ground rules are:
 
 - Use good branch name prefix such as (feature/feat, bugfix/bug/fix, refactor/chore/cleanup) and then a clear branch name.
 - No branch is pushed directly(feature/bugfix/refactor) to the upstream directly.
@@ -99,7 +98,7 @@ Following are some commands for day to day work:
 
 ### Steps to keep the fork's develop in sync
 
-```
+```bash
 git fetch upstream # fetch upstream and all branches
 git checkout develop # checkout local or own develop
 git merge upstream/develop # get the changes from the upstream and merge to your local.
@@ -109,7 +108,7 @@ git push origin develop # push the code to the develop branch of your fork
 
 ### Create a bugfix/feature/refactor branch for regular development
 
-```
+```bash
 # first sync the develop
 git fetch upstream # fetch upstream and all branches
 git checkout develop # checkout local or own develop
@@ -130,7 +129,7 @@ git push origin HEAD
 
 #### Get the code synced into an existing branch
 
-```
+```bash
 # after getting the branch synced up like this:
 git fetch upstream # fetch upstream and all branches
 git checkout develop # checkout local or own develop
@@ -148,7 +147,7 @@ git push origin feature/existing-branch
 
 Get the upstream first
 
-```
+```bash
 git fetch upstream # fetch upstream and all branches
 # checkout staging/master depending on where the fix needs to be made
 git checkout -b hotfix/major-crash-xyz
@@ -162,7 +161,7 @@ git push origin HEAD
 
 ### Get the hotfix changes to the branches lower down the upstream master or staging
 
-```
+```bash
 # after the hotfix is merge to master
 # do this:
 
@@ -181,7 +180,7 @@ git push origin develop
 ```
 
 
-```
+```bash
 # after the hotfix is merged to staging
 # do this:
 
