@@ -1,5 +1,5 @@
 ---
-title: A True Hero
+title: Koby Bryant, A True Hero
 date: "2020-01-30"
 ---
 
@@ -12,6 +12,12 @@ As embarrassing as it is, I was wondering who this person was and why everybody 
 more I regretted not knowing about him earlier. Even though, it's such a tragic loss, his life was an exemplar example and there is so much to
 learn from Kobe. He didn't only excel and was one of the all-time greats but also he was such a nice human being and a total inspiration.
 
-Just watched this video and I couldn't resist writing this post. Thank You, Kobe. Even in death, you are an inspiration to so many of us. RIP
+These two videos are few of the many amazing videos made on Koby and his work ethics.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VSceuiPBpxY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p5b3LFR4MmA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+**Thank You, Kobe. Even in death, you are an inspiration to so many of us. RIP**
+
+
