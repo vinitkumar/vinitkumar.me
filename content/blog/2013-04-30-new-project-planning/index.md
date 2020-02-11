@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "New projects"
+title: "Some plans about new project"
 description: "About new projects"
 category: articles
 tags: project

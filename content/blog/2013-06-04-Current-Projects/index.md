@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Current Projects"
+title: "Sone updates about my current projects"
 description: "What i am doing these days"
 category: articles
 tags: projects JavaScript Node MongoDB

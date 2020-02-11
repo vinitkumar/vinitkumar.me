@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Open Source"
+title: "What Has Open Source taught Me?"
 description: "What Open Source has taught me"
 category: articles
 tags: oss general

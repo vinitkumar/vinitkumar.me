@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Linux to Mac"
+title: "How I converted from a hardcore Linux fan to Mac user"
 description: "How I converted from a hardcore Linux fan to Mac user"
 category: articles
 tags: images

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Single Machine Work-flow"
+title: "I love a single machine workflow"
 description: "How a laptop based work-flow boost productivity"
 category: articles
 tags: coding development

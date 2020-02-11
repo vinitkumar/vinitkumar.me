@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Converting LaTex to PDF on macOS"
+title: "How To Convert LaTex to PDF on macOS"
 description: "Setup Mac for editing Latex"
 category: articles
 tags: latex macos pdf

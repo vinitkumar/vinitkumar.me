@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Classes in JS"
+title: "Some Notes On The Classes in JS"
 description: "About new projects"
 category: articles
 tags: coding javascript

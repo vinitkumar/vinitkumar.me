@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Some New Learnings"
+title: "Some New Learnings In Software Development"
 description: "Some new Learnings"
 category: articles
 tags: life

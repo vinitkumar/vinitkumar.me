@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How it went?"
+title: "Some Notes On How It Went Recently?"
 description: "Reflections on time spent when I was on Radio silence"
 category: articles
 tags: life happy

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Simplicity in things"
+title: "How I value Simplicity in things"
 description: "Why simplicity is so much important"
 category: articles
 tags: software general

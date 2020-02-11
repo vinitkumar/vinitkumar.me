@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Twitter in NodeJS"
+title: "Writing a twitter clone in Node and MongoDB"
 description: "Writing a twitter clone in Node"
 category: articles
 tags: Node Twitter

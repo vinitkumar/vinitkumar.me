@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GPS Tracking on Android"
+title: "Some Notes On GPS Tracking on Android"
 description: "Finding how you are tracked on Android"
 category: articles
 tags: android gps python

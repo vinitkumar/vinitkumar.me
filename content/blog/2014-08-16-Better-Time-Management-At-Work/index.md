@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Better Time Management At Work"
+title: "How To Get Better With Time Management At Work"
 description: "Time Management"
 tags: code programming self-improvements
 comments: false

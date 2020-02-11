@@ -1,5 +1,5 @@
 ---
-title: Programming Heroes I admire
+title: An Incomplete List Of Programming Heroes I admire
 date: "2020-01-23"
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My First flight"
+title: "My first experience flying on a plane"
 description: "Examples and code for displaying images in posts."
 category: articles
 tags: life

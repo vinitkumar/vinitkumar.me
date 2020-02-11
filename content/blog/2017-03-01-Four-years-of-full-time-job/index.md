@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Four years of Full time job"
+title: "I completed Four years of Full time job"
 description: "Four years of full time work at Socialschools"
 category: articles
 tags: job work life

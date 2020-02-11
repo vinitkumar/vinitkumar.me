@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "On Writing Good Code"
+title: "Some Tips On Writing Good Code"
 description: "How To Improve Code Quality Over Time"
 tags: code programming self-improvements
 comments: false

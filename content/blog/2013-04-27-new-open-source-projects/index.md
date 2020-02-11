@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Django plugin and Google command line project open sourced"
+title: "Open Sourceing a django plugin and GoogleCL"
 description: "Projects I recently worked on and open sourced"
 category: articles
 tags: oss opensource

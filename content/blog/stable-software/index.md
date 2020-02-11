@@ -1,5 +1,5 @@
 ---
-title: How to build stable software
+title: How To Build Stable Software That Lasts
 date: "2020-02-02"
 ---
 

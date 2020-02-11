@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Buying New Books "
+title: "I Am Buying Some New Books "
 description: "New Computer Science Books"
 category: articles
 tags: Hack Projects

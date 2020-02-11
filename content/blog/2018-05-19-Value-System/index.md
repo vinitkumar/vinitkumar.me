@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Important Values"
+title: "Some Very Important Values I believe in"
 description: "Some core values that I believe in"
 category: articles
 tags: value life

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 6 years of full time job
+title: I completed 6 years of full time job
 category: articles
 tags: job life general
 comments: false

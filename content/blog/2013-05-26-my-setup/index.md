@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Setup"
+title: "My Setup Interview, similar to the ones at usesthis.com"
 description: "My Setup Interview"
 category: articles
 tags: machine setup workspace

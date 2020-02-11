@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Be Awesome"
+title: "How To Be An Awesome Human Being"
 description: "Being an Awesome Human being"
 category: articles
 tags: life general

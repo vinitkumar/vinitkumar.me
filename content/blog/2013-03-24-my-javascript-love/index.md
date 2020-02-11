@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "JavaScript is super awesome"
-description: "Why i love JavaScript so much."
+title: "Why I love JavaScript so much?"
+description: "Why I love JavaScript so much?"
 category: articles
 tags: images
 comments: false

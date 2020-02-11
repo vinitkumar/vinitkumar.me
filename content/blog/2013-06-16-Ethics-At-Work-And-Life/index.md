@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Work Ethics"
+title: "Some of the important work ethics I believe in"
 description: "Idea work Ethics"
 category: articles
 tags: Work Ethics Life

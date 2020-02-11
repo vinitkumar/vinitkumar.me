@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "One Year at Job"
+title: "One Year at Full Time Job"
 description: "My Experience in past on year"
 category: articles
 tags: life general

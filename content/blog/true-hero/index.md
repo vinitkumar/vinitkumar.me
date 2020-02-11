@@ -1,5 +1,5 @@
 ---
-title: Koby Bryant, A True Hero
+title: Koby Bryant, A True Hero And Sportsman
 date: "2020-01-30"
 ---
 

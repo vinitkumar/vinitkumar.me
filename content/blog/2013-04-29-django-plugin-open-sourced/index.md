@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Django plugin open sourced"
+title: "A new django plugin open sourced"
 description: "Examples and code for displaying images in posts."
 category: articles
 tags: python django

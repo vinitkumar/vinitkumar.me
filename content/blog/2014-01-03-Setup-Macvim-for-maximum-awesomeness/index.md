@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Setup Macvim for Maximum awesomeness"
+title: "How To Setup Macvim for Maximum awesomeness"
 description: "How did I setup macvim for super awesomeness"
 category: articles
 tags: vim macvim development

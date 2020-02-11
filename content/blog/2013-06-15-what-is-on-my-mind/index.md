@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is on my mind?"
+title: "Some plans to be productive with Work and personal projects"
 description: "Things i think about"
 category: articles
 tags: life

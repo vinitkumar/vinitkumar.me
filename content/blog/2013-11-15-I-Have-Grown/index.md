@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I Have Grown"
+title: "I Have Grown As A Person And A Software Engineer"
 description: "My growth as a developer"
 category: articles
 tags: Development Growth

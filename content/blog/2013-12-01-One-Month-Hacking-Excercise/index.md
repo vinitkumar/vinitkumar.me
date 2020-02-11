@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "One Month Hacking"
+title: "One Month Hacking Experiment"
 description: "What will i hack this month"
 category: articles
 tags: Hack Projects

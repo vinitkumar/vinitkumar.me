@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why I Write Code"
+title: "Why I Love Writing Code So Much"
 description: "My Why"
 tags: code programming self-improvements
 comments: false
