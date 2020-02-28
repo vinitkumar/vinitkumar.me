@@ -4,14 +4,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Unsplash from "react-unsplash-wrapper"
 
-class AboutIndex extends React.Component {
-  render() {
+const AboutIndex  = (props) => {
     return (
-      <Layout location={this.props.location}>
+      <Layout location={props.location}>
       <SEO title="About - Vinit Kumar"></SEO>
-        <div style={{position: 'relative', width: '100%', height: 400, margin: 'auto'}}>
-          <Unsplash expand photoid="wT5VXP92jFA" />
-        </div>
       <h1> About </h1>
       <p>
         Hi,
@@ -31,8 +27,8 @@ class AboutIndex extends React.Component {
       <p> And to keep up with me on the professional front, connect with me on <a target="_blank"  rel="noopener noreferrer" href="https://www.linkedin.com/in/vinitatlinkedin/">LinkedIn</a> here.</p>
       </Layout>
     );
-  }
 }
+
 
 
 export default AboutIndex;
