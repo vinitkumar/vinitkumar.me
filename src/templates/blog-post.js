@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import Unsplash from "react-unsplash-wrapper"
-import GetUnsplashURL from '../components/unsplash';
 import { Helmet } from "react-helmet"
 import blog from "../../content/assets/blog.jpg";
 
@@ -15,7 +14,6 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
-    let unsplashURL = `https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1453&q=80`;
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <Helmet>
