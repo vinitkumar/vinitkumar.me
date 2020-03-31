@@ -11,7 +11,6 @@ date: 2017-03-01
 So on 1st February 2017, I completed my fourth year working for Socialschools.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Today I complete my 4th year at my full time job. Thankful to everyone I worked with. cc: <a href="https://twitter.com/stolker">@stolker</a> <a href="https://twitter.com/changer">@changer</a>  <a href="https://twitter.com/SocialSchools">@SocialSchools</a></p>&mdash; Vinit Kumar (@vinitkme) <a href="https://twitter.com/vinitkme/status/826694838456303616">February 1, 2017</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I joined Socialschools(then Changer) at the same date in 2013. It's has been quite an honor working with many awesome people.
 Then, I was only a fresh graduate dreaming of making a dent in the universe. Today, I am writing code for one of the fastest
