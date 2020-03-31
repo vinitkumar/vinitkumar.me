@@ -26,5 +26,5 @@ I also recently started daily update standups every evening (since all our team 
 Also, came across this wonderful list of tips by [Mitchell Hashimoto](https://twitter.com/mitchellh). These tips come from real experience and are very nice.
 
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The force to remote for much of the workforce is going to be very positive but also create a ton of FUD. Lots will “get it” and it’ll work for them and they’ll be forever changed. Many will realize it isn’t as simple as pretending your at-home desk is your in-office desk.</p>&mdash; Mitchell Hashimoto (@mitchellh) <a href="https://twitter.com/mitchellh/status/1237532491285577728?ref_src=twsrc%5Etfw">March 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The force to remote for much of the workforce is going to be very positive but also create a ton of FUD. Lots will “get it” and it’ll work for them and they’ll be forever changed. Many will realize it isn’t as simple as pretending your at-home desk is your in-office desk.</p>&mdash; Mitchell Hashimoto (@mitchellh) <a href="https://twitter.com/mitchellh/status/1237532491285577728?ref_src=twsrc%5Etfw">March 11, 2020</a></blockquote>
 
