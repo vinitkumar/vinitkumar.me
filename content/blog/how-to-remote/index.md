@@ -21,3 +21,10 @@ Limit the use of Social Media on your phone or just budget that time, so that yo
 I also recently started daily update standups every evening (since all our team is remote because of Covid-19) and I could already see things moving better and clearer.
 
 -  **Documentation & Testing**:  While working remotely, you need to do better work. Now, to do better and more correct work, you need to write good code that is documented properly and works correctly (tests to enforce that). With remote work, the only thing that shows you did something is your work and not just you coming to the office. This also means at the end of the day, you need to have something to show for what you achieved/solved that day. This is *very hard*. If you are having a bad/anxiety-filled day, let your managers know. It's okay to have a bad day when nothing goes your way. Also, to enable async communication, having good docs with the code is very important. If something can be learned by just reading the docs, then it should be that way.
+
+
+Also, came across this wonderful list of tips by [Mitchell Hashimoto](https://twitter.com/mitchellh). These tips come from real experience and are very nice.
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The force to remote for much of the workforce is going to be very positive but also create a ton of FUD. Lots will “get it” and it’ll work for them and they’ll be forever changed. Many will realize it isn’t as simple as pretending your at-home desk is your in-office desk.</p>&mdash; Mitchell Hashimoto (@mitchellh) <a href="https://twitter.com/mitchellh/status/1237532491285577728?ref_src=twsrc%5Etfw">March 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
