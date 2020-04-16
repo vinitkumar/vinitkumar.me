@@ -50,7 +50,7 @@ const AboutIndex  = (props) => {
       My name is <strong>Vinit Kumar</strong> and I'm a Software Engineer.
       I am mainly interested in designing scalable systems in Python, Node.js, and Go. I like Vim and good coffee. In this website, you will find my thoughts and musings about a range of topics.
     </p>
-    <p>You can download my <a target='_blank' href="https://vinitkumar.github.io/vinit_kumar.pdf">resume</a> here.</p>
+    <p>You can download my <a target='_blank'  rel="noopener noreferrer"  href="https://vinitkumar.github.io/vinit_kumar.pdf">resume</a> here.</p>
     <p>
       My biggest strength is in coming up with simple solutions for difficult problems. I specially enjoy reading books, and <strong><i>spending time</i></strong> with my family.
     </p>
