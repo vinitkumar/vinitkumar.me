@@ -1,5 +1,5 @@
 ---
-title: How To Do Remote Work Efficiently
+title: 🌟🌟 How To Do Remote Work Efficiently
 date: "2020-03-26"
 ---
 
