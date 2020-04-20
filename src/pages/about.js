@@ -28,7 +28,7 @@ const AboutIndex  = (props) => {
   return (
     <Layout location={props.location}>
     <SEO title="About - Vinit Kumar"></SEO>
-    <h1> About </h1>
+    <h1> Bio </h1>
     <p>
       Hi,
     </p>
