@@ -1,6 +1,7 @@
 ---
 title: An Incomplete List Of Programming Heroes I admire
 date: "2020-01-23"
+featured: true
 ---
 
 This is a WIP List. These are some people I remembered on top of my head. I will be updating it soon.

@@ -47,14 +47,14 @@ const AboutIndex  = (props) => {
       }}
     />
     <p>
-      My name is <strong>Vinit Kumar</strong> and I'm a Software Engineer.
+      My name is <strong>Vinit Kumar</strong> and I'm a Software Engineer <span role="img" aria-label="engineer">👨‍💻</span>.
       I am mainly interested in designing scalable systems in Python, Node.js, and Go. I like Vim and good coffee. In this website, you will find my thoughts and musings about a range of topics.
     </p>
-    <p>You can download my <a target='_blank'  rel="noopener noreferrer"  href="https://vinitkumar.github.io/vinit_kumar.pdf">resume</a> here.</p>
+    <p>You can download my <span role="img" aria-label="resume">📝</span> <a target='_blank'  rel="noopener noreferrer"  href="https://vinitkumar.github.io/vinit_kumar.pdf"> resume</a> here.</p>
     <p>
       My biggest strength is in coming up with simple solutions for difficult problems. I specially enjoy reading books, and <strong><i>spending time</i></strong> with my family.
     </p>
-    <p>Currently, I architect and lead the development of multi-tenant CMS system at Socialschools B.V. I have over 7 years of experience writing backend in Django for a successful product and numerous client projects.</p>
+    <p>Currently, I architect and lead the development of multi-tenant CMS system at Socialschools B.V <span role="img" aria-label="dutch">🇳🇱</span> . I have over 7 years of experience writing backend in Django for a successful product and numerous client projects.</p>
     <p>I do some OSS and you can browse them at my GitHub profile <a href="https://github.com/vinitkumar" target="_blank" rel="noopener noreferrer">vinitkumar</a>.</p>
     <p>
       If you use twitter, you can follow me <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinitkme">@vinitkme</a>.

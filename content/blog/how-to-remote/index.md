@@ -1,6 +1,7 @@
 ---
-title: 🌟🌟 How To Do Remote Work Efficiently
+title: How To Do Remote Work Efficiently
 date: "2020-03-26"
+featured: true
 ---
 
 Covid-19 has forced all Software companies to adopt **Remote Work** for their workforce.

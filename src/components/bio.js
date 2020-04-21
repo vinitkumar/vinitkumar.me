@@ -47,7 +47,7 @@ const Bio = () => {
         width: `80%`,
       }}>
         Hi there, I am <strong><a href={twitterUrl}>{author}</a></strong>. I am a software
-        engineer from India who loves making computers do things and admires good books, music, art
+        engineer from India <span role="img" aria-label="india flag">🇮🇳</span> who loves making computers do things and admires good books, music, art
     and coffee.
         You can read more about me <Link to="/about">here.</Link>
       </p>
@@ -68,18 +68,21 @@ const Bio = () => {
       <p>
         Find my
         {` `}
+        <span role="img" aria-label="resume">📝</span>
         <a href="https://vinitkumar.github.io/vinit_kumar.pdf">
-         resume
+         &nbsp;resume
         </a> ,
         {` `}
+        <span role="img" aria-label="values">🕉</span>
         <a href="/values">
-         values
+          &nbsp;values
         </a>
         {` `}
         and
         {` `}
+        <span role="img" aria-label="code">💻</span>
         <a href="https://github.com/vinitkumar">
-         code
+          &nbsp;code
         </a> here.
       </p>
     </div>
