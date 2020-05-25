@@ -54,7 +54,7 @@ const AboutIndex  = (props) => {
     <p>
       My biggest strength is in coming up with simple solutions for difficult problems. I specially enjoy reading books, and <strong><i>spending time</i></strong> with my family.
     </p>
-    <p>I live in Pune with his family. His wife Rituparna is the founder of a Digital Marketing Company <a href="https://scoophubs.com" target="_blank" rel="noopener noreferrer">ScoopHubs.com</a></p>
+    <p>I live in Pune with his family. My wife Rituparna is the founder of a Digital Marketing Company <a href="https://scoophubs.com" target="_blank" rel="noopener noreferrer">ScoopHubs.com</a></p>
     <p>Currently, I architect and lead the development of multi-tenant CMS system at Socialschools B.V <span role="img" aria-label="dutch">🇳🇱</span> . I have over 7 years of experience writing backend in Django for a successful product and numerous client projects.</p>
     <p>I do some OSS and you can browse them at my GitHub profile <a href="https://github.com/vinitkumar" target="_blank" rel="noopener noreferrer">vinitkumar</a>.</p>
     <p>
