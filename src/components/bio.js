@@ -7,7 +7,6 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 import { Link } from "gatsby"
 
 import { rhythm } from "../utils/typography"
@@ -40,48 +39,51 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
+        textDecoration: `none`,
         marginBottom: rhythm(2.5),
       }}
     >
       <p style={{
         width: `80%`,
+        border: `1px solid #eeeeee`,
+        padding: `12px`,
       }}>
         Hi there, I am <strong><a href={twitterUrl}>{author}</a></strong>. I am a software
         engineer from India <span role="img" aria-label="india flag">🇮🇳</span> who loves making computers do things and admires good books, music, art
-    and coffee.
-        You can read more about me <Link to="/about">here.</Link>
+    and <span style={{textDecorationLine: `line-through` }}>coffee</span>.
+        You can read more <Link to="/about">about</Link> me.
       </p>
-      <Image
-        fixed={data.avatar.childImageSharp.fixed}
-        alt={author}
-        style={{
-          marginRight: rhythm(1 / 2),
-          marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
-        }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
-      />
 
-      <p>
+      <p style={{
+        border: `1px solid #eeeeee`,
+        padding: `12px`,
+      }}>
         Find my
         {` `}
-        <span role="img" aria-label="resume">📝</span>
-        <a href="https://vinitkumar.github.io/vinit_kumar.pdf">
-         &nbsp;resume
-        </a> ,
+        <a href="https://vinitkumar.github.io/vinit_kumar.pdf"
+          style={{
+            textDecoration: `none`,
+          }}
+
+    >
+         resume
+        </a>,
         {` `}
-        <span role="img" aria-label="values">🕉</span>
-        <a href="/values">
-          &nbsp;values
+        <a href="/values"
+          style={{
+            textDecoration: `none`,
+          }}
+        >
+          values
         </a>
         {` `}
         and
         {` `}
-        <span role="img" aria-label="code">💻</span>
-        <a href="https://github.com/vinitkumar">
+        <a href="https://github.com/vinitkumar"
+          style={{
+            textDecoration: `none`,
+          }}
+        >
           &nbsp;code
         </a> here.
       </p>

@@ -3,10 +3,10 @@ import funstonTheme from 'typography-theme-funston'
 
 funstonTheme.baseFontSize = '22px'
 const typography = new Typography({
-    baseFontSize: "20px",
+    baseFontSize: "24px",
     baseLineHeight: 1.4,
-    headerFontFamily: ['EB Garamond', 'serif'],
-    bodyFontFamily: ['EB Garamond', 'serif'],
+    headerFontFamily: ['Public Sans', 'sans-serif'],
+    bodyFontFamily: ['Public Sans', 'sans-serif'],
   }
 )
 // Hot reload typography in development.
