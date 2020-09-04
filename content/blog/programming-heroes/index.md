@@ -4,36 +4,28 @@ date: "2020-01-23"
 featured: true
 ---
 
-This is a WIP List. These are some people I remembered on top of my head. I will be updating it soon.
-
-This essay will focus on these things:
-
-- ***What they are good at?***
-- ***What have they done?***
-- ***What can we learn from them?***
-- ***Life lessons***
+Everyone has their heroes. Even programmers have their heroes. This is
+a small list of programming heroes I admire. I don't claim that these are the best, their might be many others but these are the one I know from my limited experience. So takes this list with a grain of salt.
 
 ## Heroes
 
 - [Daniel Stenberg (C)](https://twitter.com/bagder)
 
-Daniel is the lead author and creator of the CURL project. If you deal with any web-services as a developer or end-user, you must have used his code. Not only does he lead the development of CURL, but he also live-streams his coding sessions for us mere mortals to learn from. His streams are always to the point and are high in educational content.
+Daniel is the lead developer and creator of the CURL project. If you deal with any web-services either as a developer or end-user, you have used his code. He also livestreams some of his coding sessions on stream and they are informative and fun to watch.
 
-Daniel is excellent at system programming, C and networking in particular.
-
-We can learn from Daniel is that we can succeed and have a lasting impact if we stick to a goal and purpose long enough and work hard.
+Daniel is excellent at Systems programming, Network, HTTP and ofcourse a master "C" developer.
 
 - [Brad FitzPatrick (Go)](https://twitter.com/bradfitz)
 
-Brad currently works with the Go team. In a previous life, he had founded LiveJournal, wrote Memcached and many other free software that he gave away for free. He is probably my personal favorite and it is always nice to see how he approaches programming and his personal life.
+Brad currently works with ~the Go team~ TailScale. In a previous life, he founded LiveJournal, wrote Memcached and many other free software. He is probably my favorite of the lot and I really like his personality.
 
-He is one of the most accomplished programmers of the recent generation, and he just keeps on writing code that matters and mostly gives it away for free.
+He is one of the most accomplished programmers of the recent generation, and he just keeps on writing code that matters and gives it away for free.
 
-Brad also seems like an excellent dad and family man (from his twitter feed) and it is especially inspiring to me as a Dad and family man too.
+Brad also seems like an excellent dad and family man (from his twitter feed) and it is especially inspiring to me as a new Dad.
 
 - [Salvatore Sanfilippo aka antirez (C)](https://twitter.com/antirez)
 
-Antirez is the lead and creator of popular Open Source database Redis. He is a great programmer and very humble in person. I have never learned more from any other programmer that what I learned from him. Just read this blog post and you will understand what I am talking about http://antirez.com/news/124
+Antirez is the lead and creator of popular Open Source database Redis. He is a great programmer and very humble in person. I learned so much from him. Just read this blog post and you will understand what I am talking about http://antirez.com/news/124
 
 He writes his code in C "that almost reads like poetry" in Vim. He is very strong in networking, data structures, and algorithms. You can learn more by reading his code and blogs than any other book in the field of system programming. He is also a family man and often advocates having a healthy work-life balance and it is almost inspiring to emulate his journey.
 
