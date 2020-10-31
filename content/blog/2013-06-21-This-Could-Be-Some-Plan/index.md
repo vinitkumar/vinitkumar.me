@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "This Could Be Some Plan"
-description: "Learning"
+description: "Planning for Life and Future"
 category: articles
 tags: projects
 comments: false

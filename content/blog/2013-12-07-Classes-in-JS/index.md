@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some Notes On The Classes in JS"
-description: "About new projects"
+description: "Learning new developments in JavaScript"
 category: articles
 tags: coding javascript
 comments: false
@@ -16,7 +16,7 @@ function Range(from, to) {
   this.from = from;
   this.to = to;
 }
- 
+
 Range.prototype =  {
   includes: function (x) {
     return this.from <=x && x <= this.to;
@@ -28,7 +28,7 @@ Range.prototype =  {
     return '('+this.from+'.......'+this.to+')';
   }
 };
- 
+
 var r = new Range(4,20);
 r.includes(5);
 r.foreach(console.log);

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some plans about new project"
-description: "About new projects"
+description: "I wrote about some new projects"
 category: articles
 tags: project
 comments: false
