@@ -9,7 +9,7 @@ import { rhythm } from "../utils/typography"
 const AboutIndex  = (props) => {
   const data = useStaticQuery(graphql`
     query AboutQuery {
-      avatar: file(absolutePath: { regex: "/vinit_kumar.jpeg/" }) {
+      avatar: file(absolutePath: { regex: "/vinit_kumar.jpg/" }) {
         childImageSharp {
           fixed(width: 200, height: 200, quality: 100) {
             ...GatsbyImageSharpFixed
