@@ -58,6 +58,7 @@ const AboutIndex  = (props) => {
       If you use twitter, you can follow me <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinitkme">@vinitkme</a> on twitter.
     I am on LinkedIn, connect with <a target="_blank"  rel="noopener noreferrer" href="https://www.linkedin.com/in/vinitatlinkedin/">vinitatlinkedin</a> at LinkedIn.
     </p>
+    <a href="https://www.buymeacoffee.com/z3KSrCwn4" target="_blank" rel="noopener noreferrer"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style={{height: `60px !important`, width: `217px !important`}} ></img></a>
     </Layout>
   );
 }
