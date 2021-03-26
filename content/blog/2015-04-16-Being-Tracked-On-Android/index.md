@@ -8,19 +8,19 @@ comments: false
 date: 2015-04-16
 ---
 
-Like everybody else, I have an Android phone too. If you are a developer you must have noticed a file called as GPS.LOG. It is 
-the one file which has all your GPS logs in it. This weekend I spend couple of hours hacking with it. He is the outcome. 
+Like everybody else, I have an Android phone too. If you are a developer you must have noticed a file called as GPS.LOG. It is
+the one file which has all your GPS logs in it. This weekend I spend couple of hours hacking with it. He is the outcome.
 
 ## How you get tracked
 
 First of all, connect your Android device to your computer and copy the gps.log file into your desktop:
 
-```sh
+```bash
 cp /Volumes/NO\ NAME/GPS.LOG ~/projects/gps.log
 ```
 
 Now, we need to find the good data that contain gps coordinates:
-```sh
+```bash
 cat ~/projects/gps.log | grep 'position' > ~/cleangps.log
 ```
 
@@ -28,7 +28,7 @@ The cleangps.log file contains only data that has coordinates on it.
 
 Now, create a log file that only contains coordinates:
 
-```sh
+```bash
 cat ~/cleangps.log | awk '{print $3, $4}' > ~/gpscord.log
 # notice the new file is nothing but values seperated by commas, hence write them as csv
 cat ~/gpscord.log > ~/gps.csv
@@ -37,14 +37,14 @@ This csv file is the basis we use to find that location the GPS log was taken.
 
 Prepare virtualenv and install googlemaps:
 
-```sh
+```bash
 mkvirtualenv maps
 pip install -U googlemaps
 ```
 
 Also, follow the clear instructions at https://github.com/googlemaps/google-maps-services-python#api-keys to find your API key.
 
-Here is the python file `track.py` that would find what these coordinate means and how they related to your daily life and place you are frequent to. 
+Here is the python file `track.py` that would find what these coordinate means and how they related to your daily life and place you are frequent to.
 
 ```python
 #! /usr/bin/python
@@ -64,7 +64,7 @@ with open('~/gps.csv') as csvfile:
         print "=" * 150
 ```
 
-Run this file in your terminal by and check out the output, you will get freaked out for some moment.  
+Run this file in your terminal by and check out the output, you will get freaked out for some moment.
 
 ```
 python track.py

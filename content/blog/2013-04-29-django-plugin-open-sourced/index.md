@@ -4,7 +4,7 @@ title: "A new django plugin open sourced"
 description: "Open Source Work on Django"
 category: articles
 tags: python django
-comments: fals
+comments: false
 date: 2013-04-29
 ---
 

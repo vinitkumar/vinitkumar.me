@@ -11,7 +11,7 @@ date: 2015-04-16
 ![screenshot](https://cldup.com/-iOX0p9Ob8-3000x3000.png)
 
 Sometimes, your mac  is filled up with files and you can't seem to
-understand what really is taking much space. Here is how you can find out. 
+understand what really is taking much space. Here is how you can find out.
 
 - First of all  find disk usage and save it to a log file. Also, find all
 big files that are there. Grepping  using 'G' would find all files that are  in
@@ -20,26 +20,26 @@ GB.
 Also, save the second list to another file so that we are only doing it once.
 
 
-```sh
+```bash
 du -h > ~/space.log
 cat ~/space.log | awk '{print $1}' | grep 'G' >  ~/highspace.log
 ```
 
-Next,  open a split window and do 
+Next,  open a split window and do
 
-```sh
+```bash
 cat ~/highspace.log
 ```
 
-And Now, start finding the ones which are big one by one. 
+And Now, start finding the ones which are big one by one.
 
-Let's say one of the entry was 5.6G, Let's find which one was it. 
+Let's say one of the entry was 5.6G, Let's find which one was it.
 
-```sh
+```bash
  cat ~/space.log | fgrep -f highspace.log
- 
+
  #It will give something like this:
- 
+
 1.2G	./.android/avd/Nexus_6_API_21.avd
 2.7G	./.android/avd
 2.7G	./.android
@@ -48,7 +48,7 @@ Let's say one of the entry was 5.6G, Let's find which one was it.
 Now, if you feel the file is not needed and you want to delete it. Do the
 following:
 
-```sh
+```bash
 sudo rm -rf Documents/Movie.avi
 ```
 
