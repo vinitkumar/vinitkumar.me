@@ -17,11 +17,12 @@ class BlogIndex extends React.Component {
       <HomeLayout location={this.props.location} title={siteTitle}>
         <Helmet>
           <meta name="google-site-verification" content="aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI" />
+          <meta name="msvalidate.01" content="9BD6B4DCA2B9F88A132B7DDCA1578919" />
         </Helmet>
         <SEO title="Vinit Kumar - Blog on Programming & Software Development" />
         <Bio />
         {posts.map(({ node }) => {
-          
+
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
