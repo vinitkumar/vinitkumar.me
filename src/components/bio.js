@@ -46,8 +46,7 @@ const Bio = () => {
       <p style={{
         width: `100%`,
       }}>
-        Hello Hello! I am <strong><a href={twitterUrl}>{author}</a></strong>. I am a software
-        engineer who loves making computers do things and admires good books, music, art
+        I am a software engineer who loves making computers do things and admires good books, music, art
     and <span style={{textDecorationLine: `line-through` }}>coffee</span>.
         You can read more <Link to="/about">about</Link> me.
         Find my
