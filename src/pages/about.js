@@ -3,7 +3,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 const AboutIndex  = (props) => {
@@ -27,7 +27,7 @@ const AboutIndex  = (props) => {
   const { author } = data.site.siteMetadata
   return (
     <Layout location={props.location}>
-    <SEO title="About - Vinit Kumar"></SEO>
+    <Seo title="About - Vinit Kumar"></Seo>
     <h1>About</h1>
     <p>
       Hi there,

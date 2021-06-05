@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import Unsplash from "react-unsplash-wrapper"
 import { Helmet } from "react-helmet"
@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
         <Helmet>
           <meta name="twitter:image" content={blog}/>
         </Helmet>
-        <SEO
+        <Seo
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
