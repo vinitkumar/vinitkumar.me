@@ -28,3 +28,6 @@ Ideal Neovim Setup:
 - Ability to write custom plugins
 - Learn Lua
 
+EDIT: I have moved to Neovim completely. Here is my pure LUA config and I think I really like using Neovim. Here is the configuration that if you are interested to take a look. (https://github.com/vinitkumar/nvim)
+
+
