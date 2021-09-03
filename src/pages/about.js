@@ -56,6 +56,9 @@ const AboutIndex  = (props) => {
     I am also on LinkedIn, connect with me on linkedin at <a target="_blank"  rel="noopener noreferrer" href="https://www.linkedin.com/in/vinitatlinkedin/">vinitatlinkedin</a>.
     </p>
     <p>If you use any of my OSS software, please consider sponsoring my work <span rel="img" aria-label="heart-emoji">❤️ </span>, so that I can justify spending time on OSS that benefits you all. You can sponsor me on my <a href="https://opencollective.com/vinit-kumar" rel="noopener noreferrer" target="_blank">opencollective </a> here.</p>
+    <iframe src="https://github.com/sponsors/vinitkumar/card" title="Sponsor vinitkumar" height="225" width="600" style={{ "border":
+      "0"}}></iframe>
+
     </Layout>
   );
 }
