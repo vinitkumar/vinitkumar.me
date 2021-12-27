@@ -34,7 +34,6 @@ const Bio = () => {
 
   const { author, social } = data.site.siteMetadata
   const twitterUrl = `https://twitter.com/${social.twitter}`
-  console.log(data.avatar);
   return (
     <div
       style={{
@@ -47,7 +46,7 @@ const Bio = () => {
         width: `100%`,
       }}>
         I am a software engineer who loves making computers do things and admires good books, music, art
-    and <span style={{textDecorationLine: `line-through` }}>coffee</span>.
+    and coffee.
         You can read more <Link to="/about">about</Link> me.
         Find my
         {` `}
