@@ -3,7 +3,7 @@ title: Slow Programmer, Fast Programmer
 date: "2022-01-29"
 ---
 
-2022 is a special year for me, I started writing code professionally in 2012, so this year I will be completing a decade of writing code and getting paid for it. This first decade has surely been an interesting one. A site effect of working this long is that you will form opinions (*Strong opinions, Weakly held*).
+2022 is a special year for me, I started writing code professionally in 2012, so this year I will be completing a decade of writing code and getting paid for it. This first decade has surely been an interesting one. A side-effect of working this long is that you will form opinions (*Strong opinions, Weakly held*).
 
 I was thinking about what actually makes a programmer fast and others slow. What are some of the traits I observed in myself and my peers, mentors and mentees and what actually made them fast or slow?
 
