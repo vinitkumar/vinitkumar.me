@@ -11,8 +11,8 @@
     "node": ">=14.18.0"
   },
   "dependencies": {
-    "gatsby": "^4.4.0",
-    "gatsby-cli": "^4.4.0",
+    "gatsby": "^4.6.0",
+    "gatsby-cli": "^4.6.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-feed": "^4.4.0",
     "gatsby-plugin-google-analytics": "^4.4.0",
