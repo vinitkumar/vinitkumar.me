@@ -1,6 +1,6 @@
 ---
 title: How To Get Webp Support in Django/DjangoCMS
-date: "2022-01-29"
+date: "2022-02-16"
 ---
 
 
