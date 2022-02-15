@@ -1,10 +1,10 @@
 ---
-title: How To Get Webp Support in Django/DjangoCMS
+title: How To Get WebP Support in Django/DjangoCMS
 date: "2022-02-16"
 ---
 
 
-[Webp](https://developers.google.com/speed/webp) is an exciting new image format that saves on the bandwidth because of lower size and is also supported by all major browsers. The issue is that you need to configure your server for it work.
+[WebP](https://developers.google.com/speed/webp) is an exciting new image format that saves on the bandwidth because of lower size and is also supported by all major browsers. The issue is that you need to configure your server for it to work.
 
 It can be done in following steps:
 
@@ -34,7 +34,7 @@ Now, in your requirements.txt or requirements.in file, add this:
 Pillow==9.0.1
 ```
 
-The latest version of pillow is the recommended version to install and support many formats including webp.
+The latest version of pillow is the recommended version to install and support many formats including WebP.
 
 
 So setup these packages in your app and you should be able to save that bandwidth and up on your web performance scores in no time.
