@@ -3,10 +3,9 @@ title: How To Handle Large Lists Or QuerySets In Python
 date: "2022-02-24"
 ---
 
-The Ability to write code that is memory efficient and fits in the system's memory is sign of a good programmer. I will share a technique I use very frequently that always works.
+The ability to write code that is memory efficient and fits in the system’s memory is a sign of a good programmer. I will share a neat technique I frequently use in my projects.
 
-Let's say you encounter a situation in your code where you need to iterate over a huge list(could a normal python list or any Iterable like Queryset). It might seem very tempting to do something like this:
-
+Let’s say you encounter a problem where you need to iterate over a huge list (could be a python list or any Iterable like Queryset). It might seem very tempting to do something like this:
 
 ```python
 all_users = Users.objects.all()
@@ -15,11 +14,10 @@ for user in all_users:
     print(user.name, user.age)
 ```
 
-Seems pretty harmless, right? Well, it is if your Queryset/List is pretty small and those objects are small. But what if you have more than a couple of hundred thousand records in that table and what all_users is a pretty big list. Does it still makes sense to use this, or do we need a better technique to deal with this?
+ Seems pretty harmless, right? Nope, it is only true if your list is pretty small. 
+What if you have more than a couple of hundred thousand records in that table. Does it still makes sense to use this, or do we need a better technique? 
 
-Well, indeed, there is a much better way to deal with this.
-
-Here is a snippet I reuse across all my projects:
+Here is a snippet I use across all my projects:
 
 ```python
 from __future__ import annotations
@@ -45,10 +43,9 @@ def batch_list(list_arr: list[Any], batch_size: int) -> Iterator[Any]:
 
 ```
 
-Now, let me explain what is going on here. These methods let you yield an evenly split slices of the Iterable you pass.
+Let me explain what is going on here. Using these methods, you can slice these massive lists into small, manageable lists.
 
-Using this is pretty straightforward as well.
-
+## Usage 
 
 ```python
 
@@ -57,12 +54,12 @@ Using this is pretty straightforward as well.
 def some_func(elem):
     ...
 
-huge_list_data = [...] # contains more than a hundred thousand elements
+huge_list_data = [...] # may contains more than a hundred thousand elements
 
 smaller_list_data = batch_list(huge_list_data, 100) # the batch size can be smaller chunks
 
 # now, in order to use them,
-# Iterate over the list over an infinite loop, so that you can keep running the
+# Iterate over the list over an infinite loop, so that you can keep running till the Iterator Exhausts and raises StopIteration
 
 while True:
     try:
@@ -75,11 +72,11 @@ while True:
         break
 ```
 
-Notice in the above code, you receive a generator which you use to get the elements, when you write your loops this way,
-you don't have to load the whole list into the memory at once, and you work with smaller manageable chunks which doesn't
+If you notice the above code,  the `batch_list` method returns an iterator that you can use to get the elements from the sliced list.
+You don't have to load the whole list into the memory at once, and you work with smaller manageable chunks which doesn't
 exhaust all available memory.
 
-The same technique can also be user in Django as well:
+The same technique can also be used in Django as well:
 
 ```python
 
@@ -88,7 +85,7 @@ def process_user(user):
 
 from .models import Users
 
-all_users = Users.objects.all()  # let's assume this qs is over 100,000 or longer.
+all_users = Users.objects.all()  # let's assume this qs is over 100,000 or larger.
 
 # now, instead of iterating over it all at once.
 
@@ -105,6 +102,6 @@ while True:
 
 ```
 
-If you notice, the same technique is used here to deal with huge Querysets. This ensures that however large your Queryset is, it won't halt the execution of the thread, if you are trying to iterate over it.
+This ensures that however large your Queryset is, it won't halt the execution of the thread.
 
-I always use this technique when I am doing some sort of data migrations or in the previous example dealing with big list.
+This is a pretty useful technique that you can use in your day-to-day coding.
