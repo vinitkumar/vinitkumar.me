@@ -15,7 +15,7 @@ for user in all_users:
     print(user.name, user.age)
 ```
 
-Seems pretty harmless, right. Well, it is if your Queryset is pretty small and those objects are small. But what if you have more than a couple of hundred thousand records in that table and what all_users is a pretty big list. Does it still makes sense to use this, or do we need a better technique to deal with this?
+Seems pretty harmless, right? Well, it is if your Queryset/List is pretty small and those objects are small. But what if you have more than a couple of hundred thousand records in that table and what all_users is a pretty big list. Does it still makes sense to use this, or do we need a better technique to deal with this?
 
 Well, indeed, there is a much better way to deal with this.
 
