@@ -3,7 +3,7 @@ title: How To Handle Large Lists Or QuerySets In Python
 date: "2022-02-24"
 ---
 
-Write code that is memory efficient and fits in the system's memory is one of the good qualities for a programmer. I will share a tip about one technique I use very frequently and always works well.
+The Ability to write code that is memory efficient and fits in the system's memory is sign of a good programmer. I will share a technique I use very frequently that always works.
 
 Let's say you encounter a situation in your code where you need to iterate over a huge list(could a normal python list or any Iterable like Queryset). It might seem very tempting to do something like this:
 
@@ -62,7 +62,7 @@ huge_list_data = [...] # contains more than a hundred thousand elements
 smaller_list_data = batch_list(huge_list_data, 100) # the batch size can be smaller chunks
 
 # now, in order to use them,
-# Iterate over the list over an infinite loop, so that you can keep running the 
+# Iterate over the list over an infinite loop, so that you can keep running the
 
 while True:
     try:
