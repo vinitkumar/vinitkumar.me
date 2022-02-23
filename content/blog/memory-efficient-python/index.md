@@ -30,7 +30,7 @@ from typing import Iterator
 from django.db.models.query import QuerySet
 
 # suitable for django projects
-def batch_qs(qs: QuerySet, batch_size: int):
+def batch_qs(qs: QuerySet, batch_size: int) -> Iterator[Queryset]:
     total = qs.count()
     for start in range(0, total, batch_size):
         end = min(start + batch_size, total)
