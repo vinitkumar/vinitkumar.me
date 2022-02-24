@@ -14,8 +14,8 @@ for user in all_users:
     print(user.name, user.age)
 ```
 
- Seems pretty harmless, right? Nope, it is only true if your list is pretty small. 
-What if you have more than a couple of hundred thousand records in that table. Does it still makes sense to use this, or do we need a better technique? 
+Seems pretty harmless, right? Nope, that is only true if your list is pretty small.
+What if you have more than a couple of hundred thousand records in that table? Does it still make sense to use this, or do we need a better technique?
 
 Here is a snippet I use across all my projects:
 
@@ -45,7 +45,7 @@ def batch_list(list_arr: list[Any], batch_size: int) -> Iterator[Any]:
 
 Let me explain what is going on here. Using these methods, you can slice these massive lists into small, manageable lists.
 
-## Usage 
+## Usage
 
 ```python
 
