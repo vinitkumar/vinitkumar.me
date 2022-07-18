@@ -2,10 +2,9 @@
 layout: post
 title: "My first experience flying on a plane"
 description: "The first flight of my life was a memorable experience"
-category: articles
-tags: life
+category: ["articles"]
 comments: false
-date: 2013-04-07
+date: "2013-04-07"
 ---
 
 So finally, I am going for a week long vacation and it has finally begun. On Air India flight to Delhi and From Delhi to Ranchi. Well this vacation is special for a lots of good reason. First of all, this is my first flight. Also , this is first vacation since i have started working at Changer Technologies, Pune.

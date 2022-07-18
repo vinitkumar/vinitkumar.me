@@ -2,10 +2,9 @@
 layout: post
 title: "Writing a twitter clone in Node and MongoDB"
 description: "Writing a twitter clone in Node"
-category: articles
-tags: Node Twitter
+category: ["articles"]
 comments: false
-date: 2013-03-27
+date: "2013-03-27"
 ---
 
 I am thinking to make a twitter like application as a learning exercise 

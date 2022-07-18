@@ -2,10 +2,9 @@
 layout: post
 title: "I Have Grown As A Person And A Software Engineer"
 description: "My growth as a developer"
-category: articles
-tags: Development Growth
+category: ["articles"]
 comments: false
-date: 2013-11-15
+date: "2013-11-15"
 ---
 
 Last few months has been really great for me. I think i am starting to grow as a developer and I know now 

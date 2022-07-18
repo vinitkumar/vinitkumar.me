@@ -1,6 +1,6 @@
 ---
 title: 'Hard Problems And How To Solve Them'
-date: 2020-02-05 18:18
+date: "2020-02-05 18:18"
 ---
 
 Every once in a while, we encounter a problem that seems very hard to solve and at the moment we have no clue how to fix them.

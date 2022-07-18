@@ -2,9 +2,8 @@
 layout: post
 title: "Why I Love Writing Code So Much"
 description: "My Why"
-tags: code programming self-improvements
 comments: false
-date: 2015-08-06
+date: "2015-08-06"
 ---
 
 I think I was hardly 10 years old when I wrote my first line of code. It was probably some IBM PC and the language was LOGO. 

@@ -2,10 +2,9 @@
 layout: post
 title: "Some Notes On GPS Tracking on Android"
 description: "Finding how you are tracked on Android"
-category: articles
-tags: android gps python
+category: ["articles"]
 comments: false
-date: 2015-04-16
+date: "2015-04-16"
 ---
 
 Like everybody else, I have an Android phone too. If you are a developer you must have noticed a file called as GPS.LOG. It is

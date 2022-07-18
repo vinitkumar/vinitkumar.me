@@ -2,10 +2,9 @@
 layout: post
 title: "Some of the important work ethics I believe in"
 description: "Idea work Ethics"
-category: articles
-tags: Work Ethics Life
+category: ["articles"]
 comments: false
-date: 2013-06-16
+date: "2013-06-16"
 ---
 
 Work has a really important role in anyone's life. I feel there are some things that really help us

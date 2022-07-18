@@ -1,8 +1,7 @@
 ---
 layout: post
 title: 'Coding principles every engineer should know'
-date: 2019-04-08 18:18 +0530
-tags: tech coding advice puregold
+date: "2019-04-08 18:18 +0530"
 ---
 
 IMPORTANT: Cross posting from this medium article https://medium.com/@sschillace/coding-principles-every-engineer-should-know-b946b48cc946 since I do not like medium as a platform and I do not want to loose this post in the matrix :)

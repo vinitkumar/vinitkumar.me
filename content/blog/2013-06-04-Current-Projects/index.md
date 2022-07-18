@@ -2,10 +2,9 @@
 layout: post
 title: "Sone updates about my current projects"
 description: "What i am doing these days"
-category: articles
-tags: projects JavaScript Node MongoDB
+category: ["articles"]
 comments: false
-date: 2013-06-04
+date: "2013-06-04"
 ---
 
 These days i was busy working on an a project called as Node Twitter.

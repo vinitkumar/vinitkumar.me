@@ -2,10 +2,9 @@
 layout: post
 title: "Why I love JavaScript so much?"
 description: "Why I love JavaScript so much?"
-category: articles
-tags: images
+category: ["articles"]
 comments: false
-date: 2013-03-24
+date: "2013-03-24"
 ---
 
 I started programming JavaScript seriously in September 2012 and 

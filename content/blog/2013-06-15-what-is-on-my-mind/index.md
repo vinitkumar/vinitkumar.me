@@ -2,10 +2,9 @@
 layout: post
 title: "Some plans to be productive with Work and personal projects"
 description: "Things i think about"
-category: articles
-tags: life
+category: ["articles"]
 comments: false
-date: 2013-06-16
+date: "2013-06-16"
 ---
 
 These days i had a great time working on some pretty good projects in both office and home. I will talk about my personal projects for obvious reasons.

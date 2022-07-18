@@ -2,10 +2,9 @@
 layout: post
 title: "My Setup Interview, similar to the ones at usesthis.com"
 description: "My Setup Interview"
-category: articles
-tags: machine setup workspace
+category: ["articles"]
 comments: false
-date: 2013-05-26
+date: "2013-05-26"
 ---
 
 I am doing The Setup interview for myself. It is basically based on these four questions:

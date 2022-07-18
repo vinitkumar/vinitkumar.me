@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Tooling Considered Harmful, An Overview
-tags: programming tooling editors
-date: 2019-03-06 16:30 +0530
+date: "2019-03-06 16:30 +0530"
 ---
 
 We are a big fan of tools. We use them daily in almost everything, but at one point in time, they pollute our mental space so much that we just forget to think and do as the tools dictate. A common example could be smart-phone. It was meant to keep us mobile and connected but now, it has become so dominant and addictive that it is more of a bane than boon.

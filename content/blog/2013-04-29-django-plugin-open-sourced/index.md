@@ -2,10 +2,9 @@
 layout: post
 title: "A new django plugin open sourced"
 description: "Open Source Work on Django"
-category: articles
-tags: python django
+category: ["articles"]
 comments: false
-date: 2013-04-29
+date: "2013-04-29"
 ---
 
 There are lot of useful plugins for Django CMS.

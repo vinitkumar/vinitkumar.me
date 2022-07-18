@@ -2,10 +2,9 @@
 layout: post
 title: "How To Convert LaTex to PDF on macOS"
 description: "Setup Mac for editing Latex"
-category: articles
-tags: latex macos pdf
+category: ["articles"]
 comments: false
-date: 2019-01-16
+date: "2019-01-16"
 ---
 
 I have been writing my resume in LaTeX for more than a decade now. Writing your resume in LaTex has it's own benefits.

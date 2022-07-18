@@ -2,10 +2,9 @@
 layout: post
 title: "Some Notes On How It Went Recently?"
 description: "Reflections on time spent when I was on Radio silence"
-category: articles
-tags: life happy
+category: ["articles"]
 comments: false
-date: 2015-03-11
+date: "2015-03-11"
 ---
 
 Hello People!

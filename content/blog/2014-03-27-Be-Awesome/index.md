@@ -2,10 +2,9 @@
 layout: post
 title: "How To Be An Awesome Human Being"
 description: "Being an Awesome Human being"
-category: articles
-tags: life general
+category: ["articles"]
 comments: false
-date: 2014-03-27
+date: "2014-03-27"
 ---
 
 I write a lot about technical jargon even on my personal blog. For a change, this post is nowhere close to it. 

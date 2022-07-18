@@ -1,10 +1,9 @@
 ---
 layout: post
 title: I completed 6 years of full time job
-category: articles
-tags: job life general
+category: ["articles"]
 comments: false
-date: 2019-02-01 12:01 +0530
+date: "2019-02-01 12:01 +0530"
 ---
 
 Today, I am completing 6 years of my full time employment with [Socialschools](https://socialschools.nl). It has been an incredibly long time and there has been highs and lows but mostly it has been a great experience writing code and having fun while doing it. I am very proud of the product I have helped build and make it succeed.

@@ -2,10 +2,9 @@
 layout: post
 title: "One Month Hacking Experiment"
 description: "What will i hack this month"
-category: articles
-tags: Hack Projects
+category: ["articles"]
 comments: false
-date: 2013-12-01
+date: "2013-12-01"
 ---
 
 After a lot of meditation about what I have achieved in last one year, I have stumbled upon one fact. I need to hack

@@ -2,10 +2,9 @@
 layout: post
 title: "New Theme For My Blog"
 description: "Why i wrote a new theme for my blog"
-category: articles
-tags: theme jekyll coding
+category: ["articles"]
 comments: false
-date: 2013-11-30
+date: "2013-11-30"
 ---
 
 So this week, I wrote a new theme for my blog. One big reason was that

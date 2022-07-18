@@ -2,10 +2,9 @@
 layout: post
 title: "What Has Open Source taught Me?"
 description: "What Open Source has taught me"
-category: articles
-tags: oss general
+category: ["articles"]
 comments: false
-date: 2016-04-03
+date: "2016-04-03"
 ---
 
 I joined github in 2010 and it has been my primary source for reading and writing code. I took my baby steps doing open source programming reading others code and it has been a  good source of knowledge for me. Since then I have written quite some open source software. I have written some javascript, python and go code and shared those projects in github. Open Source has quite some good benefits as it gives you a nice place to hack on things that fancy your imagination.

@@ -2,9 +2,8 @@
 layout: post
 title: "Some Tips On Writing Good Code"
 description: "How To Improve Code Quality Over Time"
-tags: code programming self-improvements
 comments: false
-date: 2014-07-20
+date: "2014-07-20"
 ---
 
 Whether you are working for a big software company or a small sized startup, writing good code is pretty much critical to your success. But the catch is it is not very easy to achieve without proper motivation from your side.

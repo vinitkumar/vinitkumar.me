@@ -2,10 +2,9 @@
 layout: post
 title: "Guide to Setting Up Emacs for Development"
 description: "A Small guide in setting up Emacs"
-category: articles
-tags: editors emacs
+category: ["articles"]
 comments: false
-date: 2014-05-04
+date: "2014-05-04"
 ---
 
 I always wanted to use Emacs. Yesterday, I wanted to have a good JavaScript/Node REPL in my editor. Though I had always used Vim since last 5 years still setting up a REPL in Vim is not very easy. So I decided to give Emacs a try and till now I am enjoying using Emacs.

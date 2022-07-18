@@ -2,10 +2,9 @@
 layout: post
 title: "This Could Be Some Plan"
 description: "Planning for Life and Future"
-category: articles
-tags: projects
+category: ["articles"]
 comments: false
-date: 2013-06-21
+date: "2013-06-21"
 ---
 
 I recently read a blog by Jeff Atwood that there is no such people as Rock-star programmer.These are people who could write cleaner code, refactor faster than anyone else, write a lot of tested code and methodology. This means each of one has a scope to get better as a developer.

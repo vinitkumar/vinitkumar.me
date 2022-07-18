@@ -2,10 +2,9 @@
 layout: post
 title: "Some Notes On The Classes in JS"
 description: "Learning new developments in JavaScript"
-category: articles
-tags: coding javascript
+category: ["articles"]
 comments: false
-date: 2013-12-07
+date: "2013-12-07"
 ---
 
 

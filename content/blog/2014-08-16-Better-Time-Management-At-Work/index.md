@@ -2,9 +2,7 @@
 layout: post
 title: "How To Get Better With Time Management At Work"
 description: "Time Management"
-tags: code programming self-improvements
-comments: false
-date: 2014-08-16
+date: "2014-08-16"
 ---
 
 Time management is a key quality of any successful person. I have been working

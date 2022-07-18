@@ -2,10 +2,9 @@
 layout: post
 title: "How To Get Readonly Mode Working In Django"
 description: "Guide to setup readonly mode for some users in django admin"
-category: articles
-tags: python django django-admin
+category: ["articles"]
 comments: false
-date: 2014-05-18
+date: "2014-05-18"
 ---
 
 Last week, I came across an interesting problem at work. The problem was:

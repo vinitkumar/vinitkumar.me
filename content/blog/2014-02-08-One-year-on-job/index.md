@@ -2,10 +2,9 @@
 layout: post
 title: "One Year at Full Time Job"
 description: "My Experience in past on year"
-category: articles
-tags: life general
+category: ["articles"]
 comments: false
-date: 2014-02-08
+date: "2014-02-08"
 ---
 
 I joined Changer on Feb 2013. Today I completed my first year at full time employment. It has been nothing but amazing.

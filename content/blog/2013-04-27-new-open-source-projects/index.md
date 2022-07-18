@@ -2,10 +2,9 @@
 layout: post
 title: "Open Sourceing a django plugin and GoogleCL"
 description: "Projects I recently worked on and open sourced"
-category: articles
-tags: oss opensource
+category: ["articles"]
 comments: false
-date: 2013-04-27
+date: "2013-04-27"
 ---
 
 Maintaining and contributing to an Open Source Project is a very important part of a developers life. 

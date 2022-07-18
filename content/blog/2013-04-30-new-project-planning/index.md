@@ -2,10 +2,9 @@
 layout: post
 title: "Some plans about new project"
 description: "I wrote about some new projects"
-category: articles
-tags: project
+category: ["articles"]
 comments: false
-date: 2013-04-30
+date: "2013-04-30"
 ---
 
 In last couple of days, i noticed there was no good planning for my personal projects and there were lots of loose ends. So i finally cleaned up my Github.

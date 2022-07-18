@@ -1,0 +1,44 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = "Vinit Kumar"
+theme = "alaGeek"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+
+[permalinks]
+  post = "/:year/:month/:slug/"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  blog = "blogs"
+
+
+[author]
+  name = "Vinit Kumar"
+  bio = "Staff Engineer, Social Schools B.V."
+  job = ""
+  location = "Pune"
+
+
+# Menu Configuration
+[[menu.main]]
+  weight = 1
+  identifier = "home"
+  name = "Home"
+  pre = "<i class=\"sidebar-button-icon fas fa-home\"></i>"
+  url = "/"
+[[menu.main]]
+  weight = 2
+  identifier = "about"
+  name = "About"
+  pre = "<i class=\"sidebar-button-icon fas fa-question\"></i>"
+  url = "/about"
+[[menu.main]]
+  weight = 3
+  identifier = "blogs"
+  name = "Blogs"
+  pre = "<i class=\"sidebar-button-icon fas fa-edit\"></i>"
+  url = "/blog"

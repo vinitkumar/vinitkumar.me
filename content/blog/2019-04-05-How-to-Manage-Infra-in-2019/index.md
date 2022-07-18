@@ -1,8 +1,7 @@
 ---
 layout: post
 title: How To Manage Infra in 2019
-date: 2019-04-05 12:49 +0530
-tags: tech infra cloud devops
+date: "2019-04-05 12:49 +0530"
 ---
 
 Infra is one of the most host topics in the Software development these days. There are so many tools,

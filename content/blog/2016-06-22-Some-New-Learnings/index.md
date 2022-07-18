@@ -2,10 +2,9 @@
 layout: post
 title: "Some New Learnings In Software Development"
 description: "Some new Learnings"
-category: articles
-tags: life
+category: ["articles"]
 comments: false
-date: 2016-06-22
+date: "2016-06-22"
 ---
 
 Software Engineering comes with a lot of good learning opportunities. First you learn

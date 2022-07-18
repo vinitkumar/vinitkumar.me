@@ -2,10 +2,9 @@
 layout: post
 title: "2013 Year In Review"
 description: "How did I spent my last year"
-category: articles
-tags: life general
+category: ["articles"]
 comments: false
-date: 2014-01-01
+date: "2014-01-01"
 ---
 
 2013 is easily one of the most amazing year of my life. In January I

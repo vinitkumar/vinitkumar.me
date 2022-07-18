@@ -2,10 +2,9 @@
 layout: post
 title: "I Am Buying Some New Books "
 description: "New Computer Science Books"
-category: articles
-tags: Hack Projects
+category: ["articles"]
 comments: false
-date: 2013-12-03
+date: "2013-12-03"
 ---
 In the span of two days I have ordered three books:
 

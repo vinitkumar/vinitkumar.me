@@ -2,10 +2,9 @@
 layout: post
 title: "How I converted from a hardcore Linux fan to Mac user"
 description: "How I converted from a hardcore Linux fan to Mac user"
-category: articles
-tags: images
+category: ["articles"]
 comments: false
-date: 2013-03-24
+date: "2013-03-24"
 ---
 
 A lot of things have changed recently. I converted from a hardcore Linux user

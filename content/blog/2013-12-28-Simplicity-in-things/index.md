@@ -2,10 +2,9 @@
 layout: post
 title: "How I value Simplicity in things"
 description: "Why simplicity is so much important"
-category: articles
-tags: software general
+category: ["articles"]
 comments: false
-date: 2013-12-28
+date: "2013-12-28"
 ---
 
 I have always been a great fan of things around me that are simple to

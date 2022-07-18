@@ -2,10 +2,9 @@
 layout: post
 title: "How To Setup Macvim for Maximum awesomeness"
 description: "How did I setup macvim for super awesomeness"
-category: articles
-tags: vim macvim development
+category: ["articles"]
 comments: false
-date: 2014-01-03
+date: "2014-01-03"
 ---
 
 I have been using vim for almost 5 years now. For some time, I even

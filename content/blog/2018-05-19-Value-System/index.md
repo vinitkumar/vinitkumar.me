@@ -2,10 +2,9 @@
 layout: post
 title: "Some Very Important Values I believe in"
 description: "Some core values that I believe in"
-category: articles
-tags: value life
+category: ["articles"]
 comments: false
-date: 2018-05-19
+date: "2018-05-19"
 ---
 
 As humans, I think it is pretty important that we sometimes look deep into the soul and see what defines us

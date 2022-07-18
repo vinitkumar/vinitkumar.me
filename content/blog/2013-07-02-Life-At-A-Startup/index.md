@@ -2,10 +2,9 @@
 layout: post
 title: "Life At A Startup"
 description: "Experience of Working at A startup"
-category: articles
-tags: projects
+category: ["articles"]
 comments: false
-date: 2013-07-02
+date: "2013-07-02"
 ---
 
 Last few months has been really exciting for me. Since, i joined [Changer](http://changer.nl) on 1st February.

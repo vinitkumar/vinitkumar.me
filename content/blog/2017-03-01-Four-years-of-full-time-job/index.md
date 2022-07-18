@@ -2,10 +2,9 @@
 layout: post
 title: "I completed Four years of Full time job"
 description: "Four years of full time work at Socialschools"
-category: articles
-tags: job work life
+category: ["articles"]
 comments: false
-date: 2017-03-01
+date: "2017-03-01"
 ---
 
 So on 1st February 2017, I completed my fourth year working for Socialschools.

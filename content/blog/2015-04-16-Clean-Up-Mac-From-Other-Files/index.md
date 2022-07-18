@@ -2,10 +2,9 @@
 layout: post
 title: "How to Clean Up Your Mac From Other Files"
 description: "How to cleanup Your Mac From Other Files"
-category: articles
-tags: mac cleanup commandline expert
+category: ["articles"]
 comments: false
-date: 2015-04-16
+date: "2015-04-16"
 ---
 
 ![screenshot](https://cldup.com/-iOX0p9Ob8-3000x3000.png)
