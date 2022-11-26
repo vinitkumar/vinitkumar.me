@@ -50,7 +50,7 @@ const Bio = () => {
         You can read more <Link to="/about">about</Link> me.
         Find my
         {` `}
-        <a href="https://vinitkumar.github.io/vinit_kumar.pdf"
+        <a href="https://vinitkumar.github.io/vinit-kumar.pdf"
           style={{
             textDecoration: `none`,
           }}
