@@ -43,21 +43,20 @@ const AboutIndex  = (props) => {
         borderRadius: `50%`,
       }}
     />
-    <p>
-      My name is <strong>Vinit Kumar</strong>, and I'm a Staff Engineer at Socialschools Websites Team.<br/>
-      <br/>
-      I have written a multi-tenant backend system that scales to more than 50m requests/month and powers a profitable business. 
-    </p>
+      <p>
+        Hi there! I'm Vinit Kumar, a Staff Engineer at the Socialschools Websites Team. I specialize in backend development, and have written a highly scalable, multi-tenant system that supports a successful business.
+      </p>
+      <p>
+        As the lead developer and architect for the Socialschools B.V. CMS, I have over ten years of experience using Django to build top-quality products and solutions for clients. I pride myself on my straightforward approach to problem-solving, and my ability to simplify complex challenges.
+      </p>
 
-    <p>I lead the development and architecture of a multi-tenant CMS at Socialschools B.V. I have more than 9 years of experience writing backend in Django for a couple of successful products and numerous client projects. You can download my <a target='_blank'  rel="noopener noreferrer"  href="https://vinitkumar.github.io/vinit_kumar.pdf"> resume</a> here. My strength is in coming up with simple solutions for difficult problems.
-    </p>
-    <p>I enjoy reading books, and <strong><i>spending time</i></strong> with family. I live in Pune with my family. My wife <a target='_blank'  rel="noopener noreferrer"  href="https://rituparnadey.com">Rituparna Dey</a> is founder of a Digital Marketing Company <a href="https://scoophubs.com" target="_blank" rel="noopener noreferrer">ScoopHubs.com</a></p>
-    <p>I contribute to some open source software and you can browse them at my github profile <a href="https://github.com/vinitkumar" target="_blank" rel="noopener noreferrer">vinitkumar</a>.
-      If you use twitter, you can follow me <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinitkme">vinitkme</a> on twitter.
-    I am also on <a target="_blank"  rel="noopener noreferrer" href="https://www.linkedin.com/in/vinitatlinkedin/">LinkedIn</a>.
-    </p>
-    <p>If you use any of my OSS software, please consider sponsoring my work <span rel="img" aria-label="heart-emoji">❤️ </span>, so that I can justify spending time on OSS that benefits you all. You can sponsor me on my <a href="https://opencollective.com/vinit-kumar" rel="noopener noreferrer" target="_blank">opencollective </a> here.</p>
-    <iframe src="https://github.com/sponsors/vinitkumar/card" title="Sponsor vinitkumar" height="225" width="600" style={{ "border":
+      <p>
+        In my free time, I enjoy reading, spending time with my family, and contributing to open source projects. My wife, Rituparna Dey, is the founder of <a href="https://scoophubs.com" target="_blank" rel="noopener noreferrer">ScoopHubs.com</a>, a digital marketing company.
+      </p>
+      <p>
+        You can learn more about me on my LinkedIn profile and my GitHub profile, and if you're on Twitter, you can follow me at <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinitkme">vinitkme</a>. And if you appreciate the open source work that I do, please consider supporting my efforts on my <a href="https://opencollective.com/vinit-kumar" rel="noopener noreferrer" target="_blank">opencollective </a> page. Thank you!
+      </p>
+      <iframe src="https://github.com/sponsors/vinitkumar/card" title="Sponsor vinitkumar" height="225" width="600" style={{ "border":
       "0"}}></iframe>
 
     </Layout>
