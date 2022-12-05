@@ -45,37 +45,7 @@ const Bio = () => {
       <p style={{
         width: `100%`,
       }}>
-        I am a software engineer who loves making computers do things and admires good books, music, art
-    and coffee.
-        You can read more <Link to="/about">about</Link> me.
-        Find my
-        {` `}
-        <a href="https://vinitkumar.github.io/vinit-kumar.pdf"
-          style={{
-            textDecoration: `none`,
-          }}
-
-    >
-         resume
-        </a>,
-        {` `}
-        <a href="/values"
-          style={{
-            textDecoration: `none`,
-          }}
-        >
-          values
-        </a>
-        {` `}
-        and
-        {` `}
-        <a href="https://github.com/vinitkumar"
-          style={{
-            textDecoration: `none`,
-          }}
-        >
-        code
-        </a> here.
+          As a <Link to="/about">Software Engineer</Link> with a passion for creating and problem-solving, I am constantly seeking new challenges and opportunities to push the boundaries of what computers can do. I am an avid admirer of good literature, music, art, and coffee. Explore my website to learn more about my skills, experience, and <Link to="/about">values</Link> as a programmer. Here, you can also find links to my <a href="https://vinitkumar.github.io/vinit-kumar.pdf" style={{textDecoration: `none`,}}>resume</a> and <a href="https://github.com/vinitkumar" style={{textDecoration: `none`,}}>code repositories</a> .
       </p>
     </div>
   )

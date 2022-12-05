@@ -10,32 +10,29 @@ class ValueComponent extends React.Component {
           <div style={{position: 'relative', width: '100%', height: 400, margin: 'auto', marginBottom: 60}}>
             <Unsplash expand keywords="worship" />
           </div>
-            <ul>
-              <li>
-                  Fast learner who can grasp new tech quickly and apply them to on-going projects.
-              </li>
-
-              <li>
-                Dedicated to the improvement of self, others, and involved processes.
-
-              </li>
-              <li>
-                Proven ability in working alone or as part of a distributed remote team.
-
-              </li>
-              <li>
-                 Developed problem-solving and analytical skills.
-              </li>
-              <li>
-                Resourceful and efficient, with a talent for improvisation.
-              </li>
-              <li>
-                Strong written and verbal English competency.
-              </li>
-              <li>
-                Empathetic and ethical in personal and professional contexts.
-              </li>
-         </ul>
+          <ul>
+            <li>
+              Quickly adapts to new technologies and applies them to ongoing projects.
+            </li>
+            <li>
+              Dedicated to personal and professional growth and improvement.
+            </li>
+            <li>
+              Experienced in working independently or as part of a remote team.
+            </li>
+            <li>
+              Strong problem-solving and analytical abilities.
+            </li>
+            <li>
+              Resourceful and efficient, with a knack for improvisation.
+            </li>
+            <li>
+              Excellent written and verbal English communication skills.
+            </li>
+            <li>
+              Empathetic and ethical in all interactions.
+            </li>
+          </ul>
         </Layout>
     )
   }
