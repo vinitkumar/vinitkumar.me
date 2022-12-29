@@ -5227,6 +5227,26 @@ gatsby-plugin-google-gtag@^5.3.0:
     "@babel/runtime" "^7.15.4"
     minimatch "^3.1.2"
 
+gatsby-plugin-image@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-3.3.2.tgz#7263c10c504eea039315bd271e917a8fa016db9a"
+  integrity sha512-8BzRBvCTbAZYSO661d+76tbxXEUgGMnGXGzDYXPfwROn3BdtP953D+w+dGdZi2AtwaSxsoZ33LR1vBdBl9pFjg==
+  dependencies:
+    "@babel/code-frame" "^7.14.0"
+    "@babel/parser" "^7.15.5"
+    "@babel/runtime" "^7.15.4"
+    "@babel/traverse" "^7.15.4"
+    babel-jsx-utils "^1.1.0"
+    babel-plugin-remove-graphql-queries "^5.3.1"
+    camelcase "^5.3.1"
+    chokidar "^3.5.3"
+    common-tags "^1.8.2"
+    fs-extra "^10.1.0"
+    gatsby-core-utils "^4.3.1"
+    gatsby-plugin-utils "^4.3.1"
+    objectFitPolyfill "^2.3.5"
+    prop-types "^15.8.1"
+
 gatsby-plugin-manifest@^5.3.1:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-5.3.1.tgz#53f25ed5697c65c43fbc65c0392b9029cf7b9b76"
@@ -7765,6 +7785,11 @@ object.values@^1.1.5, object.values@^1.1.6:
     call-bind "^1.0.2"
     define-properties "^1.1.4"
     es-abstract "^1.20.4"
+
+objectFitPolyfill@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/objectFitPolyfill/-/objectFitPolyfill-2.3.5.tgz#be8c83064aabfa4e88780f776c2013c48ce1f745"
+  integrity sha512-8Quz071ZmGi0QWEG4xB3Bv5Lpw6K0Uca87FLoLMKMWjB6qIq9IyBegP3b/VLNxv2WYvIMGoeUQ+c6ibUkNa8TA==
 
 on-finished@2.4.1:
   version "2.4.1"
