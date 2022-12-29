@@ -6,25 +6,20 @@ exports.createPages = ({ graphql, actions }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   return graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
-        ) {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-              }
-            }
-          }
+    `{
+  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
         }
       }
-    `
+    }
+  }
+}`
   ).then(result => {
     if (result.errors) {
       throw result.errors
@@ -49,7 +44,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     return null
-  })
+  });
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
