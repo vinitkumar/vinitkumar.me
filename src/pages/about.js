@@ -29,12 +29,14 @@ const AboutIndex  = (props) => {
     <Layout location={props.location}>
     <Seo title="About - Vinit Kumar"></Seo>
     <h1>About</h1>
-    <Image
-      fixed={data.avatar.childImageSharp.fixed}
+    <img
       alt={author}
+      src="https://github.com/vinitkumar.png"
       style={{
         marginRight: rhythm(1 / 2),
         marginBottom: 0,
+        height: 250,
+        width: 250,
         minWidth: 50,
         borderRadius: `100%`,
         float: `right`,
