@@ -1,28 +1,23 @@
 import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 const AboutIndex  = (props) => {
-  const data = useStaticQuery(graphql`
-    query AboutQuery {
-      avatar: file(absolutePath: { regex: "/vinit.jpeg/" }) {
-        childImageSharp {
-          fixed(width: 200, height: 200, quality: 100) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-      site {
-        siteMetadata {
-          author
-        }
-      }
+  const data = useStaticQuery(graphql`query AboutQuery {
+  avatar: file(absolutePath: {regex: "/vinit.jpeg/"}) {
+    childImageSharp {
+      gatsbyImageData(width: 200, height: 200, quality: 100, layout: FIXED)
     }
-  `)
+  }
+  site {
+    siteMetadata {
+      author
+    }
+  }
+}`)
 
   const { author } = data.site.siteMetadata
   return (

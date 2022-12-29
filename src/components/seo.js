@@ -11,25 +11,21 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({ description, lang, meta, title }) {
-  const data = useStaticQuery(graphql`
-      query {
-        avatar: file(absolutePath: { regex: "/blog.jpg/" }) {
-          childImageSharp {
-            fixed(width: 600, height: 400) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-          }
-        }
-      }
-    `
+  const data = useStaticQuery(graphql`{
+  avatar: file(absolutePath: {regex: "/blog.jpg/"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, height: 400, layout: FIXED)
+    }
+  }
+  site {
+    siteMetadata {
+      title
+      description
+      author
+      siteUrl
+    }
+  }
+}`
   )
 
   const metaDescription = description || data.site.siteMetadata.description
@@ -60,7 +56,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `${data.site.siteMetadata.siteUrl}${data.avatar.childImageSharp.fixed.src}`,
+          content: `${data.site.siteMetadata.siteUrl}${data.avatar.childImageSharp.gatsbyImageData.src}`,
         },
         {
           name: `twitter:card`,
@@ -80,7 +76,7 @@ function Seo({ description, lang, meta, title }) {
         },
       ].concat(meta)}
     />
-  )
+  );
 }
 
 Seo.defaultProps = {
