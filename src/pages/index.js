@@ -20,7 +20,7 @@ class BlogIndex extends React.Component {
           <meta name="google-site-verification" content="aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI" />
           <meta name="msvalidate.01" content="9BD6B4DCA2B9F88A132B7DDCA1578919" />
         </Helmet>
-        <Seo title="Vinit Kumar - Blog on Programming & Software Development" />
+        <Seo title="Home" />
         <div style={{position: 'relative', width: '100%', height: 420, margin: 'auto'}}>
           <Unsplash expand photoId="KUCx92pIGCM" />
         </div>

@@ -23,7 +23,7 @@ const AboutIndex  = (props) => {
   const { author } = data.site.siteMetadata
   return (
     <Layout location={props.location}>
-    <Seo title="About - Vinit Kumar"></Seo>
+    <Seo title="About"></Seo>
     <h1>About</h1>
     <div style={{position: 'relative', width: '100%', height: 420, marginBottom: '2rem'}}>
       <Unsplash expand photoId="c4LpYfizLvw" />
