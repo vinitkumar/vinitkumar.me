@@ -2,6 +2,7 @@ import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Unsplash from "react-unsplash-wrapper"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
 
@@ -24,6 +25,9 @@ const AboutIndex  = (props) => {
     <Layout location={props.location}>
     <Seo title="About - Vinit Kumar"></Seo>
     <h1>About</h1>
+    <div style={{position: 'relative', width: '100%', height: 420, marginBottom: '2rem'}}>
+      <Unsplash expand photoId="c4LpYfizLvw" />
+    </div>
     <img
       alt={author}
       src="https://github.com/vinitkumar.png"
@@ -51,11 +55,8 @@ const AboutIndex  = (props) => {
         In my free time, I enjoy reading, spending time with my family, and contributing to open source projects. My wife, Rituparna Dey, is the founder of <a href="https://scoophubs.com" target="_blank" rel="noopener noreferrer">ScoopHubs.com</a>, a digital marketing company.
       </p>
       <p>
-        You can learn more about me on my LinkedIn profile and my GitHub profile, and if you're on Twitter, you can follow me at <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinitkme">vinitkme</a>. And if you appreciate the open source work that I do, please consider supporting my efforts on my <a href="https://opencollective.com/vinit-kumar" rel="noopener noreferrer" target="_blank">opencollective </a> page. Thank you!
+        You can learn more about me on my LinkedIn profile and my GitHub profile, and if you're on Twitter, you can follow me at <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinitkme">vinitkme</a>. And if you appreciate the open source work that I do, please consider supporting my efforts on my <a href="https://github.com/sponsors/vinitkumar" rel="noopener noreferrer" target="_blank">github sponsors </a> and <a href="https://opencollective.com/vinit-kumar" rel="noopener noreferrer" target="_blank">opencollective </a> page. Thank you!
       </p>
-      <iframe src="https://github.com/sponsors/vinitkumar/card" title="Sponsor vinitkumar" height="225" width="600" style={{ "border":
-      "0"}}></iframe>
-
     </Layout>
   );
 }

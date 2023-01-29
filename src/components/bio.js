@@ -16,7 +16,8 @@ const Bio = () => {
       style={{
         display: `flex`,
         textDecoration: `none`,
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(1),
+        marginTop: rhythm(1.5),
       }}
     >
       <p style={{

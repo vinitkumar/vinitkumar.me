@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Unsplash from "react-unsplash-wrapper"
 import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -20,6 +21,9 @@ class BlogIndex extends React.Component {
           <meta name="msvalidate.01" content="9BD6B4DCA2B9F88A132B7DDCA1578919" />
         </Helmet>
         <Seo title="Vinit Kumar - Blog on Programming & Software Development" />
+        <div style={{position: 'relative', width: '100%', height: 420, margin: 'auto'}}>
+          <Unsplash expand photoId="KUCx92pIGCM" />
+        </div>
         <Bio />
         {posts.map(({ node }) => {
 

@@ -34,7 +34,7 @@ class HomeLayout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
+            fontFamily: `Satoshi, sans-serif`,
             marginTop: 0,
           }}
         >

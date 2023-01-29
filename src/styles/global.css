@@ -1,0 +1,13 @@
+html,
+body {
+ font-family: 'Space Mono', sans-serif;
+}
+
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/SpaceMono-Regular.ttf) format('ttf');
+}
