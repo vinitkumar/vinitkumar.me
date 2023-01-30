@@ -7,6 +7,9 @@ import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
 import { Helmet } from "react-helmet"
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement();
+
 
 class BlogIndex extends React.Component {
   render() {

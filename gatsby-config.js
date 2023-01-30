@@ -36,6 +36,13 @@ module.exports = {
       options: {
         gfm: true,
         plugins: [
+					{
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: "carbon",
+              theme: "blackboard",
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -48,7 +55,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          // `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
           `gatsby-plugin-react-helmet`,
