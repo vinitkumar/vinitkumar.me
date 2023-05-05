@@ -24,7 +24,7 @@ class BlogIndex extends React.Component {
           <meta name="msvalidate.01" content="9BD6B4DCA2B9F88A132B7DDCA1578919" />
         </Helmet>
         <Seo title="Home" />
-        <div style={{position: 'relative', width: '100%', height: 420, margin: 'auto'}}>
+        <div style={{position: 'relative', width: '100%', height: 600, margin: 'auto'}}>
           <Unsplash expand photoId="KUCx92pIGCM" />
         </div>
         <Bio />
