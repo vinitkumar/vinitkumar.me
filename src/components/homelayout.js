@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Analytics } from '@vercel/analytics/react';
+
 
 import { rhythm, scale } from "../utils/typography"
 
@@ -62,6 +64,7 @@ class HomeLayout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
+        <Analytics />
         <footer>
           © {new Date().getFullYear()}, Vinit Kumar
         </footer>
