@@ -24,6 +24,8 @@ class HomeLayout extends React.Component {
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
+            	fontWeight: 100,
+							fontSize: `54px`,
               color: `inherit`,
             }}
             to={`/`}
