@@ -1,9 +1,8 @@
 ---
 title: Moving from Vim to Neovim, A Smooth Transition
-featuredImage: ../../assets/nvim.png
 date: "2023-05-24"
 ---
-
+![Imgur](https://i.imgur.com/ZGDBz2M.png)
 
 # Moving from Vim to Neovim: A Smooth Transition
 
