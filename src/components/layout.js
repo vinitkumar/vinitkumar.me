@@ -93,7 +93,7 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <a href="/" className="back-link"> <span role="img" aria-label="back to home">👈 </span>back to home</a>
+        <a href="/" className="back-link"> <span role="img" aria-label="back to home">🔙 </span> to 🏠</a>
         <GlobalStyle />
         <header>{header}</header>
         <main>{children}</main>
