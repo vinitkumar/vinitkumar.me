@@ -166,7 +166,9 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.shiftwidth = 2
+vim.opt.expandtab = true  -- expand tabs into spaces
 vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
@@ -302,8 +304,7 @@ end
 vim.cmd('autocmd BufWritePre * lua StripTrailingWhitespace()')
 -- Show space and tab characters
 vim.o.list = true
-vim.o.listchars = 'tab:▸ ,trail:·,nbsp:␣'
-
+vim.o.listchars = 'tab:› ,eol:¬,trail:⋅,nbsp:␣'
 ```
 
 This config is inspired by the [Single File Nvim Config](https://arslan.io/2023/05/10/the-benefits-of-using-a-single-init-lua-vimrc-file/) post by Fatih Arslan
