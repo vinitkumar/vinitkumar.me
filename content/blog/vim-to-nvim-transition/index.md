@@ -2,6 +2,7 @@
 title: Moving from Vim to Neovim, A Smooth Transition
 date: "2023-05-24"
 ---
+
 ![Imgur](https://i.imgur.com/ZGDBz2M.png)
 
 Vim has long been a popular choice for developers and power users as a highly customizable and efficient text editor. However, in recent years, Neovim has emerged as a promising alternative to Vim, offering improved performance, enhanced features, and better extensibility. If you're considering making the switch from Vim to Neovim, this blog post will guide you through the process and highlight the benefits of using Neovim.
