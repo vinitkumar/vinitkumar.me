@@ -1,11 +1,11 @@
 html,
 body {
- font-family: 'Space Mono', sans-serif;
+ font-family: 'Twilio Sans Mono', sans-serif;
 }
 
 
 @font-face {
-  font-family: 'Space Mono';
+  font-family: 'Twilio Sans Mono';
   font-style: normal;
   font-weight: 400;
   font-display: swap;

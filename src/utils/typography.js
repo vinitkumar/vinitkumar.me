@@ -5,8 +5,8 @@ funstonTheme.baseFontSize = '22px'
 const typography = new Typography({
     baseFontSize: "16px",
     baseLineHeight: 1.4,
-    headerFontFamily: ['Space Mono', 'sans-serif'],
-    bodyFontFamily: ['Space Mono', 'sans-serif'],
+    headerFontFamily: ['Twilio Sans Mono', 'sans-serif'],
+    bodyFontFamily: ['Twilio Sans Mono', 'sans-serif'],
   }
 )
 // Hot reload typography in development.

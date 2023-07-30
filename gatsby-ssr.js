@@ -4,7 +4,7 @@ export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/SpaceMono-Regular.ttf"
+      href="/fonts/TwilioSansMono-Regular.ttf"
       as="font"
       type="font/tff"
       crossOrigin="anonymous"
