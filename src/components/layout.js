@@ -6,20 +6,20 @@ import { rhythm, scale } from "../utils/typography"
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Space Mono', 'Courier New', monospace;
+    font-family: 'Twilio Sans Mono', 'Courier New', monospace;
     font-size: 14px;
     font-smoothing: antialiased;
     font-variant-ligatures: none;
   }
   h1, h2, h3, h4, h4 {
-    font-family: 'Lora', serif;
+    font-family: 'Twilio Sans Mono', serif;
     font-weight: normal;
   }
   pre {
     font-variant-ligatures: none;
   }
   :not(pre) > code[class*="language-"] {
-    font-family: 'Space Mono', 'Courier New', monospace;
+    font-family: 'Twilio Sans Mono', 'Courier New', monospace;
     background: rgba(0, 0, 0, 0.08);
     color: rbga(0, 0, 0, 1);
   }
@@ -31,7 +31,7 @@ const GlobalStyle = createGlobalStyle`
     background: rgba(0, 0, 0, 0.02);
   }
   pre[class*="language-"] > code {
-    font-family: 'Space Mono', 'Courier New', monospace;
+    font-family: 'Twilio Sans Mono', 'Courier New', monospace;
     background: none;
   }
 `;
