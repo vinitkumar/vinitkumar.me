@@ -2,6 +2,7 @@
 title: How To Do Remote Work Efficiently
 date: "2020-03-26"
 featured: true
+description: "The blog offers practical tips for efficiently navigating the challenges of remote work, particularly relevant during the COVID-19 pandemic. The author, drawing from seven years of remote work experience, emphasizes the importance of quality hardware, efficient software usage, and establishing a routine. The blog underscores effective communication practices, urging over-communication to bridge the gap in remote collaboration. It stresses the significance of documentation, testing, and delivering tangible results in a remote work setting. The author also shares insights from Mitchell Hashimoto, highlighting the transformative potential of remote work for those who adapt effectively.
 ---
 
 Covid-19 has forced all Software companies to adopt **Remote Work** for their workforce.

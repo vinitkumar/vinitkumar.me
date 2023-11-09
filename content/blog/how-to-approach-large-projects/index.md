@@ -1,6 +1,7 @@
 ---
 title: Notes on "My Approach to Building Large Technical Projects" by Mitchell Hashimoto
 date: "2023-06-02"
+description: "Mitchell Hashimoto, co-founder of HashiCorp, shares insights on [building large technical projects](https://mitchellh.com/writing/building-large-technical-projects). Key tips include breaking tasks into manageable chunks, prioritizing real results, starting with feasible sub-projects, employing automated testing, showcasing regular demos, avoiding perfectionism initially, building for personal needs, and embracing incremental improvements for sustained progress."
 ---
 
 Mitchell Hashimoto is one programmer I really admire and he has been insanely productive

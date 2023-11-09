@@ -1,6 +1,7 @@
 ---
 title: Moving from Vim to Neovim, A Smooth Transition
 date: "2023-05-24"
+description: "The blog guides users through a smooth transition from Vim to Neovim, highlighting Neovim's improved performance, enhanced features, and better extensibility. It details the migration process, emphasizing the compatibility between Vim and Neovim configurations. The author's Neovim Lua-based configuration is provided, featuring a curated set of plugins, key mappings, and settings for a more modular and organized setup. The blog concludes by acknowledging the advantages of Neovim's init.lua configuration for those interested in exploring its features and flexibility."
 ---
 
 ![Imgur](https://i.imgur.com/ZGDBz2M.png)

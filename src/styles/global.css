@@ -1,13 +1,13 @@
 html,
 body {
- font-family: 'Twilio Sans Mono', sans-serif;
+ font-family: 'Inter', sans-serif;
 }
 
 
 @font-face {
-  font-family: 'Twilio Sans Mono';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/SpaceMono-Regular.ttf) format('ttf');
+  src: url(/fonts/Inter-Regular.woff) format('woff');
 }
