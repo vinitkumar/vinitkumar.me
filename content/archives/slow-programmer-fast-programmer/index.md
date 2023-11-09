@@ -1,0 +1,14 @@
+---
+title: Slow Programmer, Fast Programmer
+date: "2022-01-29"
+---
+
+2022 is a special year for me, as it marks the completion of a decade of writing code professionally. Over the years, I've observed several traits that seem to be common among the fastest and most effective programmers. While some of these traits may come more naturally to some people, they can all be developed and improved with experience and practice.
+
+- Clarify of thoughts: One of the most important traits of fast programmers is the ability to have clear and focused thoughts. This allows them to quickly and accurately visualize the solution to a problem and then implement it efficiently. With experience, you can learn to develop this clarity of thought by breaking complex problems into smaller, more manageable pieces, and by practicing techniques like pseudocode and mind mapping.
+- Sense of Time and Planning: Fast programmers are also skilled at planning their work and anticipating potential problems or edge cases. This helps them avoid unnecessary delays and ensures that their code is as efficient and reliable as possible. With experience, you can learn to develop this skill by creating detailed project plans and by regularly reviewing your work to identify potential issues before they arise.
+- Proven methods of testing and debugging code: Fast programmers also spend time developing their testing and debugging skills. This allows them to quickly identify and fix problems in their code, which can save a lot of time and effort in the long run. With experience, you can learn to develop these skills by practicing with different testing and debugging tools, and by regularly reviewing your own code and that of others to identify common pitfalls and best practices.
+- Love for programming: Another important trait of fast programmers is a genuine love and passion for their craft. This helps them stay motivated and focused, and it allows them to continue learning and improving over time. With experience, you can learn to develop this love by staying curious and open-minded, and by regularly seeking out new challenges and learning opportunities.
+- Fast typing hands: Finally, fast programmers often have good typing skills, which allows them to quickly and accurately enter code into their editor. This can save a lot of time and help them stay focused on the task at hand. With experience, you can learn to develop your typing skills by practicing regularly and by using tools like typing tutors and speed tests.
+
+- Overall, the traits of fast and effective programmers are not fixed or innate, but they can be developed and improved over time through experience and continuous learning. By focusing on these areas, you can become a faster and more effective programmer.
