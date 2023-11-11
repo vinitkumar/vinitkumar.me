@@ -11,7 +11,7 @@
     "@deckdeckgo/highlight-code": "^4.4.0",
     "@vercel/analytics": "^1.0.1",
     "gatsby": "^5.12.9",
-    "gatsby-cli": "^5.12.9",
+    "gatsby-cli": "^5.12.0",
     "gatsby-plugin-feed": "^5.11.0",
     "gatsby-plugin-google-gtag": "^5.11.0",
     "gatsby-plugin-image": "^3.3.2",
