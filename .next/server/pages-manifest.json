@@ -1,0 +1,9 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js",
+  "/posts": "pages/posts.js",
+  "/posts/changing-oss-landscape": "pages/posts/changing-oss-landscape.js",
+  "/posts/coding-from-scratch": "pages/posts/coding-from-scratch.js"
+}
