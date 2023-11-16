@@ -1,9 +1,11 @@
 ---
 title: Leveling Up With Gary Bernhardt's Destroyallsoftware Series
 date: "2023-07-31"
+description: "This blog recounts the author's immersive learning experience with Gary Bernhardt's destroyallsoftware series, focusing on the malloc-from-scratch project. The author established a weekly routine to delve into various projects from the from-scratch repository, highlighting key insights gained such as a deepened understanding of memory allocation, improved debugging skills, and appreciation for software design principles. The post emphasizes the transformative impact of the series on the author's coding confidence and recommends Gary's resource for learners at all levels. The conclusion expresses the author's enthusiasm to continue exploring diverse programming concepts through this educational series."
 ---
 
 ## Introduction:
+
 I believe that continuous learning and practice are key to staying ahead in the ever-evolving world of software development.
 Recently, I stumbled upon an exceptional resource that has been highly recommended by many experienced programmers – Gary Bernhardt's "destroyallsoftware" series.
 In this blog, I will share my experience diving into this series and how it has helped me strengthen my coding fundamentals.

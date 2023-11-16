@@ -7,8 +7,8 @@ class ValueComponent extends React.Component {
   render() {
     return (
         <Layout location={this.props.location} title="Values">
-          <div style={{position: 'relative', width: '100%', height: 400, margin: 'auto', marginBottom: 60}}>
-            <Unsplash expand keywords="worship" />
+         <div style={{position: 'relative', width: '100%', height: 600, marginBottom: '60px'}}>
+          <Unsplash expand photoId="KUCx92pIGCM" />
           </div>
           <ul>
             <li>

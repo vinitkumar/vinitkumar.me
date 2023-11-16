@@ -1,6 +1,7 @@
 ---
 title: The Changing Landscape of Free Online Services and Open-Source Software
 date: "2023-07-04"
+description: "The blog explores the transformation of free online services and open-source software over the past decade. It discusses the shift from free models to paid services, the bait-and-switch tactic in open-source software, and the challenges in funding strategies. The article emphasizes the need for users to contribute financially, view open-source as technical debt, and adapt to a changing economic landscape. Developers are encouraged to balance sustainability and accessibility. The conclusion highlights the importance of collaboration for a future where innovation and accessibility coexist in the evolving online world."
 ---
 
 ### Introduction:

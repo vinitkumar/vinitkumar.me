@@ -23,7 +23,7 @@ const Bio = () => {
       <p style={{
         width: `100%`,
       }}>
-          As a <Link to="/about">Software Engineer</Link> with a passion for creating and problem-solving, I am constantly seeking new challenges and opportunities to push the boundaries of what computers can do. I am an avid admirer of good literature, music, art, and coffee. Explore my website to learn more about my skills, experience, and <Link to="/values">values</Link> as a programmer. Here, you can also find links to my <a href="https://vinitkumar.github.io/vinit-kumar.pdf" style={{textDecoration: `none`,}}>resume</a> and <a href="https://github.com/vinitkumar" style={{textDecoration: `none`,}}>code repositories</a> .
+          I'm a <Link to="/about">Software Engineer</Link> who enjoys solving problems and pushing the boundaries of tech. When I'm not coding, you'll find me immersed in good books, music, art, and a cup of coffee. Personally, these <Link to="/values">values</Link> matters to me. Here are links to my <a href="https://vinitkumar.github.io/vinit-kumar.pdf" target="_blank" rel="noopener noreferrer">resume</a> and <a target="_blank" rel="noopener noreferrer" href="https://github.com/vinitkumar">github</a>. I hope you enjoy my writing here.
       </p>
     </div>
   )

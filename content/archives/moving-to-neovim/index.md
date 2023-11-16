@@ -1,6 +1,7 @@
 ---
 title: Moving from Vim to NeoVim
 date: "2021-06-05"
+description: "The blog details my shift from Vim to NeoVim, driven by NeoVim's recent progress and enhanced plugin support. Motivated to use Lua for configuration, the author aims for efficient autocomplete with native LSP, a modular setup, and the ability to write custom plugins. The post touches on terminal app experimentation and concludes with the successful transition, sharing the author's NeoVim configuration on GitHub: [https://github.com/vinitkumar/nvim](https://github.com/vinitkumar/nvim)."
 ---
 
 # Why Move?
