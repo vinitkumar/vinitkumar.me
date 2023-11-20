@@ -7,6 +7,10 @@ import { rhythm, scale } from "../utils/typography"
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Inter', 'Courier New', monospace;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+    @supports (font-variation-settings: normal) {
+      :root { font-family: InterVariable, sans-serif; }
+    }
     font-size: 16px;
     font-smoothing: antialiased;
     font-variant-ligatures: none;

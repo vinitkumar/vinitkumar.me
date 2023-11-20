@@ -5405,7 +5405,7 @@ functions-have-names@^1.2.3:
   resolved "https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz#0404fe4ee2ba2f607f0e0ec3c80bae994133b834"
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
-gatsby-cli@^5.12.4, gatsby-cli@^5.12.9:
+gatsby-cli@^5.12.0, gatsby-cli@^5.12.4:
   version "5.12.4"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-5.12.4.tgz#265ae0a3c065293d181b5800ea7e965e701723e2"
   integrity sha512-GD+otyd5LlgSbYK4ODrKyAise/k32G7Qy7H/k+gJ2P8DCG9sU+j//2zNwF7mY8C5dl0SpROqFTL+I0Y1DK4tmQ==
