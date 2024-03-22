@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Unsplash from "react-unsplash-wrapper"
 import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
