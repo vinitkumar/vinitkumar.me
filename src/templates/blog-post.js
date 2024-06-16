@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
-import Unsplash from "react-unsplash-wrapper"
 import { Helmet } from "react-helmet"
 import blog from "../../content/assets/blog.jpg";
 
@@ -22,9 +21,6 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <div style={{position: 'relative', width: '100%', height: 400, margin: 'auto'}}>
-          <Unsplash expand keywords="programming" />
-        </div>
         <h1
           style={{
             marginTop: rhythm(1),

@@ -1,5 +1,4 @@
 import React from "react"
-import Unsplash from "react-unsplash-wrapper"
 
 import Layout from "../components/layout"
 // wT5VXP92jFA
@@ -7,9 +6,6 @@ class ValueComponent extends React.Component {
   render() {
     return (
         <Layout location={this.props.location} title="Values">
-         <div style={{position: 'relative', width: '100%', height: 600, marginBottom: '60px'}}>
-          <Unsplash expand photoId="KUCx92pIGCM" />
-          </div>
           <ul>
             <li>
               Quickly adapts to new technologies and applies them to ongoing projects.

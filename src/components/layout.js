@@ -97,9 +97,8 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <a href="/" className="back-link">Home</a>
+        <a href="/" className="back-link">Back to Home</a>
         <GlobalStyle />
-        <header>{header}</header>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Vinit Kumar

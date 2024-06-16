@@ -2,7 +2,6 @@ import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Unsplash from "react-unsplash-wrapper"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
 
@@ -25,9 +24,6 @@ const AboutIndex  = (props) => {
     <Layout location={props.location}>
     <Seo title="About"></Seo>
     <h1>About</h1>
-    <div style={{position: 'relative', width: '100%', height: 420, marginBottom: '2rem'}}>
-      <Unsplash expand photoId="c4LpYfizLvw" />
-    </div>
     <img
       alt={author}
       src="https://github.com/vinitkumar.png"
@@ -70,7 +66,7 @@ const AboutIndex  = (props) => {
         In my free time, I enjoy reading, spending time with my family, and contributing to open source projects. My wife, <a href="https://rituparnadey.com" target="_blank" rel="noopener noreferrer">Rituparna Dey</a>, is the founder of <a href="https://scoophubs.com" target="_blank" rel="noopener noreferrer">ScoopHubs.com</a>, a digital marketing company.
       </p>
       <p>
-          You can connect with me on <a href="https://www.linkedin.com/in/vinitatlinkedin/" target="_blank" rel="noopener noreferrer">LinkedIn</a> and Twitter <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/vinitkme">@vinitkme</a>. If you appreciate my open source work, please consider donating on <a href="https://github.com/sponsors/vinitkumar" rel="noopener noreferrer" target="_blank">github sponsors </a> and <a href="https://opencollective.com/vinit-kumar" rel="noopener noreferrer" target="_blank">opencollective </a>. Thank you!
+          You can connect with me on <a href="https://www.linkedin.com/in/vinitatlinkedin/" target="_blank" rel="noopener noreferrer">linkedIn</a> and twitter/X <a target="_blank" rel="noopener noreferrer" href="https://x.com/vinitkme">@vinitkme</a>. If you appreciate my open source work, please consider donating on <a href="https://github.com/sponsors/vinitkumar" rel="noopener noreferrer" target="_blank">github sponsors </a> and <a href="https://opencollective.com/vinit-kumar" rel="noopener noreferrer" target="_blank">opencollective </a>. Thank you!
       </p>
     </Layout>
   );

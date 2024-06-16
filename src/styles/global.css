@@ -15,3 +15,11 @@ body {
   font-display: swap;
   src: url(/fonts/Inter-Regular.woff) format('woff');
 }
+
+a {
+  color: rgb(0, 113, 227);
+}
+
+body {
+  background-color: rgb(245, 245, 247);
+}

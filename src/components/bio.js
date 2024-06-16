@@ -14,7 +14,7 @@ const Bio = () => {
   return (
     <div
       style={{
-        display: `flex`,
+        display: `block`,
         textDecoration: `none`,
         marginBottom: rhythm(1),
         marginTop: rhythm(1.5),
@@ -23,7 +23,12 @@ const Bio = () => {
       <p style={{
         width: `100%`,
       }}>
-          I'm a <Link to="/about">Software Engineer</Link> who enjoys solving problems and pushing the boundaries of tech. When I'm not coding, you'll find me immersed in good books, music, art, and a cup of coffee. Personally, these <Link to="/values">values</Link> matters to me. Here are links to my <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" rel="noopener noreferrer">latest resume</a> and <a target="_blank" rel="noopener noreferrer" href="https://github.com/vinitkumar">github</a>. I hope you enjoy my writing here.
+          I'm a <Link to="/about">Software Engineer</Link> who enjoys solving problems and pushing the boundaries of tech. 
+      </p>
+      <p  style={{
+        width: `100%`,
+      }}>
+        When I'm not writing code, you'll find me immersed in good books, music, art, and a cup of coffee. Here is my <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" rel="noopener noreferrer">latest resume</a> and <a target="_blank" rel="noopener noreferrer" href="https://github.com/vinitkumar">github</a>. I hope you enjoy some of my writing here.
       </p>
     </div>
   )
