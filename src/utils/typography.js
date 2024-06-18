@@ -5,8 +5,8 @@ funstonTheme.baseFontSize = '22px'
 const typography = new Typography({
     baseFontSize: "16px",
     baseLineHeight: 1.4,
-    headerFontFamily: ['Inter', 'sans-serif'],
-    bodyFontFamily: ['Inter', 'sans-serif'],
+    headerFontFamily: ['IBM Plex Mono', 'sans-serif'],
+    bodyFontFamily: ['IBM Plex Mono', 'sans-serif'],
   }
 )
 // Hot reload typography in development.

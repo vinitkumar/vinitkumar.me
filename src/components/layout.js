@@ -6,24 +6,21 @@ import { rhythm, scale } from "../utils/typography"
 
 const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Inter', 'Courier New', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-    @supports (font-variation-settings: normal) {
-      :root { font-family: InterVariable, sans-serif; }
-    }
     font-size: 16px;
     font-smoothing: antialiased;
     font-variant-ligatures: none;
   }
   h1, h2, h3, h4, h4 {
-    font-family: 'Inter', serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: normal;
   }
   pre {
     font-variant-ligatures: none;
   }
   :not(pre) > code[class*="language-"] {
-    font-family: 'Inter', 'Courier New', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     background: rgba(0, 0, 0, 0.08);
     color: rbga(0, 0, 0, 1);
   }
@@ -35,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
     background: rgba(0, 0, 0, 0.02);
   }
   pre[class*="language-"] > code {
-    font-family: 'Inter', 'Courier New', monospace;
+    font-family: 'IBM Plex Mono', monospace;
     background: none;
   }
 `;

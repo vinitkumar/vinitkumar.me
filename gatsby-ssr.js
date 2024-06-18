@@ -4,9 +4,9 @@ export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/Inter-Regular.woff"
+      href="/fonts/IBMPlexMono-Regular.woff2"
       as="font"
-      type="font/woff"
+      type="font/woff2"
       crossOrigin="anonymous"
       key="interFont"
     />,
