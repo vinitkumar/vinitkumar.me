@@ -3,7 +3,7 @@ import funstonTheme from 'typography-theme-funston'
 
 funstonTheme.baseFontSize = '22px'
 const typography = new Typography({
-    baseFontSize: "16px",
+    baseFontSize: "15px",
     baseLineHeight: 1.4,
     headerFontFamily: ['IBM Plex Mono', 'sans-serif'],
     bodyFontFamily: ['IBM Plex Mono', 'sans-serif'],
