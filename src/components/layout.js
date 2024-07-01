@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'IBM Plex Mono', monospace;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
     font-size: 15px;
+    
     font-smoothing: antialiased;
     font-variant-ligatures: none;
   }
