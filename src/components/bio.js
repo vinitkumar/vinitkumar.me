@@ -23,12 +23,15 @@ const Bio = () => {
       <p style={{
         width: `100%`,
       }}>
-          I'm a <Link to="/about">Software Engineer</Link> who enjoys solving problems and pushing the boundaries of tech. 
+          I'm a <Link to="/about">Software Engineer</Link> who enjoys solving problems and pushing the boundaries of tech.
       </p>
       <p  style={{
         width: `100%`,
       }}>
-        When I'm not writing code, you'll find me immersed in good books, music, art, and a cup of coffee. Here is my <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" rel="noopener noreferrer">latest resume</a> and <a target="_blank" rel="noopener noreferrer" href="https://github.com/vinitkumar">github</a>. I hope you enjoy some of my writing here.
+        When I'm not writing code, you'll find me immersed in good books, music, art, and a cup of coffee.
+    </p>
+    <p>
+    Here is my <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" rel="noopener noreferrer">latest resume</a> and <a target="_blank" rel="noopener noreferrer" href="https://github.com/vinitkumar">github</a>. I hope you enjoy some of my writing here.
       </p>
     </div>
   )
