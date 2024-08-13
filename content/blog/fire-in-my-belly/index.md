@@ -1,7 +1,6 @@
 ---
 title: Fire in my belly
 date: "2024-05-10"
-featured: true
 ---
 
 I have a fire in my belly. I am ready to take on new challenges.
@@ -17,4 +16,3 @@ I also want to write more and share my thoughts with the world. I have been hold
 This is a promise from me to by future self. I want to be well for me and my family.
 
 That's it for now. And I hope my readers are doing well. Take care and stay safe.
-

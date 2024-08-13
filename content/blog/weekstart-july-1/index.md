@@ -1,7 +1,6 @@
 ---
 title: New Week Start
 date: "2024-07-01"
-featured: true
 description: "Plan for the new week"
 ---
 

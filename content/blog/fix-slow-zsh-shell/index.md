@@ -1,7 +1,6 @@
 ---
 title: "Fix Slow Shell ZSH"
 date: "2024-07-02"
-featured: true
 description: "How I found the slowness in my shell and fixed it"
 ---
 
