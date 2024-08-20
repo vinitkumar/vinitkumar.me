@@ -29,6 +29,11 @@ const GlobalStyle = createGlobalStyle`
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: var(--border) solid var(--gray-line);
+  }
   h1, h2, h3, h4, h4 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: normal;
