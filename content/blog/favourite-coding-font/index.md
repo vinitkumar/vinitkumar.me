@@ -1,7 +1,7 @@
 ---
 title: Favorite Coding Fonts in 2024
 date: "2024-06-24"
-description: "All my favorite coding font sin 2024. All of these are free fonts and in my opinion are best in the genre."
+description: "All my favorite coding fonts in 2024. All of these are free fonts and in my opinion are best in the genre."
 ---
 
 I think every programmer who loves their craft must love one font or another and I am no exception. I have always been fascinated by the beauty of fonts and the way they can make or break a design. I have always been a fan of monospaced fonts and I have tried a lot of them over the years.
