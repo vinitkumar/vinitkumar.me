@@ -34,7 +34,9 @@ body {
 }
 
 a {
-  color: rgb(33, 31, 111);
+  color: inherit;
+  text-decoration: none;
+  border-bottom: var(--border) solid var(--gray-line);
 }
 
 body {
