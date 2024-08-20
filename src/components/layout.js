@@ -5,6 +5,12 @@ import {createGlobalStyle} from "styled-components"
 import { rhythm, scale } from "../utils/typography"
 
 const GlobalStyle = createGlobalStyle`
+  *, *::before, *::after { box-sizing: border-box; }
+  * { margin: 0; padding: 0; }
+  :target { scroll-margin-block: 5ex; }
+  img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
+  p, h1, h2, h3 { overflow-wrap: break-word; }
+  body { min-height: 100vh; }
   :root {
     --cap-height: calc(1rem * 12.5 / 16);
     --cap-ratio: calc(1 / 0.698);

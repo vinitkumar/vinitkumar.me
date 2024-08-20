@@ -9,9 +9,9 @@ This past month has been quite interesting. Work-wise, it was decent—some good
 
 On a personal note, my wife and I have managed to keep up a fairly consistent routine of walking five days a week, except when one of us is sick. However, our sleep quality and duration are still a concern. We always end up going to bed late and waking up early, so sometimes we need to make up for it with an afternoon nap. We’ll try to improve this in the coming months.
 
-Financially, our expenses have increased a bit, and we need to get them under control. We're not in bad shape, but we need to be more careful and frugal. I've also been struggling with motivation, which has been a persistent worry. I'm trying to cut motivation out of the equation altogether since it's proven to be an unreliable ally.
+Financially, our expenses have increased a bit, and we need to get them under control. We're not in a bad shape, but we need to be more careful and frugal. I've also been struggling with motivation, which has been a persistent worry. I'm trying to cut motivation out of the equation altogether since it's proven to be an unreliable ally.
 
-On a lighter note, we watched "Deadpool" and a "Wolverine" movie recently, and they were a lot of fun.
+On a lighter note, we watched "Deadpool and Wolverine" movie recently, and it was a lot of fun.
 
 My guitar skills are improving, and I hope to be able to play some decent songs—both chords and solos—in the coming months.
 
