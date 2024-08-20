@@ -27,6 +27,9 @@ body { min-height: 100vh; }
 .about_inner { padding: var(--gap) 25px; border: var(--border) solid var(--gray-line); border-radius: var(--radius); display: flex; flex-direction: column; gap: var(--gap); }
 
 
+.btn-action { text-decoration: none; background: var(--gray-bg); border: none; padding: 0px 7px; display: inline-block; border-radius: 4px; }
+.btn-action:hover { background: rgba(0,0,0,0.2); }
+
 html,
 body {
  font-family: 'IBM Plex Sans', sans-serif;

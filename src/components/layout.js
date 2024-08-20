@@ -40,6 +40,8 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     border-bottom: var(--border) solid var(--gray-line);
   }
+  .btn-action { text-decoration: none; background: var(--gray-bg); border: none; padding: 0px 7px; display: inline-block; border-radius: 4px; }
+  .btn-action:hover { background: rgba(0,0,0,0.2); }
   h1, h2, h3, h4, h4 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: normal;
