@@ -38,8 +38,8 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h2>
-              <small>{node.frontmatter.date}</small> {node.frontmatter.featured && <small><strong>
-                featured</strong></small>}
+              {node.frontmatter.date} {node.frontmatter.featured && <strong>
+                featured</strong>}
               <p style={{ marginTop: `10px` }}
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,

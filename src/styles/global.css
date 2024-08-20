@@ -1,16 +1,34 @@
+/** CSS **/
+:root {
+  --cap-height: calc(1rem * 12.5 / 16);
+  --cap-ratio: calc(1 / 0.698);
+
+  --gap: var(--cap-height);
+  --font-smaller: calc(var(--cap-height) * 11 / 12 * var(--cap-ratio));
+  --font-small: calc(var(--cap-height) * 10 / 12 * var(--cap-ratio));
+  --width: 575px;
+  --border: 1.5px;
+  --radius: calc(var(--cap-height) / 3);
+  --gray-text: rgba(0, 0, 0, 0.4);
+  --gray-line: rgba(0, 0, 0, 0.2);
+  --gray-bg: rgba(0, 0, 0, 0.06);
+  --text: #000;
+}
+
+
 html,
 body {
- font-family: 'IBM Plex Mono', monospace;
- font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+ font-family: 'IBM Plex Sans', sans-serif;
+ font-feature-settings: "kern" 1,"liga" 1,"calt" 1;
 }
 
 
 @font-face {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/IBMPlexMono-Regular.woff2) format('woff2');
+  src: url(/fonts/IBMPlexSans-Regular.woff2) format('woff2');
 }
 
 a {
@@ -18,6 +36,6 @@ a {
 }
 
 body {
-  background-color: #ffffff;
-  color: black;
+  background-color: #FDDB29; 
+  color: var(--text);
 }
