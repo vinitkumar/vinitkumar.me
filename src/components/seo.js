@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title }) {
+function Seo({ description = ``, lang = `en` , meta = [], title }) {
   const data = useStaticQuery(graphql`{
   avatar: file(absolutePath: {regex: "/blog.jpg/"}) {
     childImageSharp {
@@ -29,7 +29,6 @@ function Seo({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || data.site.siteMetadata.description
-  console.log(data)
   return (
     <Helmet
       htmlAttributes={{
@@ -79,11 +78,6 @@ function Seo({ description, lang, meta, title }) {
   );
 }
 
-Seo.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
 
 Seo.propTypes = {
   description: PropTypes.string,
