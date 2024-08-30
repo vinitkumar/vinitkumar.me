@@ -1,7 +1,7 @@
 ---
 title: Why Asking For Help Is A Crucial Skill
-date: "2024-06-17"
-description: ""
+date: "2024-08-30"
+description: "Ask for Help, Don't be Shy, It's A Good Thing!"
 ---
 
 If you ever worked as a software engineer, chances are you must have gotten stuck in a problem that
