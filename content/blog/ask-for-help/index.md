@@ -18,8 +18,7 @@ Here are some of my suggestions based on my personal experiences working in earl
 
 Why is this such a great advice? Let me break it down for you.
 
-- Asking for help early on basically limits the amount of time that could be wasted because you are trying to 
-figure out something for which you don't have complete context/background knowledge. If you have more experience folks at work, they can always show you a correct path and you can then follow their advise and solve it with a much higher probability than earlier.
+- Asking for help early on basically limits the amount of time that could be wasted because you are trying to figure out something for which you don't have complete context/background knowledge. If you have more experience folks at work, they can always show you a correct path and you can then follow their advise and solve it with a much higher probability than earlier.
 
 - On the contrary if you don't ask for help and only ask the team sometime/some days later, you also put them under pressure as someone else needs to do that task in place of you abiet with more time pressure.
 
@@ -33,7 +32,7 @@ figure out something for which you don't have complete context/background knowle
 
 - Another important thing to note here is that once should try not to ask for a same advice two times. Let me explain:
 
-Say you had a docker issue, and you ask your senior for help and they helped and solved your problem. It's your duty to make a note/video recording of the help, so that if you face that problem once again, you can solve it on your own next time. This saves time for everyone involved. Anyone will get annoyed if you get stuck with same problem and don't take care to take notes of the solution and keep coming back with the same problem. So making notes of the solution is great approach and it shows how much you respect the others time. 
+> Say you had a docker issue, and you ask your senior for help and they helped and solved your problem. It's your duty to make a note/video recording of the help, so that if you face that problem once again, you can solve it on your own next time. This saves time for everyone involved. Anyone will get annoyed if you get stuck with same problem and don't take care to take notes of the solution and keep coming back with the same problem. So making notes of the solution is great approach and it shows how much you respect the others time. 
 
 
 Hope these tips would help you become a better developer and an asset to the team.
