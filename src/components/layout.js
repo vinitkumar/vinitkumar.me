@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     --text: #000;
   }
   body {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Atkinson', sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
     font-size: calc(var(--cap-height) * var(--cap-ratio));
     font-feature-settings: "kern" 1,"liga" 1,"calt" 1;
@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
     font-variant-ligatures: none;
   }
   :not(pre) > code[class*="language-"] {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Atkinson', sans-serif;
     background: rgba(0, 0, 0, 0.08);
     color: rbga(0, 0, 0, 1);
   }
