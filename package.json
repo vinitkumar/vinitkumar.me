@@ -37,11 +37,6 @@
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.20",
     "styled-components": "^5.3.6",
-    "typeface-eb-garamond": "^1.1.13",
-    "typeface-lora": "^1.1.13",
-    "typeface-merriweather": "^1.1.13",
-    "typeface-montserrat": "^1.1.13",
-    "typeface-space-mono": "^1.1.13",
     "typography": "^0.16.24",
     "typography-theme-funston": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
