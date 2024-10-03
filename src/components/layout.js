@@ -40,11 +40,11 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     border-bottom: var(--border) solid var(--gray-line);
   }
-  .btn-action { text-decoration: none; background: var(--gray-bg); border: none; padding: 0px 7px; display: inline-block; border-radius: 4px; }
+  .btn-action { text-decoration: none; background: var(--gray-bg); border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
   .btn-action:hover { background: rgba(0,0,0,0.2); }
   h1, h2, h3, h4, h4 {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: normal;
+      font-family: 'Atkinson', sans-serif;
+      font-weight: normal;
   }
   pre {
     font-variant-ligatures: none;
@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
   :not(pre) > code[class*="language-"] {
     font-family: 'Atkinson', sans-serif;
     background: rgba(0, 0, 0, 0.08);
-    color: rbga(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 1);
   }
   pre[class*="language-"],
   :not(pre) > code[class*="language-"] {
@@ -64,6 +64,78 @@ const GlobalStyle = createGlobalStyle`
   pre[class*="language-"] > code {
     font-family: 'IBM Plex Sans', sans-serif;
     background: none;
+  }
+  .recommendations-container {
+    padding: 20px 20px 20px 0; 
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .heading {
+    text-align: left;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .recommendation-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .recommendation-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    background-color: var(--gray-bg);
+    color: inherit;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 15px;
+  }
+
+  .info {
+    flex-grow: 1;
+  }
+
+  .name {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .job-title {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .recommendation-text {
+    font-size: 1rem;
+    margin: 15px 0;
+  }
+
+  .creation-date {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: right;
   }
 `;
 

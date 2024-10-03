@@ -22,8 +22,15 @@ const Bio = () => {
       }}
     >
       <p>
-        I’m a <Link to="/about" className="btn-action">Software Engineer</Link> passionate about solving problems and pushing tech boundaries. When I’m not coding, I enjoy reading, listening to music, appreciating art, and having a good cup of coffee. Check out my <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" className="btn-action" rel="noopener noreferrer">latest resume</a> and <a target="_blank" rel="noopener noreferrer" className="btn-action" href="https://github.com/vinitkumar">Github profile</a>, and I hope you enjoy reading my essays.
-      </p>
+        I’m a <Link to="/about" className="btn-action">Software Engineer</Link> passionate about solving problems and pushing tech boundaries.
+        I love reading, listening/playing music, appreciating/making art, and enjoying a good cup of coffee. I hope you enjoy reading my essays.
+        </p>
+      <p>
+        Here are some <Link className={"btn-action"} to="/recommendations">recommendations</Link> from my current
+        and past colleagues. Check out my
+        <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" className="btn-action" rel="noopener noreferrer">latest resume</a> and
+        <a target="_blank" rel="noopener noreferrer" className="btn-action" href="https://github.com/vinitkumar">Github profile</a>
+.      </p>
       <p>
         You can connect with me on twitter at <a href="https://twitter.com/vinitkme" target="_blank" className="btn-action"
 rel="noopener noreferrer">@vinitkme.</a> or drop me an email at <a href="mailto:mail@vinitkumar.me" className="btn-action">mail@vinitkumar.me</a>
