@@ -4,6 +4,24 @@ import Layout from "../components/layout"
 
 const recommendations = [
   {
+    "firstName": "Eric",
+    "lastName": "de Haan",
+    "Company": "",
+    "jobTitle": "Back-end Developer",
+    "text": "I had the pleasure of working with Vinit during his time at our company. Although we worked on different projects, his passion and adaptability is seen by anyone. He's a skilled cross-platform engineer with a curiosity for new technologies. I remember his quick dive into Go-lang as one example of how he picked up challenges. He has a great technical mind and consistently demonstrates that. He would be an asset to any team looking for someone who has the technical expertise and the drive to innovate. He gets the work done.",
+    "creationDate": "10/10/24",
+    "status": "VISIBLE"
+  },
+  {
+    "firstName": "Anand",
+    "lastName": "Sabale",
+    "Company": "SageOne Investment Managers LLP",
+    "jobTitle": "Chief Quant Strategist",
+    "text": "Vinit excels in Python, Django, and SQL database technologies, consistently delivering high-quality solutions. His technical acumen, particularly in full-stack development, has been instrumental in streamlining our project workflows. Vinit's problem-solving skills and ability to optimize complex systems have significantly enhanced our project's efficiency. His dedication to continuous learning and adaptability make him an invaluable asset to any technical team.",
+    "creationDate": "10/08/24",
+    "status": "VISIBLE"
+  },
+  {
     "firstName": "Ruben",
     "lastName": "Stolk",
     "Company": "Capptions",
