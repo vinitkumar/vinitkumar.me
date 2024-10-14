@@ -2,6 +2,7 @@
 title: An Incomplete List Of Programming Heroes I admire
 date: "2020-01-23"
 featured: true
+type: "blog"
 ---
 
 Everyone has their heroes. Even programmers have their heroes. This is
@@ -63,6 +64,3 @@ Python has been the key point in my life. It has provided me with a respectable 
 - [Remy Sharp](https://twitter.com/rem)
 
 Remy is an awesome British programmer and an all-around great guy. He runs his own company and has been one of most influential JavaScript programmers. He writes useful tools and services (like nodemon, jsbin and gives it all for free). His livestreams are also informative and there is a lot you can learn from watching him code and debug. I give him credit for a lot of my JS knowledge. I have been following and learning from him a lot from the start of my professional programming journey since(2012) and remember him using Chrome dev tools as an editor for development. He is also a family man and is a great chap to look up to.
-
-
-

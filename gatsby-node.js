@@ -1,57 +1,65 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  return graphql(
-    `{
-  allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
+  const blogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
+  const tilPostTemplate = path.resolve(`./src/templates/til-post.js`)
+
+  const result = await graphql(`
+    {
+      allMarkdownRemark(sort: {frontmatter: {date: DESC}}, limit: 1000) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              type  # Add a "type" field in the frontmatter of your markdown files to differentiate between "blog" and "til"
+            }
+          }
         }
       }
     }
+  `)
+
+  if (result.errors) {
+    throw result.errors
   }
-}`
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
-    }
 
-    // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges
+  // Create pages for blog posts and TIL posts.
+  const posts = result.data.allMarkdownRemark.edges
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
 
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
+    const template = post.node.frontmatter.type === "til" ? tilPostTemplate : blogPostTemplate
+
+    createPage({
+      path: post.node.fields.slug,
+      component: template,
+      context: {
+        slug: post.node.fields.slug,
+        previous,
+        next,
+      },
     })
-
-    return null
-  });
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const basePath = node.fileAbsolutePath.includes("/til/")
+      ? "til"
+      : "blog"  // Differentiating between TIL and blog posts based on the folder structure
+
+    const value = createFilePath({ node, getNode, basePath: `content/${basePath}` })
+    
     createNodeField({
       name: `slug`,
       node,

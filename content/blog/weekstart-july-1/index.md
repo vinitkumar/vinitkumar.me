@@ -2,6 +2,7 @@
 title: New Week Start
 date: "2024-07-01"
 description: "Plan for the new week"
+type: "blog"
 ---
 
 Starting a new work week today. It's exciting to start the week with a bang. I have a lot of things to do this week. I have to finish the work on the new feature that I have been working on for the past 2 weeks.

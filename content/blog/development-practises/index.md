@@ -2,6 +2,7 @@
 title: A Somewhat Sane Guide for Software Development
 date: "2020-02-06"
 featured: true
+type: "blog"
 ---
 
 I have been writing code professionally for around 8 years now. In this period, I have acquired some knowledge and formed some opinions on how software should be written and what practices to follow.

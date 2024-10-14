@@ -6,6 +6,7 @@ category: articles
 tags: react django
 comments: false
 date: 2018-05-24
+type: "blog"
 ---
 
 React is one of the most useful frontend library out there. At Socialschools, we use React to render some content using our API from App server. It has been in production since June last year and it is really amazing building neat stuff using both React and djangoCMS.
@@ -153,5 +154,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 Now, you can just compile your React app and change the files in your template for djangoCMS app and it would not have disappearing content during frontend editing.
-
-

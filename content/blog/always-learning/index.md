@@ -2,6 +2,7 @@
 title: Learning is Important
 date: "2024-06-17"
 description: ""
+type: "blog"
 ---
 
 I have been in a bit of stagnancy these days. Things has not been smooth, health has been not that great either. My mental health health has been a bit off too.

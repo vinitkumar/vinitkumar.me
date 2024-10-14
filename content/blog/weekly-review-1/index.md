@@ -2,6 +2,7 @@
 title: Weekly Review (24-28 June 2024)
 date: "2024-06-28"
 description: "Just a log of how the week went"
+type: "blog"
 ---
 
 I have been struggling fairly with the blog. I don't write that often. I love writing and reading, but lately, I have not been to do either.

@@ -1,6 +1,7 @@
 ---
 title: How To Handle Large Lists Or QuerySets In Python
 date: "2022-02-24"
+type: "blog"
 ---
 
 This is a good technique for managing memory when working with large lists or QuerySets. However, there are a few changes that could make this code more effective.

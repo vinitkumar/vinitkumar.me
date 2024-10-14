@@ -1,6 +1,7 @@
 ---
 title: Fire in my belly
 date: "2024-05-10"
+type: "blog"
 ---
 
 I have a fire in my belly. I am ready to take on new challenges.

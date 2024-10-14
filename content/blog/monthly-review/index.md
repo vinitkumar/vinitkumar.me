@@ -3,6 +3,7 @@ title: Monthly Review
 date: "2024-08-13"
 featured: true
 description: "This past month had its ups and downs. We returned to a more structured workflow at work, and my wife and I kept up our walking routine. We need to improve our sleep and watch our spending. I’m working on motivation, improving my guitar skills, and aiming to read more while cutting down on social media."
+type: "blog"
 ---
 
 This past month has been quite interesting. Work-wise, it was decent—some good moments and some not-so-great ones. We switched back to a more structured way of working after trying out something new. While many people might dislike Scrum for good reasons (like all the meetings), it does bring some order to the chaos. The alternative we tried was even messier.

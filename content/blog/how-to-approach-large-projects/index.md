@@ -2,6 +2,7 @@
 title: Notes on "My Approach to Building Large Technical Projects" by Mitchell Hashimoto
 date: "2023-06-02"
 description: "Mitchell Hashimoto, co-founder of HashiCorp, shares insights on [building large technical projects](https://mitchellh.com/writing/building-large-technical-projects). Key tips include breaking tasks into manageable chunks, prioritizing real results, starting with feasible sub-projects, employing automated testing, showcasing regular demos, avoiding perfectionism initially, building for personal needs, and embracing incremental improvements for sustained progress."
+type: "blog"
 ---
 
 Mitchell Hashimoto is one programmer I really admire and he has been insanely productive
@@ -30,4 +31,3 @@ tips are something we can incorportate in our daily routine.
 7. Build for yourself initially: When working on personal projects, prioritize solving problems or building functionality that you personally need. By addressing your own needs and experiences, you'll likely stay more motivated and engaged in the development process. This also increases the likelihood of creating a useful product for others.
 
 8. Incremental improvements and iterations: After reaching a demo stage, don't stop there. Continuously iterate on the different components of your project, addressing areas that need improvement and adding new features gradually. This iterative process helps you refine and enhance your work over time.
-

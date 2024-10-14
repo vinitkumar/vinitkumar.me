@@ -2,6 +2,7 @@
 title: "Fix Slow Shell ZSH"
 date: "2024-07-02"
 description: "How I found the slowness in my shell and fixed it"
+type: "blog"
 ---
 
 Lately, my shell (zsh) feels slow to use. Even booting it for the first time feels like
