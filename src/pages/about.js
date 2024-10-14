@@ -52,6 +52,9 @@ const AboutIndex  = (props) => {
          <li>In addition to my backend expertise, I possess extensive frontend proficiency, including 7 years of React experience and over a decade of mastery in JavaScript and related technologies. This comprehensive skill set enables me to seamlessly navigate complex codebases while collaborating effectively with diverse stakeholders.</li>
         <li>I excel in optimizing performance and enhancing the security of services, consistently delivering top-tier results. </li>
         <li>As a <a href="https://github.com/orgs/django-cms/teams/core-team" target="_blank" rel="noopener noreferrer">Core Developer at DjangoCMS</a>, the industry's most popular Django-based CMS, I have gained invaluable insights and refined my expertise in line with industry best practices.</li>
+        <li>
+          I am also invited as an <a href="https://www.djangoproject.com/foundation/individual-members/" target="_blank" rel="noopener noreferrer">Individual Member</a> with Django Software Foundation.
+  </li>
 
         <li>Moreover, I am well-versed in various cloud platforms, such as AWS, GCP, DigitalOcean, and Azure. Leveraging these powerful platforms, I am adept at deploying and managing robust, scalable solutions that meet the highest standards of performance and reliability.</li>
 
