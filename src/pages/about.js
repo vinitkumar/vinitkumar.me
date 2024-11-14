@@ -41,7 +41,7 @@ const AboutIndex  = (props) => {
       }}
     />
       <p>
-        I am currently employed as a Principal Engineer working for [ScaleFusion)(https://scalefusion.com).
+        I am currently employed as a Principal Engineer working for [ScaleFusion](https://scalefusion.com).
       </p>
 
        <p>
