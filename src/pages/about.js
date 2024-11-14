@@ -41,12 +41,13 @@ const AboutIndex  = (props) => {
       }}
     />
       <p>
-       I am an accomplished Staff Software Engineer and Team Leader with 11 years of experience specializing in Django and Python.
+        I am currently employed as a Principal Engineer working for [ScaleFusion)(https://scalefusion.com).
       </p>
 
        <p>
         <ul>
         <li>
+          I have 11 years of experience specializing in Django and Python.
           I have successfully built and delivered exceptional products and services throughout my career. Notably, I have led the architecture and development of a <a href="https://www.divio.com/case-studies/social-schools-divio-transformation/" target="_blank" rel="noopener noreferrer">cutting-edge Multi-tenant CMS</a>, catering to an extensive network of over 3k websites. This robust CMS is designed to handle a substantial volume of multi-million monthly requests with efficiency and scalability at its core.</li>
 
          <li>In addition to my backend expertise, I possess extensive frontend proficiency, including 7 years of React experience and over a decade of mastery in JavaScript and related technologies. This comprehensive skill set enables me to seamlessly navigate complex codebases while collaborating effectively with diverse stakeholders.</li>
