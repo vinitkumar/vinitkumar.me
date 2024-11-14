@@ -22,7 +22,7 @@ const Bio = () => {
       }}
     >
       <p>
-        I’m a <Link to="/about" className="btn-action">Software Engineer</Link> passionate about solving problems and pushing tech boundaries.
+        I’m a <Link to="/about" className="btn-action">Principal Engineer</Link> and <Link to="https://www.django-cms.org/en/blog/2024/11/07/welcoming-vinit-kumar-as-the-newest-django-cms-fellow/">Django CMS Fellow</Link>  passionate about solving meaningful problems and pushing tech boundaries.
         I love reading, listening/playing music, appreciating/making art, and enjoying a good cup of coffee. I hope you enjoy reading my essays.
         </p>
       <p>
