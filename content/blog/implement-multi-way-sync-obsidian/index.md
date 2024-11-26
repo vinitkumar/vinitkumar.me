@@ -76,6 +76,13 @@ Go to the notes directory and disable signing commits just for this repo.
 [commit]
 	gpgsign = false
 ```
+Also, add `.obsidian` to `.gitignore` so that you don't get merge conflicts between multiple machines.
+All we care about notes files, and not the Obsidian configurations.
+
+```
+.obsidian/*
+```
+
 
 I am sure it could be done, but was just not worth the time.
 
