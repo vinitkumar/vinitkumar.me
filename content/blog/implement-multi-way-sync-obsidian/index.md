@@ -42,12 +42,9 @@ cd "$REPO_PATH" || exit
 
 git pull origin HEAD
 git push origin HEAD
-if ! git diff-index --quiet HEAD --; then
-    git add .
-    git commit -m "Auto commit and push on $(date '+%Y-%m-%d %H:%M:%S')"
-    git push origin HEAD
-fi
-
+git add .
+git commit -m "Auto commit and push on $(date '+%Y-%m-%d %H:%M:%S')"
+git push origin HEAD
 ```
 
 Here is how the crontab looks like, add it by executing this:
