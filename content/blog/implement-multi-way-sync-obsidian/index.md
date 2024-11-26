@@ -67,4 +67,16 @@ Once done, you can also do the same in the other Mac and enjoy a free sync that 
 
 ![full-disk](../../assets/fulldisk.png)
 
+Also, you might want to disable signing commits like this.
+
+Go to the notes directory and disable signing commits just for this repo.
+
+
+```
+[commit]
+	gpgsign = false
+```
+
+I am sure it could be done, but was just not worth the time.
+
 However, if you can afford, I would suggest to buy a paid obsidian subscription for [sync](https://obsidian.md/sync) as it is a genuinely great software.
