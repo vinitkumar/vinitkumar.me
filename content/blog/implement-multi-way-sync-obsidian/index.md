@@ -5,7 +5,7 @@ description: "How I Implement Multi Way Data Sync in Obsidian"
 ---
 
 
-I love making notes in Obsidian. It's truly a Local-First Application. I love that it is free and doesn't keep you content hostage. However, I many multiple Macs and keeping them in sync was becoming an issue. I didn't wanted to use DropBox or Google Drive and thought why not just automated it myself with some line of code.
+I love making notes in Obsidian. It's truly a Local-First Application. I love that it is free and doesn't keep your content hostage. However, I many multiple Macs and keeping them in sync was becoming an issue. I didn't wanted to use DropBox or Google Drive and thought why not just automated it myself with some line of code.
 
 
 We only need few tools to implement:
