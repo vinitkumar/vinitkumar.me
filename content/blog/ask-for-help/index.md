@@ -5,15 +5,15 @@ description: "Ask for Help, Don't be Shy, It's A Good Thing!"
 ---
 
 If you ever worked as a software engineer, chances are you must have gotten stuck in a problem that
-seemed super hard to solve. Also, if you work in sprints like setup, pretty much all your time for the 
-next two weeks is booked already. What usually happens with these tricky issues is that, it would totally 
+seemed super hard to solve. Also, if you work in sprints like setup, pretty much all your time for the
+next two weeks is booked already. What usually happens with these tricky issues is that, it would totally
 derail all your estimates and planning and you would seriously lag behind your tasks and might perform even poorly
 because of the mounting time pressure.
 
 Here are some of my suggestions based on my personal experiences working in early stage startup:
 
-> This one trick was taught by my CEO at the time in 2013 was that if you can't figure out head or tail 
-> of what to do with a problem, give it 30 mins of serious effort and ask for help. 
+> This one trick was taught by my CEO at the time in 2013 was that if you can't figure out head or tail
+> of what to do with a problem, give it 30 mins of serious effort and ask for help.
 
 
 Why is this such a great advice? Let me break it down for you.
@@ -32,7 +32,7 @@ Why is this such a great advice? Let me break it down for you.
 
 - Another important thing to note here is that once should try not to ask for a same advice two times. Let me explain:
 
-> Say you had a docker issue, and you ask your senior for help and they helped and solved your problem. It's your duty to make a note/video recording of the help, so that if you face that problem once again, you can solve it on your own next time. This saves time for everyone involved. Anyone will get annoyed if you get stuck with same problem and don't take care to take notes of the solution and keep coming back with the same problem. So making notes of the solution is great approach and it shows how much you respect the others time. 
+> Say you had a docker issue, and you ask your senior for help and they helped and solved your problem. It's your duty to make a note/video recording of the help, so that if you face that problem once again, you can solve it on your own next time. This saves time for everyone involved. Anyone will get annoyed if you get stuck with same problem and don't take care to take notes of the solution and keep coming back with the same problem. So making notes of the solution is great approach and it shows how much you respect the others time.
 
 
 Hope these tips would help you become a better developer and an asset to the team.
