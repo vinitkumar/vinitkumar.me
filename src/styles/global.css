@@ -21,14 +21,16 @@ body { min-height: 100vh; }
   --gray-text: rgba(0, 0, 0, 0.4);
   --gray-line: rgba(0, 0, 0, 0.2);
   --gray-bg: rgba(0, 0, 0, 0.06);
+  --mint:  #00FFB2;
+  --mintpro: #00E6A1;
   --text: #000;
 }
 
 .about_inner { padding: var(--gap) 25px; border: var(--border) solid var(--gray-line); border-radius: var(--radius); display: flex; flex-direction: column; gap: var(--gap); }
 
 
-.btn-action { text-decoration: none; background: var(--gray-bg); border: none; padding: 0px 7px; display: inline-block; border-radius: 4px; }
-.btn-action:hover { background: rgba(0,0,0,0.2); }
+.btn-action { text-decoration: none; background: var(--mint); border: none; padding: 0px 7px; display: inline-block; border-radius: 4px; }
+.btn-action:hover { background: var(--mintpro);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
 
 html,
 body {

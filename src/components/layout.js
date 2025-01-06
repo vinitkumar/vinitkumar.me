@@ -24,6 +24,8 @@ const GlobalStyle = createGlobalStyle`
     --gray-text: rgba(0, 0, 0, 0.4);
     --gray-line: rgba(0, 0, 0, 0.2);
     --gray-bg: rgba(0, 0, 0, 0.06);
+  --mint:  #00FFB2;
+  --mintpro: #00E6A1;
     --text: #000;
   }
   body {
@@ -40,8 +42,8 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     border-bottom: var(--border) solid var(--gray-line);
   }
-  .btn-action { text-decoration: none; background: var(--gray-bg); border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
-  .btn-action:hover { background: rgba(0,0,0,0.2); }
+  .btn-action { text-decoration: none; background: var(--mint); border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
+  .btn-action:hover { background: var(--mintpro);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
   h1, h2, h3, h4, h4 {
       font-family: 'Atkinson', sans-serif;
       font-weight: normal;
@@ -66,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
     background: none;
   }
   .recommendations-container {
-    padding: 20px 20px 20px 0; 
+    padding: 20px 20px 20px 0;
     max-width: 1200px;
     margin: 0 auto;
   }
