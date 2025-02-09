@@ -22,7 +22,7 @@ const Bio = () => {
       }}
     >
       <p>
-        I’m a <Link to="/about" className="btn-action">Principal Engineer</Link> at <Link className= "btn-action" to="https://scalefusion.com">Scalefusion</Link> and <Link to="https://www.django-cms.org/en/blog/2024/11/07/welcoming-vinit-kumar-as-the-newest-django-cms-fellow/" className="btn-action">Django CMS Fellow</Link> passionate
+        I’m a <Link to="/about" className="btn-action">Principal Engineer</Link> at <a className= "btn-action" href="https://scalefusion.com">Scalefusion</a> and <a href="https://www.django-cms.org/en/blog/2024/11/07/welcoming-vinit-kumar-as-the-newest-django-cms-fellow/" className="btn-action">Django CMS Fellow</a> passionate
         about solving meaningful problems and pushing tech boundaries. I love reading, listening/playing music, appreciating/making art, and enjoying a good cup of coffee.
       </p>
       <p>

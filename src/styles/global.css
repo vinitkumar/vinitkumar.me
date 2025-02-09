@@ -34,20 +34,45 @@ body { min-height: 100vh; }
 
 html,
 body {
- font-family: 'Inconsolata', sans-serif;
- font-feature-settings: "kern" 1,"liga" 1,"calt" 1;
- font-size: 16px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  height: 100%;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
 @font-face {
-  font-family: "Inconsolata";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(/fonts/Inconsolata-Regular.woff2) format('woff2');
+  font-family: IBM Plex Sans;
+  src: url(/fonts/IBMPlexSans-Regular-Latin1.woff2) format("woff2");
 }
-
+@font-face {
+  font-family: IBM Plex Sans;
+  font-style: italic;
+  src: url(/fonts/IBMPlexSans-Italic-Latin1.woff2) format("woff2");
+}
+@font-face {
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  src: url(/fonts/IBMPlexSans-SemiBold-Latin1.woff2) format("woff2");
+}
+@font-face {
+  font-family: Inconsolata-lgc-ep;
+  font-weight: 400;
+  src: url(/fonts/Inconsolata-lgc-ep.woff2) format("woff2");
+}
+@font-face {
+  font-family: Inconsolata-lgc-ep;
+  font-weight: 700;
+  src: url(/fonts/Inconsolata-lgc-bold-ep.woff2) format("woff2");
+}
 
 a {
   color: inherit;
@@ -58,4 +83,15 @@ a {
 body {
   background-color: white;
   color: var(--text);
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Inconsolata-lgc-ep, Consolas, Monaco, monospace;
+}
+code,
+pre {
+  white-space: pre-wrap;
 }

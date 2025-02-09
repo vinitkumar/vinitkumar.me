@@ -28,17 +28,41 @@ const GlobalStyle = createGlobalStyle`
   --mintpro: #00E6A1;
     --text: #000;
   }
+  html,
   body {
-    font-family: 'Inconsolata', sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-    font-size: 16px;
-    font-optical-sizing: auto;
-    font-feature-settings: "kern" 1,"liga" 1,"calt" 1;
-    text-rendering: optimizeLegibility;
-    font-smoothing: antialiased;
-    font-variation-settings: "wdth" 100;
-    -webkit-font-smoothing: antialiased;
+    font-family: IBM\Plex\Sans, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 100%;
+    line-height: 1.5;
   }
+
+
+  @font-face {
+    font-family: IBM Plex Sans;
+    src: url(/fonts/IBMPlexSans-Regular-Latin1.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: IBM Plex Sans;
+    font-style: italic;
+    src: url(/fonts/IBMPlexSans-Italic-Latin1.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: IBM Plex Sans;
+    font-weight: 600;
+    src: url(/fonts/IBMPlexSans-SemiBold-Latin1.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Inconsolata-lgc-ep;
+    font-weight: 400;
+    src: url(/fonts/Inconsolata-lgc-ep.woff2) format("woff2");
+  }
+  @font-face {
+    font-family: Inconsolata-lgc-ep;
+    font-weight: 700;
+    src: url(/fonts/Inconsolata-lgc-bold-ep.woff2) format("woff2");
+  }
+
   a {
     color: inherit;
     text-decoration: none;
@@ -47,14 +71,26 @@ const GlobalStyle = createGlobalStyle`
   .btn-action { text-decoration: none; background: var(--mint); border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
   .btn-action:hover { background: var(--mintpro);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
   h1, h2, h3, h4, h4 {
-      font-family: 'Inconsolata', sans-serif;
+      font-family: 'IBM Plex Sans', sans-serif;
       font-weight: normal;
   }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: Inconsolata-lgc-ep, Consolas, Monaco, monospace;
+  }
+  code,
+  pre {
+    white-space: pre-wrap;
+  }
+
   pre {
     font-variant-ligatures: none;
   }
   :not(pre) > code[class*="language-"] {
-    font-family: 'Inconsolata', sans-serif;
+    font-family: Inconsolata-lgc-ep, Consolas, Monaco, monospace;
     background: rgba(0, 0, 0, 0.08);
     color: rgba(0, 0, 0, 1);
   }
@@ -66,7 +102,7 @@ const GlobalStyle = createGlobalStyle`
     background: rgba(0, 0, 0, 0.02);
   }
   pre[class*="language-"] > code {
-    font-family: "Inconsolata", serif;
+    font-family: Inconsolata-lgc-ep, Consolas, Monaco, monospace;
     background: none;
   }
   .recommendations-container {

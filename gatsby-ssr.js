@@ -4,11 +4,11 @@ export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/Inconsolata-Regular.woff2"
+      href="/fonts/IBMPlexSans-Regular-Latin1.woff2"
       as="font"
       type="font/woff2"
       crossOrigin="anonymous"
-      key="inconsolata"
+      key="ibmplexsans-regular"
     />,
   ])
 }
