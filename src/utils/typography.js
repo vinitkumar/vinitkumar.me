@@ -5,8 +5,8 @@ funstonTheme.baseFontSize = '22px'
 const typography = new Typography({
     baseFontSize: "15px",
     baseLineHeight: 1.4,
-    headerFontFamily: ['Atkinson', 'sans-serif'],
-    bodyFontFamily: ['Atkinson', 'sans-serif'],
+    headerFontFamily: ['Inconsolata', 'sans-serif'],
+    bodyFontFamily: ['Inconsolata', 'sans-serif'],
   }
 )
 // Hot reload typography in development.

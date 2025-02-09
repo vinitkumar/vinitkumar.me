@@ -29,12 +29,14 @@ const GlobalStyle = createGlobalStyle`
     --text: #000;
   }
   body {
-    font-family: 'Atkinson', sans-serif;
+    font-family: 'Inconsolata', sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-    font-size: calc(var(--cap-height) * var(--cap-ratio));
+    font-size: 16px;
+    font-optical-sizing: auto;
     font-feature-settings: "kern" 1,"liga" 1,"calt" 1;
     text-rendering: optimizeLegibility;
     font-smoothing: antialiased;
+    font-variation-settings: "wdth" 100;
     -webkit-font-smoothing: antialiased;
   }
   a {
@@ -45,14 +47,14 @@ const GlobalStyle = createGlobalStyle`
   .btn-action { text-decoration: none; background: var(--mint); border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
   .btn-action:hover { background: var(--mintpro);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
   h1, h2, h3, h4, h4 {
-      font-family: 'Atkinson', sans-serif;
+      font-family: 'Inconsolata', sans-serif;
       font-weight: normal;
   }
   pre {
     font-variant-ligatures: none;
   }
   :not(pre) > code[class*="language-"] {
-    font-family: 'Atkinson', sans-serif;
+    font-family: 'Inconsolata', sans-serif;
     background: rgba(0, 0, 0, 0.08);
     color: rgba(0, 0, 0, 1);
   }
@@ -64,7 +66,7 @@ const GlobalStyle = createGlobalStyle`
     background: rgba(0, 0, 0, 0.02);
   }
   pre[class*="language-"] > code {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: "Inconsolata", serif;
     background: none;
   }
   .recommendations-container {
