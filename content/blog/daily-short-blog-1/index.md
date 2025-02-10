@@ -4,6 +4,8 @@ date: "2025-02-10"
 description: "Daily Blog About My Thoughts"
 ---
 
+![daily-blog-1](../../assets/blog1.png)
+
 Writing blog is something that is close to my heart and I thoroughly enjoy the process. It
 also calms down the chaos inside me. I have decided to write one every single day. It doesn't have to
 be long, just one paragraph will do as well as long as I am being honest.
