@@ -1,0 +1,38 @@
+name: Technical Blog Writing Style Guide
+description: Enforces clear, engaging technical writing with active voice and confident tone
+rules:
+  - description: "Use active voice and direct language"
+    pattern: "was|were|being|been|is|are"
+    message: "Consider using active voice for stronger impact. Rewrite the sentence to put the subject first."
+
+  - description: "Avoid weak qualifiers"
+    pattern: "sort of|kind of|maybe|probably|somewhat|quite|rather|fairly"
+    message: "Use more definitive language to sound more confident."
+
+  - description: "Technical clarity"
+    pattern: "thing|stuff|it|this|that"
+    message: "Be specific about technical concepts and references."
+
+  - description: "Paragraph length"
+    pattern: "(?s).{800,}"
+    message: "Consider breaking long paragraphs into smaller chunks for better readability."
+
+  - description: "Sentence structure"
+    pattern: "(?:[^.!?]+[.!?]){3,}\\s*(?=[A-Z])"
+    message: "Vary sentence length for better rhythm. Mix short and medium-length sentences."
+
+suggestions:
+  - "Start paragraphs with strong topic sentences"
+  - "Use concrete examples to illustrate technical concepts"
+  - "Include transitions between paragraphs for smooth flow"
+  - "End sections with clear takeaways or conclusions"
+  - "Use bullet points or numbered lists for sequential steps"
+  - "Incorporate relevant code snippets when discussing technical implementations"
+  - "Define technical terms on first use"
+  - "Use present tense for technical explanations"
+
+style:
+  tone: "confident and authoritative"
+  voice: "active"
+  level: "intermediate to advanced"
+  audience: "technical professionals and developers" 
