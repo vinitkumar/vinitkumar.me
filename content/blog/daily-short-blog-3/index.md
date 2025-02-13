@@ -1,6 +1,6 @@
 ---
 title: Daily Blog Number 3
-date: "2025-02-13"
+date: "2025-02-12"
 description: "Daily Blog About My Thoughts"
 ---
 
