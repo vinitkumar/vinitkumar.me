@@ -72,7 +72,7 @@ const GlobalStyle = createGlobalStyle`
   .btn-action:hover { background: var(--mintpro);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
   h1, h2, h3, h4, h4 {
       font-family: 'IBM Plex Sans', sans-serif;
-      font-weight: normal;
+      font-weight: 300;
   }
 
   code,
