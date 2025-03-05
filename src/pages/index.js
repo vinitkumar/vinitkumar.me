@@ -21,6 +21,7 @@ class BlogIndex extends React.Component {
         <Helmet>
           <meta name="google-site-verification" content="aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI" />
           <meta name="msvalidate.01" content="9BD6B4DCA2B9F88A132B7DDCA1578919" />
+          <meta name="fediverse:creator" content="@vinitkme@fosstodon.org">
         </Helmet>
         <Seo title="Home" />
         <Bio />
