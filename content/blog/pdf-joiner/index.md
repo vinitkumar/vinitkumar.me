@@ -20,6 +20,24 @@ Then I discovered something interesting - macOS actually has a built-in PDF join
 `/System/Library/Automator/Combine PDF Pages.action/Contents/MacOS/join`. What my utility does is that it adds a nice interface on top of it and you can just it like this:
 
 
+## Source Code
+
+You can browse the source code here: https://github.com/vinitkumar/pdf-joiner
+
+## Installation
+
+You can install it directly from Github Release be following the above steps. This assumes you have wget installed
+on your local machine, if not please run `brew install wget`
+
+```
+cd /tmp
+wget https://github.com/vinitkumar/pdf-joiner/releases/download/1.0.0/pdf-joiner
+sudo chmod u+x pdf-joiner
+sudo mv pdf-joiner /usr/local/bin
+```
+
+This should ensure that it is downloaded and is in path, so that you can run the commands below.
+
 Join two PDF files:
 ```
 pdf-joiner file1.pdf file2.pdf
