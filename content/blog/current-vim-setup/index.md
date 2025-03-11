@@ -4,9 +4,10 @@ date: "2025-03-11"
 description: "A detailed look at my Vim configuration for both terminal and GUI environments"
 ---
 
-# My Current Vim Setup in Terminal and GUI
-
 As a long-time Vim user, I've carefully curated my Vim configuration to create a powerful and efficient development environment. My setup works seamlessly in both terminal Vim and GVim (GUI Vim), providing flexibility depending on my needs. Let me walk you through the key components and explain why I chose them.
+
+
+![vim-macvim-setup](../../assets/mvim-current.png)
 
 ## Essential Plugins
 
