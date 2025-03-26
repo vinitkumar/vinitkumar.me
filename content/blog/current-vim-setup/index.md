@@ -246,4 +246,6 @@ Here is my current Neovim Config: https://github.com/vinitkumar/nvim/raw/refs/he
 
 Feel free to use it or borrow some parts.
 
-- Fin
+<hr>
+
+Fin
