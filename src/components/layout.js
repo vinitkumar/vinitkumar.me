@@ -30,27 +30,26 @@ const GlobalStyle = createGlobalStyle`
   }
   html,
   body {
-    font-family: IBM\Plex\Sans, sans-serif;
+    font-family: 'Nebula Sans', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     height: 100%;
     line-height: 1.5;
   }
 
-
   @font-face {
-    font-family: IBM Plex Sans;
-    src: url(/fonts/IBMPlexSans-Regular-Latin1.woff2) format("woff2");
+    font-family: Nebula Sans;
+    src: url(/fonts/NebulaSans-Book.woff2) format("woff2");
   }
   @font-face {
-    font-family: IBM Plex Sans;
+    font-family: Nebula Sans;
     font-style: italic;
-    src: url(/fonts/IBMPlexSans-Italic-Latin1.woff2) format("woff2");
+    src: url(/fonts/NebulaSans-BookItalic.woff2) format("woff2");
   }
   @font-face {
-    font-family: IBM Plex Sans;
+    font-family: Nebula Sans;
     font-weight: 600;
-    src: url(/fonts/IBMPlexSans-SemiBold-Latin1.woff2) format("woff2");
+    src: url(/fonts/NebulaSans-Bold.woff2) format("woff2");
   }
   @font-face {
     font-family: Inconsolata-lgc-ep;
@@ -68,10 +67,10 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     border-bottom: var(--border) solid var(--gray-line);
   }
-  .btn-action { text-decoration: none; background: var(--mint); border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
+  .btn-action { text-decoration: none; background: var(--gray-bg); border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
   .btn-action:hover { background: var(--mintpro);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
   h1, h2, h3, h4, h4 {
-      font-family: 'IBM Plex Sans', sans-serif;
+      font-family: 'Nebula Sans', sans-serif;
       font-weight: 300;
   }
 
