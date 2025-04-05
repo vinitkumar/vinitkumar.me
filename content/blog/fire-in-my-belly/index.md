@@ -1,6 +1,7 @@
 ---
 title: Fire in my belly
 date: "2024-05-10"
+description: "A personal commitment to overcome self-imposed limitations and step out of my comfort zone. This renewed determination focuses on improving self-care, sharing ideas more freely, and making positive changes for myself and my family."
 ---
 
 I have a fire in my belly. I am ready to take on new challenges.

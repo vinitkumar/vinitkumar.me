@@ -67,7 +67,7 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     border-bottom: var(--border) solid var(--gray-line);
   }
-  .btn-action { text-decoration: none; background: var(--gray-bg); border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
+  .btn-action { text-decoration: none; background: yellow; border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
   .btn-action:hover { background: var(--mintpro);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
   h1, h2, h3, h4, h4 {
       font-family: 'Nebula Sans', sans-serif;

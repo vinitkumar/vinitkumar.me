@@ -1,7 +1,7 @@
 ---
 title: Learning is Important
 date: "2024-06-17"
-description: ""
+description: "Reflecting on recent personal challenges and the importance of reading books to maintain mental well-being while working toward self-improvement."
 ---
 
 I have been in a bit of stagnancy these days. Things has not been smooth, health has been not that great either. My mental health health has been a bit off too.

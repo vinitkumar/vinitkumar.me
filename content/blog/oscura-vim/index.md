@@ -1,6 +1,7 @@
 ---
 title: Oscura Vim - My New Favorite Dark Theme
 date: "2025-03-28"
+featured: true
 description: "A comfortable dark theme that's easy on the eyes"
 ---
 

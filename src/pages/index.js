@@ -33,14 +33,17 @@ class BlogIndex extends React.Component {
               <h2
                 style={{
                   marginBottom: rhythm(1 / 4),
+                  fontSize: "2rem",
                 }}
               >
                 <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h2>
-              {node.frontmatter.date} {node.frontmatter.featured && <strong>
-                featured</strong>}
+              <span>
+                {node.frontmatter.date} {node.frontmatter.featured && <strong style={{ color: 'red' }}>
+                  ⭐ featured</strong>}
+              </span>
               <p style={{ marginTop: `10px` }}
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
@@ -62,7 +65,7 @@ export const pageQuery = graphql`{
       title
     }
   }
-  allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+  allMarkdownRemark(sort: [{frontmatter: {featured: ASC}}, {frontmatter: {date: DESC}}]) {
     edges {
       node {
         excerpt(pruneLength: 350)

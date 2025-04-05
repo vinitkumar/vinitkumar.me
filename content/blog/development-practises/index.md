@@ -2,6 +2,7 @@
 title: A Somewhat Sane Guide for Software Development
 date: "2020-02-06"
 featured: true
+description: "A comprehensive guide to software development best practices based on 8 years of professional experience. Covers Git workflows, backend development principles, frontend guidelines, and DevOps considerations with practical examples and commands."
 ---
 
 I have been writing code professionally for around 8 years now. In this period, I have acquired some knowledge and formed some opinions on how software should be written and what practices to follow.

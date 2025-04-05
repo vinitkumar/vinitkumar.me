@@ -2,7 +2,7 @@
 title: Natural Coder
 date: "2025-04-02"
 featured: true
-description: "."
+description: "Returning to coding for enjoyment rather than external validation or pressure. Embracing my natural abilities while avoiding burnout and dopamine-seeking behaviors."
 ---
 
 
