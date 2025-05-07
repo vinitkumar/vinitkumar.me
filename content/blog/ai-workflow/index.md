@@ -1,6 +1,7 @@
 ---
 title: AI Workflow
 date: "2025-05-07"
+featured: true
 description: "How I think I would be using AI in my day to day life"
 ---
 
