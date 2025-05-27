@@ -1,7 +1,7 @@
 ---
 date: 2014-05-18
 layout: post
-title: "How To Get Readonly Mode In Django"
+title: "Implementing Read-Only Access in Django Admin: A Complete Guide"
 description: "Guide to setup readonly mode for some users in Django admin"
 category: articles
 tags: Python Django Django-admin

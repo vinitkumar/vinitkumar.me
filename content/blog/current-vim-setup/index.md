@@ -1,5 +1,5 @@
 ---
-title: My Current Vim Setup in Terminal and GUI
+title: "Professional Vim Configuration: Terminal and GUI Setup for Modern Development"
 date: "2025-03-11"
 description: "A detailed look at my Vim configuration for both terminal and GUI environments"
 ---
@@ -130,6 +130,7 @@ This ensures files are automatically reloaded when changed externally.
 ## Code Intelligence with CoC
 
 The configuration includes comprehensive CoC (Conquer of Completion) settings for modern IDE-like features:
+
 - Code navigation (go to definition, references)
 - Intelligent auto-completion
 - Real-time diagnostics
@@ -230,7 +231,7 @@ The Neovim setup includes sophisticated CoC integration with:
 
 ## Conclusion
 
-This Vim a nd Neovim setup provides a powerful development environment that works seamlessly in both terminal and GUI environments. The configuration focuses on:
+This Vim and Neovim setup provides a powerful development environment that works seamlessly in both terminal and GUI environments. The configuration focuses on:
 - Fast file navigation and search
 - Modern code completion and intelligence
 - Git integration

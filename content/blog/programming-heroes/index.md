@@ -1,5 +1,5 @@
 ---
-title: An Incomplete List Of Programming Heroes I admire
+title: "Influential Programmers: A Personal Tribute to 10 Open Source Leaders"
 date: "2020-01-23"
 featured: true
 description: "A personal tribute to influential programmers who have shaped my career and coding philosophy. From CURL creator Daniel Stenberg to Python's Guido Van Rossum, these talented developers demonstrate excellence in their craft while inspiring others."

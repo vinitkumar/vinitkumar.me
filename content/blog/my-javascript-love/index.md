@@ -1,7 +1,7 @@
 ---
 date: 2013-03-24
 layout: post
-title: "JavaScript is super awesome"
+title: "From Chrome Extensions to Career: My JavaScript Journey"
 description: "Why I love JavaScript so much."
 category: articles
 tags: images

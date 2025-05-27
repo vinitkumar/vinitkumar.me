@@ -1,7 +1,7 @@
 ---
 date: 2014-07-20
 layout: post
-title: "On Writing Good Code"
+title: "7 Essential Practices for Writing Better Code: A Developer's Journey"
 description: "How To Improve Code Quality Over Time"
 tags: code programming self-improvements
 comments: false

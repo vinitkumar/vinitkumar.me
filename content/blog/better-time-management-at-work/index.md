@@ -1,7 +1,7 @@
 ---
 date: 2014-08-16
 layout: post
-title: "Better Time Management At Work"
+title: "Developer's Guide to Time Management: An 8-Hour Workday Breakdown"
 description: "Time Management"
 tags: code programming self-improvements
 comments: false

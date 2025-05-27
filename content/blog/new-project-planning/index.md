@@ -1,7 +1,7 @@
 ---
 date: 2013-04-30
 layout: post
-title: "New projects"
+title: "Best Practices for Managing Open Source Projects on GitHub"
 description: "About new projects"
 category: articles
 tags: project

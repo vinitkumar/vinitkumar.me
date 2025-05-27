@@ -1,7 +1,7 @@
 ---
 date: 2015-04-16
 layout: post
-title: "Clean Up Your Mac From Other Files"
+title: "Advanced Mac Storage Cleanup: Command Line Guide for Power Users"
 description: "How to cleanup Your Mac From Other Files"
 category: articles
 tags: Mac cleanup commandline expert

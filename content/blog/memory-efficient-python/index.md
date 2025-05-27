@@ -1,5 +1,5 @@
 ---
-title: How To Handle Large Lists Or QuerySets In Python
+title: "Python Performance Optimization: Memory-Efficient Collection Handling"
 date: "2022-02-24"
 description: "Practical techniques for optimizing memory usage when working with large data collections in Python. Demonstrates how to implement batch processing for lists and Django QuerySets with improved type hints and efficient iteration methods."
 ---

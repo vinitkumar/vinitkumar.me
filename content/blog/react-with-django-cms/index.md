@@ -1,7 +1,7 @@
 ---
 date: 2018-05-24
 layout: post
-title: "Using React with djangoCMS 3.5.2"
+title: "Integrating React with Django CMS: Solving Content Refresh Challenges"
 description: "How to get react working with latest djangoCMS"
 category: articles
 tags: react Django

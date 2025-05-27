@@ -1,7 +1,7 @@
 ---
 date: 2013-06-15
 layout: post
-title: "What is on my mind?"
+title: "Maximizing Productivity: A Developer's Guide to Time Management and Focus"
 description: "Things I think about"
 category: articles
 tags: life

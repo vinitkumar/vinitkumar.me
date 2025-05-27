@@ -1,7 +1,7 @@
 ---
 date: 2019-01-16
 layout: post
-title: "Converting LaTeX to PDF on macOS"
+title: "Lightweight LaTeX to PDF Conversion on macOS: A Minimal Setup Guide"
 description: "Setup Mac for editing LaTeX"
 category: articles
 tags: latex macos pdf

@@ -1,7 +1,7 @@
 ---
 date: 2013-06-16
 layout: post
-title: "Work Ethics"
+title: "Professional Ethics: 15 Principles for Success in Work and Life"
 description: "Idea work Ethics"
 category: articles
 tags: Work Ethics Life

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tooling Considered Harmful
+title: "The Minimalist Developer: Maximizing Productivity with Fewer Tools"
 tags: programming tooling editors
 date: 2019-03-06 16:30 +0530
 --- 

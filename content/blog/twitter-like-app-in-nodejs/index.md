@@ -1,7 +1,7 @@
 ---
 date: 2013-03-27
 layout: post
-title: "Twitter in NodeJS"
+title: "Building a Twitter Clone with Node.js: A Learning Project"
 description: "Writing a Twitter clone in Node"
 category: articles
 tags: Node Twitter

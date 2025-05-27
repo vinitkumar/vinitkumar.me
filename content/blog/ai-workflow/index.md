@@ -1,5 +1,5 @@
 ---
-title: AI Workflow
+title: "Balancing AI Tools in Development: A Practical Workflow Guide"
 date: "2025-05-07"
 featured: true
 description: "How I think I would be using AI in my day to day life"

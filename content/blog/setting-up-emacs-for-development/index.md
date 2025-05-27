@@ -1,7 +1,7 @@
 ---
 date: 2014-05-04
 layout: post
-title: "Setting Up Emacs for Development"
+title: "Complete Guide to Emacs: Setting Up a Modern Development Environment"
 description: "A small guide to setting up Emacs"
 category: articles
 tags: editors emacs

@@ -1,7 +1,7 @@
 ---
 date: 2013-12-07
 layout: post
-title: "Classes in JS"
+title: "Understanding JavaScript Classes: A Practical Guide to Prototypal Inheritance"
 description: "About new projects"
 category: articles
 tags: coding JavaScript
