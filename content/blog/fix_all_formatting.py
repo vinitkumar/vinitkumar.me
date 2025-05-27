@@ -32,8 +32,8 @@ def fix_formatting_issues(content):
     content = re.sub(r'\n{3,}', '\n\n', content)  # Max 2 consecutive newlines
     
     # Fix URL spacing issues
-    content = re.sub(r'HTTPS://([^\s]+)\s+', r'https://\1', content)
-    content = re.sub(r'HTTP://([^\s]+)\s+', r'http://\1', content)
+    content = re.sub(r'httpS://([^\s]+)\s+', r'https://\1', content)
+    content = re.sub(r'http://([^\s]+)\s+', r'http://\1', content)
     content = re.sub(r'([a-zA-Z0-9])\.\s+([a-zA-Z0-9])', r'\1.\2', content)  # Fix broken URLs
     
     # Fix common word spacing

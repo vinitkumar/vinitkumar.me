@@ -31,6 +31,6 @@ readonly permission on Cars Model would only be able to see the model data in
 Readonly mode. But this is not it. Here is the part where templates are overridden. First of all save and cancel button on buttom needs to go as we don't need
 them. For that, create a new template in templates folder. The templates name is ` change_form. HTML`.
 Hence the full pathname is ` carapp/templates/admin/change_form. HTML`. Copy the content from the default Django template (/admin/change_form. HTML) in Django project
-add replace this content with this gist: <script src="HTTPS://gist. GitHub. com/vinitkumar/48a9cd0c2e35e033659c. JS"></script> This will ensure that the selected user with this readonly only permissions won't be able
+add replace this content with this gist: <script src="https://gist. GitHub. com/vinitkumar/48a9cd0c2e35e033659c. JS"></script> This will ensure that the selected user with this readonly only permissions won't be able
 get the submit button on his admin page. Now, you have a fully functioning Django Admin with readonly mode. The main effort was to make it
 very easy to use and ensure that this feature could run across future versions. Hope this post help anyone else who has to implement something similar. 

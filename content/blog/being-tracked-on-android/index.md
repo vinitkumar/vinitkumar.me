@@ -21,7 +21,7 @@ cat ~/gpscord. log > ~/gps. csv
 This csv file is the basis we use to find that location the GPS log was taken. Prepare virtualenv and install googlemaps: ```sh
 mkvirtualenv maps
 pip install -U googlemaps
-``` Also, follow the clear instructions at HTTPS://GitHub. com/googlemaps/google-maps-services-Python#API-keys to find your API key. Here is the Python file `track. py` that would find what these coordinate means and how they related to your daily life and place you are frequent to. ```Python
+``` Also, follow the clear instructions at https://GitHub. com/googlemaps/google-maps-services-Python#API-keys to find your API key. Here is the Python file `track. py` that would find what these coordinate means and how they related to your daily life and place you are frequent to. ```Python
 #! /usr/bin/Python
 import googlemaps
 import csv gmaps_client = googlemaps. Client(key='<Your Server Key Here>') with open('~/gps. csv') as csvfile: gps = csv. reader(csvfile, delimiter=',') for row in gps: lat = float(row[0]) longit = float(row[1]) reverse_geocode_result = gmaps_client. reverse_geocode((lat, longit)) formatted_address = reverse_geocode_result[0]['formatted_address'] print row[0], row[1], formatted_address print "=" * 150

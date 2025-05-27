@@ -46,7 +46,7 @@ Much cleaner and maintainable.
 - project boilerplate: Nodejs project boilerplate
 - todoapp: Todoapp built with angularjs in the beginning of year. - JSON2XML: A very handy, lightweight and efficient module written in
 in Python to convery JSON data to XML. You can check all of them on my GitHub profile.
-[@vinitkumar](HTTP://GitHub. com/vinitkumar) During the course of their development, collaborated with a lot of
+[@vinitkumar](http://GitHub. com/vinitkumar) During the course of their development, collaborated with a lot of
 people across the globe and made some nice friendship. In everyway this
 year has been a really nice and special one for me and I would thank
 every single person for being nice to me. 

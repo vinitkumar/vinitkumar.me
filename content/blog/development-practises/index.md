@@ -213,7 +213,7 @@ git push origin develop
 - Always use ORM when possible, drop to RAW SQL only when there is a performance issue. Get the RAW SQL audited before putting it live.
 - Write terse, clear code that is modular and dry. Do not try to do a lot of things at once.
 - Document any gotchas, assumptions, hard coding with as detailed comments as possible. It will help the team save tonnes of time while debugging issues in future.
-- Use standard HTTP Status code. Use standard libraries for dealing with HTTP, REST (like DRF, Retrofit). Do not try to reinvent the wheel unless you are 100% sure your implementation is better than these.
+- Use standard http Status code. Use standard libraries for dealing with http, REST (like DRF, Retrofit). Do not try to reinvent the wheel unless you are 100% sure your implementation is better than these.
 - Use stable and popular libraries.
 - Focus on performance & security while writing back end code.
 - Write DRY, reusable and testable code.
