@@ -6,7 +6,9 @@ description: "Some new Learnings"
 category: articles
 tags: life
 comments: false
---- Software Engineering comes with a lot of good learning opportunities. First you learn
+--- 
+
+Software Engineering comes with a lot of good learning opportunities. First you learn
 how to write something by reading tutorials, watching videos etc, Then down the time you learn
 some new ways to do the same thing and you are blown by it. But only after some days you actually encounter
 the real hard problem in Computer Science. Some of them are: - Race conditions - Caching I have had some very nasty experiences with race conditions. But it opened my eyes to a new

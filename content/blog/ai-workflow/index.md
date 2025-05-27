@@ -5,7 +5,6 @@ featured: true
 description: "How I think I would be using AI in my day to day life"
 ---
 
-
 I have been using to do my professional work since 2 years when Github Copilot was launched and we got an official subscription from work. Since they I have used Claude, ChatGPT and more recently Cursor AI.
 
 However, these days I am getting mixed feelings about it. I believe getting AI to work in Agent Mode will basically cause brain atrophy and you will loose your ability to reason and program well. So solve this, I would use AI more as a pair programmer or research assistant and not as a code generator. And even in the case, it generates the code it has to to pass all benchmarks and code standards.

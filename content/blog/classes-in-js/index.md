@@ -6,7 +6,9 @@ description: "About new projects"
 category: articles
 tags: coding JavaScript
 comments: false
---- Here is an interesting example for Classes in JS. Classes in JS don't have a class keyword. ```JavaScript
+--- 
+
+Here is an interesting example for Classes in JS. Classes in JS don't have a class keyword. ```JavaScript
 function Range(from, to) { this. from = from; this. to = to;
 } Range. prototype = { includes: function (x) { return this. from <=x && x <= this. to; }, foreach: function (f) { for(var x= Math. ceil(this. from); x < this. to; x++)f(x); }, toString: function () { return '('+this. from+'.'+this. to+')'; }
 }; var r = new Range(4,20);

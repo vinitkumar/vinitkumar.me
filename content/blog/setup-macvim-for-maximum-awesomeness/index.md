@@ -6,7 +6,9 @@ description: "How did I setup macvim for super awesomeness"
 category: articles
 tags: Vim macvim development
 comments: false
---- I have been using Vim for almost 5 years now. For some time, I even
+--- 
+
+I have been using Vim for almost 5 years now. For some time, I even
 switched to Sublime text2 but I am finally back home. Well, the
 following guide is only for macs. Sorry GVIM users!
 Here is the latest screenshot of my macvim:![Macvim](/public/img/Vim. png) As you can see, it has a nice Filebrowser that is way more clean and

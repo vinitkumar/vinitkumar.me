@@ -6,7 +6,9 @@ description: "Learning"
 category: articles
 tags: projects
 comments: false
---- I recently read a blog by Jeff Atwood that there is no such people as Rock-star programmer. These are people who could write cleaner code, refactor faster than anyone else, write a lot of tested code and methodology. This means each of one has a scope to get better as a developer. I am in my first software development job and there is a lot of scope for me to improve and get better. Obviously this is not going to happen overnight and I need to work hard to achieve this. Here is my plan: - For JS server side read Madhu's code and learn.
+--- 
+
+I recently read a blog by Jeff Atwood that there is no such people as Rock-star programmer. These are people who could write cleaner code, refactor faster than anyone else, write a lot of tested code and methodology. This means each of one has a scope to get better as a developer. I am in my first software development job and there is a lot of scope for me to improve and get better. Obviously this is not going to happen overnight and I need to work hard to achieve this. Here is my plan: - For JS server side read Madhu's code and learn.
 - For JS client side read Ruben's code and learn.
 - For Python read code from good projects like Django.
 - Write loads of code in NOSQL goodness(MongoDB).

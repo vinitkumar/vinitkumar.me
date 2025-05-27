@@ -6,14 +6,16 @@ description: "What I am doing these days"
 category: articles
 tags: projects JavaScript Node. JS MongoDB
 comments: false
---- These days I was busy working on an a project called as Node. JS Twitter.
+--- 
+
+These days I was busy working on an a project called as Node. JS Twitter.
 As the name suggest it is a twitter clone written on Node. JS. Right now it has following functionalities: * Login via Facebook and GitHub
 * Tweet Add, Modify, Delete
 * Comment on Tweet
 * Favorite a Tweet
 * See own and another user's profile
 * Follow another User ###Here are some screen-shots: <figure>
-<img src="HTTP://vinitkumar. me/images/twitter. png" height="400" width="640">
+<img src="HTTP://vinitkumar.me/images/twitter. png" height="400" width="640">
 </figure> <figure> <img src="HTTP://vinitkumar. me/images/twitter2.png" height="400" width="640">
 </figure> <figure> <img src="HTTP://vinitkumar. me/images/twitter3.png" height="400" width="640">
 </figure> <figure> <img src="HTTP://vinitkumar. me/images/twitter4.png" height="400" width="640">

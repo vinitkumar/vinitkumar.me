@@ -6,7 +6,9 @@ description: "My Setup Interview"
 category: articles
 tags: machine setup workspace
 comments: false
---- I am doing The Setup interview for myself. It is basically based on these four questions: - Who are you and what do you do?
+--- 
+
+I am doing The Setup interview for myself. It is basically based on these four questions: - Who are you and what do you do?
 - What hardware do you use?
 - And what software?
 - What would be your dream setup? So here it goes: ### Who are you and what do you do? Hello, I am Vinit and work as a software developer at this awesome Dutch startup,[Changer](HTTP://changer. nl). I mostly write code in JavaScript and Python. ### What hardware do you use? I use a MacBook Pro, Mid 2009, with 8 GB RAM and 256 GB SSD. I use

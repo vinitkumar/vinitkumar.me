@@ -6,7 +6,9 @@ description: "How did I spent my last year"
 category: articles
 tags: life general
 comments: false
---- 2013 is easily one of the most amazing year of my life. In January I
+--- 
+
+2013 is easily one of the most amazing year of my life. In January I
 interviewed for my current company and was offered to join them in Feb
 which I did. Well a lot did happen after that. It was my first Full Time
 job. I used to freelance as a Web/App Developer before which was fun.

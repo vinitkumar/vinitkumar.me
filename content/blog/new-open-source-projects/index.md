@@ -6,7 +6,9 @@ description: "Projects I recently worked on and open sourced"
 category: articles
 tags: oss opensource
 comments: false
---- Maintaining and contributing to an Open Source Project is a very important part of a developers life. Luckily, I am in a Company that gives me full liberty to contribute and in fact we have a Open Source day(Friday) where we could open source reusable components of project we have been working on to the open source audience. This is plain awesome, because not only it encourages a healthy culture of giving back to the community, also it improves the overall quality of the project as you just do not open source anything without getting it better. With that said, I have open sourced two of my projects: [cmsplugin-fbalbum](HTTPS://GitHub. com/vinitcool76/cmsplugin-fbalbum): This is a Django-cms plugin that gives the end user to showcase the photos from their Facebook album without going through any code. Just enter the album
+--- 
+
+Maintaining and contributing to an Open Source Project is a very important part of a developers life. Luckily, I am in a Company that gives me full liberty to contribute and in fact we have a Open Source day(Friday) where we could open source reusable components of project we have been working on to the open source audience. This is plain awesome, because not only it encourages a healthy culture of giving back to the community, also it improves the overall quality of the project as you just do not open source anything without getting it better. With that said, I have open sourced two of my projects: [cmsplugin-fbalbum](HTTPS://GitHub. com/vinitcool76/cmsplugin-fbalbum): This is a Django-cms plugin that gives the end user to showcase the photos from their Facebook album without going through any code. Just enter the album
 name, album URL and access-token and you are good to go.
 It is also available to everyone on pypi, In order to install just do:
 ```

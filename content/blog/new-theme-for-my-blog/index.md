@@ -6,7 +6,9 @@ description: "Why I wrote a new theme for my blog"
 category: articles
 tags: theme jekyll coding
 comments: false
---- So this week, I wrote a new theme for my blog. One big reason was that
+--- 
+
+So this week, I wrote a new theme for my blog. One big reason was that
 using theme created by others were not fitting my needs and I was not
 inspired to write anymore. This was odd because in general I love
 writing posts on my blog. I felt the design was taking too much attention and the content has

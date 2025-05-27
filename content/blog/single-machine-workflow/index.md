@@ -6,7 +6,9 @@ description: "How a laptop based work-flow boost productivity"
 category: articles
 tags: coding development
 comments: false
---- ##benefits - More focus, less distraction
+--- 
+
+##benefits - More focus, less distraction
 - personal
 - Skill developed for handling lot of things in less resource effectively.
 - Get better in typing and using Mac more productively. ###How to: - Use 75% to 100% code window in sublime when needed.

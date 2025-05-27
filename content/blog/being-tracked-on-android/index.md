@@ -6,7 +6,9 @@ description: "Finding how you are tracked on Android"
 category: articles
 tags: Android gps Python
 comments: false
---- Like everybody else, I have an Android phone too. If you are a developer you must have noticed a file called as GPS. LOG. It is the one file which has all your GPS logs in it. This weekend I spend couple of hours hacking with it. He is the outcome. ## How you get tracked First of all, connect your Android device to your computer and copy the gps. log file into your desktop: ```sh
+--- 
+
+Like everybody else, I have an Android phone too. If you are a developer you must have noticed a file called as GPS. LOG. It is the one file which has all your GPS logs in it. This weekend I spend couple of hours hacking with it. He is the outcome. ## How you get tracked First of all, connect your Android device to your computer and copy the gps. log file into your desktop: ```sh
 cp /Volumes/NO\ NAME/GPS. LOG ~/projects/gps. log
 ``` Now, we need to find the good data that contain gps coordinates:
 ```sh

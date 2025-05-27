@@ -6,7 +6,9 @@ description: "How to cleanup Your Mac From Other Files"
 category: articles
 tags: Mac cleanup commandline expert
 comments: false
----![screenshot](HTTPS://cldup. com/-iOX0p9Ob8-3000x3000.png) Sometimes, your Mac is filled up with files and you can't seem to
+---
+
+![screenshot](https://cldup.com/-iOX0p9Ob8-3000x3000.png) Sometimes, your Mac is filled up with files and you can't seem to
 understand what really is taking much space. Here is how you can find out. - First of all find disk usage and save it to a log file. Also, find all
 big files that are there. Grepping using 'G' would find all files that are in
 GB. Also, save the second list to another file so that we are only doing it once. ```sh

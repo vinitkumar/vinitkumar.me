@@ -6,7 +6,9 @@ description: "Guide to setup readonly mode for some users in Django admin"
 category: articles
 tags: Python Django Django-admin
 comments: false
---- Last week, I came across an interesting problem at work. The problem was: > To get read only users in a Django based application. But doing so was not very simple because there is no read only mode for users
+--- 
+
+Last week, I came across an interesting problem at work. The problem was: > To get read only users in a Django based application. But doing so was not very simple because there is no read only mode for users
 in Django. In order to solve this, I first started reading answers on stack
 overflow. Some of those links did pointed me to a correct route. Here, I will
 document the whole process so that it could help others and serve as a reminder
