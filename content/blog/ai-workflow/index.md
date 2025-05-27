@@ -1,10 +1,9 @@
 ---
-title: AI Workflow
+title: "Balancing AI Tools in Development: A Practical Workflow Guide"
 date: "2025-05-07"
 featured: true
 description: "How I think I would be using AI in my day to day life"
 ---
-
 
 I have been using to do my professional work since 2 years when Github Copilot was launched and we got an official subscription from work. Since they I have used Claude, ChatGPT and more recently Cursor AI.
 

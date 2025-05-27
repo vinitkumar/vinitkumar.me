@@ -1,5 +1,5 @@
 ---
-title: How To Implement Multi Way Data Sync in Obsidian
+title: "Building a Free Multi-Device Sync System for Obsidian with Git"
 date: "2024-11-26"
 description: "How I Implement Multi Way Data Sync in Obsidian"
 ---

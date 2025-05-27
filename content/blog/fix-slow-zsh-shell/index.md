@@ -1,5 +1,5 @@
 ---
-title: "Fix Slow Shell ZSH"
+title: "Optimizing ZSH Performance: A Guide to Profiling and Fixing Shell Slowness"
 date: "2024-07-02"
 description: "How I found the slowness in my shell and fixed it"
 ---

@@ -1,5 +1,5 @@
 ---
-title: An Incomplete List Of Programming Heroes I admire
+title: "Influential Programmers: A Personal Tribute to 10 Open Source Leaders"
 date: "2020-01-23"
 featured: true
 description: "A personal tribute to influential programmers who have shaped my career and coding philosophy. From CURL creator Daniel Stenberg to Python's Guido Van Rossum, these talented developers demonstrate excellence in their craft while inspiring others."
@@ -14,7 +14,7 @@ a small list of programming heroes I admire. I don't claim that these are the be
 
 Daniel is the lead developer and creator of the CURL project. If you deal with any web-services either as a developer or end-user, you have used his code. He also livestreams some of his coding sessions on stream and they are informative and fun to watch.
 
-Daniel is excellent at Systems programming, Network, HTTP and ofcourse a master "C" developer.
+Daniel is excellent at Systems programming, Network, http and ofcourse a master "C" developer.
 
 - [Brad FitzPatrick (Go)](https://twitter.com/bradfitz)
 

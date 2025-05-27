@@ -1,5 +1,5 @@
 ---
-title: How to Generate A Fat Binary For Mac
+title: "Creating Universal macOS Binaries: A Complete Guide to Fat Binary Generation"
 date: "2024-12-18"
 description: "Easy way to generate fat binaries for mac"
 ---
