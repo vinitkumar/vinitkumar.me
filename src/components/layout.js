@@ -65,6 +65,9 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  a:hover {
     border-bottom: var(--border) solid var(--gray-line);
   }
   .btn-action { text-decoration: none; background: yellow; border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
