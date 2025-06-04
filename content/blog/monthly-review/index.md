@@ -1,7 +1,7 @@
 ---
 title: Monthly Review
 date: "2024-08-13"
-featured: true
+featured: false
 description: "This past month had its ups and downs. We returned to a more structured workflow at work, and my wife and I kept up our walking routine. We need to improve our sleep and watch our spending. I’m working on motivation, improving my guitar skills, and aiming to read more while cutting down on social media."
 ---
 

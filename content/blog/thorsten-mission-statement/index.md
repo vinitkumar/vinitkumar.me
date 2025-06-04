@@ -1,7 +1,7 @@
 ---
 title: Mission Statement of Thorstel Ball
 date: "2025-03-26"
-featured: true
+featured: false
 description: "A collection of programming principles shared by Thorsten Ball in his 'Mission Statement' tweet. These thoughtful guidelines cover code quality, problem-solving approaches, professional ethics, and practical wisdom for software development."
 ---
 

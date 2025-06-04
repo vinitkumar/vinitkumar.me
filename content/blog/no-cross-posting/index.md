@@ -1,7 +1,7 @@
 ---
 title: No Cross Posting In Foreseeable Future
 date: "2025-03-10"
-featured: true
+featured: false
 description: "Why I'm stepping away from sharing my blog posts on social media platforms. This decision prioritizes deep focus on personal goals while avoiding the distractions and dopamine hits from social validation."
 ---
 

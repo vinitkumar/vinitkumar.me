@@ -65,7 +65,7 @@ export const pageQuery = graphql`{
       title
     }
   }
-  allMarkdownRemark(sort: [{frontmatter: {featured: ASC}}, {frontmatter: {date: DESC}}]) {
+  allMarkdownRemark(sort: [{frontmatter: {date: DESC}}]) {
     edges {
       node {
         excerpt(pruneLength: 350)

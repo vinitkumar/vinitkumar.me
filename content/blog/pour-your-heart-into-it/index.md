@@ -1,7 +1,7 @@
 ---
 title: Pour Your Heart Into It
 date: "2025-03-15"
-featured: true
+featured: false
 description: "A reflection on the challenge of fully committing to meaningful work after seeing an inspirational quote at Starbucks. Explores the struggle and value of deep focus while acknowledging that anything worthwhile requires dedicated effort."
 ---
 

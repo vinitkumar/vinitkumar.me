@@ -1,7 +1,7 @@
 ---
 title: 2024 in Review
 date: "2025-01-11"
-featured: true
+featured: false
 description: "Just refecting on how 2024 was for me and what changes I brought in my life"
 ---
 

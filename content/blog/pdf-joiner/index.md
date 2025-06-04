@@ -1,7 +1,7 @@
 ---
 title: Simple PDF joiner to Join PDF Files on Mac
 date: "2025-02-27"
-featured: true
+featured: false
 description: "A free command-line utility that leverages macOS's built-in PDF joining capabilities without privacy concerns or upselling. Installation and usage instructions provided for combining multiple PDF files simply and efficiently."
 ---
 
