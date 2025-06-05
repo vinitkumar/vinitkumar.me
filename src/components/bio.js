@@ -68,20 +68,20 @@ const Bio = () => {
       }}
     >
       <p>
-        I'm a <Link to="/about" className="btn-action">Principal Engineer</Link> at <a className= "btn-action" href="https://scalefusion.com">Scalefusion</a> and <a href="https://www.django-cms.org/en/blog/2024/11/07/welcoming-vinit-kumar-as-the-newest-django-cms-fellow/" className="btn-action">Django CMS Fellow</a> passionate
+        I'm a <Link to="/about" className="btn-action-latest">Principal Engineer</Link> at <a className= "btn-action-latest" href="https://scalefusion.com">Scalefusion</a> and <a href="https://www.django-cms.org/en/blog/2024/11/07/welcoming-vinit-kumar-as-the-newest-django-cms-fellow/" className="btn-action-latest">Django CMS Fellow</a> passionate
         about solving meaningful problems and pushing tech boundaries. I love reading, listening/playing music, appreciating/making art, and enjoying a good cup of coffee.
       </p>
       <p>
-        Here are some  <Link className={"btn-action"} to="/recommendations">recommendations</Link> from my current and past colleagues. You can check out my <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" className="btn-action" rel="noopener noreferrer">latest resume</a> and <a target="_blank" rel="noopener noreferrer" className="btn-action" href="https://github.com/vinitkumar">Github profile</a>.
-        You can connect with me on twitter at <a href="https://twitter.com/vinitkme" target="_blank" className="btn-action"
-          rel="noopener noreferrer">@vinitkme</a> or drop me an email at<a href="mailto:mail@vinitkumar.me" className="btn-action">mail@vinitkumar.me</a>.
+        Here are some  <Link className={"btn-action-latest"} to="/recommendations">recommendations</Link> from my current and past colleagues. You can check out my <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" className="btn-action-latest" rel="noopener noreferrer">latest resume</a> and <a target="_blank" rel="noopener noreferrer" className="btn-action-latest" href="https://github.com/vinitkumar">Github profile</a>.
+        You can connect with me on twitter at <a href="https://twitter.com/vinitkme" target="_blank" className="btn-action-latest"
+          rel="noopener noreferrer">@vinitkme</a> or drop me an email at<a href="mailto:mail@vinitkumar.me" className="btn-action-latest">mail@vinitkumar.me</a>.
       </p>
       <p>I hope you enjoy reading my essays.</p>
 
       {/* Blog Statistics Section */}
       <div style={{ marginTop: rhythm(1), padding: "15px", backgroundColor: "#f9f9f9", borderRadius: "8px" }}>
         <h3 style={{ marginBottom: rhythm(0.3), fontSize: "16px" }}>📊 Blog Stats</h3>
-        
+
         <div style={{ marginBottom: "15px", fontSize: "13px", lineHeight: "1.3" }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
             <span>📝 {totalPosts}</span>

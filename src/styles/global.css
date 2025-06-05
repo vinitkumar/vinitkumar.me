@@ -29,8 +29,8 @@ body { min-height: 100vh; }
 .about_inner { padding: var(--gap) 25px; border: var(--border) solid var(--gray-line); border-radius: var(--radius); display: flex; flex-direction: column; gap: var(--gap); }
 
 
-.btn-action { text-decoration: none; background: var(--mintpro); border: none; padding: 0px 7px; display: inline-block; border-radius: 4px; }
-.btn-action:hover { background: var(--mint);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
+.btn-action-latest { text-decoration: none; background: var(--mintpro); border: none; padding: 0px 7px; display: inline-block; border-radius: 4px; }
+.btn-action-latest:hover { background: var(--mint);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
 
 html,
 body {
