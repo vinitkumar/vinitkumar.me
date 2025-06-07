@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# High-Quality Safari Screenshot Generator
-# Usage: ./safari-screenshot.sh [urls_file] [output_directory]
-# Example: ./safari-screenshot.sh urls.txt ./screenshots
+# High-Quality Firefox Screenshot Generator
+# Usage: ./firefox-screenshot.sh [urls_file] [output_directory]
+# Example: ./firefox-screenshot.sh urls.txt ./screenshots
 
 set -e
 
@@ -76,35 +76,29 @@ take_screenshot() {
     
     print_status "Processing: $url"
     
-    # AppleScript to control Safari
+    # AppleScript to control Firefox
     osascript <<EOF
-tell application "Safari"
+tell application "Firefox"
     activate
     
     -- Create new window if none exists
     if (count of windows) = 0 then
-        make new document
+        make new window
     end if
     
     -- Get the front window
     set frontWindow to front window
-    set frontTab to current tab of frontWindow
     
     -- Navigate to URL
-    set URL of frontTab to "$url"
+    open location "$url"
     
     -- Wait for page to load
     delay $wait_time
     
-    -- Wait for page to finish loading
-    repeat while (do JavaScript "document.readyState" in frontTab) is not "complete"
-        delay 0.5
-    end repeat
-    
     -- Additional wait for dynamic content
-    delay 1
+    delay 2
     
-    -- Bring Safari to front
+    -- Bring Firefox to front
     activate
     delay 0.5
 end tell
@@ -113,7 +107,7 @@ EOF
     # Capture screenshot with high quality settings
     # -T 0: Capture immediately without delay
     # -x: Do not play sounds
-    # -R: Capture specific rectangle (we'll capture the Safari window)
+    # -R: Capture specific rectangle (we'll capture the Firefox window)
     screencapture -T 0 -x -t png "$output_file"
     
     if [ $? -eq 0 ]; then
@@ -124,35 +118,30 @@ EOF
     fi
 }
 
-# Function to get Safari window bounds for precise capture
-get_safari_bounds() {
+# Function to get Firefox window bounds for precise capture
+get_firefox_bounds() {
     osascript <<EOF
-tell application "Safari"
+tell application "Firefox"
     set frontWindow to front window
     return bounds of frontWindow
 end tell
 EOF
 }
 
-# Function to set Safari to full screen and maximize quality
-setup_safari_for_hq_capture() {
+# Function to set Firefox to full screen and maximize quality
+setup_firefox_for_hq_capture() {
     osascript <<EOF
-tell application "Safari"
+tell application "Firefox"
     activate
     
     if (count of windows) = 0 then
-        make new document
+        make new window
     end if
     
     set frontWindow to front window
     
     -- Maximize window
     set bounds of frontWindow to {0, 0, 1920, 1080}
-    
-    -- Hide all UI elements for cleaner screenshot
-    if (do JavaScript "document.documentElement.requestFullscreen" in current tab of frontWindow) then
-        delay 0.5
-    end if
     
     activate
     delay 0.5
@@ -168,34 +157,24 @@ take_ultra_hq_screenshot() {
     
     print_status "Processing: $url (Ultra HQ Mode)"
     
-    # Set up Safari for high quality capture
-    setup_safari_for_hq_capture
+    # Set up Firefox for high quality capture
+    setup_firefox_for_hq_capture
     
     # Navigate to URL with enhanced settings
     osascript <<EOF
-tell application "Safari"
+tell application "Firefox"
     activate
     
     set frontWindow to front window
-    set frontTab to current tab of frontWindow
-    set URL of frontTab to "$url"
+    
+    -- Navigate to URL
+    open location "$url"
     
     -- Wait for initial load
     delay $wait_time
     
-    -- Wait for complete page load
-    repeat while (do JavaScript "document.readyState" in frontTab) is not "complete"
-        delay 0.5
-    end repeat
-    
     -- Wait for additional resources (images, scripts, etc.)
-    delay 2
-    
-    -- Scroll to ensure all content is loaded
-    do JavaScript "window.scrollTo(0, document.body.scrollHeight);" in frontTab
-    delay 1
-    do JavaScript "window.scrollTo(0, 0);" in frontTab
-    delay 1
+    delay 3
     
     -- Ensure window is active and focused
     activate
@@ -208,7 +187,7 @@ EOF
     
     # Use multiple screenshot methods for best quality
     # Method 1: Precise window capture with maximum quality
-    bounds=$(get_safari_bounds)
+    bounds=$(get_firefox_bounds)
     if [ $? -eq 0 ]; then
         x1=$(echo "$bounds" | cut -d',' -f1 | tr -d ' ')
         y1=$(echo "$bounds" | cut -d',' -f2 | tr -d ' ')
@@ -339,9 +318,9 @@ main() {
     print_status "Output directory: $output_dir"
     print_status "Wait time: ${wait_time}s"
     
-    # Check if Safari is available
-    if ! osascript -e 'tell application "Safari" to activate' >/dev/null 2>&1; then
-        print_error "Safari is not available or cannot be controlled"
+    # Check if Firefox is available
+    if ! osascript -e 'tell application "Firefox" to activate' >/dev/null 2>&1; then
+        print_error "Firefox is not available or cannot be controlled. Please make sure Firefox is installed."
         exit 1
     fi
     
