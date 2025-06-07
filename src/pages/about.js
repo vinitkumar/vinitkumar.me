@@ -77,7 +77,7 @@ const AboutIndex = (props) => {
       </p>
 
       <p>
-        In my role as a Staff Software Engineer and Team Leader, I have demonstrated my ability to lead high-performing teams effectively. By fostering a culture of innovation and excellence, I have successfully steered projects toward success, consistently meeting and exceeding expectations.
+        In my role as a Principal Engineer and Team Leader, I have demonstrated my ability to lead high-performing teams effectively. By fostering a culture of innovation and excellence, I have successfully steered projects toward success, consistently meeting and exceeding expectations.
       </p>
 
       <p>

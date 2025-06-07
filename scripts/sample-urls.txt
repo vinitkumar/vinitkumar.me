@@ -1,0 +1,7 @@
+# Sample URLs for high-quality screenshots
+# One URL per line, comments start with #
+
+https://vinitkumar.me
+https://vinitkumar.me/about
+https://github.com/vinitkumar
+https://www.linkedin.com/in/vinitatlinkedin/ 
