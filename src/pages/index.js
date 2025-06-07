@@ -23,33 +23,52 @@ class BlogIndex extends React.Component {
           <meta name="fediverse:creator" content="@vinitkme@fosstodon.org" />
         </Helmet>
         <Seo title="Home" />
-        {posts.map(({ node }) => {
-
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h2
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                  fontSize: "2rem",
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h2>
-              <span>
-                {node.frontmatter.date} {node.frontmatter.featured && <strong style={{ color: 'red' }}>
-                  ⭐ featured</strong>}
-              </span>
-              <p style={{ marginTop: `10px` }}
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          )
-        })}
+        
+        <div className="blog-posts-grid">
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <article key={node.fields.slug} className="blog-post-card">
+                <div className="blog-post-header">
+                  <h2 className="blog-post-title">
+                    <Link 
+                      style={{ 
+                        boxShadow: `none`, 
+                        textDecoration: 'none',
+                        color: 'inherit'
+                      }} 
+                      to={node.fields.slug}
+                    >
+                      {title}
+                    </Link>
+                  </h2>
+                  <div className="blog-post-meta">
+                    <span className="blog-post-date">{node.frontmatter.date}</span>
+                    {node.frontmatter.featured && (
+                      <span className="featured-badge">⭐ Featured</span>
+                    )}
+                  </div>
+                </div>
+                
+                <div 
+                  className="blog-post-description"
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+                
+                <div className="blog-post-footer">
+                  <Link 
+                    to={node.fields.slug}
+                    className="read-more-link"
+                  >
+                    Read more →
+                  </Link>
+                </div>
+              </article>
+            )
+          })}
+        </div>
       </HomeLayout>
     )
   }
@@ -66,7 +85,7 @@ export const pageQuery = graphql`{
   allMarkdownRemark(sort: [{frontmatter: {date: DESC}}]) {
     edges {
       node {
-        excerpt(pruneLength: 350)
+        excerpt(pruneLength: 200)
         fields {
           slug
         }
