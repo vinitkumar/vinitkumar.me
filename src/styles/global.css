@@ -6,39 +6,108 @@ img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto
 p, h1, h2, h3 { overflow-wrap: break-word; }
 body { min-height: 100vh; }
 
-
 /** CSS **/
 :root {
-  --cap-height: calc(1rem * 12.5 / 16);
-  --cap-ratio: calc(1 / 0.698);
-
-  --gap: var(--cap-height);
-  --font-smaller: calc(var(--cap-height) * 11 / 12 * var(--cap-ratio));
-  --font-small: calc(var(--cap-height) * 10 / 12 * var(--cap-ratio));
+  --font-base: 1rem;
+  --font-small: 0.875rem;
+  --font-smaller: 0.75rem;
   --width: 575px;
-  --border: 1.5px;
-  --radius: calc(var(--cap-height) / 3);
-  --gray-text: rgba(0, 0, 0, 0.4);
-  --gray-line: rgba(0, 0, 0, 0.2);
-  --gray-bg: rgba(0, 0, 0, 0.06);
-  --mint:  #00FFB2;
-  --mintpro: #00E6A1;
-  --text: #000;
+  --border: 1px;
+  --radius: 0;
+  --gray-text: rgba(51, 51, 51, 0.6);
+  --gray-line: rgba(51, 51, 51, 0.1);
+  --gray-bg: rgba(51, 51, 51, 0.02);
+  --accent: #2c3338;
+  --accent-hover: #000000;
+  --text: #2c3338;
+  --background: #fcfcfc;
+  --terminal-green: #00ff00;
 }
 
-.about_inner { padding: var(--gap) 25px; border: var(--border) solid var(--gray-line); border-radius: var(--radius); display: flex; flex-direction: column; gap: var(--gap); }
+.about_inner { 
+  padding: calc(var(--font-base) * 1.5);
+  border-bottom: var(--border) solid var(--gray-line);
+  display: flex; 
+  flex-direction: column; 
+  gap: var(--font-base);
+  background-color: white;
+}
 
+.btn-action-latest { 
+  text-decoration: none; 
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  font-size: var(--font-smaller);
+  letter-spacing: 0.02em;
+  display: inline-block;
+  border-radius: 2px;
+}
 
-.btn-action-latest { text-decoration: none; background: var(--mintpro); border: none; padding: 0px 7px; display: inline-block; border-radius: 4px; }
-.btn-action-latest:hover { background: var(--mint);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
+.btn-action-latest:hover { 
+  color: var(--terminal-green);
+}
+
+/* Hide or minimize blog stats completely */
+[class*="blog-stats"], 
+[class*="BlogStats"],
+.blog-stats,
+h3:has(+ *[class*="chart"]),
+h3:contains("Blog Stats") {
+  display: none;
+}
+
+/* If the chart can't be hidden, make it minimal */
+svg[class*="chart"] rect,
+svg rect[fill="#1f77b4"],
+svg rect[fill*="blue"],
+.recharts-bar rect,
+.chart rect {
+  fill: var(--gray-line) !important;
+  opacity: 0.3 !important;
+}
+
+/* Post list improvements */
+.post-list {
+  margin: 2rem 0;
+}
+
+.post-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: var(--border) solid var(--gray-line);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-date {
+  font-size: var(--font-smaller);
+  color: var(--gray-text);
+  margin-bottom: 0.25rem;
+}
+
+.post-title {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.post-description {
+  font-size: var(--font-small);
+  color: var(--gray-text);
+  line-height: 1.5;
+}
 
 html,
 body {
   font-family: "Nebula Sans", sans-serif;
-  font-size: 1rem;
+  font-size: var(--font-base);
   font-weight: 400;
   height: 100%;
-  line-height: 1.5;
+  line-height: 1.6;
   -webkit-text-size-adjust: 100%;
   font-feature-settings: normal;
   font-variation-settings: normal;
@@ -46,8 +115,9 @@ body {
   -o-tab-size: 4;
   tab-size: 4;
   -webkit-tap-highlight-color: transparent;
+  background-color: var(--background);
+  color: var(--text);
 }
-
 
 @font-face {
   font-family: Nebula Sans;
@@ -75,16 +145,12 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--text);
   text-decoration: none;
 }
 
 a:hover {
-    border-bottom: var(--border) solid var(--gray-line);
-}
-body {
-  background-color: white;
-  color: var(--text);
+  color: var(--accent-hover);
 }
 
 code,
@@ -92,13 +158,18 @@ kbd,
 pre,
 samp {
   font-family: Inconsolata-lgc-ep, Consolas, Monaco, monospace;
+  font-size: var(--font-small);
 }
+
 code,
 pre {
   white-space: pre-wrap;
+  padding: 0.15em 0.3em;
 }
 
 h1, h2, h3, h4, h4 {
   font-family: 'Nebula Sans', sans-serif;
   font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
 }

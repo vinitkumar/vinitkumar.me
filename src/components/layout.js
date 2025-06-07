@@ -11,30 +11,33 @@ const GlobalStyle = createGlobalStyle`
   img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
   p, h1, h2, h3 { overflow-wrap: break-word; }
   body { min-height: 100vh; }
+  
   :root {
-    --cap-height: calc(1rem * 12.5 / 16);
-    --cap-ratio: calc(1 / 0.698);
-
-    --gap: var(--cap-height);
-    --font-smaller: calc(var(--cap-height) * 11 / 12 * var(--cap-ratio));
-    --font-small: calc(var(--cap-height) * 10 / 12 * var(--cap-ratio));
+    --font-base: 1rem;
+    --font-small: 0.875rem;
+    --font-smaller: 0.75rem;
     --width: 575px;
-    --border: 1.5px;
-    --radius: calc(var(--cap-height) / 3);
-    --gray-text: rgba(0, 0, 0, 0.4);
-    --gray-line: rgba(0, 0, 0, 0.2);
-    --gray-bg: rgba(0, 0, 0, 0.06);
-  --mint:  #00FFB2;
-  --mintpro: #00E6A1;
-    --text: #000;
+    --border: 1px;
+    --radius: 0;
+    --gray-text: rgba(51, 51, 51, 0.6);
+    --gray-line: rgba(51, 51, 51, 0.1);
+    --gray-bg: rgba(51, 51, 51, 0.02);
+    --accent: #2c3338;
+    --accent-hover: #000000;
+    --text: #2c3338;
+    --background: #fcfcfc;
+    --terminal-green: #00ff00;
   }
+
   html,
   body {
     font-family: 'Nebula Sans', sans-serif;
-    font-size: 1rem;
+    font-size: var(--font-base);
     font-weight: 400;
     height: 100%;
-    line-height: 1.5;
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text);
   }
 
   @font-face {
@@ -63,18 +66,102 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: inherit;
+    color: var(--text);
     text-decoration: none;
   }
 
   a:hover {
+    color: var(--accent-hover);
+  }
+
+  .btn-action-latest { 
+    text-decoration: none; 
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0.25rem 0.75rem;
+    font-size: var(--font-smaller);
+    letter-spacing: 0.02em;
+    display: inline-block;
+    border-radius: 2px;
+  }
+
+  .btn-action-latest:hover { 
+    color: var(--terminal-green);
+  }
+
+  nav {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+
+  nav a {
+    margin-right: 2rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  nav a:hover {
+    color: var(--accent-hover);
+  }
+
+  /* Hide or minimize blog stats completely */
+  [class*="blog-stats"], 
+  [class*="BlogStats"],
+  .blog-stats,
+  h3:has(+ *[class*="chart"]),
+  h3:contains("Blog Stats") {
+    display: none;
+  }
+
+  /* If the chart can't be hidden, make it minimal */
+  svg[class*="chart"] rect,
+  svg rect[fill="#1f77b4"],
+  svg rect[fill*="blue"],
+  .recharts-bar rect,
+  .chart rect {
+    fill: var(--gray-line) !important;
+    opacity: 0.3 !important;
+  }
+
+  /* Post list improvements */
+  .post-list {
+    margin: 2rem 0;
+  }
+
+  .post-item {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
     border-bottom: var(--border) solid var(--gray-line);
   }
-  .btn-action-latest { text-decoration: none; background: var(--mintpro); border: none; padding: 0 7px; display: inline-block; border-radius: 4px; }
-  .btn-action-latest:hover { background: var(--mint);      box-shadow: 0 4px 12px rgba(0, 255, 178, 0.3);}
+
+  .post-item:last-child {
+    border-bottom: none;
+  }
+
+  .post-date {
+    font-size: var(--font-smaller);
+    color: var(--gray-text);
+    margin-bottom: 0.25rem;
+  }
+
+  .post-title {
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-description {
+    font-size: var(--font-small);
+    color: var(--gray-text);
+    line-height: 1.5;
+  }
+
   h1, h2, h3, h4, h4 {
-      font-family: 'Nebula Sans', sans-serif;
-      font-weight: 300;
+    font-family: 'Nebula Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
   }
 
   code,
@@ -82,55 +169,50 @@ const GlobalStyle = createGlobalStyle`
   pre,
   samp {
     font-family: Inconsolata-lgc-ep, Consolas, Monaco, monospace;
+    font-size: var(--font-small);
   }
+
   code,
   pre {
     white-space: pre-wrap;
+    padding: 0.15em 0.3em;
   }
 
   pre {
     font-variant-ligatures: none;
   }
+
   :not(pre) > code[class*="language-"] {
     font-family: Inconsolata-lgc-ep, Consolas, Monaco, monospace;
-    background: rgba(0, 0, 0, 0.08);
-    color: rgba(0, 0, 0, 1);
+    color: var(--text);
   }
-  pre[class*="language-"],
-  :not(pre) > code[class*="language-"] {
-    border: 0;
-  }
-  pre[class*="language-"] {
-    background: rgba(0, 0, 0, 0.02);
-  }
+
   pre[class*="language-"] > code {
     font-family: Inconsolata-lgc-ep, Consolas, Monaco, monospace;
-    background: none;
   }
+
   .recommendations-container {
-    padding: 20px 20px 20px 0;
+    padding: var(--font-base);
     max-width: 1200px;
     margin: 0 auto;
   }
 
   .heading {
     text-align: left;
-    font-size: 2rem;
-    margin-bottom: 30px;
+    font-size: 1.5rem;
+    margin-bottom: var(--font-base);
+    font-weight: 300;
   }
 
   .recommendations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: var(--font-base);
   }
 
   .recommendation-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: var(--border) solid var(--gray-line);
+    padding: var(--font-base);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -139,20 +221,19 @@ const GlobalStyle = createGlobalStyle`
   .recommendation-header {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--font-base);
   }
 
   .avatar {
-    width: 50px;
-    height: 50px;
-    background-color: var(--gray-bg);
+    width: 40px;
+    height: 40px;
     color: inherit;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
-    margin-right: 15px;
+    font-size: 1.2rem;
+    margin-right: var(--font-base);
+    background-color: var(--gray-bg);
   }
 
   .info {
@@ -160,23 +241,25 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .name {
-    font-size: 1.25rem;
+    font-size: var(--font-base);
     margin: 0;
+    font-weight: 400;
   }
 
   .job-title {
-    font-size: 0.9rem;
-    color: #666;
+    font-size: var(--font-small);
+    color: var(--gray-text);
   }
 
   .recommendation-text {
-    font-size: 1rem;
-    margin: 15px 0;
+    font-size: var(--font-small);
+    margin: var(--font-base) 0;
+    line-height: 1.5;
   }
 
   .creation-date {
-    font-size: 0.8rem;
-    color: #888;
+    font-size: var(--font-smaller);
+    color: var(--gray-text);
     text-align: right;
   }
 `;
@@ -189,44 +272,70 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
+        <>
+          <h1
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              ...scale(1.2),
+              marginBottom: rhythm(0.5),
+              marginTop: 0,
+              fontWeight: 300,
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h1>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+                fontWeight: 100,
+                fontSize: `54px`,
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h1>
+          <nav>
+            <Link to="/about">About</Link>
+            <Link to="/stats">Stats</Link>
+            <Link to="/recommendations">Recommendations</Link>
+            <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <a href="https://x.com/vinitkme" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://github.com/vinitkumar" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </nav>
+        </>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Satoshi, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
+        <>
+          <h1
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              fontFamily: `Nebula Sans, sans-serif`,
+              marginTop: 0,
+              fontWeight: 300,
+              fontSize: `54px`,
+              marginBottom: rhythm(0.5),
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h3>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h1>
+          <nav>
+            <Link to="/about">About</Link>
+            <Link to="/stats">Stats</Link>
+            <Link to="/recommendations">Recommendations</Link>
+            <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <a href="https://x.com/vinitkme" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://github.com/vinitkumar" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </nav>
+        </>
       )
     }
     return (
@@ -234,14 +343,18 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: `78rem`,
+          maxWidth: `80rem`,
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <a href="/" className="back-link">Back to Home</a>
         <GlobalStyle />
+        <header>{header}</header>
         <main>{children}</main>
-        <footer>
+        <footer style={{
+          marginTop: rhythm(2),
+          fontSize: '0.875rem',
+          color: 'rgba(51, 51, 51, 0.6)',
+        }}>
           © {new Date().getFullYear()}, Vinit Kumar
         </footer>
       </div>

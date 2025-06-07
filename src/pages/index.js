@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -24,7 +23,6 @@ class BlogIndex extends React.Component {
           <meta name="fediverse:creator" content="@vinitkme@fosstodon.org" />
         </Helmet>
         <Seo title="Home" />
-        <Bio />
         {posts.map(({ node }) => {
 
           const title = node.frontmatter.title || node.fields.slug
