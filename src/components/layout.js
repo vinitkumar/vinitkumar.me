@@ -213,41 +213,69 @@ const GlobalStyle = createGlobalStyle`
 
   .heading {
     text-align: left;
-    font-size: 1.5rem;
-    margin-bottom: var(--font-base);
+    font-size: 2rem;
+    margin-bottom: 2rem;
     font-weight: 300;
+    color: var(--text);
+    line-height: 1.2;
   }
 
   .recommendations-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--font-base);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
   }
 
   .recommendation-card {
-    border-bottom: var(--border) solid var(--gray-line);
-    padding: var(--font-base);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid var(--gray-line);
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  }
+
+  .recommendation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent);
+  }
+
+  .recommendation-card::before {
+    content: '"';
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--gray-line);
+    line-height: 1;
+    font-family: Georgia, serif;
   }
 
   .recommendation-header {
     display: flex;
     align-items: center;
-    margin-bottom: var(--font-base);
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
   }
 
   .avatar {
-    width: 40px;
-    height: 40px;
-    color: inherit;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--accent) 0%, #4a5568 100%);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    margin-right: var(--font-base);
-    background-color: var(--gray-bg);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(44, 51, 56, 0.15);
+    letter-spacing: 0.5px;
   }
 
   .info {
@@ -255,26 +283,38 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .name {
-    font-size: var(--font-base);
-    margin: 0;
-    font-weight: 400;
+    font-size: 1.25rem;
+    margin: 0 0 0.25rem 0;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.2;
   }
 
   .job-title {
-    font-size: var(--font-small);
+    font-size: 0.9rem;
     color: var(--gray-text);
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 500;
   }
 
   .recommendation-text {
-    font-size: var(--font-small);
-    margin: var(--font-base) 0;
-    line-height: 1.5;
+    font-size: 0.95rem;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+    color: var(--text);
+    font-style: italic;
+    position: relative;
   }
 
   .creation-date {
-    font-size: var(--font-smaller);
+    font-size: 0.8rem;
     color: var(--gray-text);
     text-align: right;
+    margin: 0;
+    font-weight: 500;
+    border-top: 1px solid var(--gray-line);
+    padding-top: 1rem;
   }
 `;
 

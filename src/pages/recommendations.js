@@ -1,8 +1,19 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const recommendations = [
+  {
+    "firstName": "Jochem",
+    "lastName": "Klingeler",
+    "Company": "KidsKonnect",
+    "jobTitle": "Back End Developer",
+    "text": "Vinit and I worked mostly on improving our salesfunnel functionality, where he did both front-end and back-end. There I have seen him work in both React and Laravel, while he also did Python at Social-Schools. This shows Vinits versatility and drive to dive into sometimes unfamiliar territory. I found Vinit to be quite social, not afraid to ask and have smalltalk outside of work related questions.",
+    "creationDate": "12/02/24",
+    "status": "VISIBLE"
+  },
   {
     "firstName": "Eric",
     "lastName": "de Haan",
@@ -285,12 +296,24 @@ const recommendations = [
 
 ];
 
-class ValueComponent extends React.Component {
-  render() {
-    return (
-        <Layout location={this.props.location} title="Recommendations">
-          <div className="recommendations-container">
-            <h1 className="heading">Here are some of the Recommendations from my colleagues over the years</h1>
+const ValueComponent = (props) => {
+  const data = useStaticQuery(graphql`
+    query RecommendationsQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
+  const { title } = data.site.siteMetadata
+
+  return (
+    <Layout location={props.location} title={title}>
+      <Seo title="Recommendations" />
+      <div className="recommendations-container">
+        <h1 className="heading">What my colleagues say about working with me</h1>
             <div className="recommendations-grid">
               {recommendations.map((rec, index) => (
                 <div className="recommendation-card" key={index}>
@@ -315,7 +338,6 @@ class ValueComponent extends React.Component {
           </div>
         </Layout>
     )
-  }
 }
 
 export default ValueComponent
