@@ -15,12 +15,13 @@ const AboutIndex = (props) => {
       site {
         siteMetadata {
           author
+          title
         }
       }
     }
   `)
 
-  const { author } = data.site.siteMetadata
+  const { author, title } = data.site.siteMetadata
 
   // Calculate dynamic experience
   const startDate = new Date('2013-02-01')
@@ -30,7 +31,7 @@ const AboutIndex = (props) => {
   const diffYears = Math.floor(diffDays / 365.25)
 
   return (
-    <Layout location={props.location}>
+    <Layout location={props.location} title={title}>
       <Seo title="About"></Seo>
       <h1>About</h1>
       <img

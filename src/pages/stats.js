@@ -7,6 +7,11 @@ import { rhythm } from "../utils/typography"
 const StatsIndex = (props) => {
   const data = useStaticQuery(graphql`
     query StatsQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
       allMarkdownRemark(
         sort: { frontmatter: { date: DESC } }
         limit: 1000
@@ -23,6 +28,8 @@ const StatsIndex = (props) => {
       }
     }
   `)
+  
+  const { title } = data.site.siteMetadata
   
   // Analyze posts by year
   const posts = data.allMarkdownRemark.edges
@@ -52,7 +59,7 @@ const StatsIndex = (props) => {
   const mostActiveYear = Object.keys(yearStats).reduce((a, b) => yearStats[a] > yearStats[b] ? a : b)
 
   return (
-    <Layout location={props.location}>
+    <Layout location={props.location} title={title}>
       <Seo title="Blog Statistics" />
       <h1>📊 Blog Statistics</h1>
       
