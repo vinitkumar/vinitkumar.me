@@ -93,16 +93,30 @@ const GlobalStyle = createGlobalStyle`
   nav {
     margin-bottom: 2rem;
     font-size: 1rem;
+    border-top: 1px solid var(--gray-line);
+    border-bottom: 1px solid var(--gray-line);
+    padding: 1rem 0;
   }
 
   nav a {
     margin-right: 2rem;
     text-decoration: none;
     color: inherit;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-weight: 400;
+    letter-spacing: 0.01em;
   }
 
   nav a:hover {
+    background-color: var(--gray-bg);
     color: var(--accent-hover);
+    transform: translateY(-1px);
+  }
+
+  nav a:last-child {
+    margin-right: 0;
   }
 
   /* Hide or minimize blog stats completely */
@@ -299,6 +313,7 @@ class Layout extends React.Component {
             <Link to="/stats">Stats</Link>
             <Link to="/recommendations">Recommendations</Link>
             <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <a href="https://www.linkedin.com/in/vinitatlinkedin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://x.com/vinitkme" target="_blank" rel="noopener noreferrer">Twitter</a>
             <a href="https://github.com/vinitkumar" target="_blank" rel="noopener noreferrer">GitHub</a>
           </nav>
@@ -332,6 +347,7 @@ class Layout extends React.Component {
             <Link to="/stats">Stats</Link>
             <Link to="/recommendations">Recommendations</Link>
             <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+            <a href="https://www.linkedin.com/in/vinitatlinkedin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a href="https://x.com/vinitkme" target="_blank" rel="noopener noreferrer">Twitter</a>
             <a href="https://github.com/vinitkumar" target="_blank" rel="noopener noreferrer">GitHub</a>
           </nav>

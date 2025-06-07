@@ -36,13 +36,21 @@ class HomeLayout extends React.Component {
           <nav style={{
             marginBottom: rhythm(1.5),
             fontSize: '1rem',
+            borderTop: '1px solid rgba(51, 51, 51, 0.1)',
+            borderBottom: '1px solid rgba(51, 51, 51, 0.1)',
+            padding: '1rem 0',
           }}>
             <Link 
               to="/about" 
               style={{ 
                 marginRight: '2rem',
                 textDecoration: 'none',
-                color: 'inherit'
+                color: 'inherit',
+                padding: '0.5rem 0.75rem',
+                borderRadius: '4px',
+                transition: 'all 0.2s ease',
+                fontWeight: '400',
+                letterSpacing: '0.01em',
               }}
             >
               About
@@ -52,7 +60,12 @@ class HomeLayout extends React.Component {
               style={{ 
                 marginRight: '2rem',
                 textDecoration: 'none',
-                color: 'inherit'
+                color: 'inherit',
+                padding: '0.5rem 0.75rem',
+                borderRadius: '4px',
+                transition: 'all 0.2s ease',
+                fontWeight: '400',
+                letterSpacing: '0.01em',
               }}
             >
               Stats
@@ -62,7 +75,12 @@ class HomeLayout extends React.Component {
               style={{ 
                 marginRight: '2rem',
                 textDecoration: 'none',
-                color: 'inherit'
+                color: 'inherit',
+                padding: '0.5rem 0.75rem',
+                borderRadius: '4px',
+                transition: 'all 0.2s ease',
+                fontWeight: '400',
+                letterSpacing: '0.01em',
               }}
             >
               Recommendations
@@ -74,10 +92,32 @@ class HomeLayout extends React.Component {
               style={{ 
                 marginRight: '2rem',
                 textDecoration: 'none',
-                color: 'inherit'
+                color: 'inherit',
+                padding: '0.5rem 0.75rem',
+                borderRadius: '4px',
+                transition: 'all 0.2s ease',
+                fontWeight: '400',
+                letterSpacing: '0.01em',
               }}
             >
               Resume
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/vinitatlinkedin/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ 
+                marginRight: '2rem',
+                textDecoration: 'none',
+                color: 'inherit',
+                padding: '0.5rem 0.75rem',
+                borderRadius: '4px',
+                transition: 'all 0.2s ease',
+                fontWeight: '400',
+                letterSpacing: '0.01em',
+              }}
+            >
+              LinkedIn
             </a>
             <a 
               href="https://x.com/vinitkme" 
@@ -86,7 +126,12 @@ class HomeLayout extends React.Component {
               style={{ 
                 marginRight: '2rem',
                 textDecoration: 'none',
-                color: 'inherit'
+                color: 'inherit',
+                padding: '0.5rem 0.75rem',
+                borderRadius: '4px',
+                transition: 'all 0.2s ease',
+                fontWeight: '400',
+                letterSpacing: '0.01em',
               }}
             >
               Twitter
@@ -97,7 +142,12 @@ class HomeLayout extends React.Component {
               rel="noopener noreferrer"
               style={{ 
                 textDecoration: 'none',
-                color: 'inherit'
+                color: 'inherit',
+                padding: '0.5rem 0.75rem',
+                borderRadius: '4px',
+                transition: 'all 0.2s ease',
+                fontWeight: '400',
+                letterSpacing: '0.01em',
               }}
             >
               GitHub

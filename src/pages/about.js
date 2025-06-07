@@ -120,7 +120,7 @@ const AboutIndex = (props) => {
       </p>
 
       <p>
-        If you appreciate my open source work, please consider donating on <a href="https://github.com/sponsors/vinitkumar" rel="noopener noreferrer" target="_blank">GitHub Sponsors</a> and <a href="https://opencollective.com/vinit-kumar" rel="noopener noreferrer" target="_blank">OpenCollective</a>. Thank you!
+        If you appreciate my open source work, please consider donating on <a href="https://github.com/sponsors/vinitkumar" rel="noopener noreferrer" target="_blank">GitHub Sponsors</a>. Thank you!
       </p>
 
       <p style={{ marginTop: rhythm(1), fontStyle: 'italic' }}>
