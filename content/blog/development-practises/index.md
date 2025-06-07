@@ -1,7 +1,7 @@
 ---
 title: A Somewhat Sane Guide for Software Development
 date: "2020-02-06"
-featured: false
+featured: true
 description: "A comprehensive guide to software development best practices based on 8 years of professional experience. Covers Git workflows, backend development principles, frontend guidelines, and DevOps considerations with practical examples and commands."
 ---
 

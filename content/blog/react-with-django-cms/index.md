@@ -6,6 +6,7 @@ description: "How to get react working with latest djangoCMS"
 category: articles
 tags: react Django
 comments: false
+featured: true
 ---
 
 React is one of the most useful frontend libraries out there. At Socialschools, we use React to render some content using our API from App server. It has been in production since June last year and it is really amazing building neat stuff using both React and djangoCMS. djangoCMS provides us the best hybrid experience possible, we render say 70% of the content from server rendered pages and it provides us good support for even running React et al. without any hiccups.
