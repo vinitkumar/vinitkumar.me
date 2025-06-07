@@ -151,119 +151,158 @@ class HomeLayout extends React.Component {
             fontSize: '1rem',
             borderTop: '1px solid rgba(51, 51, 51, 0.1)',
             borderBottom: '1px solid rgba(51, 51, 51, 0.1)',
-            padding: '1rem 0',
+            padding: '1.5rem 0',
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '1rem',
           }}>
             <Link 
               to="/about" 
               style={{ 
-                marginRight: '2rem',
+                background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+                color: 'white',
+                padding: '0.4rem 1rem',
+                borderRadius: '20px',
                 textDecoration: 'none',
-                color: 'inherit',
-                padding: '0.5rem 0.75rem',
-                borderRadius: '4px',
-                transition: 'all 0.2s ease',
-                fontWeight: '400',
-                letterSpacing: '0.01em',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                letterSpacing: '0.5px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(59, 130, 246, 0.3)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
               }}
             >
-              About
+              👤 About
             </Link>
             <Link 
               to="/stats" 
               style={{ 
-                marginRight: '2rem',
+                background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+                color: 'white',
+                padding: '0.4rem 1rem',
+                borderRadius: '20px',
                 textDecoration: 'none',
-                color: 'inherit',
-                padding: '0.5rem 0.75rem',
-                borderRadius: '4px',
-                transition: 'all 0.2s ease',
-                fontWeight: '400',
-                letterSpacing: '0.01em',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                letterSpacing: '0.5px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(139, 92, 246, 0.3)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
               }}
             >
-              Stats
+              📊 Stats
             </Link>
             <Link 
               to="/recommendations" 
               style={{ 
-                marginRight: '2rem',
+                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                color: 'white',
+                padding: '0.4rem 1rem',
+                borderRadius: '20px',
                 textDecoration: 'none',
-                color: 'inherit',
-                padding: '0.5rem 0.75rem',
-                borderRadius: '4px',
-                transition: 'all 0.2s ease',
-                fontWeight: '400',
-                letterSpacing: '0.01em',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                letterSpacing: '0.5px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(16, 185, 129, 0.3)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
               }}
             >
-              Recommendations
+              ⭐ Recommendations
             </Link>
             <a 
               href="https://vinitkumar.github.io/vinitkumar.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ 
-                marginRight: '2rem',
+                background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                color: 'white',
+                padding: '0.4rem 1rem',
+                borderRadius: '20px',
                 textDecoration: 'none',
-                color: 'inherit',
-                padding: '0.5rem 0.75rem',
-                borderRadius: '4px',
-                transition: 'all 0.2s ease',
-                fontWeight: '400',
-                letterSpacing: '0.01em',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                letterSpacing: '0.5px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(99, 102, 241, 0.3)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
               }}
             >
-              Resume
+              📄 Resume
             </a>
             <a 
               href="https://www.linkedin.com/in/vinitatlinkedin/" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ 
-                marginRight: '2rem',
+                background: 'linear-gradient(135deg, #0077b5 0%, #005885 100%)',
+                color: 'white',
+                padding: '0.4rem 1rem',
+                borderRadius: '20px',
                 textDecoration: 'none',
-                color: 'inherit',
-                padding: '0.5rem 0.75rem',
-                borderRadius: '4px',
-                transition: 'all 0.2s ease',
-                fontWeight: '400',
-                letterSpacing: '0.01em',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                letterSpacing: '0.5px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(0, 119, 181, 0.3)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
               }}
             >
-              LinkedIn
+              💼 LinkedIn
             </a>
             <a 
               href="https://x.com/vinitkme" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ 
-                marginRight: '2rem',
+                background: 'linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%)',
+                color: 'white',
+                padding: '0.4rem 1rem',
+                borderRadius: '20px',
                 textDecoration: 'none',
-                color: 'inherit',
-                padding: '0.5rem 0.75rem',
-                borderRadius: '4px',
-                transition: 'all 0.2s ease',
-                fontWeight: '400',
-                letterSpacing: '0.01em',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                letterSpacing: '0.5px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(29, 161, 242, 0.3)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
               }}
             >
-              Twitter
+              🐦 Twitter
             </a>
             <a 
               href="https://github.com/vinitkumar" 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ 
+                background: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)',
+                color: 'white',
+                padding: '0.4rem 1rem',
+                borderRadius: '20px',
                 textDecoration: 'none',
-                color: 'inherit',
-                padding: '0.5rem 0.75rem',
-                borderRadius: '4px',
-                transition: 'all 0.2s ease',
-                fontWeight: '400',
-                letterSpacing: '0.01em',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                letterSpacing: '0.5px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(55, 65, 81, 0.3)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
               }}
             >
-              GitHub
+              💻 GitHub
             </a>
           </nav>
         </>
