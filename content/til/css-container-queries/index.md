@@ -5,8 +5,6 @@ description: "How CSS container queries enable true component-based responsive d
 tags: ["css", "responsive-design", "web-development"]
 ---
 
-# CSS Container Queries Are Game Changers
-
 Today I discovered the power of CSS container queries, which solve a major limitation of traditional media queries.
 
 ## The Problem with Media Queries

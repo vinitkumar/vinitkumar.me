@@ -5,8 +5,6 @@ description: "How to use git sparse-checkout to work with specific directories i
 tags: ["git", "version-control", "productivity"]
 ---
 
-# Git Sparse Checkout for Large Repos
-
 Today I learned about `git sparse-checkout`, a powerful feature that allows you to work with only specific directories in a large repository.
 
 ## The Problem
