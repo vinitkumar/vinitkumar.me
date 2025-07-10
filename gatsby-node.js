@@ -1,12 +1,12 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createSchemaCustomization = ({ actions }) => {
+exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
   
   // Define explicit types for markdown frontmatter
   const typeDefs = `
-    type MarkdownRemarkFrontmatter {
+    type MarkdownRemarkFrontmatter @dontInfer {
       title: String
       date: Date @dateformat
       description: String
@@ -14,18 +14,37 @@ exports.createSchemaCustomization = ({ actions }) => {
       tags: [String]
     }
     
-    type MarkdownRemark implements Node {
+    type MarkdownRemark implements Node @dontInfer {
       frontmatter: MarkdownRemarkFrontmatter
       fields: MarkdownRemarkFields
     }
     
-    type MarkdownRemarkFields {
+    type MarkdownRemarkFields @dontInfer {
       slug: String
       collection: String
     }
   `
   
   createTypes(typeDefs)
+  
+  // Create resolver for tags to handle string -> array conversion
+  createTypes([
+    schema.buildObjectType({
+      name: `MarkdownRemarkFrontmatter`,
+      fields: {
+        tags: {
+          type: `[String]`,
+          resolve(source) {
+            const tags = source.tags
+            if (!tags) return []
+            if (Array.isArray(tags)) return tags
+            if (typeof tags === 'string') return [tags]
+            return []
+          }
+        }
+      }
+    })
+  ])
 }
 
 exports.createPages = ({ graphql, actions }) => {
