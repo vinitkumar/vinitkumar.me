@@ -177,6 +177,26 @@ class HomeLayout extends React.Component {
               👤 About
             </Link>
             <Link 
+              to="/til" 
+              style={{ 
+                background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+                color: 'white',
+                padding: '0.4rem 1rem',
+                borderRadius: '20px',
+                textDecoration: 'none',
+                fontSize: '0.85rem',
+                fontWeight: '600',
+                letterSpacing: '0.5px',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 4px rgba(245, 158, 11, 0.3)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+              }}
+            >
+              📚 TIL
+            </Link>
+            <Link 
               to="/stats" 
               style={{ 
                 background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
