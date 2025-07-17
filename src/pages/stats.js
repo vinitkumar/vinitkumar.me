@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 const StatsIndex = (props) => {
   const data = useStaticQuery(graphql`

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Analytics } from '@vercel/analytics/react';
-import styled, { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
 

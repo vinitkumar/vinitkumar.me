@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
-import { rhythm } from "../utils/typography"
 import { Helmet } from "react-helmet"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 deckDeckGoHighlightElement();
@@ -31,7 +30,7 @@ class BlogIndex extends React.Component {
   toggleFeaturedFilter = () => {
     const newShowFeaturedOnly = !this.state.showFeaturedOnly
     this.setState({ showFeaturedOnly: newShowFeaturedOnly })
-    
+
     // Update URL without page refresh
     if (typeof window !== 'undefined') {
       const url = new URL(window.location)
@@ -48,9 +47,9 @@ class BlogIndex extends React.Component {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const allPosts = data.allMarkdownRemark.edges
-    
+
     // Filter posts based on featured status
-    const posts = this.state.showFeaturedOnly 
+    const posts = this.state.showFeaturedOnly
       ? allPosts.filter(({ node }) => node.frontmatter.featured)
       : allPosts
 
@@ -64,7 +63,7 @@ class BlogIndex extends React.Component {
           <meta name="fediverse:creator" content="@vinitkme@fosstodon.org" />
         </Helmet>
         <Seo title="Home" />
-        
+
         {/* Filter Controls */}
         <div style={{
           marginBottom: '2rem',
@@ -79,9 +78,9 @@ class BlogIndex extends React.Component {
           gap: '1rem'
         }}>
           <div>
-            <h3 style={{ 
-              margin: 0, 
-              fontSize: '1.2rem', 
+            <h3 style={{
+              margin: 0,
+              fontSize: '1.2rem',
               color: '#2d3748',
               marginBottom: '0.25rem'
             }}>
@@ -91,22 +90,22 @@ class BlogIndex extends React.Component {
                 <>📝 All Posts ({allPosts.length})</>
               )}
             </h3>
-            <p style={{ 
-              margin: 0, 
-              fontSize: '0.9rem', 
-              color: '#718096' 
+            <p style={{
+              margin: 0,
+              fontSize: '0.9rem',
+              color: '#718096'
             }}>
-              {this.state.showFeaturedOnly 
+              {this.state.showFeaturedOnly
                 ? 'Showing my most valuable and impactful writing'
                 : `Browse all posts • ${featuredCount} featured`
               }
             </p>
           </div>
-          
+
           <button
             onClick={this.toggleFeaturedFilter}
             style={{
-              background: this.state.showFeaturedOnly 
+              background: this.state.showFeaturedOnly
                 ? 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
                 : 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
               color: 'white',
@@ -117,7 +116,7 @@ class BlogIndex extends React.Component {
               fontWeight: '600',
               cursor: 'pointer',
               transition: 'all 0.3s ease',
-              boxShadow: this.state.showFeaturedOnly 
+              boxShadow: this.state.showFeaturedOnly
                 ? '0 4px 12px rgba(16, 185, 129, 0.3)'
                 : '0 4px 12px rgba(99, 102, 241, 0.3)',
               display: 'inline-flex',
@@ -126,13 +125,25 @@ class BlogIndex extends React.Component {
             }}
             onMouseOver={(e) => {
               e.target.style.transform = 'translateY(-2px)'
-              e.target.style.boxShadow = this.state.showFeaturedOnly 
+              e.target.style.boxShadow = this.state.showFeaturedOnly
+                ? '0 6px 16px rgba(16, 185, 129, 0.4)'
+                : '0 6px 16px rgba(99, 102, 241, 0.4)'
+            }}
+            onFocus={(e) => {
+              e.target.style.transform = 'translateY(-2px)'
+              e.target.style.boxShadow = this.state.showFeaturedOnly
                 ? '0 6px 16px rgba(16, 185, 129, 0.4)'
                 : '0 6px 16px rgba(99, 102, 241, 0.4)'
             }}
             onMouseOut={(e) => {
               e.target.style.transform = 'translateY(0)'
-              e.target.style.boxShadow = this.state.showFeaturedOnly 
+              e.target.style.boxShadow = this.state.showFeaturedOnly
+                ? '0 4px 12px rgba(16, 185, 129, 0.3)'
+                : '0 4px 12px rgba(99, 102, 241, 0.3)'
+            }}
+            onBlur={(e) => {
+              e.target.style.transform = 'translateY(0)'
+              e.target.style.boxShadow = this.state.showFeaturedOnly
                 ? '0 4px 12px rgba(16, 185, 129, 0.3)'
                 : '0 4px 12px rgba(99, 102, 241, 0.3)'
             }}
@@ -152,12 +163,12 @@ class BlogIndex extends React.Component {
               <article key={node.fields.slug} className="blog-post-card">
                 <div className="blog-post-header">
                   <h2 className="blog-post-title">
-                    <Link 
-                      style={{ 
-                        boxShadow: `none`, 
+                    <Link
+                      style={{
+                        boxShadow: `none`,
                         textDecoration: 'none',
                         color: 'inherit'
-                      }} 
+                      }}
                       to={node.fields.slug}
                     >
                       {title}
@@ -170,16 +181,16 @@ class BlogIndex extends React.Component {
                     )}
                   </div>
                 </div>
-                
-                <div 
+
+                <div
                   className="blog-post-description"
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
-                
+
                 <div className="blog-post-footer">
-                  <Link 
+                  <Link
                     to={node.fields.slug}
                     className="read-more-link"
                   >

@@ -117,8 +117,40 @@ class TilIndex extends React.Component {
             const tags = node.frontmatter.tags || []
             
             return (
-              <article 
+              <Link
                 key={node.fields.slug}
+                to={node.fields.slug}
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                }}
+                onMouseEnter={e => {
+                  const article = e.currentTarget.firstChild
+                  article.style.transform = "translateY(-4px)"
+                  article.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.08)"
+                  article.style.borderColor = "#3b82f6"
+                }}
+                onMouseLeave={e => {
+                  const article = e.currentTarget.firstChild
+                  article.style.transform = "translateY(0)"
+                  article.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.02)"
+                  article.style.borderColor = "#e5e7eb"
+                }}
+                onFocus={e => {
+                  const article = e.currentTarget.firstChild
+                  article.style.transform = "translateY(-4px)"
+                  article.style.boxShadow = "0 8px 25px rgba(0, 0, 0, 0.08)"
+                  article.style.borderColor = "#3b82f6"
+                }}
+                onBlur={e => {
+                  const article = e.currentTarget.firstChild
+                  article.style.transform = "translateY(0)"
+                  article.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.02)"
+                  article.style.borderColor = "#e5e7eb"
+                }}
+              >
+              <article 
                 style={{
                   background: '#ffffff',
                   border: '1px solid #e5e7eb',
@@ -129,16 +161,7 @@ class TilIndex extends React.Component {
                   display: 'flex',
                   flexDirection: 'column',
                   position: 'relative',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.08)'
-                  e.currentTarget.style.borderColor = '#3b82f6'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.02)'
-                  e.currentTarget.style.borderColor = '#e5e7eb'
+                  width: '100%'
                 }}
               >
                 {/* TIL Badge */}
@@ -169,16 +192,7 @@ class TilIndex extends React.Component {
                     fontWeight: '600',
                     lineHeight: '1.3',
                   }}>
-                    <Link 
-                      style={{ 
-                        boxShadow: `none`, 
-                        textDecoration: 'none',
-                        color: 'inherit',
-                      }} 
-                      to={node.fields.slug}
-                    >
                       {title}
-                    </Link>
                   </h2>
                   
                   {/* Meta */}
@@ -250,8 +264,7 @@ class TilIndex extends React.Component {
                   paddingTop: '1rem',
                   borderTop: '1px solid #e5e7eb',
                 }}>
-                  <Link 
-                    to={node.fields.slug}
+                  <div
                     style={{
                       color: '#3b82f6',
                       textDecoration: 'none',
@@ -263,9 +276,10 @@ class TilIndex extends React.Component {
                     }}
                   >
                     Read more →
-                  </Link>
+                  </div>
                 </footer>
               </article>
+              </Link>
             )
           })}
         </div>
