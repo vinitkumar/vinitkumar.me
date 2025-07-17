@@ -5,7 +5,7 @@ featured: true
 description: "A personal take on the power and perils of using AI agents in software development, exploring how to strike a balance between productivity and preserving one's skills."
 ---
 
-I have been using AI-based editors for a couple of years. At my previous job, I used GitHub Copilot, and more recently, since November 2023, I have been using Cursor. The field of AI is evolving so rapidly that it's challenging to form a consistent opinion about it. This post outlines some of my feelings on the subject.
+I have been using AI-based editors for a couple of years. At my previous job, I used GitHub Copilot, and more recently, since November 2024, I have been using Cursor. The field of AI is evolving so rapidly that it's challenging to form a consistent opinion about it. This post outlines some of my feelings on the subject.
 
 AI agents are powerful and useful, but they also present certain dangers. If you let an AI agent write most of your code, you risk creating a codebase that you won't remember in the long run. Worse yet, if you don't ask the agent to document its work, you could end up with a mess that is difficult to reason about. Personally, I remember all the code I've written and thought about deeply. While an agent can significantly reduce development time by doing the heavy lifting, I find that because I didn't exert the mental effort myself, I don't remember the details as minutely as when I write the code from scratch.
 
