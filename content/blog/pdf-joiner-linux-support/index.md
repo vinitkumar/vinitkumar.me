@@ -59,7 +59,7 @@ $ ./pdf-joiner file1.pdf file2.pdf
 No PDF joining tools found. Attempting to install them...
 Detected Linux distribution: ubuntu
 Installing PDF tools for Ubuntu/Debian...
-[sudo] password for user: 
+[sudo] password for user:
 PDF tools installed successfully!
 Successfully joined PDFs into: combined_20250625_143812.pdf
 ```
@@ -126,7 +126,7 @@ go build -o pdf-joiner
 
 ---
 
-**GitHub Repository**: [vinitkumar/pdf-joiner](https://github.com/vinitkumar/pdf-joiner)  
+**GitHub Repository**: [vinitkumar/pdf-joiner](https://github.com/vinitkumar/pdf-joiner)
 **Latest Release**: [v1.2.9](https://github.com/vinitkumar/pdf-joiner/releases/tag/v1.2.9)
 
-The Linux support extends PDF Joiner's reach beyond macOS, making it accessible to developers across all major platforms while maintaining the same privacy-focused, local processing approach that makes it a reliable alternative to online PDF tools. 
+The Linux support extends PDF Joiner's reach beyond macOS, making it accessible to developers across all major platforms while maintaining the same privacy-focused, local processing approach that makes it a reliable alternative to online PDF tools.
