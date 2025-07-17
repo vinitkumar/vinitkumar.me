@@ -1,6 +1,6 @@
 ---
 title: "AI Agents, Me, and My Feelings"
-date: "2024-07-18"
+date: "2025-07-18"
 featured: true
 description: "A personal take on the power and perils of using AI agents in software development, exploring how to strike a balance between productivity and preserving one's skills."
 ---
