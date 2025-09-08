@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
   img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
   p, h1, h2, h3 { overflow-wrap: break-word; }
   body { min-height: 100vh; }
-  
+
   :root {
     --font-base: 1rem;
     --font-small: 0.875rem;
@@ -74,8 +74,8 @@ const GlobalStyle = createGlobalStyle`
     color: var(--accent-hover);
   }
 
-  .btn-action-latest { 
-    text-decoration: none; 
+  .btn-action-latest {
+    text-decoration: none;
     background: var(--accent);
     color: white;
     border: none;
@@ -86,7 +86,7 @@ const GlobalStyle = createGlobalStyle`
     border-radius: 2px;
   }
 
-  .btn-action-latest:hover { 
+  .btn-action-latest:hover {
     color: var(--terminal-green);
   }
 
@@ -120,7 +120,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   /* Hide or minimize blog stats completely */
-  [class*="blog-stats"], 
+  [class*="blog-stats"],
   [class*="BlogStats"],
   .blog-stats,
   h3:has(+ *[class*="chart"]),
@@ -375,7 +375,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .featured-badge {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    background: #ff0000;
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
@@ -461,10 +461,10 @@ class Layout extends React.Component {
             flexWrap: 'wrap',
             gap: '1rem',
           }}>
-            <Link 
-              to="/about" 
-              style={{ 
-                background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+            <Link
+              to="/about"
+              style={{
+                background: '#3b82f6',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -479,12 +479,12 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              👤 About
+              About
             </Link>
-            <Link 
-              to="/til" 
-              style={{ 
-                background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+            <Link
+              to="/til"
+              style={{
+                background: '#f59e0b',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -499,12 +499,12 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              📚 TIL
+              TIL
             </Link>
-            <Link 
-              to="/stats" 
-              style={{ 
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+            <Link
+              to="/stats"
+              style={{
+                background: '#8b5cf6',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -519,12 +519,12 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              📊 Stats
+              Stats
             </Link>
-            <Link 
-              to="/recommendations" 
-              style={{ 
-                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+            <Link
+              to="/recommendations"
+              style={{
+                background: '#10b981',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -539,14 +539,14 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              ⭐ Recommendations
+              Recommendations
             </Link>
-            <a 
-              href="https://vinitkumar.github.io/vinitkumar.pdf" 
-              target="_blank" 
+            <a
+              href="https://vinitkumar.github.io/vinitkumar.pdf"
+              target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+              style={{
+                background: '#6366f1',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -561,14 +561,14 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              📄 Resume
+              Resume
             </a>
-            <a 
-              href="https://www.linkedin.com/in/vinitatlinkedin/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/vinitatlinkedin/"
+              target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                background: 'linear-gradient(135deg, #0077b5 0%, #005885 100%)',
+              style={{
+                background: '#0077b5',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -583,14 +583,14 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              💼 LinkedIn
+              LinkedIn
             </a>
-            <a 
-              href="https://x.com/vinitkme" 
-              target="_blank" 
+            <a
+              href="https://x.com/vinitkme"
+              target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                background: 'linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%)',
+              style={{
+                background: '#1da1f2',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -605,14 +605,14 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              🐦 Twitter
+              Twitter
             </a>
-            <a 
-              href="https://github.com/vinitkumar" 
-              target="_blank" 
+            <a
+              href="https://github.com/vinitkumar"
+              target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                background: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)',
+              style={{
+                background: '#374151',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -627,7 +627,7 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              💻 GitHub
+              GitHub
             </a>
           </nav>
         </>
@@ -665,10 +665,10 @@ class Layout extends React.Component {
             flexWrap: 'wrap',
             gap: '1rem',
           }}>
-            <Link 
-              to="/about" 
-              style={{ 
-                background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+            <Link
+              to="/about"
+              style={{
+                background: '#3b82f6',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -683,12 +683,12 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              👤 About
+              About
             </Link>
-            <Link 
-              to="/til" 
-              style={{ 
-                background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+            <Link
+              to="/til"
+              style={{
+                background: '#f59e0b',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -703,12 +703,12 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              📚 TIL
+              TIL
             </Link>
-            <Link 
-              to="/stats" 
-              style={{ 
-                background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+            <Link
+              to="/stats"
+              style={{
+                background: '#8b5cf6',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -723,12 +723,12 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              📊 Stats
+              Stats
             </Link>
-            <Link 
-              to="/recommendations" 
-              style={{ 
-                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+            <Link
+              to="/recommendations"
+              style={{
+                background: '#10b981',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -743,14 +743,14 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              ⭐ Recommendations
+              Recommendations
             </Link>
-            <a 
-              href="https://vinitkumar.github.io/vinitkumar.pdf" 
-              target="_blank" 
+            <a
+              href="https://vinitkumar.github.io/vinitkumar.pdf"
+              target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+              style={{
+                background: '#6366f1',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -765,14 +765,14 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              📄 Resume
+              Resume
             </a>
-            <a 
-              href="https://www.linkedin.com/in/vinitatlinkedin/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/vinitatlinkedin/"
+              target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                background: 'linear-gradient(135deg, #0077b5 0%, #005885 100%)',
+              style={{
+                background: '#0077b5',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -787,14 +787,14 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              💼 LinkedIn
+              LinkedIn
             </a>
-            <a 
-              href="https://x.com/vinitkme" 
-              target="_blank" 
+            <a
+              href="https://x.com/vinitkme"
+              target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                background: 'linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%)',
+              style={{
+                background: '#1da1f2',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -809,14 +809,14 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              🐦 Twitter
+              Twitter
             </a>
-            <a 
-              href="https://github.com/vinitkumar" 
-              target="_blank" 
+            <a
+              href="https://github.com/vinitkumar"
+              target="_blank"
               rel="noopener noreferrer"
-              style={{ 
-                background: 'linear-gradient(135deg, #374151 0%, #1f2937 100%)',
+              style={{
+                background: '#374151',
                 color: 'white',
                 padding: '0.4rem 1rem',
                 borderRadius: '20px',
@@ -831,7 +831,7 @@ class Layout extends React.Component {
                 gap: '0.5rem',
               }}
             >
-              💻 GitHub
+              GitHub
             </a>
           </nav>
         </>
