@@ -107,7 +107,7 @@ class BlogIndex extends React.Component {
             style={{
               background: this.state.showFeaturedOnly
                 ? 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
-                : 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                : '#ff0000',
               color: 'white',
               border: 'none',
               padding: '0.75rem 1.5rem',
