@@ -7,6 +7,8 @@ description: "Introducing Monokai Pro for Vim - a faithful port of the popular V
 
 I've always believed that the right colorscheme makes a profound difference in how we write code. After years of switching between various themes, I found myself constantly drawn back to Monokai Pro in VSCode. Its carefully crafted color palette strikes the perfect balance between vibrant syntax highlighting and comfortable readability.
 
+I wrote this theme in vim colorscheme based on the work from [gthelding](https://github.com/vinitkumar/monokai-pro-vim?tab=readme-ov-file)
+
 But here's the thing - I spend most of my coding time in Vim. The existing Monokai ports never quite captured what made the Pro version special. So I decided to create a faithful port that brings all six Monokai Pro filters to Vim and Neovim.
 
 ## Why Another Monokai Theme?
