@@ -5,7 +5,7 @@ featured: true
 description: "A deep dive into professional AI-assisted development with Django, exploring how experienced engineers can leverage coding agents while maintaining accountability and code quality."
 ---
 
-*This post builds on the excellent work by [Simon Willison](https://simonwillison.net/) and his original concept of "Vibe Engineering." You can read his original piece [here](https://simonwillison.net/2024/Oct/7/vibe-engineering/).*
+*This post builds on the excellent work by [Simon Willison](https://simonwillison.net/) and his original concept of "Vibe Engineering." You can read his original piece <a href="https://simonwillison.net/2024/Oct/7/vibe-engineering/" class="inline-link" target="_blank" rel="noopener noreferrer">here</a>.*
 
 I've been using AI coding assistants for over two years now—from GitHub Copilot to Cursor—and I've seen the landscape evolve rapidly. What started as simple autocomplete has transformed into sophisticated coding agents that can iterate, test, and modify code until they achieve specified goals.
 

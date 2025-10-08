@@ -153,6 +153,26 @@ a:hover {
   color: var(--accent-hover);
 }
 
+/* Inline link styling for better visibility */
+.inline-link {
+  color: #3b82f6 !important;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  background: rgba(59, 130, 246, 0.1);
+  transition: all 0.2s ease;
+  border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+}
+
+.inline-link:hover {
+  color: white !important;
+  background: #3b82f6;
+  border-bottom-color: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
 code,
 kbd,
 pre,
