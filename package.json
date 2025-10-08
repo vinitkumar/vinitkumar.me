@@ -10,6 +10,8 @@
   "dependencies": {
     "@deckdeckgo/highlight-code": "^4.4.0",
     "@vercel/analytics": "^1.0.1",
+    "axios": "^1.12.0",
+    "cookie": "^0.7.0",
     "gatsby": "^5.14.5",
     "gatsby-cli": "^5.14.0",
     "gatsby-plugin-feed": "^5.11.0",
@@ -37,6 +39,8 @@
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.20",
     "styled-components": "^5.3.6",
+    "tar-fs": "^3.1.1",
+    "tmp": "^0.2.4",
     "typography": "^0.16.24",
     "typography-theme-funston": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
@@ -64,5 +68,11 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "upgrade-interactive": "npm-check --update"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "resolutions": {
+    "axios": "^1.12.0",
+    "cookie": "^0.7.0",
+    "tar-fs": "^3.1.1",
+    "tmp": "^0.2.4"
+  }
 }
