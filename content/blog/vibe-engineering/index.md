@@ -1,8 +1,8 @@
 ---
-title: "Vibe Engineering: Working with AI Coding Agents"
+title: "Vibe Engineering with Django: Working with AI Coding Agents"
 date: "2025-10-08"
 featured: true
-description: "A deep dive into professional AI-assisted development, exploring how experienced engineers can leverage coding agents while maintaining accountability and code quality."
+description: "A deep dive into professional AI-assisted development with Django, exploring how experienced engineers can leverage coding agents while maintaining accountability and code quality."
 ---
 
 *This post builds on the excellent work by [Simon Willison](https://simonwillison.net/) and his original concept of "Vibe Engineering." You can read his original piece [here](https://simonwillison.net/2024/Oct/7/vibe-engineering/).*
