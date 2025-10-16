@@ -26,9 +26,23 @@ const AboutIndex = (props) => {
   // Calculate dynamic experience
   const startDate = new Date('2013-02-01')
   const currentDate = new Date()
-  const diffTime = Math.abs(currentDate - startDate)
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-  const diffYears = Math.floor(diffDays / 365.25)
+  
+  let years = currentDate.getFullYear() - startDate.getFullYear()
+  let months = currentDate.getMonth() - startDate.getMonth()
+  let days = currentDate.getDate() - startDate.getDate()
+
+  // Adjust if days is negative
+  if (days < 0) {
+    months--
+    const prevMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0)
+    days += prevMonth.getDate()
+  }
+
+  // Adjust if months is negative
+  if (months < 0) {
+    years--
+    months += 12
+  }
 
   return (
     <Layout location={props.location} title={title}>
@@ -56,7 +70,7 @@ const AboutIndex = (props) => {
       </p>
 
       <p>
-        I have <strong>{diffYears} years</strong> of experience ({diffDays.toLocaleString()} days since February 1, 2013) specializing in Django, Python, Go, and TypeScript.
+        I have <strong>{years} years, {months} months, and {days} days</strong> of experience (since February 1, 2013) specializing in Django, Python, Go, and TypeScript.
         I have successfully built and delivered exceptional products and services throughout my career. Notably, I have led the architecture and development of a <a href="https://www.divio.com/case-studies/social-schools-divio-transformation/" target="_blank" rel="noopener noreferrer">cutting-edge Multi-tenant CMS</a>, catering to an extensive network of over 3k websites. This robust CMS is designed to handle a substantial volume of multi-million monthly requests with efficiency and scalability at its core.
       </p>
 
