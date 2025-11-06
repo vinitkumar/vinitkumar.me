@@ -4,6 +4,8 @@ date: "2025-11-06"
 description: "Discover how switching from Packer to Lazy.nvim slashed my Neovim startup time from 1797ms to 115ms. Dive into the detailed migration process, lazy-loading optimizations, and why Packer is no longer viable for modern Neovim users."
 ---
 
+![Neovim current setup](../../assets/nvim-current.png)
+
 In the ever-evolving world of Neovim plugins, staying current isn't just about features—it's about performance. My recent migration from Packer to Lazy.nvim didn't just modernize my setup; it transformed it, delivering a staggering 15x improvement in startup time. Let's unpack this migration, explore the nitty-gritty changes, and discuss why Packer, once a favorite, has become a relic of the past.
 
 ## The Packer Exodus: Why I Finally Made the Switch
@@ -18,7 +20,7 @@ Lazy.nvim, created by the same team behind some of Neovim's most popular plugins
 
 ## Diving into the Migration: PR #8 in Detail
 
-The migration captured in [PR #8](https://github.com/vinitkumar/nvim/pull/8) of my nvim config was more than a simple swap. It was a comprehensive overhaul that touched nearly every aspect of my configuration while maintaining the same single-file `init.lua` approach I prefer.
+This PR migrates the Neovim configuration from Packer to lazy.nvim, replacing the plugin manager while adding performance optimizations like lazy loading. The main file changed is `init.lua` (+42 additions, -98 deletions). Other files include `init.lua.back` (backup), `lazy-lock.json` (new lockfile), and `nvim.png` (likely an icon update).
 
 ### Core Changes: From Packer to Lazy
 
@@ -27,44 +29,106 @@ The heart of the migration was replacing Packer's `startup` function with Lazy's
 ```lua
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- plugins...
+  use 'junegunn/fzf'
+  -- ... (all plugin 'use' calls)
 end)
 ```
 
-Lazy uses a table-based approach:
+Lazy uses a table-based approach with bootstrap code:
 
 ```lua
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable",
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- Setup lazy.nvim
 require("lazy").setup({
-  -- plugins as tables...
+  -- plugin specs here
 })
 ```
 
-This change alone brought structural improvements, but the real magic happened in the optimizations.
-
 ### Lazy-Loading: The Performance Game-Changer
 
-One of Lazy's killer features is its sophisticated lazy-loading system. In my config, I implemented multiple loading strategies:
+Migrated plugins with Lazy's sophisticated lazy-loading system, adding `event`, `cmd`, `keys`, `build`, and `dependencies` for performance.
 
+**Example before (Packer):**
+```lua
+use {'neoclide/coc.nvim', branch = 'master', run = 'npm ci'}
+use {'tpope/vim-commentary'}
+use {'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true }}
+```
+
+**After (lazy):**
+```lua
+{ 'neoclide/coc.nvim', branch = 'master', build = 'npm ci', event = 'BufReadPre' },
+{ 'tpope/vim-commentary', keys = { { 'gc', mode = { 'n', 'v' } } } },
+{
+  'nvim-lualine/lualine.nvim',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  event = 'VeryLazy'
+}
+```
+
+This implements multiple loading strategies:
 - **Event-based loading**: Plugins like `fzf.vim` now load only when the `:Files` command is invoked
 - **Keymap triggers**: `nvim-tree` loads when pressing `<C-n>`
-- **Filetype loading**: Language-specific plugins load only for relevant file types
 - **Command loading**: Plugins like Copilot activate only when needed
 
 ### Lualine Optimization: Cutting the Fat
 
-Lualine, my statusline plugin, was a performance drain due to aggressive refresh settings. The PR removed expensive `CursorMoved` events and enabled the global statusline, reducing unnecessary redraws.
+Updated lualine config to enable global statusline and remove expensive refresh events:
 
-### Colorscheme Caching: Smart System Calls
-
-A clever optimization cached colorscheme availability checks, eliminating redundant system calls that were happening on every startup.
+```lua
+require('lualine').setup {
+  -- ...
+  globalstatus = true,  -- Changed from false
+  refresh = {
+    -- Removed 'CursorMoved' and 'CursorMovedI' events
+    statusline = 1000,
+    tabline = 1000,
+    winbar = 1000,
+    refresh_time = 16, -- ~60fps
+    events = {
+      'WinEnter',
+      'BufEnter',
+      'BufWritePost',
+      'SessionLoadPost',
+      'FileChangedShellPost',
+      'VimResized',
+      'Filetype',
+      'ModeChanged',
+    },
+  },
+}
+```
 
 ### Deferred Setup: Non-Critical Plugins on Ice
 
-Plugins like indent-blankline (`ibl`) and `nvim-tree` now load asynchronously, preventing them from blocking the main UI thread during startup.
+Moved non-critical setups into `vim.defer_fn()` for startup performance:
+
+```lua
+-- Defer non-critical setup
+vim.defer_fn(function()
+  require("ibl").setup()
+  require("nvim-tree").setup()
+end, 0)
+```
+
+This prevents plugins like indent-blankline (`ibl`) and `nvim-tree` from blocking the main UI thread during startup.
 
 ### Code Cleanup: Removing Duplicates
 
-The migration eliminated about 60 lines of duplicate autocmd definitions, streamlining the configuration without losing functionality.
+Eliminated duplicate autocmd definitions and redundant code, such as multiple yaml filetype sets and a typescript callback that auto-saved files. Removed about 60 lines without losing functionality.
 
 ## The Numbers Don't Lie: Performance Gains
 
