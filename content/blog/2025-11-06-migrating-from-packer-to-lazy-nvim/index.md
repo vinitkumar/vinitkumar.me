@@ -140,16 +140,9 @@ The results speak for themselves:
 
 That's the difference between waiting almost 2 seconds and having Neovim ready in under a tenth of a second. In practical terms, this means instant responsiveness when opening files, switching projects, or just launching the editor.
 
-## Why Packer is Officially Dead
+## Why Packer is Dead
 
-Let's be clear: Packer isn't just "less optimal"—it's effectively unmaintained:
-
-- **Last meaningful update**: Over a year ago, with only minor patches since
-- **Open PRs**: Hundreds of pull requests sit unmerged, including critical bug fixes and feature requests
-- **Community shift**: The Neovim community has overwhelmingly moved to Lazy or other modern managers
-- **Security concerns**: Unmaintained code is a liability in any setup
-
-While Packer worked well during its prime, the lack of active development means missing out on performance optimizations, new Neovim features, and ecosystem advancements. If you're still using Packer, you're not just using outdated technology—you're actively choosing slower startup times and potential compatibility issues.
+Packer is showing its age and is barely maintained, with stagnant development and unresolved issues. For peace of mind, moving to lazy.nvim is the best option.
 
 ## Migration Tips for Fellow Neovim Users
 
