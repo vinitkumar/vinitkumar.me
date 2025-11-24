@@ -31,28 +31,13 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    font-family: 'Nebula Sans', sans-serif;
+    font-family: 'Avenir Pro', sans-serif;
     font-size: var(--font-base);
     font-weight: 400;
     height: 100%;
     line-height: 1.6;
     background-color: var(--background);
     color: var(--text);
-  }
-
-  @font-face {
-    font-family: Nebula Sans;
-    src: url(/fonts/NebulaSans-Book.woff2) format("woff2");
-  }
-  @font-face {
-    font-family: Nebula Sans;
-    font-style: italic;
-    src: url(/fonts/NebulaSans-BookItalic.woff2) format("woff2");
-  }
-  @font-face {
-    font-family: Nebula Sans;
-    font-weight: 600;
-    src: url(/fonts/NebulaSans-Bold.woff2) format("woff2");
   }
   @font-face {
     font-family: Inconsolata-lgc-ep;
@@ -172,8 +157,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h4 {
-    font-family: 'Nebula Sans', sans-serif;
-    font-weight: 300;
+    font-family: 'Avenir Pro', sans-serif;
+    font-weight: 600;
     line-height: 1.3;
     letter-spacing: -0.01em;
   }
@@ -637,9 +622,9 @@ class Layout extends React.Component {
         <>
           <h1
             style={{
-              fontFamily: `Nebula Sans, sans-serif`,
+              fontFamily: `Avenir Pro, sans-serif`,
               marginTop: 0,
-              fontWeight: 300,
+              fontWeight: 600,
               fontSize: `54px`,
               marginBottom: rhythm(0.5),
             }}

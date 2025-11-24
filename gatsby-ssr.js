@@ -4,11 +4,11 @@ export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/NebulaSans-Book.woff2"
+      href="/fonts/AvenirLTProBook.otf"
       as="font"
-      type="font/woff2"
+      type="font/opentype"
       crossOrigin="anonymous"
-      key="nebulasans-regular"
+      key="avenir-pro-regular"
     />,
   ])
 }

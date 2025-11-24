@@ -121,23 +121,58 @@ body {
 
 @font-face {
   font-family: Avenir Pro;
-  src: url(/fonts/AvenirLTPro-Book.ttf) format("truetype");
+  font-weight: 400;
+  src: url(/fonts/AvenirLTProBook.otf) format("opentype");
 }
 @font-face {
   font-family: Avenir Pro;
+  font-weight: 400;
   font-style: italic;
-  src: url(/fonts/AvenirLTPro-BookOblique.ttf) format("truetype");
+  src: url(/fonts/AvenirLTProBookOblique.otf) format("opentype");
+}
+@font-face {
+  font-family: Avenir Pro;
+  font-weight: 400;
+  src: url(/fonts/AvenirLTProRoman.otf) format("opentype");
+}
+@font-face {
+  font-family: Avenir Pro;
+  font-weight: 400;
+  font-style: italic;
+  src: url(/fonts/AvenirLTProOblique.otf) format("opentype");
+}
+@font-face {
+  font-family: Avenir Pro;
+  font-weight: 300;
+  src: url(/fonts/AvenirLTProLight.otf) format("opentype");
+}
+@font-face {
+  font-family: Avenir Pro;
+  font-weight: 300;
+  font-style: italic;
+  src: url(/fonts/AvenirLTProLightOblique.otf) format("opentype");
 }
 @font-face {
   font-family: Avenir Pro;
   font-weight: 600;
-  src: url(/fonts/AvenirLTPro-Heavy.ttf) format("truetype");
+  src: url(/fonts/AvenirLTProHeavy.otf) format("opentype");
 }
 @font-face {
   font-family: Avenir Pro;
   font-weight: 600;
   font-style: italic;
-  src: url(/fonts/AvenirLTPro-HeavyOblique.ttf) format("truetype");
+  src: url(/fonts/AvenirLTProHeavyOblique.otf) format("opentype");
+}
+@font-face {
+  font-family: Avenir Pro;
+  font-weight: 700;
+  src: url(/fonts/AvenirLTProBlack.otf) format("opentype");
+}
+@font-face {
+  font-family: Avenir Pro;
+  font-weight: 700;
+  font-style: italic;
+  src: url(/fonts/AvenirLTProBlackOblique.otf) format("opentype");
 }
 @font-face {
   font-family: Inconsolata-lgc-ep;
