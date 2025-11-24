@@ -5,8 +5,8 @@ funstonTheme.baseFontSize = '22px'
 const typography = new Typography({
     baseFontSize: "15px",
     baseLineHeight: 1.4,
-    headerFontFamily: ['Nebula Sans', 'sans-serif'],
-    bodyFontFamily: ['Nebula Sans', 'sans-serif'],
+    headerFontFamily: ['Avenir Pro', 'sans-serif'],
+    bodyFontFamily: ['Avenir Pro', 'sans-serif'],
   }
 )
 // Hot reload typography in development.

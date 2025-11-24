@@ -103,7 +103,7 @@ svg rect[fill*="blue"],
 
 html,
 body {
-  font-family: "Nebula Sans", sans-serif;
+  font-family: "Avenir Pro", sans-serif;
   font-size: var(--font-base);
   font-weight: 400;
   height: 100%;
@@ -120,18 +120,24 @@ body {
 }
 
 @font-face {
-  font-family: Nebula Sans;
-  src: url(/fonts/NebulaSans-Book.woff2) format("woff2");
+  font-family: Avenir Pro;
+  src: url(/fonts/AvenirLTPro-Book.ttf) format("truetype");
 }
 @font-face {
-  font-family: Nebula Sans;
+  font-family: Avenir Pro;
   font-style: italic;
-  src: url(/fonts/NebulaSans-BookItalic.woff2) format("woff2");
+  src: url(/fonts/AvenirLTPro-BookOblique.ttf) format("truetype");
 }
 @font-face {
-  font-family: Nebula Sans;
+  font-family: Avenir Pro;
   font-weight: 600;
-  src: url(/fonts/NebulaSans-Bold.woff2) format("woff2");
+  src: url(/fonts/AvenirLTPro-Heavy.ttf) format("truetype");
+}
+@font-face {
+  font-family: Avenir Pro;
+  font-weight: 600;
+  font-style: italic;
+  src: url(/fonts/AvenirLTPro-HeavyOblique.ttf) format("truetype");
 }
 @font-face {
   font-family: Inconsolata-lgc-ep;
@@ -188,8 +194,8 @@ pre {
 }
 
 h1, h2, h3, h4, h4 {
-  font-family: 'Nebula Sans', sans-serif;
-  font-weight: 300;
+  font-family: 'Avenir Pro', sans-serif;
+  font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.01em;
 }
