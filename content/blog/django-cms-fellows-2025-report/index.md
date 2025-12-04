@@ -1,5 +1,5 @@
 ---
-title: "Django CMS Fellows & Communtiy Annual Report 2025: A Year of Extraordinary Contributions"
+title: "Django CMS Fellows & Community Annual Report 2025: A Year of Extraordinary Contributions"
 date: "2025-12-03"
 featured: true
 description: "A comprehensive review of the contributions made by Django CMS Fellows Vinit Kumar and Fabian Braun to the django-cms organization throughout 2025, showcasing the dedication and impact of the Fellowship Program."
@@ -222,7 +222,7 @@ Fabian Braun serves as the lead maintainer of Django CMS and brings deep experti
 
 Fabian led the monumental effort of releasing Django CMS 5.0, which included:
 
-- Complete frontend JavaScript rewrite removing jQuery dependencies
+- Complete djangocms-frontend JavaScript rewrite removing jQuery dependencies
 - New design language implementation for Django CMS 5.1
 - CSP (Content Security Policy) compliance across the board
 - Improved editor response times through global caching of plugin restrictions
@@ -230,8 +230,8 @@ Fabian led the monumental effort of releasing Django CMS 5.0, which included:
 
 **Core Architecture Improvements**
 
-- Merged the `Page` and `TreeNode` models with backwards migration support
-- Implemented async support and middleware updates for Django CMS 4.2+
+- Merged the `Page` and `TreeNode` models with backwards migration support by @jrief
+- Implemented async support and middleware updates for Django CMS 5.0+
 - Added placeholder-level error handling
 - Created the `CMS_ALWAYS_REFRESH_CONTENT` setting for better UX
 - Implemented the new Django CMS design language
@@ -284,16 +284,6 @@ Fabian orchestrated multiple releases across the ecosystem:
 
 ---
 
-## Aggregate Statistics
-
-| Metric | Vinit Kumar | Fabian Braun | **Combined Total** |
-|--------|-------------|--------------|-------------------|
-| Pull Requests Created | 16 | 393 | **409** |
-| Pull Requests Reviewed | 136 | 471 | **607** |
-| Issues Opened | 2 | 24 | **26** |
-| Issues Commented On | 3 | 129 | **132** |
-
----
 
 ## Repositories Impacted
 
