@@ -5,7 +5,7 @@ featured: true
 description: "A comprehensive review of the contributions made by Django CMS Fellows Vinit Kumar and Fabian Braun to the django-cms organization throughout 2025, showcasing the dedication and impact of the Fellowship Program."
 ---
 
-The Django CMS Fellowship Program continues to drive the development and maintenance of one of the most powerful open-source content management systems in the Python ecosystem. This report covers the contributions made by the two Django CMS Fellows—**Vinit Kumar** and **Fabian Braun**—from January 1, 2025, to December 3, 2025.
+The Django CMS Fellowship Program continues to drive the development and maintenance of one of the most powerful open-source content management systems in the Python ecosystem. This report covers the contributions made by the two Django CMS Fellows—**Fabian Braun**and **Vinit Kumar**—from January 1, 2025, to December 3, 2025.
 
 ## About the Django CMS Fellowship Program
 
@@ -383,7 +383,7 @@ As we close 2025, Django CMS stands stronger than ever:
 - **Python 3.14 readiness** future-proofs the ecosystem
 - **Improved headless capabilities** with djangocms-rest opens new use cases
 
-The Fellowship Program continues to prove its value in maintaining one of Python's most important open-source projects. The dedication shown by Vinit Kumar and Fabian Braun throughout 2025 exemplifies the spirit of open-source contribution.
+The Fellowship Program continues to prove its value in maintaining one of Python's most important open-source projects. The dedication shown by Fabian Braun and Vinit Kumar throughout 2025 exemplifies the spirit of open-source contribution.
 
 ---
 
@@ -404,3 +404,5 @@ Visit [django-cms.org](https://www.django-cms.org/) to learn more about supporti
 
 *Thank you to Vinit Kumar and Fabian Braun for their exceptional dedication to Django CMS.*
 
+
+Reposted from here: https://www.django-cms.org/en/blog/2025/12/07/django-cms-fellows-community-annual-report-2025-a-year-of-extraordinary-contributions/
