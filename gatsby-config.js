@@ -135,7 +135,12 @@ module.exports = {
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
+                const isTil = edge.node.fields.collection === 'til'
+                const title = isTil 
+                  ? `[TIL] ${edge.node.frontmatter.title}` 
+                  : edge.node.frontmatter.title
                 return Object.assign({}, edge.node.frontmatter, {
+                  title,
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
@@ -151,7 +156,10 @@ module.exports = {
                     node {
                       excerpt
                       html
-                      fields { slug }
+                      fields { 
+                        slug
+                        collection
+                      }
                       frontmatter {
                         title
                         date
