@@ -55,3 +55,12 @@ AI is a powerful tool in the hands of experienced engineers who maintain strong 
 ## Conclusion
 
 This is not the time to relax or cut corners. Work hard to develop solid skills and keep yourself sharp. The programming landscape is transforming rapidly, and no one knows what the field will look like even a year from now. The question isn't whether to use AI—it's whether you'll remain a skilled engineer capable of evaluating and improving what AI produces.
+
+---
+
+## Related AI Posts
+
+- [AI Agents, Me, and My Feelings](../ai-agents/) - Exploring the balance between productivity and preserving coding skills
+- [My New AI Workflow: Embracing Command-Line AI Tools](../new-ai-workflow/) - Moving to a command-line AI workflow that fits your development style
+- [Balancing AI Tools in Development: A Practical Workflow Guide](../ai-workflow/) - Using AI as a pair programmer rather than a code generator
+- [Developer's Guide to AI Tools: Real-world Experience with 5 Leading Platforms](../how-i-use-ai/) - A practical comparison of AI tools and when to use them
