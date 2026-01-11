@@ -66,51 +66,42 @@ const AboutIndex = (props) => {
       />
 
       <p>
-        I'm a <strong>Principal Engineer</strong> at <a href="https://scalefusion.com" target="_blank" rel="noopener noreferrer">Scalefusion</a> and <a href="https://www.django-cms.org/en/blog/2024/11/07/welcoming-vinit-kumar-as-the-newest-django-cms-fellow/" target="_blank" rel="noopener noreferrer">Django CMS Fellow</a> passionate about solving meaningful problems and pushing tech boundaries. I love reading, listening/playing music, appreciating/making art, and enjoying a good cup of coffee.
+        I'm a <strong>Principal Engineer</strong> at <a href="https://scalefusion.com" target="_blank" rel="noopener noreferrer">Scalefusion</a> with expertise in building system-level features like live SSH terminal interfaces. I'm also a <a href="https://www.django-cms.org/en/blog/2025/12/07/django-cms-fellows-community-annual-report-2025-a-year-of-extraordinary-contributions/" target="_blank" rel="noopener noreferrer">Django CMS Fellow</a>, helping shape the roadmap of the Python ecosystem's most popular CMS. I'm passionate about solving meaningful problems, building robust systems, and pushing technical boundaries. When I'm not coding, you'll find me reading, listening to/playing music, sketching, or enjoying a good cup of coffee.
       </p>
 
       <p>
-        I have <strong>{years} years, {months} months, and {days} days</strong> of experience (since February 1, 2013) specializing in Django, Python, Go, and TypeScript.
-        I have successfully built and delivered exceptional products and services throughout my career. Notably, I have led the architecture and development of a <a href="https://www.divio.com/case-studies/social-schools-divio-transformation/" target="_blank" rel="noopener noreferrer">cutting-edge Multi-tenant CMS</a>, catering to an extensive network of over 3k websites. This robust CMS is designed to handle a substantial volume of multi-million monthly requests with efficiency and scalability at its core.
+        I have <strong>{years} years, {months} months, and {days} days</strong> of professional experience (since February 1, 2013), with deep expertise in Python, Django, Go, TypeScript, and modern system design. I've architected and delivered exceptional products at scale, including a <a href="https://www.divio.com/case-studies/social-schools-divio-transformation/" target="_blank" rel="noopener noreferrer">multi-tenant CMS</a> serving 3,000+ websites and handling millions of requests monthly. In 2025, I contributed <strong>57 merged pull requests and reviewed 139 pull requests</strong> across open source projects, maintaining momentum in infrastructure modernization and ecosystem health.
       </p>
 
       <p>
-        In addition to my backend expertise with Python, Django, and Go, I possess extensive frontend proficiency, including 7 years of React experience and over a decade of mastery in JavaScript, TypeScript, and related technologies. This comprehensive skill set enables me to seamlessly navigate complex codebases while collaborating effectively with diverse stakeholders.
+        <strong>Backend Mastery:</strong> 12+ years with Python and Django, 5+ years shipping Go in production, optimizing for performance and scalability at every level. <strong>Frontend Strength:</strong> 7+ years of React, 13+ years JavaScript/TypeScript. This full-stack depth enables me to navigate complex systems and collaborate effectively across all engineering disciplines.
       </p>
 
       <p>
-        I excel in optimizing performance and enhancing the security of services, consistently delivering top-tier results. As a <a href="https://github.com/orgs/django-cms/teams/core-team" target="_blank" rel="noopener noreferrer">Core Developer at DjangoCMS</a>, the industry's most popular Django-based CMS, I have gained invaluable insights and refined my expertise in line with industry best practices.
+        I excel at optimizing performance, enhancing security, and architecting systems that scale. As a <a href="https://github.com/orgs/django-cms/teams/core-team" target="_blank" rel="noopener noreferrer">Core Developer at DjangoCMS</a> and <a href="https://www.djangoproject.com/foundation/individual-members/" target="_blank" rel="noopener noreferrer">Django Software Foundation Individual Member</a>, I've refined my expertise in line with industry best practices while mentoring the next generation of developers.
       </p>
 
       <p>
-        I am also invited as an <a href="https://www.djangoproject.com/foundation/individual-members/" target="_blank" rel="noopener noreferrer">Individual Member</a> with Django Software Foundation.
+        <strong>Infrastructure & DevOps:</strong> Proficient across AWS, GCP, DigitalOcean, and Azure. I design and deploy robust, scalable solutions that meet enterprise reliability standards. My work includes CI/CD optimization, database architecture, and containerized deployments at scale.
       </p>
 
       <p>
-        Moreover, I am well-versed in various cloud platforms, such as AWS, GCP, DigitalOcean, and Azure. Leveraging these powerful platforms, I am adept at deploying and managing robust, scalable solutions that meet the highest standards of performance and reliability.
-      </p>
-
-      <p>
-        In my role as a Principal Engineer and Team Leader, I have demonstrated my ability to lead high-performing teams effectively. By fostering a culture of innovation and excellence, I have successfully steered projects toward success, consistently meeting and exceeding expectations.
-      </p>
-
-      <p>
-        I am deeply passionate about driving innovation and delivering exceptional outcomes in every project I undertake. My proven track record and my unwavering commitment to excellence make me an ideal candidate for leading and contributing to high-performing teams.
+        <strong>Leadership & Mentorship:</strong> As a Principal Engineer and team leader, I've built high-performing teams that consistently exceed expectations. I foster cultures of innovation, code quality, and continuous learning while practicing what I preach through daily contributions to open source and personal projects.
       </p>
 
       <p>
         In my free time, I enjoy reading, spending time with my family, and contributing to open source projects. My wife, <a href="https://rituparnadey.com" target="_blank" rel="noopener noreferrer">Rituparna Dey</a>, is the founder of <a href="https://scoophubs.com" target="_blank" rel="noopener noreferrer">ScoopHubs.com</a>, a digital marketing company.
       </p>
 
-      <h2 style={{ marginTop: rhythm(2) }}>What I’m Doing Now</h2>
+      <h2 style={{ marginTop: rhythm(2) }}>What I'm Doing Now</h2>
       <p>
-        Right now, I’m focused on building robust system-level features at <a href="https://scalefusion.com" target="_blank" rel="noopener noreferrer">Scalefusion</a>, including a live terminal interface over SSH. I'm also actively mentoring contributors and shaping the future roadmap as a <a href="https://www.django-cms.org/en/blog/2024/11/07/welcoming-vinit-kumar-as-the-newest-django-cms-fellow/" target="_blank" rel="noopener noreferrer">Django CMS Fellow</a>.
+        At <a href="https://scalefusion.com" target="_blank" rel="noopener noreferrer">Scalefusion</a>, I'm shipping system-level features including live SSH terminal interfaces and building infrastructure that scales. As a <a href="https://www.django-cms.org/en/blog/2025/12/07/django-cms-fellows-community-annual-report-2025-a-year-of-extraordinary-contributions/" target="_blank" rel="noopener noreferrer">Django CMS Fellow</a>, I'm modernizing the ecosystem—in 2025 alone, we published Django CMS 5.0 with major JavaScript rewrites, CSP compliance, and Django 6.0 compatibility work.
       </p>
       <p>
-        Mornings are for the gym 🏋️‍♂️, evenings for OSS work, and weekends for deep thinking and family time. I'm also working on tightening my focus and building long-term rituals around reading and creating.
+        My rhythm: Early mornings for the gym, days for focused work, evenings for open-source contributions, weekends for deep reading and family. I'm deliberately building habits around long-form thinking, writing, and creating.
       </p>
       <p>
-        Some current interests: Go internals, OS-level programming, high-performance networking, and managing cognitive load as a Principal Engineer.
+        Current technical obsessions: Go's concurrency model and internals, OS-level programming, high-performance networking, distributed systems design, and practical AI workflows. Also deeply invested in code quality, mentorship, and helping developers grow.
       </p>
 
       <h2 style={{ marginTop: rhythm(2) }}>Books on My Desk</h2>

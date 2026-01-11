@@ -54,30 +54,34 @@ const StatsIndex = (props) => {
   
   // Career milestones and themes
   const careerMilestones = {
-    2013: "Started professional career",
+    2013: "Started professional career at Changer",
     2015: "First blog about coding passion",
-    2018: "Leadership reflections emerge", 
+    2018: "Leadership and architecture reflections", 
     2019: "Infrastructure and tooling focus",
-    2021: "Mentoring and growth themes",
-    2024: "Principal Engineer evolution"
+    2021: "Mentoring and growth themes emerge",
+    2024: "Principal Engineer role, career transition",
+    2025: "Django CMS Fellow, 57 OSS PRs, ecosystem modernization"
   }
 
   const techEvolution = {
     "Early Years (2013-2015)": ["JavaScript", "Python", "Django"],
     "Growth Phase (2016-2018)": ["React", "DevOps", "Leadership"],
     "Expertise Era (2019-2021)": ["Go", "Infrastructure", "Mentoring"],
-    "Principal Phase (2022-2024)": ["TypeScript", "Architecture", "Strategy"]
+    "Principal Phase (2022-2024)": ["TypeScript", "Architecture", "Strategy"],
+    "Current (2025+)": ["Go Internals", "System Design", "AI Workflows"]
   }
 
   const interestingTrivia = [
     "🚀 Started coding at age 10 with IBM PC and LOGO",
     "🎸 Learned guitar alongside his kid in 2024",
     "🚶‍♂️ Walks 5-6km daily as part of work-life balance",
-    "📚 From college affordability to music lessons - full circle moment",
-    "🔧 Advocates for minimalist tooling - Vim over IDEs",
+    "📚 From college affordability to music lessons — full circle",
+    "🔧 Advocates for minimalist tooling — Vim over bloated IDEs",
     "🌍 Has worked across 3+ time zones seamlessly",
-    "📖 12-year journey from startup employee to Principal Engineer",
-    "🎯 Influenced 50% of Dutch schools through platform work"
+    "📖 13-year journey from startup employee to Principal Engineer",
+    "🎯 Influenced millions through multi-tenant CMS serving 3k+ websites",
+    "💡 Contributed 57 PRs and reviewed 139 PRs in 2025 alone",
+    "🧠 Mentors developers and shapes open source ecosystem roadmap"
   ]
 
   posts.forEach(({ node }) => {
@@ -135,6 +139,7 @@ const StatsIndex = (props) => {
 
   const writingPeriodYears = Math.max(...years) - Math.min(...years) + 1
   const avgPostsPerYear = Math.round(totalPosts / writingPeriodYears)
+  const hoursOfContent = Math.round(totalReadTime / 60)
 
   return (
     <Layout location={props.location} title={title}>
@@ -144,7 +149,7 @@ const StatsIndex = (props) => {
       <div style={{ marginBottom: "2rem" }}>
         <h1 style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>📊 Blog Analytics & Insights</h1>
         <p style={{ fontSize: "1.1rem", color: "#666", margin: 0 }}>
-          A deep dive into {writingPeriodYears} years of writing, learning, and growth
+          A deep dive into {writingPeriodYears} years of writing, learning, and professional growth
         </p>
       </div>
 
@@ -158,7 +163,7 @@ const StatsIndex = (props) => {
         {[
           { label: "Total Posts", value: totalPosts, icon: "📝" },
           { label: "Total Words", value: totalWords.toLocaleString(), icon: "📖" },
-          { label: "Reading Time", value: `${totalReadTime} mins`, icon: "⏱️" },
+          { label: "Reading Time", value: `${hoursOfContent}h`, icon: "⏱️" },
           { label: "Avg Words/Post", value: avgWordsPerPost, icon: "📄" },
           { label: "Writing Years", value: writingPeriodYears, icon: "📅" },
           { label: "Posts/Year", value: avgPostsPerYear, icon: "📈" }
@@ -305,7 +310,7 @@ const StatsIndex = (props) => {
             </div>
             <div style={{ marginBottom: "1rem" }}>
               <strong>⚡ Total Reading:</strong><br/>
-              {Math.round(totalReadTime / 60)} hours of content
+              {hoursOfContent} hours of content
             </div>
           </div>
         </div>
@@ -415,4 +420,4 @@ const StatsIndex = (props) => {
   )
 }
 
-export default StatsIndex 
+export default StatsIndex
