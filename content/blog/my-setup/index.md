@@ -14,8 +14,8 @@ I am doing The Setup interview for myself. It is basically based on these four q
 - What would be your dream setup? So here it goes: ### Who are you and what do you do? Hello, I am Vinit and work as a software developer at this awesome Dutch startup,[Changer](http://changer. nl). I mostly write code in JavaScript and Python. ### What hardware do you use? I use a MacBook Pro, Mid 2009, with 8 GB RAM and 256 GB SSD. I use
 30-inch BenQ Monitors, apple wired keyboard, Logitech GT400 at work. At home, I have a 22-inch Dell monitor with same keyboard and mouse. I
 use Steelseries Headphones for listening to Music.
-For storage and backups, I use a Western Digital 512GB Hard disk. I also have an old Dell laptop with Windows7 and Ubuntu on it. I have a HTC Desire X as my headphone with Android Jelly Bean. I like
-this phone a lot and it does almost everything I required without burning
+For storage and backups, I use a Western Digital 512GB Hard disk. I also have an old Dell laptop with Windows7 and Ubuntu on it. I have an HTC Desire X as my mobile phone with Android Jelly Bean. I like
+this phone a lot and it does almost everything I require without burning
 a hole in my pocket. ### And What Software? I use OS X Mavericks as my primary operating system. Well here is the list of Software I use: For writing code, I only use Macvim. For browsing I use Chrome, firefox,
 safari and IE (for testing mostly on VM). For running other OSes I use
 Virtualbox. I love [Dash](http://kapeli. com/dash). They are really awesome way to

@@ -24,8 +24,8 @@ has undergone a major update and I need to learn a lot of things. My other team 
 sometime hard to catch up with him. At the same time, I am proud of the progress we have been making off late.
 
 
-I have also decide to work on my anger issues. Recently, I have let myself into stressful situations and I have vowed to not
-subject me to those situations anymore and keep myself first while interacting with folks.  Yesterday, also catch up with my friend
+I have also decided to work on my anger issues. Recently, I have let myself get into stressful situations and I have vowed to not
+subject myself to those situations anymore and to keep myself first while interacting with folks. Yesterday, I also caught up with my friend
 from college and his family and we had a nice time. Today, I also missed my Gym Session, as I just wanted to sleep in today. I have
 accumulated a lot of sleep debt and want to do better on it.
 

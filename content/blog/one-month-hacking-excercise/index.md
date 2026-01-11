@@ -8,7 +8,7 @@ tags: Hack Projects
 comments: false
 ---
 
-After a lot of meditation about what I have achieved in the last year, I have stumbled upon one fact. I need to hack
+After a lot of reflection on what I have achieved in the last year, I have stumbled upon one fact: I need to hack
 a lot more on Python and JavaScript. These are the two main languages I am comfortable with, and almost all my projects
 and official work are done with them.
 

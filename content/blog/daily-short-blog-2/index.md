@@ -16,7 +16,7 @@ it's still progress. I guess some days, you should just take whatever win comes 
 I got a flat tire and that means tomorrow I need to take my Scooty to the tire shop. I hate this hassle, but I guess sometimes
 there's no way around it.
 
-Also, in the morning, I went to a nice cafe with wifey and had my favorite Vietnamese Shakerato - loved it! Now, before
+Also, in the morning, I went to a nice café with my wife and had my favorite Vietnamese Shakerato - loved it! Now, before
 going to bed, I want to make some progress with the book I'm currently reading on Kindle called "The Art of Doing Science and Engineering"
 by Richard W. Hamming.
 
