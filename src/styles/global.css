@@ -6,21 +6,78 @@ img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto
 p, h1, h2, h3 { overflow-wrap: break-word; }
 body { min-height: 100vh; }
 
-/** CSS **/
+/** CSS Variables - Single Source of Truth **/
 :root {
+  /* Typography */
   --font-base: 1rem;
   --font-small: 0.875rem;
   --font-smaller: 0.75rem;
+  --font-family-body: 'Avenir Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-code: Inconsolata-lgc-ep, Consolas, Monaco, 'Courier New', monospace;
+  
+  /* Layout */
   --width: 575px;
+  --max-width: 80rem;
   --border: 1px;
-  --radius: 0;
+  --radius: 12px;
+  --radius-small: 8px;
+  --radius-pill: 20px;
+  
+  /* Core Colors */
+  --text: #2c3338;
+  --text-muted: #6b7280;
+  --background: #fcfcfc;
+  --background-card: #ffffff;
+  --accent: #2c3338;
+  --accent-hover: #000000;
+  
+  /* Gray Scale */
   --gray-text: rgba(51, 51, 51, 0.6);
   --gray-line: rgba(51, 51, 51, 0.1);
   --gray-bg: rgba(51, 51, 51, 0.02);
-  --accent: #2c3338;
-  --accent-hover: #000000;
-  --text: #2c3338;
-  --background: #fcfcfc;
+  --gray-100: #f8fafc;
+  --gray-200: #e2e8f0;
+  --gray-300: #e5e7eb;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  
+  /* Navigation Colors */
+  --nav-about: #3b82f6;
+  --nav-til: #f59e0b;
+  --nav-stats: #8b5cf6;
+  --nav-recommendations: #10b981;
+  --nav-resume: #6366f1;
+  --nav-linkedin: #0077b5;
+  --nav-twitter: #1da1f2;
+  --nav-github: #374151;
+  
+  /* Accent Colors */
+  --blue: #3b82f6;
+  --amber: #f59e0b;
+  --purple: #8b5cf6;
+  --green: #10b981;
+  --indigo: #6366f1;
+  --red: #ef4444;
+  --orange: #f97316;
+  
+  /* Featured/Highlight */
+  --featured-bg: #f97316;
+  --featured-text: #ffffff;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-card-hover: 0 8px 25px rgba(0, 0, 0, 0.08);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  
+  /* Special */
   --terminal-green: #00ff00;
 }
 
@@ -228,9 +285,298 @@ pre {
   padding: 0.15em 0.3em;
 }
 
-h1, h2, h3, h4, h4 {
-  font-family: 'Avenir Pro', sans-serif;
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-family-body);
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.01em;
+}
+
+/* ===========================================
+   Navigation Styles
+   =========================================== */
+.site-nav {
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--gray-line);
+  border-bottom: 1px solid var(--gray-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: white;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+/* Navigation link colors */
+.nav-link--about { background: var(--nav-about); }
+.nav-link--til { background: var(--nav-til); }
+.nav-link--stats { background: var(--nav-stats); }
+.nav-link--recommendations { background: var(--nav-recommendations); }
+.nav-link--resume { background: var(--nav-resume); }
+.nav-link--linkedin { background: var(--nav-linkedin); }
+.nav-link--twitter { background: var(--nav-twitter); }
+.nav-link--github { background: var(--nav-github); }
+
+/* Separator for nav groups */
+.nav-separator {
+  width: 1px;
+  height: 24px;
+  background: var(--gray-line);
+  margin: 0 0.25rem;
+}
+
+/* ===========================================
+   Blog Post Cards
+   =========================================== */
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.blog-post-card {
+  background: var(--background-card);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: relative;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.blog-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--accent);
+}
+
+.blog-post-header {
+  margin-bottom: 1rem;
+}
+
+.blog-post-title {
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem 0;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+  transition: color var(--transition-fast);
+}
+
+.blog-post-card:hover .blog-post-title {
+  color: var(--blue);
+}
+
+.blog-post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.blog-post-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.featured-badge {
+  background: var(--featured-bg);
+  color: var(--featured-text);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.blog-post-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.blog-post-description p {
+  margin: 0;
+}
+
+.blog-post-footer {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-line);
+}
+
+.read-more-link {
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.read-more-link:hover {
+  color: var(--text);
+  transform: translateX(4px);
+}
+
+/* ===========================================
+   Recommendations Grid
+   =========================================== */
+.recommendations-container {
+  padding: var(--font-base);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.recommendation-card {
+  background: var(--background-card);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: relative;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-card);
+}
+
+.recommendation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--accent);
+}
+
+.recommendation-card::before {
+  content: '"';
+  position: absolute;
+  top: 0.75rem;
+  left: 1.25rem;
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--gray-line);
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+/* ===========================================
+   Filter Controls
+   =========================================== */
+.filter-controls {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-btn {
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.filter-btn--active {
+  background: var(--green);
+}
+
+.filter-btn--active:hover {
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* ===========================================
+   Page Layout
+   =========================================== */
+.page-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+  padding: 1.5rem 1rem;
+}
+
+.page-footer {
+  margin-top: 2rem;
+  font-size: var(--font-small);
+  color: var(--gray-text);
+}
+
+/* ===========================================
+   Responsive Adjustments
+   =========================================== */
+@media (max-width: 768px) {
+  .blog-posts-grid,
+  .recommendations-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .site-nav {
+    gap: 0.5rem;
+  }
+  
+  .nav-link {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  .nav-separator {
+    display: none;
+  }
 }
