@@ -6,9 +6,25 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       rel="preload"
       href="/fonts/AvenirLTProBook.otf"
       as="font"
-      type="font/opentype"
+      type="font/otf"
       crossOrigin="anonymous"
-      key="avenir-pro-regular"
+      key="avenir-pro-book"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/AvenirLTProHeavy.otf"
+      as="font"
+      type="font/otf"
+      crossOrigin="anonymous"
+      key="avenir-pro-heavy"
+    />,
+    <link
+      rel="preload"
+      href="/fonts/Inconsolata-lgc-ep.woff2"
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+      key="inconsolata-code"
     />,
   ])
   
