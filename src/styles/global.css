@@ -594,6 +594,65 @@ h1, h2, h3, h4, h5 {
 }
 
 /* ===========================================
+   Site Footer
+   =========================================== */
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--gray-border, #e5e5e5);
+  font-size: 0.875rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+.site-footer p {
+  margin: 0.5rem 0;
+}
+
+.site-footer a {
+  color: var(--link-color, #0066cc);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  font-weight: 500;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  color: var(--link-color, #0066cc);
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.theme-btn:hover {
+  text-decoration: underline;
+}
+
+.theme-btn.active {
+  font-weight: 600;
+}
+
+[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --gray-text: #666;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e5e5e5;
+  --gray-text: #999;
+}
+
+/* ===========================================
    Responsive Adjustments
    =========================================== */
 @media (max-width: 768px) {

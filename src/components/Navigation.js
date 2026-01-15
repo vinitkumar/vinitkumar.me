@@ -23,7 +23,7 @@ const externalLinks = [
     icon: null
   },
   { 
-    href: "https://x.com/vinitkme", 
+    href: "https://x.com/intent/user?screen_name=vinitkme", 
     label: "Twitter", 
     className: "nav-link--twitter",
     icon: null
