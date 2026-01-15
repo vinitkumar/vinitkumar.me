@@ -1,6 +1,7 @@
 ---
 title: "Building json2xml Across Three Languages in One Day"
 date: "2026-01-14"
+updated: "2026-01-15"
 description: "A productive day porting json2xml to Go and Zig, adding CLI support to the Python version, and benchmarking all three implementations."
 tags: ["python", "go", "zig", "json2xml", "open-source", "cli", "benchmarks"]
 ---
@@ -8,6 +9,22 @@ tags: ["python", "go", "zig", "json2xml", "open-source", "cli", "benchmarks"]
 ![json2xml across Python, Go, and Zig](../../assets/json2xml-hero.png)
 
 Yesterday was one of those rare days where everything clicks. I spent the day working on my json2xml project across three different language implementations: Python, Go, and Zig. Here's what I accomplished and how I did it.
+
+> **Update (Jan 15, 2026):** Added cross-linking documentation between all three repos, fuzz testing for the Go version, and educational Zig comments for newcomers. All three repos now feature the unified hero image in their READMEs.
+
+## Day 2 Updates (Jan 15)
+
+### json2xml-go Improvements
+
+- **Fuzz testing**: Added fuzz tests for dicttoxml functions to catch edge cases and improve robustness
+- **Cross-documentation**: README now links to Python and Zig versions with benchmark comparisons
+- **Hero image**: Unified branding across all three repos
+
+### json2xml-zig Improvements
+
+- **Educational comments**: Added comprehensive comments throughout the codebase to help Zig newcomers understand idiomatic patterns
+- **Better testing**: Improved test suite with `zig fmt` integration and invalid JSON handling
+- **Cross-documentation**: Enhanced Related Projects section with comparison table linking to Python and Go versions
 
 ## The Python CLI (json2xml-py)
 
