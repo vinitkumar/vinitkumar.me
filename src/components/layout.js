@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Navigation from "./Navigation"
+import Footer from "./Footer"
 import { rhythm, scale } from "../utils/typography"
 
 /**
@@ -47,15 +48,7 @@ const Layout = ({ location, title, children }) => {
       
       <main>{children}</main>
       
-      <footer
-        style={{
-          marginTop: rhythm(2),
-          fontSize: '0.875rem',
-          color: 'var(--gray-text)',
-        }}
-      >
-        © {new Date().getFullYear()}, Vinit Kumar
-      </footer>
+      <Footer />
     </div>
   )
 }

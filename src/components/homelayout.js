@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Analytics } from '@vercel/analytics/react'
 import Navigation from "./Navigation"
+import Footer from "./Footer"
 import { rhythm, scale } from "../utils/typography"
 
 /**
@@ -49,15 +50,7 @@ const HomeLayout = ({ location, title, children }) => {
       
       <Analytics />
       
-      <footer
-        style={{
-          marginTop: rhythm(2),
-          fontSize: '0.875rem',
-          color: 'var(--gray-text)',
-        }}
-      >
-        © {new Date().getFullYear()}, Vinit Kumar
-      </footer>
+      <Footer />
     </div>
   )
 }

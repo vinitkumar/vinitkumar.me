@@ -73,7 +73,7 @@ const Bio = () => {
       </p>
       <p>
         Here are some  <Link className={"btn-action-latest"} to="/recommendations">recommendations</Link> from my current and past colleagues. You can check out my <a href="https://vinitkumar.github.io/vinitkumar.pdf" target="_blank" className="btn-action-latest" rel="noopener noreferrer">latest resume</a> and <a target="_blank" rel="noopener noreferrer" className="btn-action-latest" href="https://github.com/vinitkumar">Github profile</a>.
-        You can connect with me on twitter at <a href="https://twitter.com/vinitkme" target="_blank" className="btn-action-latest"
+        You can connect with me on twitter at <a href="https://x.com/intent/user?screen_name=vinitkme" target="_blank" className="btn-action-latest"
           rel="noopener noreferrer">@vinitkme</a> or drop me an email at<a href="mailto:mail@vinitkumar.me" className="btn-action-latest">mail@vinitkumar.me</a>.
       </p>
       <p>I hope you enjoy reading my essays.</p>
