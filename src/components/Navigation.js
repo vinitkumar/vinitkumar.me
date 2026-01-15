@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import ThemeToggle from "./ThemeToggle"
 
 // Navigation link data for easy maintenance
 const internalLinks = [
@@ -73,6 +74,10 @@ const Navigation = () => {
           {link.label}
         </a>
       ))}
+      
+      {/* Theme Toggle */}
+      <span className="nav-separator" aria-hidden="true" />
+      <ThemeToggle compact />
     </nav>
   )
 }

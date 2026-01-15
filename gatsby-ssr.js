@@ -1,6 +1,17 @@
 import * as React from "react"
 
-export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
+const themeScript = `
+(function() {
+  try {
+    var scheme = localStorage.getItem('colorScheme');
+    if (scheme === 'dark' || scheme === 'light') {
+      document.documentElement.setAttribute('data-theme', scheme);
+    }
+  } catch (e) {}
+})();
+`
+
+export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setPostBodyComponents }) => {
   setHeadComponents([
     <link
       rel="preload"
@@ -25,6 +36,13 @@ export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
       type="font/woff2"
       crossOrigin="anonymous"
       key="inconsolata-code"
+    />,
+  ])
+  
+  setPreBodyComponents([
+    <script
+      key="theme-script"
+      dangerouslySetInnerHTML={{ __html: themeScript }}
     />,
   ])
   

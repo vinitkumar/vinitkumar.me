@@ -1,29 +1,7 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
+import ThemeToggle from "./ThemeToggle"
 
 const Footer = () => {
-  const [colorScheme, setColorScheme] = useState("auto")
-
-  useEffect(() => {
-    const saved = localStorage.getItem("colorScheme") || "auto"
-    setColorScheme(saved)
-    applyColorScheme(saved)
-  }, [])
-
-  const applyColorScheme = (scheme) => {
-    const root = document.documentElement
-    if (scheme === "auto") {
-      root.removeAttribute("data-theme")
-    } else {
-      root.setAttribute("data-theme", scheme)
-    }
-  }
-
-  const handleSchemeChange = (scheme) => {
-    setColorScheme(scheme)
-    localStorage.setItem("colorScheme", scheme)
-    applyColorScheme(scheme)
-  }
-
   return (
     <footer className="site-footer">
       <p className="footer-copyright">
@@ -93,28 +71,8 @@ const Footer = () => {
         <a href="/rss.xml">RSS</a>.
       </p>
       <p className="footer-theme">
-        Color scheme:{" "}
-        <button
-          className={`theme-btn ${colorScheme === "auto" ? "active" : ""}`}
-          onClick={() => handleSchemeChange("auto")}
-        >
-          auto
-        </button>
-        ,{" "}
-        <button
-          className={`theme-btn ${colorScheme === "light" ? "active" : ""}`}
-          onClick={() => handleSchemeChange("light")}
-        >
-          light
-        </button>
-        ,{" "}
-        <button
-          className={`theme-btn ${colorScheme === "dark" ? "active" : ""}`}
-          onClick={() => handleSchemeChange("dark")}
-        >
-          dark
-        </button>
-        .
+        <span>Theme:</span>
+        <ThemeToggle />
       </p>
     </footer>
   )

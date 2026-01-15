@@ -315,30 +315,18 @@ const ValueComponent = (props) => {
       <div className="recommendations-container">
         <h1 className="heading">What my colleagues say about working with me</h1>
         
-        <div style={{
-          background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
-          borderRadius: '12px',
-          padding: '2rem',
-          marginBottom: '3rem',
-          border: '1px solid var(--gray-line)'
-        }}>
-          <h2 style={{
-            fontSize: '1.5rem',
-            fontWeight: '600',
-            marginBottom: '1rem',
-            color: 'var(--accent)'
-          }}>TL;DR</h2>
-                     <p style={{
-             fontSize: '1.1rem',
-             lineHeight: '1.6',
-             margin: '0',
-             color: 'var(--text)'
-           }}>
-             <strong>Full-stack polyglot</strong> (Python, Django, React, Go, Laravel, DevOps) • <strong>Django CMS core team member</strong> • 
-             <strong>Patient mentor</strong> who breaks down complex problems • <strong>Remote collaboration expert</strong> across time zones • 
-             <strong>Pragmatic problem-solver</strong> with startup-to-scale experience • <strong>Quality-focused delivery</strong> that gets things done • 
-             <strong>Strategic thinker</strong> with proven leadership skills • <strong>Continuous learner</strong> who adapts quickly
-           </p>
+        <div className="tldr-section">
+          <h2 className="tldr-title">TL;DR</h2>
+          <ul className="tldr-list">
+            <li><strong>Full-stack polyglot</strong> — Python, Django, React, Go, Laravel, DevOps</li>
+            <li><strong>Django CMS core team member</strong></li>
+            <li><strong>Patient mentor</strong> who breaks down complex problems</li>
+            <li><strong>Remote collaboration expert</strong> across time zones</li>
+            <li><strong>Pragmatic problem-solver</strong> with startup-to-scale experience</li>
+            <li><strong>Quality-focused delivery</strong> that gets things done</li>
+            <li><strong>Strategic thinker</strong> with proven leadership skills</li>
+            <li><strong>Continuous learner</strong> who adapts quickly</li>
+          </ul>
         </div>
             <div className="recommendations-grid">
               {recommendations.map((rec, index) => (
