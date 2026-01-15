@@ -5,49 +5,77 @@ import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/
 
 import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
+import Search from "../components/Search"
+import Pagination from "../components/Pagination"
 
-// Initialize code highlighting
+const POSTS_PER_PAGE = 6
+
 if (typeof window !== "undefined") {
   deckDeckGoHighlightElement()
 }
 
 const BlogIndex = ({ data, location }) => {
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1)
   
   const siteTitle = data.site.siteMetadata.title
   const allPosts = data.allMarkdownRemark.edges
 
-  // Check URL parameters on mount
   useEffect(() => {
     if (typeof window !== "undefined") {
       const urlParams = new URLSearchParams(window.location.search)
       const featuredFilter = urlParams.get("featured")
+      const pageParam = urlParams.get("page")
+      
       if (featuredFilter === "true") {
         setShowFeaturedOnly(true)
+      }
+      if (pageParam) {
+        const page = parseInt(pageParam, 10)
+        if (!isNaN(page) && page > 0) {
+          setCurrentPage(page)
+        }
       }
     }
   }, [])
 
-  const toggleFeaturedFilter = () => {
-    const newShowFeaturedOnly = !showFeaturedOnly
-    setShowFeaturedOnly(newShowFeaturedOnly)
-
-    // Update URL without page refresh
+  const updateURL = (featured, page) => {
     if (typeof window !== "undefined") {
       const url = new URL(window.location)
-      if (newShowFeaturedOnly) {
+      if (featured) {
         url.searchParams.set("featured", "true")
       } else {
         url.searchParams.delete("featured")
+      }
+      if (page > 1) {
+        url.searchParams.set("page", page.toString())
+      } else {
+        url.searchParams.delete("page")
       }
       window.history.pushState({}, "", url)
     }
   }
 
-  // Filter posts based on featured status
-  const posts = showFeaturedOnly
+  const toggleFeaturedFilter = () => {
+    const newShowFeaturedOnly = !showFeaturedOnly
+    setShowFeaturedOnly(newShowFeaturedOnly)
+    setCurrentPage(1)
+    updateURL(newShowFeaturedOnly, 1)
+  }
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page)
+    updateURL(showFeaturedOnly, page)
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  const filteredPosts = showFeaturedOnly
     ? allPosts.filter(({ node }) => node.frontmatter.featured)
     : allPosts
+
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE)
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE
+  const paginatedPosts = filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE)
 
   const featuredCount = allPosts.filter(
     ({ node }) => node.frontmatter.featured
@@ -64,6 +92,9 @@ const BlogIndex = ({ data, location }) => {
         <meta name="fediverse:creator" content="@vinitkme@fosstodon.org" />
       </Helmet>
       <Seo title="Home" />
+
+      {/* Search */}
+      <Search posts={allPosts} />
 
       {/* Filter Controls */}
       <div className="filter-controls">
@@ -91,7 +122,7 @@ const BlogIndex = ({ data, location }) => {
           >
             {showFeaturedOnly
               ? "Showing my most valuable and impactful writing"
-              : `Browse all posts • ${featuredCount} featured`}
+              : `Showing ${startIndex + 1}–${Math.min(startIndex + POSTS_PER_PAGE, filteredPosts.length)} of ${filteredPosts.length} posts • ${featuredCount} featured`}
           </p>
         </div>
 
@@ -104,7 +135,7 @@ const BlogIndex = ({ data, location }) => {
       </div>
 
       <div className="blog-posts-grid">
-        {posts.map(({ node }) => {
+        {paginatedPosts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug} className="blog-post-card">
@@ -146,8 +177,15 @@ const BlogIndex = ({ data, location }) => {
         })}
       </div>
 
+      {/* Pagination */}
+      <Pagination
+        currentPage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
+
       {/* No posts message for featured filter */}
-      {showFeaturedOnly && posts.length === 0 && (
+      {showFeaturedOnly && paginatedPosts.length === 0 && (
         <div
           style={{
             textAlign: "center",
@@ -171,7 +209,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: [{ frontmatter: { date: DESC } }]) {
+    allMarkdownRemark(
+      sort: [{ frontmatter: { date: DESC } }]
+      filter: { fields: { collection: { ne: "til" } } }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 200)
