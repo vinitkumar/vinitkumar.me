@@ -416,39 +416,39 @@ h1, h2, h3, h4, h5 {
    Navigation Styles
    =========================================== */
 .site-nav {
-  margin-bottom: 1.5rem;
-  padding: 1.25rem 0;
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
   border-top: 1px solid var(--gray-line);
   border-bottom: 1px solid var(--gray-line);
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.4rem;
   align-items: center;
 }
 
 .nav-group-label {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: var(--gray-500);
-  padding: 0.25rem 0.5rem;
-  margin-right: 0.25rem;
+  padding: 0.2rem 0.4rem;
+  margin-right: 0.15rem;
 }
 
 .nav-link {
   color: white;
-  padding: 0.45rem 1rem;
+  padding: 0.3rem 0.7rem;
   border-radius: var(--radius-pill);
   text-decoration: none;
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
   transition: all var(--transition-normal);
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -484,7 +484,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .nav-icon {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 /* Navigation link colors with brand colors */
@@ -500,14 +500,135 @@ h1, h2, h3, h4, h5 {
 /* Separator between nav groups */
 .nav-separator {
   width: 1px;
-  height: 28px;
+  height: 20px;
   background: var(--gray-300);
-  margin: 0 0.75rem;
+  margin: 0 0.5rem;
 }
 
 /* ===========================================
-   Blog Post Cards
+   Blog Post List (Compact)
    =========================================== */
+.blog-posts-list {
+  margin-top: 1rem;
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius);
+  background: var(--background-card);
+  overflow: hidden;
+}
+
+.blog-post-row {
+  display: block;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--gray-line);
+  transition: background var(--transition-fast);
+}
+
+.blog-post-row:last-child {
+  border-bottom: none;
+}
+
+.blog-post-row:hover {
+  background: var(--gray-100);
+}
+
+.blog-post-row-main {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.blog-post-row-featured {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+.blog-post-row-date {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  min-width: 110px;
+}
+
+.blog-post-row-title {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color var(--transition-fast);
+}
+
+.blog-post-row:hover .blog-post-row-title {
+  color: var(--link-color);
+}
+
+.blog-post-row-arrow {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.blog-post-row:hover .blog-post-row-arrow {
+  transform: translateX(3px);
+  color: var(--link-color);
+}
+
+.blog-post-row-excerpt {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-left: 1.65rem;
+}
+
+/* When there's a featured icon, adjust excerpt padding */
+.blog-post-row:has(.blog-post-row-featured) .blog-post-row-excerpt {
+  padding-left: 0;
+}
+
+@media (max-width: 768px) {
+  .blog-post-row-main {
+    flex-wrap: wrap;
+  }
+  
+  .blog-post-row-date {
+    min-width: auto;
+    order: 1;
+  }
+  
+  .blog-post-row-featured {
+    order: 0;
+  }
+  
+  .blog-post-row-title {
+    order: 2;
+    flex-basis: 100%;
+    white-space: normal;
+    margin-top: 0.25rem;
+  }
+  
+  .blog-post-row-arrow {
+    display: none;
+  }
+  
+  .blog-post-row-excerpt {
+    padding-left: 0;
+  }
+}
+
+/* Legacy card styles (kept for other pages) */
 .blog-posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -704,7 +825,7 @@ h1, h2, h3, h4, h5 {
    =========================================== */
 .search-container {
   position: relative;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .search-input-wrapper {
@@ -715,18 +836,18 @@ h1, h2, h3, h4, h5 {
 
 .search-icon {
   position: absolute;
-  left: 1rem;
-  font-size: 1rem;
+  left: 0.75rem;
+  font-size: 0.85rem;
   pointer-events: none;
   opacity: 0.6;
 }
 
 .search-input {
   width: 100%;
-  padding: 0.875rem 2.5rem 0.875rem 2.75rem;
-  font-size: 1rem;
+  padding: 0.6rem 2rem 0.6rem 2.25rem;
+  font-size: 0.9rem;
   border: 1px solid var(--gray-line);
-  border-radius: var(--radius);
+  border-radius: var(--radius-small);
   background: var(--background-card);
   color: var(--text);
   transition: all var(--transition-fast);
@@ -735,7 +856,7 @@ h1, h2, h3, h4, h5 {
 .search-input:focus {
   outline: none;
   border-color: var(--link-color);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--link-color) 20%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--link-color) 15%, transparent);
 }
 
 .search-input::placeholder {
@@ -744,13 +865,13 @@ h1, h2, h3, h4, h5 {
 
 .search-clear {
   position: absolute;
-  right: 0.75rem;
+  right: 0.5rem;
   background: none;
   border: none;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.4rem;
   line-height: 1;
   transition: color var(--transition-fast);
 }
@@ -829,10 +950,8 @@ h1, h2, h3, h4, h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--gray-line);
+  gap: 0.4rem;
+  margin-top: 0.75rem;
   flex-wrap: wrap;
 }
 
@@ -840,9 +959,9 @@ h1, h2, h3, h4, h5 {
   background: var(--background-card);
   border: 1px solid var(--gray-line);
   color: var(--text);
-  padding: 0.6rem 1rem;
+  padding: 0.4rem 0.75rem;
   border-radius: var(--radius-small);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -869,10 +988,10 @@ h1, h2, h3, h4, h5 {
   background: var(--background-card);
   border: 1px solid var(--gray-line);
   color: var(--text);
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 1.85rem;
+  height: 1.85rem;
   border-radius: var(--radius-small);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -901,36 +1020,45 @@ h1, h2, h3, h4, h5 {
    Filter Controls
    =========================================== */
 .filter-controls {
-  margin-bottom: 1.5rem;
-  padding: 1.25rem;
-  background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
-  border-radius: var(--radius);
-  border: 1px solid var(--gray-200);
+  margin-bottom: 0.75rem;
+  padding: 0.6rem 0.875rem;
+  background: var(--gray-100);
+  border-radius: var(--radius-small);
+  border: 1px solid var(--gray-line);
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
+}
+
+.filter-controls h3 {
+  font-size: 0.95rem !important;
+  margin-bottom: 0.1rem !important;
+}
+
+.filter-controls p {
+  font-size: 0.8rem !important;
 }
 
 .filter-btn {
   background: var(--blue);
   color: white;
   border: none;
-  padding: 0.6rem 1.25rem;
+  padding: 0.4rem 0.875rem;
   border-radius: var(--radius-pill);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-normal);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .filter-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(59, 130, 246, 0.25);
 }
 
 .filter-btn--active {
@@ -938,7 +1066,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .filter-btn--active:hover {
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 3px 8px rgba(16, 185, 129, 0.25);
 }
 
 /* ===========================================
@@ -961,16 +1089,14 @@ h1, h2, h3, h4, h5 {
    Site Footer
    =========================================== */
 .site-footer {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--gray-border, #e5e5e5);
-  font-size: 0.875rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
   color: var(--gray-text);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .site-footer p {
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
 }
 
 .site-footer a {

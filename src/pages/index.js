@@ -8,7 +8,7 @@ import Seo from "../components/seo"
 import Search from "../components/Search"
 import Pagination from "../components/Pagination"
 
-const POSTS_PER_PAGE = 6
+const POSTS_PER_PAGE = 5
 
 if (typeof window !== "undefined") {
   deckDeckGoHighlightElement()
@@ -134,45 +134,26 @@ const BlogIndex = ({ data, location }) => {
         </button>
       </div>
 
-      <div className="blog-posts-grid">
+      <div className="blog-posts-list">
         {paginatedPosts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const excerpt = node.frontmatter.description || node.excerpt
           return (
-            <article key={node.fields.slug} className="blog-post-card">
-              <div className="blog-post-header">
-                <h2 className="blog-post-title">
-                  <Link
-                    style={{
-                      boxShadow: `none`,
-                      textDecoration: "none",
-                      color: "inherit",
-                    }}
-                    to={node.fields.slug}
-                  >
-                    {title}
-                  </Link>
-                </h2>
-                <div className="blog-post-meta">
-                  <span className="blog-post-date">{node.frontmatter.date}</span>
-                  {node.frontmatter.featured && (
-                    <span className="featured-badge">⭐ Featured</span>
-                  )}
-                </div>
+            <Link
+              key={node.fields.slug}
+              to={node.fields.slug}
+              className="blog-post-row"
+            >
+              <div className="blog-post-row-main">
+                {node.frontmatter.featured && (
+                  <span className="blog-post-row-featured" title="Featured">⭐</span>
+                )}
+                <span className="blog-post-row-date">{node.frontmatter.date}</span>
+                <h2 className="blog-post-row-title">{title}</h2>
+                <span className="blog-post-row-arrow">→</span>
               </div>
-
-              <div
-                className="blog-post-description"
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-
-              <div className="blog-post-footer">
-                <Link to={node.fields.slug} className="read-more-link">
-                  Read more →
-                </Link>
-              </div>
-            </article>
+              <p className="blog-post-row-excerpt">{excerpt}</p>
+            </Link>
           )
         })}
       </div>
