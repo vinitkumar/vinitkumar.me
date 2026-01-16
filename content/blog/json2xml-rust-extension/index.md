@@ -1,12 +1,12 @@
 ---
-title: "json2xml v6.0.0: 29x Faster with Native Rust Extension"
+title: "json2xml v6.0.1: 29x Faster with Native Rust Extension"
 date: "2026-01-16"
 description: "How I supercharged json2xml with a native Rust extension using PyO3, achieving 29x faster performance while maintaining full backward compatibility."
 ---
 
 I've been maintaining [json2xml](https://github.com/vinitkumar/json2xml) for years now. It's a simple library that converts JSON to XML, and it's been working fine. But "fine" wasn't good enough. I wanted it to be fast.
 
-Today, I'm releasing version 6.0.0 with a native Rust extension that makes the library 29x faster.
+Today, I'm releasing version 6.0.1 with a native Rust extension that makes the library 29x faster.
 
 ## Why Rust?
 
