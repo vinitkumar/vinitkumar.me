@@ -144,14 +144,16 @@ const BlogIndex = ({ data, location }) => {
               to={node.fields.slug}
               className="blog-post-row"
             >
-              <div className="blog-post-row-main">
-                {node.frontmatter.featured && (
-                  <span className="blog-post-row-featured" title="Featured">⭐</span>
-                )}
-                <span className="blog-post-row-date">{node.frontmatter.date}</span>
-                <h2 className="blog-post-row-title">{title}</h2>
+              <div className="blog-post-row-header">
+                <div className="blog-post-row-meta">
+                  {node.frontmatter.featured && (
+                    <span className="blog-post-row-featured" title="Featured">⭐</span>
+                  )}
+                  <h2 className="blog-post-row-title">{title}</h2>
+                </div>
                 <span className="blog-post-row-arrow">→</span>
               </div>
+              <span className="blog-post-row-date">{node.frontmatter.date}</span>
               <p className="blog-post-row-excerpt">{excerpt}</p>
             </Link>
           )

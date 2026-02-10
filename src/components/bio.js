@@ -80,7 +80,7 @@ const Bio = () => {
 
       {/* Blog Statistics Section */}
       <div style={{ marginTop: rhythm(1), padding: "15px", backgroundColor: "#f9f9f9", borderRadius: "8px" }}>
-        <h3 style={{ marginBottom: rhythm(0.3), fontSize: "16px" }}>📊 Blog Stats</h3>
+        <h3 style={{ marginBottom: rhythm(0.3) }}>📊 Blog Stats</h3>
 
         <div style={{ marginBottom: "15px", fontSize: "13px", lineHeight: "1.3" }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
