@@ -15,27 +15,19 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setPostB
   setHeadComponents([
     <link
       rel="preload"
-      href="/fonts/AvenirLTProBook.otf"
+      href="/fonts/CommitMono-400-Regular.otf"
       as="font"
       type="font/otf"
       crossOrigin="anonymous"
-      key="avenir-pro-book"
+      key="commit-mono-regular"
     />,
     <link
       rel="preload"
-      href="/fonts/AvenirLTProHeavy.otf"
+      href="/fonts/CommitMono-700-Regular.otf"
       as="font"
       type="font/otf"
       crossOrigin="anonymous"
-      key="avenir-pro-heavy"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/Inconsolata-lgc-ep.woff2"
-      as="font"
-      type="font/woff2"
-      crossOrigin="anonymous"
-      key="inconsolata-code"
+      key="commit-mono-bold"
     />,
   ])
   

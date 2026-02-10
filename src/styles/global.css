@@ -12,8 +12,8 @@ body { min-height: 100vh; }
   --font-base: 1rem;
   --font-small: 0.875rem;
   --font-smaller: 0.75rem;
-  --font-family-body: 'Avenir Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-family-code: Inconsolata-lgc-ep, Consolas, Monaco, 'Courier New', monospace;
+  --font-family-body: 'CommitMono', monospace;
+  --font-family-code: 'CommitMono', Consolas, Monaco, 'Courier New', monospace;
   
   /* Layout */
   --width: 575px;
@@ -173,7 +173,7 @@ svg rect[fill*="blue"],
 
 html,
 body {
-  font-family: "Avenir Pro", sans-serif;
+  font-family: "CommitMono", monospace;
   font-size: var(--font-base);
   font-weight: 400;
   height: 100%;
@@ -199,70 +199,34 @@ html * {
 }
 
 @font-face {
-  font-family: Avenir Pro;
+  font-family: CommitMono;
   font-weight: 400;
-  src: url(/fonts/AvenirLTProBook.otf) format("opentype");
+  font-style: normal;
+  src: url(/fonts/CommitMono-400-Regular.otf) format("opentype");
+  font-display: swap;
 }
 @font-face {
-  font-family: Avenir Pro;
-  font-weight: 400;
-  font-style: italic;
-  src: url(/fonts/AvenirLTProBookOblique.otf) format("opentype");
-}
-@font-face {
-  font-family: Avenir Pro;
-  font-weight: 400;
-  src: url(/fonts/AvenirLTProRoman.otf) format("opentype");
-}
-@font-face {
-  font-family: Avenir Pro;
+  font-family: CommitMono;
   font-weight: 400;
   font-style: italic;
-  src: url(/fonts/AvenirLTProOblique.otf) format("opentype");
+  src: url(/fonts/CommitMono-400-Italic.otf) format("opentype");
+  font-display: swap;
 }
 @font-face {
-  font-family: Avenir Pro;
-  font-weight: 300;
-  src: url(/fonts/AvenirLTProLight.otf) format("opentype");
-}
-@font-face {
-  font-family: Avenir Pro;
-  font-weight: 300;
-  font-style: italic;
-  src: url(/fonts/AvenirLTProLightOblique.otf) format("opentype");
-}
-@font-face {
-  font-family: Avenir Pro;
-  font-weight: 600;
-  src: url(/fonts/AvenirLTProHeavy.otf) format("opentype");
-}
-@font-face {
-  font-family: Avenir Pro;
-  font-weight: 600;
-  font-style: italic;
-  src: url(/fonts/AvenirLTProHeavyOblique.otf) format("opentype");
-}
-@font-face {
-  font-family: Avenir Pro;
+  font-family: CommitMono;
   font-weight: 700;
-  src: url(/fonts/AvenirLTProBlack.otf) format("opentype");
+  font-style: normal;
+  src: url(/fonts/CommitMono-700-Regular.otf) format("opentype");
+  font-display: swap;
 }
 @font-face {
-  font-family: Avenir Pro;
+  font-family: CommitMono;
   font-weight: 700;
   font-style: italic;
-  src: url(/fonts/AvenirLTProBlackOblique.otf) format("opentype");
+  src: url(/fonts/CommitMono-700-Italic.otf) format("opentype");
+  font-display: swap;
 }
-@font-face {
-  font-family: Inconsolata-lgc-ep;
-  font-weight: 400;
-  src: url(/fonts/Inconsolata-lgc-ep.woff2) format("woff2");
-}
-@font-face {
-  font-family: Inconsolata-lgc-ep;
-  font-weight: 700;
-  src: url(/fonts/Inconsolata-lgc-bold-ep.woff2) format("woff2");
-}
+
 
 a {
   color: var(--text);
@@ -297,7 +261,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Inconsolata-lgc-ep, Consolas, Monaco, monospace;
+  font-family: CommitMono, Consolas, Monaco, monospace;
   font-size: var(--font-small);
 }
 
@@ -410,6 +374,31 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
   line-height: 1.3;
   letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ===========================================
