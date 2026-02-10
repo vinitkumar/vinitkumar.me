@@ -147,7 +147,7 @@ const StatsIndex = (props) => {
       
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "2.5rem", marginBottom: "0.5rem" }}>📊 Blog Analytics & Insights</h1>
+        <h1>📊 Blog Analytics & Insights</h1>
         <p style={{ fontSize: "1.1rem", color: "#666", margin: 0 }}>
           A deep dive into {writingPeriodYears} years of writing, learning, and professional growth
         </p>
@@ -191,7 +191,7 @@ const StatsIndex = (props) => {
         marginBottom: "2rem",
         color: "white"
       }}>
-        <h2 style={{ color: "white", marginBottom: "1.5rem", fontSize: "1.8rem" }}>🚀 Career Evolution Through Writing</h2>
+        <h2 style={{ color: "white" }}>🚀 Career Evolution Through Writing</h2>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
@@ -219,7 +219,7 @@ const StatsIndex = (props) => {
         marginBottom: "2rem",
         border: "1px solid #e2e8f0"
       }}>
-        <h2 style={{ marginBottom: "1.5rem", fontSize: "1.8rem" }}>🎯 Interesting Trivia</h2>
+        <h2>🎯 Interesting Trivia</h2>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
@@ -253,7 +253,7 @@ const StatsIndex = (props) => {
           borderRadius: "12px",
           border: "1px solid #e2e8f0"
         }}>
-          <h2 style={{ marginBottom: "1.5rem", fontSize: "1.5rem" }}>📈 Posts by Year</h2>
+          <h2>📈 Posts by Year</h2>
           <div style={{ fontFamily: "monospace", fontSize: "14px", lineHeight: "1.8" }}>
             {years.map(year => {
               const count = yearStats[year]
@@ -294,7 +294,7 @@ const StatsIndex = (props) => {
           borderRadius: "12px",
           border: "1px solid #e2e8f0"
         }}>
-          <h2 style={{ marginBottom: "1.5rem", fontSize: "1.5rem" }}>💡 Quick Insights</h2>
+          <h2>💡 Quick Insights</h2>
           <div style={{ fontSize: "0.9rem", lineHeight: "1.6" }}>
             <div style={{ marginBottom: "1rem" }}>
               <strong>🔥 Most Active:</strong><br/>
@@ -324,7 +324,7 @@ const StatsIndex = (props) => {
         border: "1px solid #e2e8f0",
         marginBottom: "2rem"
       }}>
-        <h2 style={{ marginBottom: "1.5rem", fontSize: "1.8rem" }}>🛠️ Technology Evolution Journey</h2>
+        <h2>🛠️ Technology Evolution Journey</h2>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
@@ -336,7 +336,7 @@ const StatsIndex = (props) => {
               borderRadius: "8px",
               padding: "1.5rem"
             }}>
-              <h3 style={{ fontSize: "1.1rem", marginBottom: "1rem", color: "#2d3748" }}>{period}</h3>
+              <h3 style={{ color: "#2d3748" }}>{period}</h3>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
                 {techs.map(tech => (
                   <span key={tech} style={{
@@ -363,7 +363,7 @@ const StatsIndex = (props) => {
         border: "1px solid #e2e8f0",
         marginBottom: "2rem"
       }}>
-        <h2 style={{ marginBottom: "1.5rem", fontSize: "1.5rem" }}>🏷️ Most Written About Topics</h2>
+        <h2>🏷️ Most Written About Topics</h2>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
           {topTags.map(([tag, count]) => (
             <span key={tag} style={{
@@ -388,7 +388,7 @@ const StatsIndex = (props) => {
           borderRadius: "12px",
           border: "1px solid #e2e8f0"
         }}>
-          <h2 style={{ marginBottom: "1.5rem", fontSize: "1.5rem" }}>⭐ Featured Posts</h2>
+          <h2>⭐ Featured Posts</h2>
           <div style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
@@ -401,7 +401,7 @@ const StatsIndex = (props) => {
                 padding: "1.5rem",
                 background: "#fafafa"
               }}>
-                <h3 style={{ fontSize: "1.1rem", marginBottom: "0.5rem", color: "#2d3748" }}>
+                <h3 style={{ color: "#2d3748" }}>
                   {post.title}
                 </h3>
                 <p style={{ fontSize: "0.9rem", color: "#718096", margin: 0 }}>
