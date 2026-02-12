@@ -12,9 +12,9 @@ body { min-height: 100vh; }
   --font-base: 1rem;
   --font-small: 0.875rem;
   --font-smaller: 0.75rem;
-  --font-family-body: 'CommitMono', monospace;
-  --font-family-code: 'CommitMono', Consolas, Monaco, 'Courier New', monospace;
-  
+  --font-family-body: "CommitMono", -apple-system, "system-ui", Helvetica, Arial, sans-serif;
+  --font-family-code: "CommitMono", SFMono-Regular, Consolas, Menlo, monospace;
+
   /* Layout */
   --width: 575px;
   --max-width: 80rem;
@@ -22,7 +22,7 @@ body { min-height: 100vh; }
   --radius: 12px;
   --radius-small: 8px;
   --radius-pill: 20px;
-  
+
   /* Core Colors */
   --text: #111111;
   --text-muted: #374151;
@@ -30,7 +30,7 @@ body { min-height: 100vh; }
   --background-card: #ffffff;
   --accent: #111111;
   --accent-hover: #000000;
-  
+
   /* Gray Scale */
   --gray-text: rgba(17, 17, 17, 0.7);
   --gray-line: rgba(17, 17, 17, 0.12);
@@ -42,7 +42,7 @@ body { min-height: 100vh; }
   --gray-500: #374151;
   --gray-600: #1f2937;
   --gray-700: #111827;
-  
+
   /* Navigation Colors */
   --nav-about: #3b82f6;
   --nav-til: #f59e0b;
@@ -52,7 +52,7 @@ body { min-height: 100vh; }
   --nav-linkedin: #0077b5;
   --nav-twitter: #1da1f2;
   --nav-github: #374151;
-  
+
   /* Accent Colors */
   --blue: #3b82f6;
   --amber: #f59e0b;
@@ -61,50 +61,50 @@ body { min-height: 100vh; }
   --indigo: #6366f1;
   --red: #ef4444;
   --orange: #f97316;
-  
+
   /* Featured/Highlight */
   --featured-bg: #f97316;
   --featured-text: #ffffff;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.02);
   --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.08);
   --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.02);
   --shadow-card-hover: 0 8px 25px rgba(0, 0, 0, 0.08);
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
-  
+
   /* Special */
   --terminal-green: #00ff00;
-  
+
   /* Code blocks */
   --code-bg: #f6f8fa;
   --code-text: #24292e;
   --code-border: #e1e4e8;
-  
+
   /* Blockquotes */
   --blockquote-bg: #f8f9fa;
   --blockquote-border: #3b82f6;
-  
+
   /* Links */
   --link-color: #3b82f6;
   --gray-border: #e5e5e5;
 }
 
-.about_inner { 
+.about_inner {
   padding: calc(var(--font-base) * 1.5);
   border-bottom: var(--border) solid var(--gray-line);
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   gap: var(--font-base);
   background-color: var(--background-card);
 }
 
-.btn-action-latest { 
-  text-decoration: none; 
+.btn-action-latest {
+  text-decoration: none;
   background: var(--accent);
   color: white;
   border: none;
@@ -115,12 +115,12 @@ body { min-height: 100vh; }
   border-radius: 2px;
 }
 
-.btn-action-latest:hover { 
+.btn-action-latest:hover {
   color: var(--terminal-green);
 }
 
 /* Hide or minimize blog stats completely */
-[class*="blog-stats"], 
+[class*="blog-stats"],
 [class*="BlogStats"],
 .blog-stats,
 h3:has(+ *[class*="chart"]),
@@ -173,8 +173,8 @@ svg rect[fill*="blue"],
 
 html,
 body {
-  font-family: "CommitMono", monospace;
-  font-size: var(--font-base);
+  font-family: var(--font-family-body);
+  font-size: 14px;
   font-weight: 400;
   height: 100%;
   line-height: 1.6;
@@ -262,7 +262,7 @@ kbd,
 pre,
 samp {
   font-family: CommitMono, Consolas, Monaco, monospace;
-  font-size: var(--font-small);
+  font-size: 14px;
 }
 
 code,
@@ -593,7 +593,7 @@ h5 {
     white-space: normal;
     font-size: 1.05rem;
   }
-  
+
   .blog-post-row-arrow {
     display: none;
   }
@@ -1146,7 +1146,7 @@ h5 {
   --background-card: #ffffff;
   --accent: #2c3338;
   --accent-hover: #000000;
-  
+
   --gray-text: rgba(51, 51, 51, 0.6);
   --gray-line: rgba(51, 51, 51, 0.1);
   --gray-bg: rgba(51, 51, 51, 0.02);
@@ -1157,16 +1157,16 @@ h5 {
   --gray-500: #6b7280;
   --gray-600: #4b5563;
   --gray-700: #374151;
-  
+
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.02);
   --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.08);
   --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.02);
   --shadow-card-hover: 0 8px 25px rgba(0, 0, 0, 0.08);
-  
+
   --link-color: #3b82f6;
   --gray-border: #e5e5e5;
-  
+
   --code-bg: #f6f8fa;
   --code-text: #24292e;
   --code-border: #e1e4e8;
@@ -1184,7 +1184,7 @@ h5 {
   --background-card: #18181b;
   --accent: #f4f4f5;
   --accent-hover: #ffffff;
-  
+
   --gray-text: rgba(244, 244, 245, 0.75);
   --gray-line: rgba(244, 244, 245, 0.14);
   --gray-bg: rgba(244, 244, 245, 0.04);
@@ -1195,25 +1195,25 @@ h5 {
   --gray-500: #b4b4bb;
   --gray-600: #d4d4d8;
   --gray-700: #f4f4f5;
-  
+
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.2);
   --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.4);
   --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.25);
   --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.5);
-  
+
   --link-color: #60a5fa;
   --gray-border: #27272a;
-  
+
   --code-bg: #1e1e1e;
   --code-text: #d4d4d4;
   --code-border: #3f3f46;
   --blockquote-bg: #18181b;
   --blockquote-border: #60a5fa;
-  
+
   --featured-bg: #ea580c;
   --featured-text: #ffffff;
-  
+
   --nav-about: #2563eb;
   --nav-til: #d97706;
   --nav-stats: #7c3aed;
@@ -1235,7 +1235,7 @@ h5 {
     --background-card: #18181b;
     --accent: #f4f4f5;
     --accent-hover: #ffffff;
-    
+
     --gray-text: rgba(244, 244, 245, 0.75);
     --gray-line: rgba(244, 244, 245, 0.14);
     --gray-bg: rgba(244, 244, 245, 0.04);
@@ -1246,25 +1246,25 @@ h5 {
     --gray-500: #b4b4bb;
     --gray-600: #d4d4d8;
     --gray-700: #f4f4f5;
-    
+
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.2);
     --shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.4);
     --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.25);
     --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.5);
-    
+
     --link-color: #60a5fa;
     --gray-border: #27272a;
-    
+
     --code-bg: #1e1e1e;
     --code-text: #d4d4d4;
     --code-border: #3f3f46;
     --blockquote-bg: #18181b;
     --blockquote-border: #60a5fa;
-    
+
     --featured-bg: #ea580c;
     --featured-text: #ffffff;
-    
+
     --nav-about: #2563eb;
     --nav-til: #d97706;
     --nav-stats: #7c3aed;
@@ -1284,16 +1284,16 @@ h5 {
   .recommendations-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .site-nav {
     gap: 0.5rem;
   }
-  
+
   .nav-link {
     padding: 0.35rem 0.8rem;
     font-size: 0.8rem;
   }
-  
+
   .nav-separator {
     display: none;
   }
