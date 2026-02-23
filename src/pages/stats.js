@@ -148,7 +148,7 @@ const StatsIndex = (props) => {
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
         <h1>📊 Blog Analytics & Insights</h1>
-        <p style={{ fontSize: "1.1rem", color: "#666", margin: 0 }}>
+        <p style={{ fontSize: "1.1rem", color: "var(--text-muted)", margin: 0 }}>
           A deep dive into {writingPeriodYears} years of writing, learning, and professional growth
         </p>
       </div>
@@ -169,16 +169,16 @@ const StatsIndex = (props) => {
           { label: "Posts/Year", value: avgPostsPerYear, icon: "📈" }
         ].map((stat, index) => (
           <div key={index} style={{
-            background: "white",
+            background: "var(--background-card)",
             padding: "1.5rem",
             borderRadius: "8px",
-            border: "1px solid #e2e8f0",
+            border: "1px solid var(--gray-line)",
             textAlign: "center",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.1)"
+            boxShadow: "var(--shadow-card)"
           }}>
             <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>{stat.icon}</div>
-            <div style={{ fontSize: "1.5rem", fontWeight: "600", color: "#2d3748" }}>{stat.value}</div>
-            <div style={{ fontSize: "0.9rem", color: "#718096" }}>{stat.label}</div>
+            <div style={{ fontSize: "1.5rem", fontWeight: "600", color: "var(--text)" }}>{stat.value}</div>
+            <div style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>{stat.label}</div>
           </div>
         ))}
       </div>
@@ -213,11 +213,11 @@ const StatsIndex = (props) => {
 
       {/* Interesting Trivia */}
       <div style={{
-        background: "#f7fafc",
+        background: "var(--gray-bg)",
         borderRadius: "12px",
         padding: "2rem",
         marginBottom: "2rem",
-        border: "1px solid #e2e8f0"
+        border: "1px solid var(--gray-line)"
       }}>
         <h2>🎯 Interesting Trivia</h2>
         <div style={{
@@ -227,11 +227,12 @@ const StatsIndex = (props) => {
         }}>
           {interestingTrivia.map((trivia, index) => (
             <div key={index} style={{
-              background: "white",
+              background: "var(--background-card)",
               padding: "1rem",
               borderRadius: "8px",
-              border: "1px solid #e2e8f0",
-              fontSize: "0.95rem"
+              border: "1px solid var(--gray-line)",
+              fontSize: "0.95rem",
+              color: "var(--text)"
             }}>
               {trivia}
             </div>
@@ -248,13 +249,13 @@ const StatsIndex = (props) => {
       }}>
         {/* Posts by Year */}
         <div style={{
-          background: "white",
+          background: "var(--background-card)",
           padding: "2rem",
           borderRadius: "12px",
-          border: "1px solid #e2e8f0"
+          border: "1px solid var(--gray-line)"
         }}>
           <h2>📈 Posts by Year</h2>
-          <div style={{ fontFamily: "monospace", fontSize: "14px", lineHeight: "1.8" }}>
+          <div style={{ fontFamily: "monospace", fontSize: "14px", lineHeight: "1.8", color: "var(--text)" }}>
             {years.map(year => {
               const count = yearStats[year]
               const barLength = Math.round((count / Math.max(...Object.values(yearStats))) * 25)
@@ -263,18 +264,18 @@ const StatsIndex = (props) => {
               return (
                 <div key={year} style={{ marginBottom: "8px" }}>
                   <div style={{ display: "flex", alignItems: "center" }}>
-                    <span style={{ width: "60px", textAlign: "right", marginRight: "15px", fontWeight: "600" }}>
+                    <span style={{ width: "60px", textAlign: "right", marginRight: "15px", fontWeight: "600", color: "var(--text)" }}>
                       {year}
                     </span>
-                    <span style={{ width: "40px", textAlign: "right", marginRight: "15px" }}>
+                    <span style={{ width: "40px", textAlign: "right", marginRight: "15px", color: "var(--text)" }}>
                       {count}
                     </span>
-                    <span style={{ color: "#4299e1", marginRight: "10px" }}>{bar}</span>
+                    <span style={{ color: "var(--blue)", marginRight: "10px" }}>{bar}</span>
                   </div>
                   {milestone && (
                     <div style={{ 
                       fontSize: "12px", 
-                      color: "#718096", 
+                      color: "var(--text-muted)", 
                       marginLeft: "115px",
                       fontStyle: "italic"
                     }}>
@@ -289,13 +290,13 @@ const StatsIndex = (props) => {
 
         {/* Quick Insights */}
         <div style={{
-          background: "white",
+          background: "var(--background-card)",
           padding: "2rem",
           borderRadius: "12px",
-          border: "1px solid #e2e8f0"
+          border: "1px solid var(--gray-line)"
         }}>
           <h2>💡 Quick Insights</h2>
-          <div style={{ fontSize: "0.9rem", lineHeight: "1.6" }}>
+          <div style={{ fontSize: "0.9rem", lineHeight: "1.6", color: "var(--text)" }}>
             <div style={{ marginBottom: "1rem" }}>
               <strong>🔥 Most Active:</strong><br/>
               {mostActiveYear} ({yearStats[mostActiveYear]} posts)
@@ -318,10 +319,10 @@ const StatsIndex = (props) => {
 
       {/* Technology Evolution */}
       <div style={{
-        background: "white",
+        background: "var(--background-card)",
         padding: "2rem",
         borderRadius: "12px",
-        border: "1px solid #e2e8f0",
+        border: "1px solid var(--gray-line)",
         marginBottom: "2rem"
       }}>
         <h2>🛠️ Technology Evolution Journey</h2>
@@ -332,19 +333,20 @@ const StatsIndex = (props) => {
         }}>
           {Object.entries(techEvolution).map(([period, techs]) => (
             <div key={period} style={{
-              border: "1px solid #e2e8f0",
+              border: "1px solid var(--gray-line)",
               borderRadius: "8px",
-              padding: "1.5rem"
+              padding: "1.5rem",
+              backgroundColor: "var(--background)"
             }}>
-              <h3 style={{ color: "#2d3748" }}>{period}</h3>
+              <h3 style={{ color: "var(--text)" }}>{period}</h3>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
                 {techs.map(tech => (
                   <span key={tech} style={{
-                    background: "#edf2f7",
+                    background: "var(--gray-100)",
                     padding: "0.25rem 0.75rem",
                     borderRadius: "20px",
                     fontSize: "0.8rem",
-                    color: "#4a5568"
+                    color: "var(--text)"
                   }}>
                     {tech}
                   </span>
@@ -357,10 +359,10 @@ const StatsIndex = (props) => {
 
       {/* Top Tags */}
       <div style={{
-        background: "white",
+        background: "var(--background-card)",
         padding: "2rem",
         borderRadius: "12px",
-        border: "1px solid #e2e8f0",
+        border: "1px solid var(--gray-line)",
         marginBottom: "2rem"
       }}>
         <h2>🏷️ Most Written About Topics</h2>
@@ -383,10 +385,10 @@ const StatsIndex = (props) => {
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
         <div style={{
-          background: "white",
+          background: "var(--background-card)",
           padding: "2rem",
           borderRadius: "12px",
-          border: "1px solid #e2e8f0"
+          border: "1px solid var(--gray-line)"
         }}>
           <h2>⭐ Featured Posts</h2>
           <div style={{
@@ -396,15 +398,15 @@ const StatsIndex = (props) => {
           }}>
             {featuredPosts.map((post, index) => (
               <div key={index} style={{
-                border: "1px solid #e2e8f0",
+                border: "1px solid var(--gray-line)",
                 borderRadius: "8px",
                 padding: "1.5rem",
-                background: "#fafafa"
+                background: "var(--background)"
               }}>
-                <h3 style={{ color: "#2d3748" }}>
+                <h3 style={{ color: "var(--text)" }}>
                   {post.title}
                 </h3>
-                <p style={{ fontSize: "0.9rem", color: "#718096", margin: 0 }}>
+                <p style={{ fontSize: "0.9rem", color: "var(--text-muted)", margin: 0 }}>
                   {new Date(post.date).toLocaleDateString('en-US', {
                     year: 'numeric',
                     month: 'long',
