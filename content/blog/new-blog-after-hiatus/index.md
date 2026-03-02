@@ -21,11 +21,11 @@ Now, as the dust has settled from the deployment, I am going to be more active i
 
 I also went on a couple vacations. Here are some picture from the same. Enjoy! :)
 
-![Vacation photo 1](../../assets/23AF739E-E4CA-46B9-ADBC-6C2885FBF71C.JPG)
+![Vacation photo 1](../../assets/23AF739E-E4CA-46B9-ADBC-6C2885FBF71C.jpg)
 
-![Vacation photo 2](../../assets/56762FF7-5192-4909-B08C-D10A9B910141.JPG)
+![Vacation photo 2](../../assets/56762FF7-5192-4909-B08C-D10A9B910141.jpg)
 
-![Vacation photo 3](../../assets/5A938B32-D257-4499-8BBA-6699D2426F0C.JPG)
+![Vacation photo 3](../../assets/5A938B32-D257-4499-8BBA-6699D2426F0C.jpg)
 
 ![Vacation photo 4](../../assets/IMG_4634.jpg)
 
