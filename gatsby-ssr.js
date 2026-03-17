@@ -12,24 +12,7 @@ const themeScript = `
 `
 
 export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setPostBodyComponents }) => {
-  setHeadComponents([
-    <link
-      rel="preload"
-      href="/fonts/CommitMono-400-Regular.otf"
-      as="font"
-      type="font/otf"
-      crossOrigin="anonymous"
-      key="commit-mono-regular"
-    />,
-    <link
-      rel="preload"
-      href="/fonts/CommitMono-700-Regular.otf"
-      as="font"
-      type="font/otf"
-      crossOrigin="anonymous"
-      key="commit-mono-bold"
-    />,
-  ])
+  setHeadComponents([])
   
   setPreBodyComponents([
     <script

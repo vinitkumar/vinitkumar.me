@@ -2,8 +2,8 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "15px",
   baseLineHeight: 1.4,
-  headerFontFamily: ["Geist", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"],
-  bodyFontFamily: ["Newsreader", "Georgia", "serif"],
+  headerFontFamily: ["Crimson Pro", "Georgia", "serif"],
+  bodyFontFamily: ["Crimson Pro", "Georgia", "serif"],
 })
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
