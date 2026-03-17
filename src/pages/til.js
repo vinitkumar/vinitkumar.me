@@ -49,7 +49,7 @@ const TilIndex = ({ data, location }) => {
         </h1>
         <p
           style={{
-            fontSize: "1.2rem",
+            fontSize: "1.3rem",
             margin: 0,
             opacity: 0.9,
             maxWidth: "600px",
@@ -92,7 +92,7 @@ const TilIndex = ({ data, location }) => {
           </div>
           <div
             style={{
-              fontSize: "0.9rem",
+              fontSize: "1rem",
               color: "var(--gray-500)",
               fontWeight: "500",
             }}
@@ -121,7 +121,7 @@ const TilIndex = ({ data, location }) => {
           </div>
           <div
             style={{
-              fontSize: "0.9rem",
+              fontSize: "1rem",
               color: "var(--gray-500)",
               fontWeight: "500",
             }}
@@ -158,7 +158,7 @@ const TilIndex = ({ data, location }) => {
                     color: "white",
                     padding: "0.25rem 0.75rem",
                     borderRadius: "var(--radius)",
-                    fontSize: "0.7rem",
+                    fontSize: "0.8rem",
                     fontWeight: "600",
                     letterSpacing: "0.5px",
                     textTransform: "uppercase",
@@ -186,7 +186,7 @@ const TilIndex = ({ data, location }) => {
                       display: "flex",
                       alignItems: "center",
                       gap: "1rem",
-                      fontSize: "0.9rem",
+                      fontSize: "1rem",
                       color: "var(--gray-500)",
                       flexWrap: "wrap",
                     }}
@@ -200,7 +200,7 @@ const TilIndex = ({ data, location }) => {
                 {/* Description */}
                 <div
                   style={{
-                    fontSize: "0.95rem",
+                    fontSize: "1.1rem",
                     lineHeight: "1.6",
                     color: "var(--text)",
                     marginBottom: "1.5rem",

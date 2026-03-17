@@ -178,7 +178,7 @@ const StatsIndex = (props) => {
           }}>
             <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>{stat.icon}</div>
             <div style={{ fontSize: "1.5rem", fontWeight: "600", color: "var(--text)" }}>{stat.value}</div>
-            <div style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>{stat.label}</div>
+            <div style={{ fontSize: "1rem", color: "var(--text-muted)" }}>{stat.label}</div>
           </div>
         ))}
       </div>
@@ -205,7 +205,7 @@ const StatsIndex = (props) => {
               backdropFilter: "blur(10px)"
             }}>
               <div style={{ fontWeight: "600", fontSize: "1.1rem" }}>{year}</div>
-              <div style={{ fontSize: "0.9rem", opacity: 0.9 }}>{milestone}</div>
+              <div style={{ fontSize: "1rem", opacity: 0.9 }}>{milestone}</div>
             </div>
           ))}
         </div>
@@ -231,7 +231,7 @@ const StatsIndex = (props) => {
               padding: "1rem",
               borderRadius: "8px",
               border: "1px solid var(--gray-line)",
-              fontSize: "0.95rem",
+              fontSize: "1.1rem",
               color: "var(--text)"
             }}>
               {trivia}
@@ -274,7 +274,7 @@ const StatsIndex = (props) => {
                   </div>
                   {milestone && (
                     <div style={{ 
-                      fontSize: "12px", 
+                      fontSize: "14px", 
                       color: "var(--text-muted)", 
                       marginLeft: "115px",
                       fontStyle: "italic"
@@ -296,7 +296,7 @@ const StatsIndex = (props) => {
           border: "1px solid var(--gray-line)"
         }}>
           <h2>💡 Quick Insights</h2>
-          <div style={{ fontSize: "0.9rem", lineHeight: "1.6", color: "var(--text)" }}>
+          <div style={{ fontSize: "1rem", lineHeight: "1.6", color: "var(--text)" }}>
             <div style={{ marginBottom: "1rem" }}>
               <strong>🔥 Most Active:</strong><br/>
               {mostActiveYear} ({yearStats[mostActiveYear]} posts)

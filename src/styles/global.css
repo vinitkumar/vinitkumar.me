@@ -431,7 +431,7 @@ h5 {
   padding: 0.3rem 0.7rem;
   border-radius: var(--radius-pill);
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.2px;
   transition: all var(--transition-normal);
@@ -474,7 +474,7 @@ h5 {
 }
 
 .nav-icon {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 /* Navigation link colors with brand colors */
@@ -592,7 +592,7 @@ h5 {
 @media (max-width: 768px) {
   .blog-post-row-title {
     white-space: normal;
-    font-size: 1.05rem;
+    font-size: 1.2rem;
   }
 
   .blog-post-row-arrow {
@@ -632,7 +632,7 @@ h5 {
 }
 
 .blog-post-title {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   margin: 0 0 0.75rem 0;
   font-weight: 600;
   color: var(--text);
@@ -652,7 +652,7 @@ h5 {
 }
 
 .blog-post-date {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--text-muted);
   font-weight: 500;
 }
@@ -662,14 +662,14 @@ h5 {
   color: var(--featured-text);
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-pill);
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .blog-post-description {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: var(--text);
   margin-bottom: 1rem;
@@ -690,7 +690,7 @@ h5 {
   color: var(--blue);
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: all var(--transition-fast);
   display: inline-flex;
   align-items: center;
@@ -721,7 +721,7 @@ h5 {
 }
 
 .tldr-title {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
   color: var(--accent);
@@ -739,7 +739,7 @@ h5 {
 .tldr-list li {
   position: relative;
   padding-left: 1.25rem;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: var(--text);
   margin: 0;
@@ -809,7 +809,7 @@ h5 {
 .search-icon {
   position: absolute;
   left: 0.75rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
   pointer-events: none;
   opacity: 0.6;
 }
@@ -817,7 +817,7 @@ h5 {
 .search-input {
   width: 100%;
   padding: 0.6rem 2rem 0.6rem 2.25rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   border: 1px solid var(--gray-line);
   border-radius: var(--radius-small);
   background: var(--background-card);
@@ -869,7 +869,7 @@ h5 {
 
 .search-results-header {
   padding: 0.75rem 1rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   border-bottom: 1px solid var(--gray-line);
   font-weight: 500;
@@ -901,11 +901,11 @@ h5 {
 }
 
 .search-result-featured {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .search-result-date {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
 }
 
@@ -933,7 +933,7 @@ h5 {
   color: var(--text);
   padding: 0.4rem 0.75rem;
   border-radius: var(--radius-small);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -963,7 +963,7 @@ h5 {
   width: 1.85rem;
   height: 1.85rem;
   border-radius: var(--radius-small);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -1005,12 +1005,12 @@ h5 {
 }
 
 .filter-controls h3 {
-  font-size: 0.95rem !important;
+  font-size: 1.1rem !important;
   margin-bottom: 0.1rem !important;
 }
 
 .filter-controls p {
-  font-size: 0.8rem !important;
+  font-size: 1rem !important;
 }
 
 .filter-btn {
@@ -1019,7 +1019,7 @@ h5 {
   border: none;
   padding: 0.4rem 0.875rem;
   border-radius: var(--radius-pill);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-normal);
@@ -1292,7 +1292,7 @@ h5 {
 
   .nav-link {
     padding: 0.35rem 0.8rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .nav-separator {

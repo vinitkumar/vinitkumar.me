@@ -30,7 +30,7 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
           color: "white",
           padding: "0.5rem 1rem",
           borderRadius: "var(--radius-pill)",
-          fontSize: "0.8rem",
+          fontSize: "0.9rem",
           fontWeight: "600",
           marginBottom: rhythm(1),
           letterSpacing: "0.5px",
@@ -88,7 +88,7 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
                   color: "var(--gray-700)",
                   padding: "0.25rem 0.75rem",
                   borderRadius: "var(--radius)",
-                  fontSize: "0.75rem",
+                  fontSize: "0.85rem",
                   fontWeight: "500",
                 }}
               >
@@ -154,7 +154,7 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
             color: "var(--blue)",
             textDecoration: "none",
             fontWeight: "600",
-            fontSize: "0.9rem",
+            fontSize: "1rem",
           }}
         >
           ← Back to all TIL posts
