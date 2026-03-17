@@ -544,7 +544,7 @@ h5 {
 }
 
 .blog-post-row-title {
-  font-size: 1.15rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin: 0;
   color: var(--text);
@@ -560,7 +560,7 @@ h5 {
 
 .blog-post-row-date {
   display: block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--text-muted);
   font-weight: 500;
   margin-bottom: 0.35rem;
@@ -569,7 +569,7 @@ h5 {
 .blog-post-row-arrow {
   flex-shrink: 0;
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   transition: transform var(--transition-fast), color var(--transition-fast);
 }
 
@@ -580,7 +580,7 @@ h5 {
 
 .blog-post-row-excerpt {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
   line-height: 1.5;
   display: -webkit-box;
@@ -1064,7 +1064,7 @@ h5 {
   margin-top: 3rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--gray-line);
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: var(--gray-text);
   line-height: 1.6;
 }

@@ -102,7 +102,7 @@ const BlogIndex = ({ data, location }) => {
           <h3
             style={{
               margin: 0,
-              fontSize: "1.2rem",
+              fontSize: "1.5rem",
               color: "var(--text)",
               marginBottom: "0.25rem",
             }}
@@ -116,7 +116,7 @@ const BlogIndex = ({ data, location }) => {
           <p
             style={{
               margin: 0,
-              fontSize: "0.9rem",
+              fontSize: "1.1rem",
               color: "var(--text-muted)",
             }}
           >
