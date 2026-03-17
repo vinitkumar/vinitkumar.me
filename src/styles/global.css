@@ -178,10 +178,10 @@ svg rect[fill*="blue"],
 html,
 body {
   font-family: var(--font-family-body);
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   height: 100%;
-  line-height: 1.6;
+  line-height: 1.2;
   -webkit-text-size-adjust: 100%;
   font-feature-settings: normal;
   font-variation-settings: normal;
