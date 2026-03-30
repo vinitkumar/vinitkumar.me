@@ -2,7 +2,7 @@ import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.2,
-  headerFontFamily: ["Crimson Pro", "Georgia", "serif"],
+  headerFontFamily: ["Space Grotesk", "Helvetica Neue", "Arial", "sans-serif"],
   bodyFontFamily: ["Crimson Pro", "Georgia", "serif"],
 })
 // Hot reload typography in development.
