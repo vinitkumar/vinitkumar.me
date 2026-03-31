@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "vinit-kumar-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "My blog written in gatsby JS ",
+  "version": "1.0.0",
+  "author": "Vinit Kumar <mail@vinitkumar.me>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
