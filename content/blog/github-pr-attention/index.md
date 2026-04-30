@@ -13,6 +13,9 @@ GitHub is good at a lot of things, but reviewing a queue of pull requests is sti
 
 So I built [github-pr-attention](https://github.com/vinitkumar/github-pr-attention): a small terminal UI in Go for treating pull requests like an inbox. See what needs you, open the item, decide, act, move on. No mouse. No tab archaeology. No pretending the notifications page is a workflow.
 
+[![asciicast](https://asciinema.org/a/yc2GopjUrsbSgD3b.svg)](https://asciinema.org/a/yc2GopjUrsbSgD3b)
+
+
 ## The Problem
 
 GitHub's web UI is optimized around a single pull request. That makes sense for deep review, but it is clumsy when your real job is keeping a queue moving.
