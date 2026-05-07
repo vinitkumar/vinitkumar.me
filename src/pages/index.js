@@ -18,7 +18,7 @@ const POSTS_PER_PAGE = 5
 const BlogIndex = ({ data, location }) => {
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
-  
+
   const siteTitle = data.site.siteMetadata.title
   const allPosts = data.allMarkdownRemark.edges
   const tilPosts = data.allTil.edges
@@ -28,7 +28,7 @@ const BlogIndex = ({ data, location }) => {
       const urlParams = new URLSearchParams(window.location.search)
       const featuredFilter = urlParams.get("featured")
       const pageParam = urlParams.get("page")
-      
+
       if (featuredFilter === "true") {
         setShowFeaturedOnly(true)
       }
@@ -77,7 +77,10 @@ const BlogIndex = ({ data, location }) => {
 
   const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE)
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE
-  const paginatedPosts = filteredPosts.slice(startIndex, startIndex + POSTS_PER_PAGE)
+  const paginatedPosts = filteredPosts.slice(
+    startIndex,
+    startIndex + POSTS_PER_PAGE
+  )
 
   const featuredCount = allPosts.filter(
     ({ node }) => node.frontmatter.featured
@@ -87,7 +90,7 @@ const BlogIndex = ({ data, location }) => {
     .slice(0, 4)
   const latestPosts = allPosts.slice(0, 5)
   const topicCounts = allPosts.reduce((counts, { node }) => {
-    normalizeTags(node.frontmatter.tags).forEach(tag => {
+    normalizeTags(node.frontmatter.tags).forEach((tag) => {
       counts[tag] = (counts[tag] || 0) + 1
     })
     return counts
@@ -110,15 +113,25 @@ const BlogIndex = ({ data, location }) => {
 
       <section className="home-hero">
         <p className="eyebrow">Principal Engineer · Django CMS Fellow</p>
-        <h1>Writing about robust systems, open source, tools, AI workflows, and engineering craft.</h1>
+        <h1>
+          Writing about robust systems, open source, tools, AI workflows, and
+          engineering craft.
+        </h1>
         <p>
-          I use this site as a working notebook: long-form essays, sharp technical notes,
-          career reflections, and project write-ups from building production software.
+          I use this site as a working notebook: long-form essays, sharp
+          technical notes, career reflections, and project write-ups from
+          building production software.
         </p>
         <div className="home-hero-actions">
-          <a href="/rss.xml" className="text-action">RSS</a>
-          <Link to="/about" className="text-action">About</Link>
-          <Link to="/recommendations" className="text-action">Recommendations</Link>
+          <a href="/rss.xml" className="text-action">
+            RSS
+          </a>
+          <Link to="/about" className="text-action">
+            About
+          </Link>
+          <Link to="/recommendations" className="text-action">
+            Recommendations
+          </Link>
         </div>
       </section>
 
@@ -144,7 +157,11 @@ const BlogIndex = ({ data, location }) => {
           </div>
           <div className="featured-post-grid">
             {featuredPosts.map(({ node }) => (
-              <Link key={node.fields.slug} to={node.fields.slug} className="featured-post-card">
+              <Link
+                key={node.fields.slug}
+                to={node.fields.slug}
+                className="featured-post-card"
+              >
                 <span>{node.frontmatter.date}</span>
                 <h3>{getPostTitle(node)}</h3>
                 <p>{getPostDescription(node)}</p>
@@ -164,7 +181,11 @@ const BlogIndex = ({ data, location }) => {
           </div>
           <div className="compact-post-list">
             {latestPosts.map(({ node }) => (
-              <Link key={node.fields.slug} to={node.fields.slug} className="compact-post-link">
+              <Link
+                key={node.fields.slug}
+                to={node.fields.slug}
+                className="compact-post-link"
+              >
                 <span>{node.frontmatter.date}</span>
                 <strong>{getPostTitle(node)}</strong>
               </Link>
@@ -182,7 +203,8 @@ const BlogIndex = ({ data, location }) => {
           <div className="topic-cloud">
             {topTopics.map(([tag, count]) => (
               <Link key={tag} to={getTopicSlug(tag)} className="topic-pill">
-                {tag}<span>{count}</span>
+                {tag}
+                <span>{count}</span>
               </Link>
             ))}
           </div>
@@ -196,11 +218,17 @@ const BlogIndex = ({ data, location }) => {
               <p className="eyebrow">Today I Learned</p>
               <h2>Short Technical Notes</h2>
             </div>
-            <Link to="/til" className="text-action">All TIL</Link>
+            <Link to="/til" className="text-action">
+              All TIL
+            </Link>
           </div>
           <div className="compact-post-list">
             {tilPosts.map(({ node }) => (
-              <Link key={node.fields.slug} to={node.fields.slug} className="compact-post-link">
+              <Link
+                key={node.fields.slug}
+                to={node.fields.slug}
+                className="compact-post-link"
+              >
                 <span>{node.frontmatter.date}</span>
                 <strong>{getPostTitle(node)}</strong>
               </Link>
@@ -210,88 +238,92 @@ const BlogIndex = ({ data, location }) => {
       )}
 
       <section className="home-section">
-      <div className="filter-controls">
-        <div>
-          <h3
-            style={{
-              margin: 0,
-              fontSize: "1.5rem",
-              color: "var(--text)",
-              marginBottom: "0.25rem",
-            }}
+        <div className="filter-controls">
+          <div>
+            <h3
+              style={{
+                margin: 0,
+                fontSize: "1.5rem",
+                color: "var(--text)",
+                marginBottom: "0.25rem",
+              }}
+            >
+              {showFeaturedOnly ? (
+                <>Featured Posts ({featuredCount})</>
+              ) : (
+                <>All Posts ({allPosts.length})</>
+              )}
+            </h3>
+            <p
+              style={{
+                margin: 0,
+                fontSize: "1.1rem",
+                color: "var(--text-muted)",
+              }}
+            >
+              {showFeaturedOnly
+                ? "Showing my most valuable and impactful writing"
+                : `Showing ${startIndex + 1}–${Math.min(startIndex + POSTS_PER_PAGE, filteredPosts.length)} of ${filteredPosts.length} posts • ${featuredCount} featured`}
+            </p>
+          </div>
+
+          <button
+            onClick={toggleFeaturedFilter}
+            className={`filter-btn ${showFeaturedOnly ? "filter-btn--active" : ""}`}
           >
-            {showFeaturedOnly ? (
-              <>Featured Posts ({featuredCount})</>
-            ) : (
-              <>All Posts ({allPosts.length})</>
-            )}
-          </h3>
-          <p
+            {showFeaturedOnly ? <>Show All Posts</> : <>Show Featured Only</>}
+          </button>
+        </div>
+
+        <div className="blog-posts-list">
+          {paginatedPosts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            const excerpt = node.frontmatter.description || node.excerpt
+            return (
+              <Link
+                key={node.fields.slug}
+                to={node.fields.slug}
+                className="blog-post-row"
+              >
+                <div className="blog-post-row-header">
+                  <div className="blog-post-row-meta">
+                    {node.frontmatter.featured && (
+                      <span className="blog-post-row-featured" title="Featured">
+                        ⭐
+                      </span>
+                    )}
+                    <h2 className="blog-post-row-title">{title}</h2>
+                  </div>
+                  <span className="blog-post-row-arrow">→</span>
+                </div>
+                <span className="blog-post-row-date">
+                  {node.frontmatter.date}
+                </span>
+                <p className="blog-post-row-excerpt">{excerpt}</p>
+              </Link>
+            )
+          })}
+        </div>
+
+        {/* Pagination */}
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={handlePageChange}
+        />
+
+        {/* No posts message for featured filter */}
+        {showFeaturedOnly && paginatedPosts.length === 0 && (
+          <div
             style={{
-              margin: 0,
-              fontSize: "1.1rem",
+              textAlign: "center",
+              padding: "3rem",
               color: "var(--text-muted)",
             }}
           >
-            {showFeaturedOnly
-              ? "Showing my most valuable and impactful writing"
-              : `Showing ${startIndex + 1}–${Math.min(startIndex + POSTS_PER_PAGE, filteredPosts.length)} of ${filteredPosts.length} posts • ${featuredCount} featured`}
-          </p>
-        </div>
-
-        <button
-          onClick={toggleFeaturedFilter}
-          className={`filter-btn ${showFeaturedOnly ? "filter-btn--active" : ""}`}
-        >
-          {showFeaturedOnly ? <>Show All Posts</> : <>Show Featured Only</>}
-        </button>
-      </div>
-
-      <div className="blog-posts-list">
-        {paginatedPosts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          const excerpt = node.frontmatter.description || node.excerpt
-          return (
-            <Link
-              key={node.fields.slug}
-              to={node.fields.slug}
-              className="blog-post-row"
-            >
-              <div className="blog-post-row-header">
-                <div className="blog-post-row-meta">
-                  {node.frontmatter.featured && (
-                    <span className="blog-post-row-featured" title="Featured">⭐</span>
-                  )}
-                  <h2 className="blog-post-row-title">{title}</h2>
-                </div>
-                <span className="blog-post-row-arrow">→</span>
-              </div>
-              <span className="blog-post-row-date">{node.frontmatter.date}</span>
-              <p className="blog-post-row-excerpt">{excerpt}</p>
-            </Link>
-          )
-        })}
-      </div>
-
-      {/* Pagination */}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
-
-      {/* No posts message for featured filter */}
-      {showFeaturedOnly && paginatedPosts.length === 0 && (
-        <div
-          style={{
-            textAlign: "center",
-            padding: "3rem",
-            color: "var(--text-muted)",
-          }}
-        >
-          <p style={{ fontSize: "1.1rem" }}>No featured posts found.</p>
-        </div>
-      )}
+            <p style={{ fontSize: "1.1rem" }}>No featured posts found.</p>
+          </div>
+        )}
       </section>
     </HomeLayout>
   )

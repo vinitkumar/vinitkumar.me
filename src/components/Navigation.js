@@ -7,28 +7,32 @@ const internalLinks = [
   { to: "/about", label: "About", className: "nav-link--about" },
   { to: "/til", label: "TIL", className: "nav-link--til" },
   { to: "/stats", label: "Stats", className: "nav-link--stats" },
-  { to: "/recommendations", label: "Recs", className: "nav-link--recommendations" },
+  {
+    to: "/recommendations",
+    label: "Recs",
+    className: "nav-link--recommendations",
+  },
 ]
 
 const externalLinks = [
-  { 
-    href: "https://vinitkumar.github.io/vinitkumar.pdf", 
-    label: "Resume", 
+  {
+    href: "https://vinitkumar.github.io/vinitkumar.pdf",
+    label: "Resume",
     className: "nav-link--resume",
   },
-  { 
-    href: "https://www.linkedin.com/in/vinitatlinkedin/", 
-    label: "LinkedIn", 
+  {
+    href: "https://www.linkedin.com/in/vinitatlinkedin/",
+    label: "LinkedIn",
     className: "nav-link--linkedin",
   },
-  { 
-    href: "https://x.com/intent/user?screen_name=vinitkme", 
-    label: "Twitter", 
+  {
+    href: "https://x.com/intent/user?screen_name=vinitkme",
+    label: "Twitter",
     className: "nav-link--twitter",
   },
-  { 
-    href: "https://github.com/vinitkumar", 
-    label: "GitHub", 
+  {
+    href: "https://github.com/vinitkumar",
+    label: "GitHub",
     className: "nav-link--github",
   },
 ]
@@ -40,7 +44,7 @@ const externalLinks = [
 const Navigation = () => {
   return (
     <nav className="site-nav" aria-label="Main navigation">
-      {internalLinks.map(link => (
+      {internalLinks.map((link) => (
         <Link
           key={link.to}
           to={link.to}
@@ -50,10 +54,10 @@ const Navigation = () => {
           {link.label}
         </Link>
       ))}
-      
+
       <span className="nav-separator" aria-hidden="true" />
-      
-      {externalLinks.map(link => (
+
+      {externalLinks.map((link) => (
         <a
           key={link.href}
           href={link.href}
@@ -64,7 +68,7 @@ const Navigation = () => {
           {link.label}
         </a>
       ))}
-      
+
       <span className="nav-separator" aria-hidden="true" />
       <ThemeToggle compact />
     </nav>

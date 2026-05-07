@@ -38,7 +38,7 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
           </div>
           {tags.length > 0 && (
             <div className="post-tags">
-              {tags.map(tag => (
+              {tags.map((tag) => (
                 <Link key={tag} to={getTopicSlug(tag)} className="topic-pill">
                   {tag}
                 </Link>
@@ -47,7 +47,10 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
           )}
         </header>
 
-        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </article>
 
       <hr
@@ -63,13 +66,17 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
             <span>Previous</span>
             <strong>{previous.frontmatter.title}</strong>
           </Link>
-        ) : <span />}
+        ) : (
+          <span />
+        )}
         {next ? (
           <Link to={next.fields.slug} rel="next">
             <span>Next</span>
             <strong>{next.frontmatter.title}</strong>
           </Link>
-        ) : <span />}
+        ) : (
+          <span />
+        )}
       </nav>
 
       {/* Back to TIL */}

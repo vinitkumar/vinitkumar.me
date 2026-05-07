@@ -5,7 +5,12 @@ import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
-import { getPostDescription, getPostTitle, getTopicSlug, normalizeTags } from "../utils/content"
+import {
+  getPostDescription,
+  getPostTitle,
+  getTopicSlug,
+  normalizeTags,
+} from "../utils/content"
 import blog from "../../content/assets/blog.jpg"
 
 const BlogPostTemplate = ({ data, location, pageContext }) => {
@@ -37,11 +42,13 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
           <div className="post-meta">
             <span>{post.frontmatter.date}</span>
             <span>{post.timeToRead} min read</span>
-            {post.wordCount?.words && <span>{post.wordCount.words.toLocaleString()} words</span>}
+            {post.wordCount?.words && (
+              <span>{post.wordCount.words.toLocaleString()} words</span>
+            )}
           </div>
           {tags.length > 0 && (
             <div className="post-tags">
-              {tags.map(tag => (
+              {tags.map((tag) => (
                 <Link key={tag} to={getTopicSlug(tag)} className="topic-pill">
                   {tag}
                 </Link>
@@ -53,7 +60,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
         {post.headings.length > 2 && (
           <nav className="toc" aria-label="Table of contents">
             <p className="eyebrow">Contents</p>
-            {post.headings.map(heading => (
+            {post.headings.map((heading) => (
               <a key={heading.id} href={`#${heading.id}`}>
                 {heading.value}
               </a>
@@ -61,7 +68,10 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
           </nav>
         )}
 
-        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          className="post-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
       </article>
       <hr
         style={{
@@ -78,7 +88,11 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
           </div>
           <div className="compact-post-list">
             {relatedPosts.map(({ node }) => (
-              <Link key={node.fields.slug} to={node.fields.slug} className="compact-post-link">
+              <Link
+                key={node.fields.slug}
+                to={node.fields.slug}
+                className="compact-post-link"
+              >
                 <span>{node.frontmatter.date}</span>
                 <strong>{getPostTitle(node)}</strong>
               </Link>
@@ -93,13 +107,17 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
             <span>Previous</span>
             <strong>{previous.frontmatter.title}</strong>
           </Link>
-        ) : <span />}
+        ) : (
+          <span />
+        )}
         {next ? (
           <Link to={next.fields.slug} rel="next">
             <span>Next</span>
             <strong>{next.frontmatter.title}</strong>
           </Link>
-        ) : <span />}
+        ) : (
+          <span />
+        )}
       </nav>
     </Layout>
   )

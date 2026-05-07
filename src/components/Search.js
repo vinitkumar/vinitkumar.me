@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
-import { getPostDescription, getPostTitle, normalizeTags } from "../utils/content"
+import {
+  getPostDescription,
+  getPostTitle,
+  normalizeTags,
+} from "../utils/content"
 
 const Search = ({ posts }) => {
   const [query, setQuery] = useState("")
@@ -17,19 +21,21 @@ const Search = ({ posts }) => {
     }
 
     const searchQuery = query.toLowerCase()
-    const filtered = posts.filter(({ node }) => {
-      const title = getPostTitle(node).toLowerCase()
-      const description = getPostDescription(node).toLowerCase()
-      const excerpt = node.excerpt?.toLowerCase() || ""
-      const tags = normalizeTags(node.frontmatter.tags).join(" ")
-      
-      return (
-        title.includes(searchQuery) ||
-        description.includes(searchQuery) ||
-        excerpt.includes(searchQuery) ||
-        tags.includes(searchQuery)
-      )
-    }).slice(0, 8)
+    const filtered = posts
+      .filter(({ node }) => {
+        const title = getPostTitle(node).toLowerCase()
+        const description = getPostDescription(node).toLowerCase()
+        const excerpt = node.excerpt?.toLowerCase() || ""
+        const tags = normalizeTags(node.frontmatter.tags).join(" ")
+
+        return (
+          title.includes(searchQuery) ||
+          description.includes(searchQuery) ||
+          excerpt.includes(searchQuery) ||
+          tags.includes(searchQuery)
+        )
+      })
+      .slice(0, 8)
 
     setResults(filtered)
     setActiveIndex(filtered.length > 0 ? 0 : -1)
@@ -37,7 +43,10 @@ const Search = ({ posts }) => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (containerRef.current && !containerRef.current.contains(event.target)) {
+      if (
+        containerRef.current &&
+        !containerRef.current.contains(event.target)
+      ) {
         setIsOpen(false)
       }
     }
@@ -50,7 +59,9 @@ const Search = ({ posts }) => {
     }
 
     const handleShortcut = (event) => {
-      const isSearchShortcut = event.key === "/" || ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k")
+      const isSearchShortcut =
+        event.key === "/" ||
+        ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k")
       if (isSearchShortcut && document.activeElement !== inputRef.current) {
         event.preventDefault()
         inputRef.current?.focus()
@@ -61,7 +72,7 @@ const Search = ({ posts }) => {
     document.addEventListener("mousedown", handleClickOutside)
     document.addEventListener("keydown", handleEscape)
     document.addEventListener("keydown", handleShortcut)
-    
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside)
       document.removeEventListener("keydown", handleEscape)
@@ -78,17 +89,17 @@ const Search = ({ posts }) => {
     setQuery("")
   }
 
-  const handleKeyDown = event => {
+  const handleKeyDown = (event) => {
     if (!isOpen || results.length === 0) return
 
     if (event.key === "ArrowDown") {
       event.preventDefault()
-      setActiveIndex(index => (index + 1) % results.length)
+      setActiveIndex((index) => (index + 1) % results.length)
     }
 
     if (event.key === "ArrowUp") {
       event.preventDefault()
-      setActiveIndex(index => (index <= 0 ? results.length - 1 : index - 1))
+      setActiveIndex((index) => (index <= 0 ? results.length - 1 : index - 1))
     }
 
     if (event.key === "Enter" && activeIndex >= 0) {
@@ -100,7 +111,9 @@ const Search = ({ posts }) => {
   return (
     <div className="search-container" ref={containerRef}>
       <div className="search-input-wrapper">
-        <span className="search-icon" aria-hidden="true">/</span>
+        <span className="search-icon" aria-hidden="true">
+          /
+        </span>
         <input
           ref={inputRef}
           type="text"
@@ -114,7 +127,9 @@ const Search = ({ posts }) => {
           role="combobox"
           aria-expanded={isOpen && query.length >= 2}
           aria-controls="site-search-results"
-          aria-activedescendant={activeIndex >= 0 ? `search-result-${activeIndex}` : undefined}
+          aria-activedescendant={
+            activeIndex >= 0 ? `search-result-${activeIndex}` : undefined
+          }
         />
         {query && (
           <button
@@ -149,7 +164,9 @@ const Search = ({ posts }) => {
                 >
                   <div className="search-result-title">
                     {getPostTitle(node)}
-                    {node.frontmatter.featured && <span className="search-result-featured">Featured</span>}
+                    {node.frontmatter.featured && (
+                      <span className="search-result-featured">Featured</span>
+                    )}
                   </div>
                   <div className="search-result-date">
                     {node.frontmatter.date}

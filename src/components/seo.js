@@ -21,27 +21,29 @@ function Seo({
   title,
   type = `website`,
 }) {
-  const data = useStaticQuery(graphql`{
-  avatar: file(absolutePath: {regex: "/blog.jpg/"}) {
-    childImageSharp {
-      gatsbyImageData(width: 600, height: 400, layout: FIXED)
+  const data = useStaticQuery(graphql`
+    {
+      avatar: file(absolutePath: { regex: "/blog.jpg/" }) {
+        childImageSharp {
+          gatsbyImageData(width: 600, height: 400, layout: FIXED)
+        }
+      }
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          siteUrl
+        }
+      }
     }
-  }
-  site {
-    siteMetadata {
-      title
-      description
-      author
-      siteUrl
-    }
-  }
-}`
-  )
+  `)
 
   const site = data.site.siteMetadata
   const metaDescription = description || site.description
   const canonical = `${site.siteUrl}${pathname}`
-  const imageUrl = image || `${site.siteUrl}${data.avatar.childImageSharp.gatsbyImageData.src}`
+  const imageUrl =
+    image || `${site.siteUrl}${data.avatar.childImageSharp.gatsbyImageData.src}`
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": type === "article" ? "BlogPosting" : "WebSite",
@@ -120,9 +122,8 @@ function Seo({
     >
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Helmet>
-  );
+  )
 }
-
 
 Seo.propTypes = {
   date: PropTypes.string,
