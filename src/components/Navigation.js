@@ -15,25 +15,21 @@ const externalLinks = [
     href: "https://vinitkumar.github.io/vinitkumar.pdf", 
     label: "Resume", 
     className: "nav-link--resume",
-    icon: "📄"
   },
   { 
     href: "https://www.linkedin.com/in/vinitatlinkedin/", 
     label: "LinkedIn", 
     className: "nav-link--linkedin",
-    icon: null
   },
   { 
     href: "https://x.com/intent/user?screen_name=vinitkme", 
     label: "Twitter", 
     className: "nav-link--twitter",
-    icon: null
   },
   { 
     href: "https://github.com/vinitkumar", 
     label: "GitHub", 
     className: "nav-link--github",
-    icon: null
   },
 ]
 
@@ -44,8 +40,6 @@ const externalLinks = [
 const Navigation = () => {
   return (
     <nav className="site-nav" aria-label="Main navigation">
-      {/* Site Pages Group */}
-      <span className="nav-group-label">Pages</span>
       {internalLinks.map(link => (
         <Link
           key={link.to}
@@ -57,11 +51,8 @@ const Navigation = () => {
         </Link>
       ))}
       
-      {/* Visual Separator */}
       <span className="nav-separator" aria-hidden="true" />
       
-      {/* External Links Group */}
-      <span className="nav-group-label">Connect</span>
       {externalLinks.map(link => (
         <a
           key={link.href}
@@ -70,12 +61,10 @@ const Navigation = () => {
           rel="noopener noreferrer"
           className={`nav-link ${link.className}`}
         >
-          {link.icon && <span className="nav-icon">{link.icon}</span>}
           {link.label}
         </a>
       ))}
       
-      {/* Theme Toggle */}
       <span className="nav-separator" aria-hidden="true" />
       <ThemeToggle compact />
     </nav>

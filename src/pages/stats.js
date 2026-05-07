@@ -1,7 +1,8 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { getTopicSlug } from "../utils/content"
 
 const StatsIndex = (props) => {
   const data = useStaticQuery(graphql`
@@ -147,7 +148,7 @@ const StatsIndex = (props) => {
       
       {/* Header */}
       <div style={{ marginBottom: "2rem" }}>
-        <h1>📊 Blog Analytics & Insights</h1>
+        <h1>Blog Analytics & Insights</h1>
         <p style={{ fontSize: "1.1rem", color: "var(--text-muted)", margin: 0 }}>
           A deep dive into {writingPeriodYears} years of writing, learning, and professional growth
         </p>
@@ -161,12 +162,12 @@ const StatsIndex = (props) => {
         marginBottom: "2rem"
       }}>
         {[
-          { label: "Total Posts", value: totalPosts, icon: "📝" },
-          { label: "Total Words", value: totalWords.toLocaleString(), icon: "📖" },
-          { label: "Reading Time", value: `${hoursOfContent}h`, icon: "⏱️" },
-          { label: "Avg Words/Post", value: avgWordsPerPost, icon: "📄" },
-          { label: "Writing Years", value: writingPeriodYears, icon: "📅" },
-          { label: "Posts/Year", value: avgPostsPerYear, icon: "📈" }
+          { label: "Total Posts", value: totalPosts },
+          { label: "Total Words", value: totalWords.toLocaleString() },
+          { label: "Reading Time", value: `${hoursOfContent}h` },
+          { label: "Avg Words/Post", value: avgWordsPerPost },
+          { label: "Writing Years", value: writingPeriodYears },
+          { label: "Posts/Year", value: avgPostsPerYear }
         ].map((stat, index) => (
           <div key={index} style={{
             background: "var(--background-card)",
@@ -176,7 +177,6 @@ const StatsIndex = (props) => {
             textAlign: "center",
             boxShadow: "var(--shadow-card)"
           }}>
-            <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>{stat.icon}</div>
             <div style={{ fontSize: "1.5rem", fontWeight: "600", color: "var(--text)" }}>{stat.value}</div>
             <div style={{ fontSize: "1rem", color: "var(--text-muted)" }}>{stat.label}</div>
           </div>
@@ -191,7 +191,7 @@ const StatsIndex = (props) => {
         marginBottom: "2rem",
         color: "white"
       }}>
-        <h2 style={{ color: "white" }}>🚀 Career Evolution Through Writing</h2>
+        <h2 style={{ color: "white" }}>Career Evolution Through Writing</h2>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
@@ -219,7 +219,7 @@ const StatsIndex = (props) => {
         marginBottom: "2rem",
         border: "1px solid var(--gray-line)"
       }}>
-        <h2>🎯 Interesting Trivia</h2>
+        <h2>Interesting Trivia</h2>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
@@ -254,7 +254,7 @@ const StatsIndex = (props) => {
           borderRadius: "12px",
           border: "1px solid var(--gray-line)"
         }}>
-          <h2>📈 Posts by Year</h2>
+          <h2>Posts by Year</h2>
           <div style={{ fontFamily: "monospace", fontSize: "14px", lineHeight: "1.8", color: "var(--text)" }}>
             {years.map(year => {
               const count = yearStats[year]
@@ -295,22 +295,22 @@ const StatsIndex = (props) => {
           borderRadius: "12px",
           border: "1px solid var(--gray-line)"
         }}>
-          <h2>💡 Quick Insights</h2>
+          <h2>Quick Insights</h2>
           <div style={{ fontSize: "1rem", lineHeight: "1.6", color: "var(--text)" }}>
             <div style={{ marginBottom: "1rem" }}>
-              <strong>🔥 Most Active:</strong><br/>
+              <strong>Most Active:</strong><br/>
               {mostActiveYear} ({yearStats[mostActiveYear]} posts)
             </div>
             <div style={{ marginBottom: "1rem" }}>
-              <strong>📅 Productive Month:</strong><br/>
+              <strong>Productive Month:</strong><br/>
               {mostProductiveMonth?.[0]} ({mostProductiveMonth?.[1]} posts)
             </div>
             <div style={{ marginBottom: "1rem" }}>
-              <strong>📏 Post Lengths:</strong><br/>
+              <strong>Post Lengths:</strong><br/>
               {shortestPost} - {longestPost} words
             </div>
             <div style={{ marginBottom: "1rem" }}>
-              <strong>⚡ Total Reading:</strong><br/>
+              <strong>Total Reading:</strong><br/>
               {hoursOfContent} hours of content
             </div>
           </div>
@@ -325,7 +325,7 @@ const StatsIndex = (props) => {
         border: "1px solid var(--gray-line)",
         marginBottom: "2rem"
       }}>
-        <h2>🛠️ Technology Evolution Journey</h2>
+        <h2>Technology Evolution Journey</h2>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
@@ -365,10 +365,10 @@ const StatsIndex = (props) => {
         border: "1px solid var(--gray-line)",
         marginBottom: "2rem"
       }}>
-        <h2>🏷️ Most Written About Topics</h2>
+        <h2>Most Written About Topics</h2>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
           {topTags.map(([tag, count]) => (
-            <span key={tag} style={{
+            <Link key={tag} to={getTopicSlug(tag)} style={{
               background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
               color: "white",
               padding: "0.5rem 1rem",
@@ -377,7 +377,7 @@ const StatsIndex = (props) => {
               fontWeight: "500"
             }}>
               {tag} ({count})
-            </span>
+            </Link>
           ))}
         </div>
       </div>
@@ -390,18 +390,20 @@ const StatsIndex = (props) => {
           borderRadius: "12px",
           border: "1px solid var(--gray-line)"
         }}>
-          <h2>⭐ Featured Posts</h2>
+          <h2>Featured Posts</h2>
           <div style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
             gap: "1rem"
           }}>
             {featuredPosts.map((post, index) => (
-              <div key={index} style={{
+              <Link key={index} to={post.slug} style={{
                 border: "1px solid var(--gray-line)",
                 borderRadius: "8px",
                 padding: "1.5rem",
-                background: "var(--background)"
+                background: "var(--background)",
+                color: "var(--text)",
+                textDecoration: "none"
               }}>
                 <h3 style={{ color: "var(--text)" }}>
                   {post.title}
@@ -413,7 +415,7 @@ const StatsIndex = (props) => {
                     day: 'numeric'
                   })}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
