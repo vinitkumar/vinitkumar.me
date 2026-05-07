@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -18,21 +17,14 @@ const TilIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Helmet>
-        <meta
-          name="description"
-          content="Today I Learned - Short notes on programming, technology, and development insights"
-        />
-      </Helmet>
-      <Seo title="Today I Learned" />
-
       {/* Header */}
       <header
         style={{
           marginBottom: rhythm(2),
           textAlign: "center",
           padding: rhythm(2),
-          background: "linear-gradient(135deg, var(--nav-til) 0%, #d97706 100%)",
+          background:
+            "linear-gradient(135deg, var(--nav-til) 0%, #d97706 100%)",
           borderRadius: "var(--radius)",
           color: "white",
         }}
@@ -57,8 +49,8 @@ const TilIndex = ({ data, location }) => {
             marginRight: "auto",
           }}
         >
-          Short notes on programming, technology, and development insights. Quick
-          reads that pack valuable knowledge.
+          Short notes on programming, technology, and development insights.
+          Quick reads that pack valuable knowledge.
         </p>
       </header>
 
@@ -300,6 +292,14 @@ const TilIndex = ({ data, location }) => {
 }
 
 export default TilIndex
+
+export const Head = ({ location }) => (
+  <Seo
+    title="Today I Learned"
+    description="Today I Learned - Short notes on programming, technology, and development insights"
+    pathname={location.pathname}
+  />
+)
 
 export const pageQuery = graphql`
   query {

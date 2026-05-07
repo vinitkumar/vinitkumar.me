@@ -59,7 +59,6 @@ module.exports = {
           // `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-plugin-react-helmet`,
         ],
       },
     },
@@ -70,9 +69,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
-        trackingIds: [
-          `G-FGECNRP32R`
-        ],
+        trackingIds: [`G-FGECNRP32R`],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
@@ -96,14 +93,13 @@ module.exports = {
         short_name: `Vinit Kumar`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#111111`,
         display: `minimal-ui`,
-        icon: `src/images/favicon-32x32.png`
+        icon: `src/images/favicon-32x32.png`,
       },
     },
     `gatsby-plugin-twitter`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -128,10 +124,10 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
-                const isTil = edge.node.fields.collection === 'til'
-                const title = isTil 
-                  ? `[TIL] ${edge.node.frontmatter.title}` 
+              return allMarkdownRemark.edges.map((edge) => {
+                const isTil = edge.node.fields.collection === "til"
+                const title = isTil
+                  ? `[TIL] ${edge.node.frontmatter.title}`
                   : edge.node.frontmatter.title
                 return Object.assign({}, edge.node.frontmatter, {
                   title,

@@ -18,7 +18,6 @@
     "gatsby-plugin-image": "^3.16.0",
     "gatsby-plugin-manifest": "^5.16.0",
     "gatsby-plugin-offline": "^6.16.0",
-    "gatsby-plugin-react-helmet": "^6.16.0",
     "gatsby-plugin-sharp": "^5.16.0",
     "gatsby-plugin-sitemap": "^6.16.0",
     "gatsby-plugin-twitter": "^5.16.0",
@@ -35,7 +34,6 @@
     "prismjs": "^1.30.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-helmet": "^6.1.0",
     "react-typography": "^0.16.23",
     "styled-components": "^6.3.9",
     "tar-fs": "^3.1.1",
@@ -59,11 +57,11 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
+    "build": "GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby build",
+    "develop": "GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "serve": "gatsby serve",
+    "serve": "GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "upgrade-interactive": "npm-check --update"
   },

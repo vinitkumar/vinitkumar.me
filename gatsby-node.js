@@ -1,6 +1,18 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const normalizeTag = tag =>
+  String(tag || "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+
+const normalizeTags = tags => {
+  if (!tags) return []
+  const rawTags = Array.isArray(tags) ? tags : String(tags).split(/[,\s]+/)
+  return Array.from(new Set(rawTags.map(normalizeTag).filter(Boolean)))
+}
+
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
   
@@ -35,11 +47,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         tags: {
           type: `[String]`,
           resolve(source) {
-            const tags = source.tags
-            if (!tags) return []
-            if (Array.isArray(tags)) return tags
-            if (typeof tags === 'string') return [tags]
-            return []
+            return normalizeTags(source.tags)
           }
         }
       }
@@ -52,6 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const tilPost = path.resolve(`./src/templates/til-post.js`)
+  const topicPage = path.resolve(`./src/templates/topic-page.js`)
   
   return graphql(
     `{
@@ -64,6 +73,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
         frontmatter {
           title
+          tags
         }
       }
     }
@@ -78,6 +88,11 @@ exports.createPages = ({ graphql, actions }) => {
     const posts = result.data.allMarkdownRemark.edges
     const blogPosts = posts.filter(post => post.node.fields.collection === 'blog')
     const tilPosts = posts.filter(post => post.node.fields.collection === 'til')
+    const tags = new Set()
+
+    posts.forEach(post => {
+      normalizeTags(post.node.frontmatter.tags).forEach(tag => tags.add(tag))
+    })
 
     // Create blog posts pages
     blogPosts.forEach((post, index) => {
@@ -89,6 +104,7 @@ exports.createPages = ({ graphql, actions }) => {
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
+          tags: normalizeTags(post.node.frontmatter.tags),
           previous,
           next,
         },
@@ -105,8 +121,19 @@ exports.createPages = ({ graphql, actions }) => {
         component: tilPost,
         context: {
           slug: post.node.fields.slug,
+          tags: normalizeTags(post.node.frontmatter.tags),
           previous,
           next,
+        },
+      })
+    })
+
+    tags.forEach(tag => {
+      createPage({
+        path: `/topics/${tag}/`,
+        component: topicPage,
+        context: {
+          tag,
         },
       })
     })
