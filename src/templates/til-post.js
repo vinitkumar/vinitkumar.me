@@ -4,13 +4,15 @@ import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
+import { getTopicSlug, normalizeTags } from "../utils/content"
 import blog from "../../content/assets/blog.jpg"
 
 const TilPostTemplate = ({ data, location, pageContext }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+  const tags = normalizeTags(post.frontmatter.tags)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -20,92 +22,33 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        pathname={location.pathname}
+        type="article"
+        date={post.frontmatter.dateISO}
+        tags={tags}
       />
 
-      {/* TIL Badge */}
-      <div
-        style={{
-          display: "inline-block",
-          backgroundColor: "var(--nav-til)",
-          color: "white",
-          padding: "0.5rem 1rem",
-          borderRadius: "var(--radius-pill)",
-          fontSize: "0.9rem",
-          fontWeight: "600",
-          marginBottom: rhythm(1),
-          letterSpacing: "0.5px",
-          textTransform: "uppercase",
-        }}
-      >
-        Today I Learned
-      </div>
-
-      <h1
-        style={{
-          marginTop: rhythm(0.5),
-          marginBottom: 0,
-          fontSize: "2rem",
-          lineHeight: "1.2",
-        }}
-      >
-        {post.frontmatter.title}
-      </h1>
-
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "1rem",
-          marginBottom: rhythm(1),
-          flexWrap: "wrap",
-        }}
-      >
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            margin: 0,
-            color: "var(--gray-text)",
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-
-        {/* Tags */}
-        {post.frontmatter.tags && (
-          <div
-            style={{
-              display: "flex",
-              gap: "0.5rem",
-              flexWrap: "wrap",
-            }}
-          >
-            {post.frontmatter.tags.map((tag, index) => (
-              <span
-                key={index}
-                style={{
-                  backgroundColor: "var(--gray-100)",
-                  color: "var(--gray-700)",
-                  padding: "0.25rem 0.75rem",
-                  borderRadius: "var(--radius)",
-                  fontSize: "0.85rem",
-                  fontWeight: "500",
-                }}
-              >
-                #{tag}
-              </span>
-            ))}
+      <article className="post-shell til-post">
+        <header className="post-header">
+          <p className="eyebrow">Today I Learned</p>
+          <h1>{post.frontmatter.title}</h1>
+          <div className="post-meta">
+            <span>{post.frontmatter.date}</span>
+            <span>{post.timeToRead || 2} min read</span>
           </div>
-        )}
-      </div>
+          {tags.length > 0 && (
+            <div className="post-tags">
+              {tags.map(tag => (
+                <Link key={tag} to={getTopicSlug(tag)} className="topic-pill">
+                  {tag}
+                </Link>
+              ))}
+            </div>
+          )}
+        </header>
 
-      <div
-        style={{
-          fontSize: "1.1rem",
-          lineHeight: "1.7",
-        }}
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
+        <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+      </article>
 
       <hr
         style={{
@@ -114,32 +57,20 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
         }}
       />
 
-      {/* Navigation */}
-      <ul
-        style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          marginLeft: 0,
-          padding: 0,
-        }}
-      >
-        <li>
-          {previous && (
-            <Link to={previous.fields.slug} rel="prev">
-              ← {previous.frontmatter.title}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </li>
-      </ul>
+      <nav className="post-nav" aria-label="TIL navigation">
+        {previous ? (
+          <Link to={previous.fields.slug} rel="prev">
+            <span>Previous</span>
+            <strong>{previous.frontmatter.title}</strong>
+          </Link>
+        ) : <span />}
+        {next ? (
+          <Link to={next.fields.slug} rel="next">
+            <span>Next</span>
+            <strong>{next.frontmatter.title}</strong>
+          </Link>
+        ) : <span />}
+      </nav>
 
       {/* Back to TIL */}
       <div
@@ -178,9 +109,11 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 300)
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        dateISO: date(formatString: "YYYY-MM-DD")
         description
         tags
       }

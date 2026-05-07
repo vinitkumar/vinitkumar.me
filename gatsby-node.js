@@ -104,6 +104,7 @@ exports.createPages = ({ graphql, actions }) => {
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
+          tags: normalizeTags(post.node.frontmatter.tags),
           previous,
           next,
         },
@@ -120,6 +121,7 @@ exports.createPages = ({ graphql, actions }) => {
         component: tilPost,
         context: {
           slug: post.node.fields.slug,
+          tags: normalizeTags(post.node.frontmatter.tags),
           previous,
           next,
         },

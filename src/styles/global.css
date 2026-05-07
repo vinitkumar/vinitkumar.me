@@ -594,6 +594,135 @@ h6 {
   padding: 1rem;
 }
 
+.post-shell {
+  max-width: 48rem;
+}
+
+.post-header {
+  border-bottom: 1px solid var(--gray-line);
+  margin: 1.5rem 0;
+  padding-bottom: 1.25rem;
+}
+
+.post-header h1 {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 1.08;
+  margin-bottom: 1rem;
+}
+
+.post-meta {
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-family-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  gap: 0.45rem 1rem;
+}
+
+.post-meta span + span::before {
+  color: var(--gray-line);
+  content: "/";
+  margin-right: 1rem;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.post-content {
+  font-size: 1.05rem;
+}
+
+.post-content a {
+  border-bottom: 1px solid color-mix(in srgb, var(--link-color) 45%, transparent);
+  color: var(--link-color);
+}
+
+.post-content a:hover {
+  border-bottom-color: var(--link-color);
+}
+
+.toc {
+  background: var(--gray-bg);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+}
+
+.toc a {
+  color: var(--text);
+  font-family: var(--font-family-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.toc a:hover {
+  color: var(--link-color);
+}
+
+.related-posts {
+  margin: 2rem 0;
+}
+
+.post-nav {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.post-nav a {
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-height: 6rem;
+  padding: 1rem;
+}
+
+.post-nav a:hover {
+  border-color: var(--link-color);
+}
+
+.post-nav span {
+  color: var(--text-muted);
+  font-family: var(--font-family-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.post-nav strong {
+  line-height: 1.35;
+}
+
+.post-nav a:last-child {
+  text-align: right;
+}
+
+.topic-header {
+  border-bottom: 1px solid var(--gray-line);
+  margin: 1.5rem 0;
+  padding-bottom: 1rem;
+}
+
+.topic-header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.topic-header p:last-child {
+  color: var(--text-muted);
+}
+
 /* ===========================================
    Navigation Styles
    =========================================== */
@@ -1486,6 +1615,19 @@ h6 {
   .section-heading {
     align-items: start;
     flex-direction: column;
+  }
+
+  .post-meta {
+    flex-direction: column;
+  }
+
+  .post-meta span + span::before {
+    content: none;
+    margin-right: 0;
+  }
+
+  .post-nav {
+    grid-template-columns: 1fr;
   }
 
   .blog-posts-grid,
