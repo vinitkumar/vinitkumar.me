@@ -126,12 +126,6 @@ const StatsIndex = (props) => {
 
   return (
     <Layout location={props.location} title={title}>
-      <Seo
-        title="Writing Stats"
-        description="A data view of Vinit Kumar's essays, technical notes, topics, writing history, and featured posts."
-        pathname={props.location.pathname}
-      />
-
       <div className="stats-page">
         <header className="stats-hero">
           <p className="eyebrow">Writing Stats</p>
@@ -296,3 +290,11 @@ const StatsIndex = (props) => {
 }
 
 export default StatsIndex
+
+export const Head = ({ location }) => (
+  <Seo
+    title="Writing Stats"
+    description="A data view of Vinit Kumar's essays, technical notes, topics, writing history, and featured posts."
+    pathname={location.pathname}
+  />
+)

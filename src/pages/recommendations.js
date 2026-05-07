@@ -374,11 +374,6 @@ const ValueComponent = (props) => {
 
   return (
     <Layout location={props.location} title={title}>
-      <Seo
-        title="Recommendations"
-        description="Recommendations from colleagues, founders, engineers, product leaders, and open source collaborators who have worked with Vinit Kumar."
-        pathname={props.location.pathname}
-      />
       <div className="recommendations-container">
         <header className="recommendations-hero">
           <p className="eyebrow">Recommendations</p>
@@ -495,3 +490,11 @@ const ValueComponent = (props) => {
 }
 
 export default ValueComponent
+
+export const Head = ({ location }) => (
+  <Seo
+    title="Recommendations"
+    description="Recommendations from colleagues, founders, engineers, product leaders, and open source collaborators who have worked with Vinit Kumar."
+    pathname={location.pathname}
+  />
+)

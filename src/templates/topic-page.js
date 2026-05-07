@@ -12,12 +12,6 @@ const TopicPage = ({ data, location, pageContext }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo
-        title={`Topic: ${tag}`}
-        description={`Writing by Vinit Kumar about ${tag}.`}
-        pathname={location.pathname}
-      />
-
       <header className="topic-header">
         <p className="eyebrow">Topic</p>
         <h1>{tag}</h1>
@@ -51,6 +45,14 @@ const TopicPage = ({ data, location, pageContext }) => {
 }
 
 export default TopicPage
+
+export const Head = ({ location, pageContext }) => (
+  <Seo
+    title={`Topic: ${pageContext.tag}`}
+    description={`Writing by Vinit Kumar about ${pageContext.tag}.`}
+    pathname={location.pathname}
+  />
+)
 
 export const pageQuery = graphql`
   query TopicPageByTag($tag: String!) {

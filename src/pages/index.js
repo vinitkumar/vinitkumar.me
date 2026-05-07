@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import { Link, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
@@ -101,16 +100,6 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <HomeLayout location={location} title={siteTitle}>
-      <Helmet>
-        <meta
-          name="google-site-verification"
-          content="aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI"
-        />
-        <meta name="msvalidate.01" content="9BD6B4DCA2B9F88A132B7DDCA1578919" />
-        <meta name="fediverse:creator" content="@vinitkme@fosstodon.org" />
-      </Helmet>
-      <Seo title="Home" />
-
       <section className="home-hero">
         <p className="eyebrow">Principal Engineer · Django CMS Fellow</p>
         <h1>
@@ -330,6 +319,27 @@ const BlogIndex = ({ data, location }) => {
 }
 
 export default BlogIndex
+
+export const Head = ({ location }) => (
+  <Seo
+    title="Home"
+    pathname={location.pathname}
+    meta={[
+      {
+        name: "google-site-verification",
+        content: "aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI",
+      },
+      {
+        name: "msvalidate.01",
+        content: "9BD6B4DCA2B9F88A132B7DDCA1578919",
+      },
+      {
+        name: "fediverse:creator",
+        content: "@vinitkme@fosstodon.org",
+      },
+    ]}
+  />
+)
 
 export const pageQuery = graphql`
   {

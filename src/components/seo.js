@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({
@@ -64,64 +63,60 @@ function Seo({
     ...(tags.length > 0 ? { keywords: tags.join(", ") } : {}),
   }
 
+  const metaTags = [
+    {
+      name: `description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:title`,
+      content: title,
+    },
+    {
+      property: `og:description`,
+      content: metaDescription,
+    },
+    {
+      property: `og:type`,
+      content: type,
+    },
+    {
+      property: `og:url`,
+      content: canonical,
+    },
+    {
+      property: `og:image`,
+      content: imageUrl,
+    },
+    {
+      name: `twitter:card`,
+      content: `summary_large_image`,
+    },
+    {
+      name: `twitter:creator`,
+      content: site.author,
+    },
+    {
+      name: `twitter:title`,
+      content: title,
+    },
+    {
+      name: `twitter:description`,
+      content: metaDescription,
+    },
+  ].concat(meta)
+
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.title}`}
-      link={[
-        {
-          rel: `canonical`,
-          href: canonical,
-        },
-      ]}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: type,
-        },
-        {
-          property: `og:url`,
-          content: canonical,
-        },
-        {
-          property: `og:image`,
-          content: imageUrl,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-      ].concat(meta)}
-    >
+    <>
+      <html lang={lang} />
+      <title>{`${title} | ${site.title}`}</title>
+      <link rel="canonical" href={canonical} />
+      {metaTags.map((entry) => {
+        const key = entry.name || entry.property
+        return <meta key={key} {...entry} />
+      })}
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-    </Helmet>
+    </>
   )
 }
 

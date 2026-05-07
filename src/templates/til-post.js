@@ -1,12 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
 import { getTopicSlug, normalizeTags } from "../utils/content"
-import blog from "../../content/assets/blog.jpg"
 
 const TilPostTemplate = ({ data, location, pageContext }) => {
   const post = data.markdownRemark
@@ -16,18 +14,6 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Helmet>
-        <meta name="twitter:image" content={blog} />
-      </Helmet>
-      <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-        pathname={location.pathname}
-        type="article"
-        date={post.frontmatter.dateISO}
-        tags={tags}
-      />
-
       <article className="post-shell til-post">
         <header className="post-header">
           <p className="eyebrow">Today I Learned</p>
@@ -103,6 +89,22 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
 }
 
 export default TilPostTemplate
+
+export const Head = ({ data, location }) => {
+  const post = data.markdownRemark
+  const tags = normalizeTags(post.frontmatter.tags)
+
+  return (
+    <Seo
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt}
+      pathname={location.pathname}
+      type="article"
+      date={post.frontmatter.dateISO}
+      tags={tags}
+    />
+  )
+}
 
 export const pageQuery = graphql`
   query TilPostBySlug($slug: String!) {

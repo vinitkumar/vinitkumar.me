@@ -46,7 +46,6 @@ const AboutIndex = (props) => {
 
   return (
     <Layout location={props.location} title={title}>
-      <Seo title="About"></Seo>
       <h1>About</h1>
       <img
         alt={author}
@@ -136,3 +135,11 @@ const AboutIndex = (props) => {
 }
 
 export default AboutIndex
+
+export const Head = ({ location }) => (
+  <Seo
+    title="About"
+    description="About Vinit Kumar, Principal Engineer and Django CMS Fellow."
+    pathname={location.pathname}
+  />
+)
