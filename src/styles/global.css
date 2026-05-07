@@ -413,6 +413,187 @@ h6 {
   margin-bottom: 0.5rem;
 }
 
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--text-muted);
+  font-family: var(--font-family-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-hero {
+  border-bottom: 1px solid var(--gray-line);
+  margin: 1.5rem 0 1rem;
+  padding: 1.25rem 0 1.75rem;
+  max-width: 58rem;
+}
+
+.home-hero h1 {
+  font-size: clamp(2rem, 5vw, 4.4rem);
+  line-height: 1.05;
+  max-width: 15ch;
+  margin-bottom: 1rem;
+}
+
+.home-hero p:not(.eyebrow) {
+  color: var(--text-muted);
+  font-size: 1.16rem;
+  max-width: 48rem;
+}
+
+.home-hero-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.home-section {
+  margin-top: 1.5rem;
+}
+
+.section-heading {
+  align-items: end;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+}
+
+.text-action,
+.text-button {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-family-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0 0 0.1rem;
+  text-decoration: none;
+}
+
+.text-action:hover,
+.text-button:hover {
+  color: var(--link-color);
+}
+
+.featured-post-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.featured-post-card {
+  background: var(--background-card);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 15rem;
+  padding: 1rem;
+  text-decoration: none;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.featured-post-card:hover {
+  border-color: var(--link-color);
+  transform: translateY(-2px);
+}
+
+.featured-post-card span,
+.compact-post-link span {
+  color: var(--text-muted);
+  font-family: var(--font-family-heading);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.featured-post-card h3 {
+  font-size: 1.12rem;
+  margin: 0.7rem 0;
+}
+
+.featured-post-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: auto 0 0;
+}
+
+.home-split {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1.1fr) minmax(18rem, 0.9fr);
+}
+
+.compact-post-list {
+  border-top: 1px solid var(--gray-line);
+}
+
+.compact-post-link {
+  align-items: baseline;
+  border-bottom: 1px solid var(--gray-line);
+  color: var(--text);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  padding: 0.75rem 0;
+  text-decoration: none;
+}
+
+.compact-post-link:hover strong {
+  color: var(--link-color);
+}
+
+.topic-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.topic-pill {
+  align-items: center;
+  background: var(--background-card);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  color: var(--text);
+  display: inline-flex;
+  font-family: var(--font-family-heading);
+  font-size: 0.9rem;
+  font-weight: 650;
+  gap: 0.45rem;
+  padding: 0.45rem 0.65rem;
+  text-decoration: none;
+}
+
+.topic-pill:hover {
+  border-color: var(--link-color);
+  color: var(--link-color);
+}
+
+.topic-pill span {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.til-strip {
+  background: var(--gray-bg);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  padding: 1rem;
+}
+
 /* ===========================================
    Navigation Styles
    =========================================== */
@@ -1292,6 +1473,21 @@ h6 {
    Responsive Adjustments
    =========================================== */
 @media (max-width: 768px) {
+  .featured-post-grid,
+  .home-split {
+    grid-template-columns: 1fr;
+  }
+
+  .compact-post-link {
+    gap: 0.2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
   .blog-posts-grid,
   .recommendations-grid {
     grid-template-columns: 1fr;

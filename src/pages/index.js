@@ -7,6 +7,12 @@ import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
 import Search from "../components/Search"
 import Pagination from "../components/Pagination"
+import {
+  getPostDescription,
+  getPostTitle,
+  getTopicSlug,
+  normalizeTags,
+} from "../utils/content"
 
 const POSTS_PER_PAGE = 5
 
@@ -20,6 +26,7 @@ const BlogIndex = ({ data, location }) => {
   
   const siteTitle = data.site.siteMetadata.title
   const allPosts = data.allMarkdownRemark.edges
+  const tilPosts = data.allTil.edges
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -80,6 +87,19 @@ const BlogIndex = ({ data, location }) => {
   const featuredCount = allPosts.filter(
     ({ node }) => node.frontmatter.featured
   ).length
+  const featuredPosts = allPosts
+    .filter(({ node }) => node.frontmatter.featured)
+    .slice(0, 4)
+  const latestPosts = allPosts.slice(0, 5)
+  const topicCounts = allPosts.reduce((counts, { node }) => {
+    normalizeTags(node.frontmatter.tags).forEach(tag => {
+      counts[tag] = (counts[tag] || 0) + 1
+    })
+    return counts
+  }, {})
+  const topTopics = Object.entries(topicCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
 
   return (
     <HomeLayout location={location} title={siteTitle}>
@@ -93,10 +113,108 @@ const BlogIndex = ({ data, location }) => {
       </Helmet>
       <Seo title="Home" />
 
-      {/* Search */}
+      <section className="home-hero">
+        <p className="eyebrow">Principal Engineer · Django CMS Fellow</p>
+        <h1>Writing about robust systems, open source, tools, AI workflows, and engineering craft.</h1>
+        <p>
+          I use this site as a working notebook: long-form essays, sharp technical notes,
+          career reflections, and project write-ups from building production software.
+        </p>
+        <div className="home-hero-actions">
+          <a href="/rss.xml" className="text-action">RSS</a>
+          <Link to="/about" className="text-action">About</Link>
+          <Link to="/recommendations" className="text-action">Recommendations</Link>
+        </div>
+      </section>
+
       <Search posts={allPosts} />
 
-      {/* Filter Controls */}
+      {featuredPosts.length > 0 && (
+        <section className="home-section">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Start Here</p>
+              <h2>Featured Writing</h2>
+            </div>
+            <button
+              onClick={() => {
+                setShowFeaturedOnly(true)
+                setCurrentPage(1)
+                updateURL(true, 1)
+              }}
+              className="text-button"
+            >
+              View all featured
+            </button>
+          </div>
+          <div className="featured-post-grid">
+            {featuredPosts.map(({ node }) => (
+              <Link key={node.fields.slug} to={node.fields.slug} className="featured-post-card">
+                <span>{node.frontmatter.date}</span>
+                <h3>{getPostTitle(node)}</h3>
+                <p>{getPostDescription(node)}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section className="home-section home-split">
+        <div>
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Recent</p>
+              <h2>Latest Posts</h2>
+            </div>
+          </div>
+          <div className="compact-post-list">
+            {latestPosts.map(({ node }) => (
+              <Link key={node.fields.slug} to={node.fields.slug} className="compact-post-link">
+                <span>{node.frontmatter.date}</span>
+                <strong>{getPostTitle(node)}</strong>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Explore</p>
+              <h2>Topics</h2>
+            </div>
+          </div>
+          <div className="topic-cloud">
+            {topTopics.map(([tag, count]) => (
+              <Link key={tag} to={getTopicSlug(tag)} className="topic-pill">
+                {tag}<span>{count}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {tilPosts.length > 0 && (
+        <section className="home-section til-strip">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Today I Learned</p>
+              <h2>Short Technical Notes</h2>
+            </div>
+            <Link to="/til" className="text-action">All TIL</Link>
+          </div>
+          <div className="compact-post-list">
+            {tilPosts.map(({ node }) => (
+              <Link key={node.fields.slug} to={node.fields.slug} className="compact-post-link">
+                <span>{node.frontmatter.date}</span>
+                <strong>{getPostTitle(node)}</strong>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section className="home-section">
       <div className="filter-controls">
         <div>
           <h3
@@ -108,9 +226,9 @@ const BlogIndex = ({ data, location }) => {
             }}
           >
             {showFeaturedOnly ? (
-              <>⭐ Featured Posts ({featuredCount})</>
+              <>Featured Posts ({featuredCount})</>
             ) : (
-              <>📝 All Posts ({allPosts.length})</>
+              <>All Posts ({allPosts.length})</>
             )}
           </h3>
           <p
@@ -130,7 +248,7 @@ const BlogIndex = ({ data, location }) => {
           onClick={toggleFeaturedFilter}
           className={`filter-btn ${showFeaturedOnly ? "filter-btn--active" : ""}`}
         >
-          {showFeaturedOnly ? <>📚 Show All Posts</> : <>⭐ Show Featured Only</>}
+          {showFeaturedOnly ? <>Show All Posts</> : <>Show Featured Only</>}
         </button>
       </div>
 
@@ -179,6 +297,7 @@ const BlogIndex = ({ data, location }) => {
           <p style={{ fontSize: "1.1rem" }}>No featured posts found.</p>
         </div>
       )}
+      </section>
     </HomeLayout>
   )
 }
@@ -207,6 +326,25 @@ export const pageQuery = graphql`
             title
             description
             featured
+            tags
+          }
+        }
+      }
+    }
+    allTil: allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
+      filter: { fields: { collection: { eq: "til" } } }
+      limit: 3
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
           }
         }
       }
