@@ -11,23 +11,13 @@ const themeScript = `
 })();
 `
 
-export const onRenderBody = ({ setHeadComponents, setPreBodyComponents, setPostBodyComponents }) => {
+export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
   setHeadComponents([])
   
   setPreBodyComponents([
     <script
       key="theme-script"
       dangerouslySetInnerHTML={{ __html: themeScript }}
-    />,
-  ])
-  
-  // Load the deckdeckgo highlight-code web component script
-  // This ensures code highlighting works on direct page loads (not just client-side navigation)
-  setPostBodyComponents([
-    <script
-      key="deckdeckgo-highlight-code"
-      type="module"
-      src="https://unpkg.com/@deckdeckgo/highlight-code@latest/dist/deckdeckgo-highlight-code/deckdeckgo-highlight-code.esm.js"
     />,
   ])
 }

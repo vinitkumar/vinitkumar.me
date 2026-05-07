@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Link, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 
 import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
@@ -15,10 +14,6 @@ import {
 } from "../utils/content"
 
 const POSTS_PER_PAGE = 5
-
-if (typeof window !== "undefined") {
-  deckDeckGoHighlightElement()
-}
 
 const BlogIndex = ({ data, location }) => {
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false)

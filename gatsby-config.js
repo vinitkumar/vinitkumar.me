@@ -96,7 +96,7 @@ module.exports = {
         short_name: `Vinit Kumar`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#111111`,
         display: `minimal-ui`,
         icon: `src/images/favicon-32x32.png`
       },
