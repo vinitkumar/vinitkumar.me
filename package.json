@@ -60,6 +60,7 @@
     "build": "GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby build",
     "develop": "GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
+    "new:post": "node scripts/new-blog-post.js",
     "start": "npm run develop",
     "serve": "GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
