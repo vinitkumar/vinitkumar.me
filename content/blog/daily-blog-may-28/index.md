@@ -18,5 +18,5 @@ totally loved that place and even after being there for 10 days, we felt we
 could have stayed a bit longer.
 
 Today, the agenda is simple. Write some good code to solve the issue I am
-currently facing and then enjoy the time with family. We might even go for a ICE
-cream run later at night.
+currently facing and then enjoy the time with family. We might even go for a
+ice-cream run later at night.
