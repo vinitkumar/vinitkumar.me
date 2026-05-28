@@ -37,7 +37,7 @@
     "react-typography": "^0.16.23",
     "styled-components": "^6.3.9",
     "tar-fs": "^3.1.1",
-    "tmp": "^0.2.5",
+    "tmp": "^0.2.6",
     "typography": "^0.16.24",
     "typography-theme-funston": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
@@ -69,6 +69,6 @@
   "resolutions": {
     "cookie": "^1.1.1",
     "tar-fs": "^3.1.1",
-    "tmp": "^0.2.5"
+    "tmp": "^0.2.6"
   }
 }
