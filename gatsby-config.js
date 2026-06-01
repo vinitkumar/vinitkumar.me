@@ -150,7 +150,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-twitter`,
-    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
