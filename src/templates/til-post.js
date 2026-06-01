@@ -93,11 +93,16 @@ export default TilPostTemplate
 export const Head = ({ data, location }) => {
   const post = data.markdownRemark
   const tags = normalizeTags(post.frontmatter.tags)
+  const isCanonicalPost =
+    !post.frontmatter.canonicalPath && !post.frontmatter.noindex
 
   return (
     <Seo
       title={post.frontmatter.title}
       description={post.frontmatter.description || post.excerpt}
+      canonicalPath={post.frontmatter.canonicalPath}
+      markdownPath={isCanonicalPost ? post.fields.markdownPath : undefined}
+      noindex={post.frontmatter.noindex}
       pathname={location.pathname}
       type="article"
       date={post.frontmatter.dateISO}
@@ -124,7 +129,12 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         dateISO: date(formatString: "YYYY-MM-DD")
         description
+        canonicalPath
+        noindex
         tags
+      }
+      fields {
+        markdownPath
       }
     }
   }

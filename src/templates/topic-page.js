@@ -50,6 +50,7 @@ export const Head = ({ location, pageContext }) => (
   <Seo
     title={`Topic: ${pageContext.tag}`}
     description={`Writing by Vinit Kumar about ${pageContext.tag}.`}
+    noindex
     pathname={location.pathname}
   />
 )

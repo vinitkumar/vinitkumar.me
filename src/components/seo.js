@@ -10,11 +10,14 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({
+  canonicalPath,
   date,
   description = ``,
   image,
   lang = `en`,
   meta = [],
+  markdownPath,
+  noindex = false,
   pathname = `/`,
   tags = [],
   title,
@@ -23,9 +26,7 @@ function Seo({
   const data = useStaticQuery(graphql`
     {
       avatar: file(absolutePath: { regex: "/blog.jpg/" }) {
-        childImageSharp {
-          gatsbyImageData(width: 600, height: 400, layout: FIXED)
-        }
+        publicURL
       }
       site {
         siteMetadata {
@@ -40,9 +41,8 @@ function Seo({
 
   const site = data.site.siteMetadata
   const metaDescription = description || site.description
-  const canonical = `${site.siteUrl}${pathname}`
-  const imageUrl =
-    image || `${site.siteUrl}${data.avatar.childImageSharp.gatsbyImageData.src}`
+  const canonical = `${site.siteUrl}${canonicalPath || pathname}`
+  const imageUrl = image || `${site.siteUrl}${data.avatar.publicURL}`
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": type === "article" ? "BlogPosting" : "WebSite",
@@ -68,6 +68,14 @@ function Seo({
       name: `description`,
       content: metaDescription,
     },
+    ...(noindex
+      ? [
+          {
+            name: `robots`,
+            content: `noindex, follow`,
+          },
+        ]
+      : []),
     {
       property: `og:title`,
       content: title,
@@ -111,6 +119,9 @@ function Seo({
       <html lang={lang} />
       <title>{`${title} | ${site.title}`}</title>
       <link rel="canonical" href={canonical} />
+      {markdownPath && (
+        <link rel="alternate" type="text/markdown" href={markdownPath} />
+      )}
       {metaTags.map((entry) => {
         const key = entry.name || entry.property
         return <meta key={key} {...entry} />
@@ -121,11 +132,14 @@ function Seo({
 }
 
 Seo.propTypes = {
+  canonicalPath: PropTypes.string,
   date: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
+  markdownPath: PropTypes.string,
+  noindex: PropTypes.bool,
   pathname: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,

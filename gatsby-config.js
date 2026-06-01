@@ -9,7 +9,58 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        excludes: [`/topics/**`, `/stats/`, `/404/`],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+            allMarkdownRemark {
+              nodes {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  date(formatString: "YYYY-MM-DD")
+                  noindex
+                  canonicalPath
+                }
+              }
+            }
+          }
+        `,
+        resolvePages: ({
+          allSitePage: { nodes: allPages },
+          allMarkdownRemark: { nodes: markdownNodes },
+        }) => {
+          const markdownByPath = markdownNodes.reduce((pages, node) => {
+            pages[node.fields.slug] = node.frontmatter
+            return pages
+          }, {})
+
+          return allPages
+            .map((page) => ({
+              ...page,
+              ...markdownByPath[page.path],
+            }))
+            .filter((page) => !page.noindex && !page.canonicalPath)
+        },
+        serialize: ({ path, date }) => ({
+          url: path,
+          ...(date ? { lastmod: date } : {}),
+        }),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -141,7 +192,15 @@ module.exports = {
             },
             query: `
               {
-                allMarkdownRemark(sort: { frontmatter: { date: DESC }}) {
+                allMarkdownRemark(
+                  sort: { frontmatter: { date: DESC }}
+                  filter: {
+                    frontmatter: {
+                      noindex: { ne: true }
+                      canonicalPath: { eq: null }
+                    }
+                  }
+                ) {
                   edges {
                     node {
                       excerpt
