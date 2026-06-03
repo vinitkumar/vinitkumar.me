@@ -5,12 +5,7 @@ import HomeLayout from "../components/homelayout"
 import Seo from "../components/seo"
 import Search from "../components/Search"
 import Pagination from "../components/Pagination"
-import {
-  getPostDescription,
-  getPostTitle,
-  getTopicSlug,
-  normalizeTags,
-} from "../utils/content"
+import { getPostTitle, getTopicSlug, normalizeTags } from "../utils/content"
 
 const POSTS_PER_PAGE = 5
 
@@ -87,7 +82,6 @@ const BlogIndex = ({ data, location }) => {
   const featuredPosts = allPosts
     .filter(({ node }) => node.frontmatter.featured)
     .slice(0, 4)
-  const latestPosts = allPosts.slice(0, 5)
   const topicCounts = allPosts.reduce((counts, { node }) => {
     normalizeTags(node.frontmatter.tags).forEach((tag) => {
       counts[tag] = (counts[tag] || 0) + 1
@@ -100,133 +94,24 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <HomeLayout location={location} title={siteTitle}>
-      <section className="home-hero">
-        <p className="eyebrow">Principal Engineer · Django CMS Fellow</p>
-        <h1>
-          Writing about robust systems, open source, tools, AI workflows, and
-          engineering craft.
-        </h1>
-        <p>
-          I use this site as a working notebook: long-form essays, sharp
-          technical notes, career reflections, and project write-ups from
-          building production software.
-        </p>
-        <div className="home-hero-actions">
+      <section className="home-intro">
+        <div className="home-intro-copy">
+          <p className="eyebrow">Principal Engineer · Django CMS Fellow</p>
+          <p>
+            Writing about robust systems, open source, tools, AI workflows, and
+            engineering craft.
+          </p>
+        </div>
+        <div className="home-intro-actions">
           <a href="/rss.xml" className="text-action">
             RSS
           </a>
-          <Link to="/about" className="text-action">
-            About
-          </Link>
-          <Link to="/recommendations" className="text-action">
-            Recommendations
-          </Link>
         </div>
       </section>
 
       <Search posts={allPosts} />
 
-      {featuredPosts.length > 0 && (
-        <section className="home-section">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Start Here</p>
-              <h2>Featured Writing</h2>
-            </div>
-            <button
-              onClick={() => {
-                setShowFeaturedOnly(true)
-                setCurrentPage(1)
-                updateURL(true, 1)
-              }}
-              className="text-button"
-            >
-              View all featured
-            </button>
-          </div>
-          <div className="featured-post-grid">
-            {featuredPosts.map(({ node }) => (
-              <Link
-                key={node.fields.slug}
-                to={node.fields.slug}
-                className="featured-post-card"
-              >
-                <span>{node.frontmatter.date}</span>
-                <h3>{getPostTitle(node)}</h3>
-                <p>{getPostDescription(node)}</p>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      <section className="home-section home-split">
-        <div>
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Recent</p>
-              <h2>Latest Posts</h2>
-            </div>
-          </div>
-          <div className="compact-post-list">
-            {latestPosts.map(({ node }) => (
-              <Link
-                key={node.fields.slug}
-                to={node.fields.slug}
-                className="compact-post-link"
-              >
-                <span>{node.frontmatter.date}</span>
-                <strong>{getPostTitle(node)}</strong>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Explore</p>
-              <h2>Topics</h2>
-            </div>
-          </div>
-          <div className="topic-cloud">
-            {topTopics.map(([tag, count]) => (
-              <Link key={tag} to={getTopicSlug(tag)} className="topic-pill">
-                {tag}
-                <span>{count}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {tilPosts.length > 0 && (
-        <section className="home-section til-strip">
-          <div className="section-heading">
-            <div>
-              <p className="eyebrow">Today I Learned</p>
-              <h2>Short Technical Notes</h2>
-            </div>
-            <Link to="/til" className="text-action">
-              All TIL
-            </Link>
-          </div>
-          <div className="compact-post-list">
-            {tilPosts.map(({ node }) => (
-              <Link
-                key={node.fields.slug}
-                to={node.fields.slug}
-                className="compact-post-link"
-              >
-                <span>{node.frontmatter.date}</span>
-                <strong>{getPostTitle(node)}</strong>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      <section className="home-section">
+      <section className="home-section writing-index">
         <div className="filter-controls">
           <div>
             <h3
@@ -278,7 +163,7 @@ const BlogIndex = ({ data, location }) => {
                   <div className="blog-post-row-meta">
                     {node.frontmatter.featured && (
                       <span className="blog-post-row-featured" title="Featured">
-                        ⭐
+                        Featured
                       </span>
                     )}
                     <h2 className="blog-post-row-title">{title}</h2>
@@ -311,6 +196,84 @@ const BlogIndex = ({ data, location }) => {
             }}
           >
             <p style={{ fontSize: "1.1rem" }}>No featured posts found.</p>
+          </div>
+        )}
+      </section>
+
+      <section className="home-section discovery-strip">
+        {featuredPosts.length > 0 && (
+          <div className="discovery-panel start-here-panel">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">Start Here</p>
+                <h2>Featured Writing</h2>
+              </div>
+              <button
+                onClick={() => {
+                  setShowFeaturedOnly(true)
+                  setCurrentPage(1)
+                  updateURL(true, 1)
+                }}
+                className="text-button"
+              >
+                View all
+              </button>
+            </div>
+            <div className="compact-post-list">
+              {featuredPosts.map(({ node }) => (
+                <Link
+                  key={node.fields.slug}
+                  to={node.fields.slug}
+                  className="compact-post-link"
+                >
+                  <span>{node.frontmatter.date}</span>
+                  <strong>{getPostTitle(node)}</strong>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="discovery-panel topics-panel">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Explore</p>
+              <h2>Topics</h2>
+            </div>
+          </div>
+          <div className="topic-cloud">
+            {topTopics.map(([tag, count]) => (
+              <Link key={tag} to={getTopicSlug(tag)} className="topic-pill">
+                {tag}
+                <span>{count}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {tilPosts.length > 0 && (
+          <div className="discovery-panel til-panel">
+            <div className="section-heading">
+              <div>
+                <p className="eyebrow">Today I Learned</p>
+                <h2>Short Notes</h2>
+              </div>
+              <Link to="/til" className="text-action">
+                All TIL
+              </Link>
+            </div>
+            <div className="compact-post-list">
+              {tilPosts.map(({ node }) => (
+                <Link
+                  key={node.fields.slug}
+                  to={node.fields.slug}
+                  className="compact-post-link"
+                >
+                  <span>{node.frontmatter.date}</span>
+                  <strong>{getPostTitle(node)}</strong>
+                </Link>
+              ))}
+            </div>
           </div>
         )}
       </section>
