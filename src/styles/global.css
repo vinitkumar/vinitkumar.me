@@ -742,6 +742,193 @@ h6 {
 }
 
 /* ===========================================
+   About Page
+   =========================================== */
+.about-page {
+  margin: 0 auto;
+  max-width: 72rem;
+}
+
+.about-hero {
+  align-items: end;
+  border-bottom: 1px solid var(--gray-line);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  margin: 1.5rem 0;
+  padding-bottom: 1.5rem;
+}
+
+.about-hero-copy {
+  max-width: 58rem;
+}
+
+.about-hero h1 {
+  font-size: clamp(2.1rem, 5vw, 4.6rem);
+  line-height: 1.04;
+  margin-bottom: 1rem;
+  max-width: 17ch;
+}
+
+.about-hero p:not(.eyebrow) {
+  color: var(--text-muted);
+  font-size: 1.12rem;
+  max-width: 48rem;
+}
+
+.about-avatar {
+  aspect-ratio: 1;
+  border: 1px solid var(--gray-line);
+  border-radius: 50%;
+  margin: 0;
+  width: clamp(8rem, 14vw, 12rem);
+}
+
+.about-metrics {
+  border-bottom: 1px solid var(--gray-line);
+  border-top: 1px solid var(--gray-line);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 1.5rem 0;
+}
+
+.about-metrics div {
+  border-right: 1px solid var(--gray-line);
+  padding: 1rem;
+}
+
+.about-metrics div:last-child {
+  border-right: 0;
+}
+
+.about-metrics strong {
+  display: block;
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.35rem, 3vw, 2.2rem);
+  line-height: 1.05;
+}
+
+.about-metrics span {
+  color: var(--text-muted);
+  display: block;
+  font-family: var(--font-family-heading);
+  font-size: 0.85rem;
+  font-weight: 650;
+  margin-top: 0.35rem;
+}
+
+.about-section {
+  border-bottom: 1px solid var(--gray-line);
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.about-section h2,
+.about-contact h2 {
+  font-size: clamp(1.45rem, 3vw, 2.35rem);
+  line-height: 1.12;
+  margin-bottom: 0.75rem;
+}
+
+.about-section p,
+.about-contact p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  max-width: 46rem;
+}
+
+.about-section a,
+.about-contact a,
+.about-hero a {
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--link-color) 45%, transparent);
+  color: var(--link-color);
+}
+
+.about-now,
+.about-split,
+.about-contact {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(14rem, 0.45fr) minmax(0, 1fr);
+}
+
+.about-split {
+  grid-template-columns: minmax(14rem, 0.55fr) minmax(0, 1fr);
+}
+
+.about-now-list {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-now-list p,
+.about-principles p {
+  background: var(--gray-bg);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  color: var(--text);
+  font-family: var(--font-family-heading);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.45;
+  margin: 0;
+  max-width: none;
+  padding: 0.9rem;
+}
+
+.about-principles {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.about-work-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-work-item {
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  color: var(--text);
+  display: block;
+  min-height: 12rem;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.about-work-item:hover {
+  border-color: var(--link-color);
+}
+
+.about-work-item span {
+  display: block;
+  font-family: var(--font-family-heading);
+  font-size: 1.1rem;
+  font-weight: 750;
+  margin-bottom: 0.75rem;
+}
+
+.about-work-item p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.about-contact {
+  align-items: start;
+  background: var(--gray-bg);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+}
+
+/* ===========================================
    Navigation Styles
    =========================================== */
 .site-nav {
@@ -1979,6 +2166,35 @@ h6 {
 
   .post-nav {
     grid-template-columns: 1fr;
+  }
+
+  .about-hero,
+  .about-now,
+  .about-split,
+  .about-contact,
+  .about-work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    align-items: start;
+  }
+
+  .about-avatar {
+    width: 8rem;
+  }
+
+  .about-metrics,
+  .about-now-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-metrics div:nth-child(2) {
+    border-right: 0;
+  }
+
+  .about-metrics div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--gray-line);
   }
 
   .recommendation-metrics,
