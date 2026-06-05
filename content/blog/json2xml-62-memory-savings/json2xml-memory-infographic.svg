@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">json2xml 6.2.0 memory savings benchmark</title>
+  <desc id="desc">Infographic showing json2xml-rs serializer RSS delta dropping from 157.70 MiB to 80.26 MiB, a 49.1 percent reduction.</desc>
+  <rect width="1400" height="820" fill="#f7f4ee"/>
+  <rect x="70" y="70" width="1260" height="680" rx="24" fill="#17202a"/>
+  <text x="120" y="145" fill="#f7f4ee" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">json2xml 6.2.0</text>
+  <text x="120" y="195" fill="#f3c969" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700">The memory savings release</text>
+  <text x="120" y="247" fill="#d8dee5" font-family="Inter, Arial, sans-serif" font-size="24">Rust serializer benchmark: 100,000 nested records, 78.17 MiB XML output</text>
+
+  <line x1="150" y1="610" x2="940" y2="610" stroke="#d8dee5" stroke-width="3" opacity="0.7"/>
+  <line x1="150" y1="310" x2="150" y2="610" stroke="#d8dee5" stroke-width="3" opacity="0.7"/>
+
+  <rect x="245" y="310" width="170" height="300" rx="12" fill="#d95f5f"/>
+  <rect x="650" y="457" width="170" height="153" rx="12" fill="#4fb286"/>
+
+  <text x="330" y="285" text-anchor="middle" fill="#f7f4ee" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">157.70 MiB</text>
+  <text x="330" y="660" text-anchor="middle" fill="#d8dee5" font-family="Inter, Arial, sans-serif" font-size="24">previous Rust path</text>
+
+  <text x="735" y="430" text-anchor="middle" fill="#f7f4ee" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">80.26 MiB</text>
+  <text x="735" y="660" text-anchor="middle" fill="#d8dee5" font-family="Inter, Arial, sans-serif" font-size="24">Python bytes writer</text>
+
+  <path d="M 450 375 C 520 335, 585 335, 625 396" fill="none" stroke="#f3c969" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 625 396 L 600 390 L 618 371 Z" fill="#f3c969"/>
+  <text x="535" y="330" text-anchor="middle" fill="#f3c969" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">49.1% lower</text>
+
+  <rect x="1000" y="305" width="260" height="170" rx="20" fill="#f7f4ee"/>
+  <text x="1130" y="365" text-anchor="middle" fill="#17202a" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="900">77.44 MiB</text>
+  <text x="1130" y="410" text-anchor="middle" fill="#17202a" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700">saved at peak</text>
+
+  <rect x="1000" y="505" width="260" height="120" rx="20" fill="#263647"/>
+  <text x="1130" y="555" text-anchor="middle" fill="#f7f4ee" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Install</text>
+  <text x="1130" y="595" text-anchor="middle" fill="#f3c969" font-family="Menlo, Consolas, monospace" font-size="22">pip install json2xml[fast]</text>
+
+  <text x="120" y="720" fill="#aeb8c2" font-family="Inter, Arial, sans-serif" font-size="20">Measured serializer RSS delta after payload creation. Release order: json2xml-rs 0.3.0 first, then json2xml 6.2.0.</text>
+</svg>
