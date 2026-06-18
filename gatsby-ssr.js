@@ -12,7 +12,20 @@ const themeScript = `
 `
 
 export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
-  setHeadComponents([])
+  setHeadComponents([
+    <meta
+      key="theme-color-light"
+      name="theme-color"
+      content="#F9F6EE"
+      media="(prefers-color-scheme: light)"
+    />,
+    <meta
+      key="theme-color-dark"
+      name="theme-color"
+      content="#000000"
+      media="(prefers-color-scheme: dark)"
+    />,
+  ])
   
   setPreBodyComponents([
     <script

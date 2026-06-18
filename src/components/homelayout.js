@@ -22,7 +22,7 @@ const HomeLayout = ({ location, title, children }) => {
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
-      <header>
+      <header className="site-header">
         <h1
           style={{
             ...scale(1.5),
