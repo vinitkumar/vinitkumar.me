@@ -19,8 +19,7 @@ const Footer = () => {
         .
       </p>
       <p className="footer-contact">
-        Contact me via{" "}
-        <a href="mailto:mail@vinitkumar.me">mail</a>,{" "}
+        Contact me via <a href="mailto:mail@vinitkumar.me">mail</a>,{" "}
         <a
           href="https://bsky.app/profile/vinitkme.bsky.social"
           target="_blank"
@@ -66,9 +65,19 @@ const Footer = () => {
         .
       </p>
       <p className="footer-info">
-        More info:{" "}
-        <a href="/ai-transparency">AI transparency</a>. Subscribe via{" "}
+        More info: <a href="/ai-transparency">AI transparency</a>. Subscribe via{" "}
         <a href="/rss.xml">RSS</a>.
+      </p>
+      <p className="footer-fonts">
+        Set in{" "}
+        <a
+          href="https://github.com/vinitkumar/berka-mono-closer"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Berka Text
+        </a>{" "}
+        for prose and Berka Mono Focus for code.
       </p>
       <p className="footer-theme">
         <span>Theme:</span>
