@@ -374,7 +374,7 @@ svg rect[fill*="blue"],
 html,
 body {
   font-family: var(--font-family-body);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
   height: 100%;
   line-height: 1.58;

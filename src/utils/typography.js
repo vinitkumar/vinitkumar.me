@@ -1,6 +1,6 @@
 import Typography from "typography"
 const typography = new Typography({
-  baseFontSize: "17px",
+  baseFontSize: "16px",
   baseLineHeight: 1.6,
   headerFontFamily: ["Berka Text", "system-ui", "sans-serif"],
   bodyFontFamily: ["Berka Text", "system-ui", "sans-serif"],
