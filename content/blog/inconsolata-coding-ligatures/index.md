@@ -18,7 +18,7 @@ The first pass added ligature glyphs, but I realized quickly that having them on
 
 The ligature set covers the operators I reach for most often:
 
-```text
+```sh
 != == === !== -> <- => <= >= :: ++ -- && || // /* */ <> << >> |> <|
 ```
 
