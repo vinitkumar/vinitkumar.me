@@ -865,6 +865,12 @@ h6 {
   font-size: 1.05rem;
 }
 
+.post-content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .post-content a {
   border-bottom: 1px solid
     color-mix(in srgb, var(--link-color) 45%, transparent);
