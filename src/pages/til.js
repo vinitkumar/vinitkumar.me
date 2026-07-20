@@ -26,7 +26,7 @@ const TilIndex = ({ data, location }) => {
           background:
             "linear-gradient(135deg, var(--nav-til) 0%, #d97706 100%)",
           borderRadius: "var(--radius)",
-          color: "white",
+          color: "#1d1d1f",
         }}
       >
         <h1
@@ -147,7 +147,7 @@ const TilIndex = ({ data, location }) => {
                     top: "-8px",
                     right: "1rem",
                     background: "var(--nav-til)",
-                    color: "white",
+                    color: "#1d1d1f",
                     padding: "0.25rem 0.75rem",
                     borderRadius: "var(--radius)",
                     fontSize: "0.8rem",

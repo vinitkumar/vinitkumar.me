@@ -1525,7 +1525,7 @@ h6 {
 }
 
 .blog-post-card:hover .blog-post-title {
-  color: var(--blue);
+  color: var(--link-color);
 }
 
 .blog-post-meta {
@@ -1571,7 +1571,7 @@ h6 {
 }
 
 .read-more-link {
-  color: var(--blue);
+  color: var(--link-color);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
