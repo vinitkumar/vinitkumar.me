@@ -75,8 +75,9 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
         <Link
           to="/til"
           style={{
-            color: "var(--blue)",
-            textDecoration: "none",
+            color: "var(--link-color)",
+            textDecoration: "underline",
+            textUnderlineOffset: "0.15em",
             fontWeight: "600",
             fontSize: "1rem",
           }}
