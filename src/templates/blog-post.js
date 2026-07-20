@@ -4,12 +4,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { rhythm } from "../utils/typography"
-import {
-  getPostDescription,
-  getPostTitle,
-  getTopicSlug,
-  normalizeTags,
-} from "../utils/content"
+import { getPostTitle, getTopicSlug, normalizeTags } from "../utils/content"
 
 const postAccentByTag = {
   ai: "#F9A8D4",
