@@ -881,6 +881,78 @@ h6 {
   border-bottom-color: var(--link-color);
 }
 
+.post-content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.post-content .fff-plus-demo-player {
+  --media-button-icon-height: 1.35rem;
+  --media-button-icon-width: 1.35rem;
+  --media-control-background: transparent;
+  --media-control-color: #fff;
+  --media-control-hover-background: rgba(255, 255, 255, 0.14);
+  --media-range-bar-color: #fb923c;
+  --media-range-thumb-background: #fff;
+  --media-range-track-background: rgba(255, 255, 255, 0.32);
+  aspect-ratio: 16 / 9;
+  background: #08090d;
+  border: 1px solid rgba(251, 146, 60, 0.42);
+  border-radius: 0.8rem;
+  box-shadow:
+    0 1.2rem 3rem rgba(8, 9, 13, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+  display: block;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.fff-plus-demo-player video {
+  background: #08090d;
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.fff-plus-demo-player media-control-bar {
+  background: linear-gradient(transparent, rgba(8, 9, 13, 0.92));
+  font-family: var(--font-family-heading);
+  gap: 0.1rem;
+  padding: 1.5rem 0.4rem 0.4rem;
+}
+
+.fff-plus-demo-player > media-play-button[slot="centered-chrome"] {
+  --media-button-icon-height: 2.15rem;
+  --media-button-icon-width: 2.15rem;
+  --media-control-background: rgba(8, 9, 13, 0.76);
+  --media-control-hover-background: #fb923c;
+  backdrop-filter: blur(0.65rem);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  box-shadow: 0 0.7rem 2rem rgba(0, 0, 0, 0.32);
+  overflow: hidden;
+}
+
+.fff-plus-demo-player[mediahasplayed]
+  > media-play-button[slot="centered-chrome"] {
+  display: none;
+}
+
+@media (max-width: 38rem) {
+  .fff-plus-demo-player media-seek-backward-button,
+  .fff-plus-demo-player media-seek-forward-button,
+  .fff-plus-demo-player media-playback-rate-button,
+  .fff-plus-demo-player media-pip-button {
+    display: none;
+  }
+
+  .fff-plus-demo-player media-time-display {
+    font-size: 0.75rem;
+  }
+}
+
 .toc {
   background: var(--gray-bg);
   border: 1px solid var(--gray-line);

@@ -8,6 +8,8 @@ featured: true
 
 I recently released [fff-plus.nvim](https://github.com/vinitkumar/fff-plus.nvim), a small extension plugin for [fff.nvim](https://github.com/dmtrKovalenko/fff.nvim).
 
+> **Update, July 20, 2026:** The Git APIs and commands described below have evolved. Read [Closing the fzf.vim Gaps in fff-plus.nvim](/fff-plus-fzf-vim-parity/) for the new tracked-file and Git-status split, fuzzy matching, multi-select actions, fullscreen layouts, and diff previews.
+
 This is the next version of an idea I wrote about earlier in [Why I Forked fff.nvim and Turned It Into a Complete Picker Ecosystem](/fff-nvim-fork/). That post was about my [old `fff.nvim` fork](https://github.com/vinitkumar/fff.nvim), where I added the picker workflows I missed from `fzf.vim`: buffers, git status files, and colorschemes.
 
 The fork worked. It solved my problem. But after living with it for a while, I think `fff-plus.nvim` is the better idea.
