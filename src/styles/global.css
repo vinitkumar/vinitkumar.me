@@ -261,6 +261,8 @@ body {
   --indigo: #6366f1;
   --red: #ef4444;
   --orange: #f97316;
+  --control-primary: #1d4ed8;
+  --control-active: #047857;
 
   /* Featured/Highlight */
   --featured-bg: #f97316;
@@ -2210,31 +2212,34 @@ h6 {
 }
 
 .filter-btn {
-  background: var(--blue);
+  background: var(--control-primary);
   color: white;
   border: none;
   padding: 0.4rem 0.875rem;
   border-radius: var(--radius-pill);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-normal);
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  min-height: 2.75rem;
 }
 
 .filter-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 3px 8px rgba(59, 130, 246, 0.25);
+  box-shadow: 0 3px 8px
+    color-mix(in srgb, var(--control-primary) 35%, transparent);
 }
 
 .filter-btn--active {
-  background: var(--green);
+  background: var(--control-active);
 }
 
 .filter-btn--active:hover {
-  box-shadow: 0 3px 8px rgba(16, 185, 129, 0.25);
+  box-shadow: 0 3px 8px
+    color-mix(in srgb, var(--control-active) 35%, transparent);
 }
 
 /* ===========================================
