@@ -12,6 +12,10 @@ Between July 13 and 24, I merged 17 pull requests across eight public repositori
 
 That sounds like a story about volume. It was really a story about removing friction: faster serializers, fewer queries, quicker editors, safer input handling, simpler systems, better reading, and more dependable releases.
 
+![A GitHub contribution graph transformed into a skyline of green skyscrapers](./github-contribution-skyscrapers.png)
+
+*Seventeen merged pull requests and twelve reviews, rendered as a city of contribution tiles.*
+
 ## Profiling `json2xml` instead of guessing
 
 Eight of the pull requests moved `json2xml` forward.
