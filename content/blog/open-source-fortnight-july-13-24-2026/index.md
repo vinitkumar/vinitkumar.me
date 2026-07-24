@@ -12,9 +12,15 @@ Between July 13 and 24, I merged 17 pull requests across eight public repositori
 
 That sounds like a story about volume. It was really a story about removing friction: faster serializers, fewer queries, quicker editors, safer input handling, simpler systems, better reading, and more dependable releases.
 
-![A GitHub contribution graph transformed into a skyline of green skyscrapers](./github-contribution-skyscrapers.png)
+These views use the exact daily counts and contribution levels returned by GitHub for July 13–24: 103 contributions across twelve days.
 
-*Seventeen merged pull requests and twelve reviews, rendered as a city of contribution tiles.*
+![Top view of the actual GitHub contribution counts from July 13 through July 24](./github-contributions-top-view.png)
+
+*Top view: every tile shows the date, exact contribution count, and GitHub contribution level.*
+
+![Side view of the actual GitHub contribution counts rendered as skyscrapers](./github-contributions-side-view.png)
+
+*Side view: one stacked block equals one contribution, so every building height follows the real daily count.*
 
 ## Profiling `json2xml` instead of guessing
 
