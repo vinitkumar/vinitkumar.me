@@ -1080,25 +1080,27 @@ h6 {
    =========================================== */
 .about-page {
   margin: 0 auto;
-  max-width: 72rem;
+  max-width: 80rem;
 }
 
 .about-intro {
   border-bottom: 1px solid var(--gray-line);
+  column-gap: clamp(2rem, 4vw, 4rem);
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 1.08fr);
   grid-template-areas:
     "heading portrait"
     "prose portrait";
-  column-gap: clamp(2rem, 6vw, 6rem);
-  margin: clamp(2rem, 6vw, 5.5rem) 0 3rem;
-  padding-bottom: clamp(3rem, 6vw, 5.5rem);
+  grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 1.08fr);
+  grid-template-rows: auto 1fr;
+  margin: 2.5rem 0;
+  padding-bottom: 3rem;
+  row-gap: 2rem;
 }
 
 .about-intro-heading {
-  align-self: end;
+  align-self: start;
   grid-area: heading;
-  margin-bottom: clamp(2.5rem, 7vw, 6rem);
+  margin: 0;
 }
 
 .about-intro h1 {
@@ -1123,41 +1125,21 @@ h6 {
 }
 
 .about-portrait-frame {
-  background: #d6ef3f;
+  background: var(--gray-100);
   border-radius: 1.35rem;
-  isolation: isolate;
   overflow: hidden;
-  position: relative;
-}
-
-.about-portrait-frame::after {
-  background: #d6ef3f;
-  content: "";
-  inset: 0;
-  mix-blend-mode: multiply;
-  pointer-events: none;
-  position: absolute;
 }
 
 .about-portrait img {
-  aspect-ratio: 4 / 5;
-  filter: grayscale(1) contrast(1.12);
+  aspect-ratio: 1 / 1;
   margin: 0;
   object-fit: cover;
-  object-position: 50% 37%;
+  object-position: center top;
   width: 100%;
 }
 
-.about-portrait figcaption {
-  color: var(--text-muted);
-  font-family: var(--font-family-code);
-  font-size: 0.74rem;
-  letter-spacing: 0.01em;
-  margin-top: 0.65rem;
-}
-
 .about-intro-prose {
-  align-self: end;
+  align-self: start;
   grid-area: prose;
 }
 
@@ -2637,15 +2619,18 @@ h6 {
       "heading"
       "portrait"
       "prose";
-    margin-top: 3rem;
+    grid-template-rows: auto;
+    margin: 2rem 0;
+    padding-bottom: 2.5rem;
+    row-gap: 2rem;
   }
 
   .about-intro-heading {
-    margin-bottom: 2.5rem;
+    margin: 0;
   }
 
   .about-portrait {
-    margin-bottom: 2.5rem;
+    margin: 0;
   }
 
   .about-metrics,

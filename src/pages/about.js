@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import portrait from "../../content/assets/vinit_kumar.jpg"
+import portrait from "../../content/assets/vinitgreynew.png"
 
 const startDate = new Date("2013-02-01")
 
@@ -119,15 +119,11 @@ const AboutIndex = (props) => {
             </p>
           </div>
 
-          <figure className="about-portrait">
+          <div className="about-portrait">
             <div className="about-portrait-frame">
-              <img
-                alt="A black and white portrait of Vinit Kumar"
-                src={portrait}
-              />
+              <img alt="Portrait of Vinit Kumar" src={portrait} />
             </div>
-            <figcaption>That’s me. No generated pixels.</figcaption>
-          </figure>
+          </div>
 
           <div className="about-intro-prose">
             <p>
