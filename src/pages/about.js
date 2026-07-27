@@ -107,6 +107,75 @@ const AboutIndex = (props) => {
     "I care about writing because it forces scattered technical experience into something reusable.",
   ]
 
+  const career = [
+    {
+      organization: "Scalefusion",
+      role: "Principal Engineer",
+      period: "Nov 2024—Now",
+      href: "https://scalefusion.com",
+    },
+    {
+      organization: "django CMS",
+      role: "Django CMS Fellow",
+      period: "Nov 2024—Now",
+      href: "https://www.django-cms.org/en/blog/2024/11/07/welcoming-vinit-kumar-as-the-newest-django-cms-fellow/",
+    },
+    {
+      organization: "Django Software Foundation",
+      role: "Individual Member",
+      period: "Feb 2024—Now",
+      href: "https://www.djangoproject.com/foundation/individual-members/",
+    },
+    {
+      organization: "KidsKonnect",
+      role: "Staff Software Engineer",
+      period: "Feb 2023—Nov 2024",
+    },
+    {
+      organization: "Social Schools",
+      role: "Staff / Senior Software Engineer",
+      period: "Feb 2013—Feb 2023",
+    },
+  ]
+
+  const elsewhereLinks = [
+    {
+      label: "GitHub",
+      value: "@vinitkumar",
+      href: "https://github.com/vinitkumar",
+    },
+    {
+      label: "LinkedIn",
+      value: "/in/vinitatlinkedin",
+      href: "https://www.linkedin.com/in/vinitatlinkedin/",
+    },
+    {
+      label: "GotchaCode",
+      value: "gotchacode.com",
+      href: "https://www.gotchacode.com",
+    },
+    {
+      label: "Bluesky",
+      value: "@vinitkme.bsky.social",
+      href: "https://bsky.app/profile/vinitkme.bsky.social",
+    },
+    {
+      label: "Mastodon",
+      value: "@vinitkme@fosstodon.org",
+      href: "https://fosstodon.org/@vinitkme",
+    },
+    {
+      label: "X",
+      value: "@vinitkme",
+      href: "https://x.com/vinitkme",
+    },
+    {
+      label: "Email",
+      value: "mail@vinitkumar.me",
+      href: "mailto:mail@vinitkumar.me",
+    },
+  ]
+
   return (
     <Layout location={props.location} title={title}>
       <div className="about-page">
@@ -206,6 +275,45 @@ const AboutIndex = (props) => {
           </div>
         </section>
 
+        <section className="about-section about-career">
+          <div>
+            <p className="eyebrow">Career</p>
+            <h2>Long-term ownership, from backend systems to open source.</h2>
+            <p>
+              My career has moved through product engineering, distributed
+              systems, team leadership, and open-source stewardship.
+            </p>
+          </div>
+
+          <div>
+            <ol className="about-career-list">
+              {career.map((item) => (
+                <li key={`${item.organization}-${item.role}`}>
+                  <div className="about-career-position">
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <strong>{item.organization}</strong>
+                      </a>
+                    ) : (
+                      <strong>{item.organization}</strong>
+                    )}
+                    <span>{item.role}</span>
+                  </div>
+                  <span className="about-career-period">{item.period}</span>
+                </li>
+              ))}
+            </ol>
+            <p className="about-career-education">
+              B.E. in Civil Engineering, Birla Institute of Technology, Mesra,
+              2008—2012.
+            </p>
+          </div>
+        </section>
+
         <section className="about-section">
           <div className="section-heading">
             <div>
@@ -285,40 +393,36 @@ const AboutIndex = (props) => {
           </div>
         </section>
 
-        <section className="about-contact">
+        <section className="about-section about-elsewhere">
           <div>
-            <p className="eyebrow">Contact</p>
-            <h2>Send a good note.</h2>
+            <p className="eyebrow">Elsewhere</p>
+            <h2>Find me around the internet.</h2>
           </div>
-          <p>
-            Email me at{" "}
-            <a href="mailto:mail@vinitkumar.me">mail@vinitkumar.me</a>, connect
-            on{" "}
-            <a
-              href="https://www.linkedin.com/in/vinitatlinkedin/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-            , follow{" "}
-            <a
-              href="https://x.com/vinitkme"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              @vinitkme
-            </a>
-            , or sponsor my open-source work on{" "}
-            <a
-              href="https://github.com/sponsors/vinitkumar"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub Sponsors
-            </a>
-            .
-          </p>
+          <div>
+            <p>
+              GitHub is where most of my public code lives. For anything that
+              needs more than a short reply, email is best.
+            </p>
+            <ul className="about-link-list">
+              {elsewhereLinks.map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    {...(item.href.startsWith("http")
+                      ? {
+                          target: "_blank",
+                          rel: "noopener noreferrer",
+                        }
+                      : {})}
+                  >
+                    <span>{item.label}</span>
+                    <strong>{item.value}</strong>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
       </div>
     </Layout>

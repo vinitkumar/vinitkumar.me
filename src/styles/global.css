@@ -1080,7 +1080,7 @@ h6 {
    =========================================== */
 .about-page {
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: var(--max-width);
 }
 
 .about-intro {
@@ -1194,15 +1194,13 @@ h6 {
   padding-bottom: 1.5rem;
 }
 
-.about-section h2,
-.about-contact h2 {
+.about-section h2 {
   font-size: clamp(1.45rem, 3vw, 2.35rem);
   line-height: 1.12;
   margin-bottom: 0.75rem;
 }
 
-.about-section p,
-.about-contact p {
+.about-section p {
   color: var(--text-muted);
   font-size: 1.05rem;
   margin-bottom: 0.75rem;
@@ -1210,7 +1208,6 @@ h6 {
 }
 
 .about-section a,
-.about-contact a,
 .about-intro a {
   border-bottom: 1px solid
     color-mix(in srgb, var(--link-color) 45%, transparent);
@@ -1219,7 +1216,8 @@ h6 {
 
 .about-now,
 .about-split,
-.about-contact {
+.about-career,
+.about-elsewhere {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: minmax(14rem, 0.45fr) minmax(0, 1fr);
@@ -1253,6 +1251,62 @@ h6 {
 .about-principles {
   display: grid;
   gap: 0.75rem;
+}
+
+.about-career {
+  grid-template-columns: minmax(14rem, 0.55fr) minmax(0, 1fr);
+}
+
+.about-career-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-career-list li {
+  align-items: baseline;
+  border-bottom: 1px solid var(--gray-line);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: 0.75rem 0;
+}
+
+.about-career-list li:first-child {
+  padding-top: 0;
+}
+
+.about-career-position {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.65rem;
+}
+
+.about-career-position strong {
+  color: var(--text);
+}
+
+.about-career-position span,
+.about-career-period {
+  color: var(--text-muted);
+}
+
+.about-career-position a {
+  color: var(--text);
+}
+
+.about-career-period {
+  font-family: var(--font-family-code);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.about-career-education {
+  border-left: 2px solid var(--gray-line);
+  font-size: 0.92rem !important;
+  margin: 1rem 0 0 !important;
+  padding-left: 0.75rem;
 }
 
 .about-work-grid {
@@ -1290,13 +1344,38 @@ h6 {
   margin: 0;
 }
 
-.about-contact {
-  align-items: start;
-  background: var(--gray-bg);
-  border: 1px solid var(--gray-line);
-  border-radius: var(--radius-small);
-  margin-top: 1.5rem;
-  padding: 1.25rem;
+.about-link-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.about-link-list li {
+  margin: 0;
+}
+
+.about-link-list a {
+  align-items: baseline;
+  border-bottom: 1px solid var(--gray-line);
+  color: var(--text);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 6rem minmax(0, 1fr) auto;
+  padding: 0.65rem 0;
+  text-decoration: none;
+}
+
+.about-link-list a:hover {
+  border-color: var(--link-color);
+}
+
+.about-link-list span:first-child {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.about-link-list strong {
+  overflow-wrap: anywhere;
 }
 
 /* ===========================================
@@ -1627,7 +1706,7 @@ h6 {
    Recommendations Grid
    =========================================== */
 .recommendations-container {
-  max-width: 72rem;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
 
@@ -1823,7 +1902,7 @@ h6 {
    Stats Page
    =========================================== */
 .stats-page {
-  max-width: 72rem;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
 
@@ -2609,7 +2688,8 @@ h6 {
   .about-intro,
   .about-now,
   .about-split,
-  .about-contact,
+  .about-career,
+  .about-elsewhere,
   .about-work-grid {
     grid-template-columns: 1fr;
   }
@@ -2689,5 +2769,31 @@ h6 {
 @media (max-width: 480px) {
   .about-now-list {
     grid-template-columns: 1fr;
+  }
+
+  .about-career-list li {
+    gap: 0.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .about-link-list a {
+    gap: 0.2rem 0.75rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .about-link-list span:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .about-link-list strong {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .about-link-list span:last-child {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1 / span 2;
   }
 }
