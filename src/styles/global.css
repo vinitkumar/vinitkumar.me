@@ -1083,39 +1083,94 @@ h6 {
   max-width: 72rem;
 }
 
-.about-hero {
-  align-items: end;
+.about-intro {
   border-bottom: 1px solid var(--gray-line);
   display: grid;
-  gap: 2rem;
-  grid-template-columns: minmax(0, 1fr) auto;
-  margin: 1.5rem 0;
-  padding-bottom: 1.5rem;
+  grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 1.08fr);
+  grid-template-areas:
+    "heading portrait"
+    "prose portrait";
+  column-gap: clamp(2rem, 6vw, 6rem);
+  margin: clamp(2rem, 6vw, 5.5rem) 0 3rem;
+  padding-bottom: clamp(3rem, 6vw, 5.5rem);
 }
 
-.about-hero-copy {
-  max-width: 58rem;
+.about-intro-heading {
+  align-self: end;
+  grid-area: heading;
+  margin-bottom: clamp(2.5rem, 7vw, 6rem);
 }
 
-.about-hero h1 {
-  font-size: clamp(2.1rem, 5vw, 4.6rem);
-  line-height: 1.04;
-  margin-bottom: 1rem;
-  max-width: 17ch;
+.about-intro h1 {
+  font-size: clamp(4.75rem, 11vw, 9.5rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.78;
+  margin: 0 0 1.4rem;
 }
 
-.about-hero p:not(.eyebrow) {
+.about-intro-heading > p {
   color: var(--text-muted);
-  font-size: 1.12rem;
-  max-width: 48rem;
+  font-size: clamp(1.35rem, 2.5vw, 2.15rem);
+  line-height: 1.12;
+  margin: 0;
+  max-width: 18ch;
 }
 
-.about-avatar {
-  aspect-ratio: 1;
-  border: 1px solid var(--gray-line);
-  border-radius: 50%;
+.about-portrait {
+  grid-area: portrait;
   margin: 0;
-  width: clamp(8rem, 14vw, 12rem);
+}
+
+.about-portrait-frame {
+  background: #d6ef3f;
+  border-radius: 1.35rem;
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-portrait-frame::after {
+  background: #d6ef3f;
+  content: "";
+  inset: 0;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  position: absolute;
+}
+
+.about-portrait img {
+  aspect-ratio: 4 / 5;
+  filter: grayscale(1) contrast(1.12);
+  margin: 0;
+  object-fit: cover;
+  object-position: 50% 37%;
+  width: 100%;
+}
+
+.about-portrait figcaption {
+  color: var(--text-muted);
+  font-family: var(--font-family-code);
+  font-size: 0.74rem;
+  letter-spacing: 0.01em;
+  margin-top: 0.65rem;
+}
+
+.about-intro-prose {
+  align-self: end;
+  grid-area: prose;
+}
+
+.about-intro-prose p {
+  color: var(--text-muted);
+  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  max-width: 38rem;
+}
+
+.about-intro-prose p:last-child {
+  margin-bottom: 0;
 }
 
 .about-metrics {
@@ -1174,7 +1229,7 @@ h6 {
 
 .about-section a,
 .about-contact a,
-.about-hero a {
+.about-intro a {
   border-bottom: 1px solid
     color-mix(in srgb, var(--link-color) 45%, transparent);
   color: var(--link-color);
@@ -2569,7 +2624,7 @@ h6 {
     grid-template-columns: 1fr;
   }
 
-  .about-hero,
+  .about-intro,
   .about-now,
   .about-split,
   .about-contact,
@@ -2577,12 +2632,20 @@ h6 {
     grid-template-columns: 1fr;
   }
 
-  .about-hero {
-    align-items: start;
+  .about-intro {
+    grid-template-areas:
+      "heading"
+      "portrait"
+      "prose";
+    margin-top: 3rem;
   }
 
-  .about-avatar {
-    width: 8rem;
+  .about-intro-heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-portrait {
+    margin-bottom: 2.5rem;
   }
 
   .about-metrics,
@@ -2635,5 +2698,11 @@ h6 {
 
   .nav-separator {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-now-list {
+    grid-template-columns: 1fr;
   }
 }

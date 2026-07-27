@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import portrait from "../../content/assets/vinit_kumar.jpg"
 
 const startDate = new Date("2013-02-01")
 
@@ -109,15 +110,33 @@ const AboutIndex = (props) => {
   return (
     <Layout location={props.location} title={title}>
       <div className="about-page">
-        <header className="about-hero">
-          <div className="about-hero-copy">
-            <p className="eyebrow">About Vinit Kumar</p>
-            <h1>
-              I build reliable systems, maintain open source, and write about
-              the craft of staying useful as software changes.
-            </h1>
+        <header className="about-intro">
+          <div className="about-intro-heading">
+            <h1>Hello.</h1>
             <p>
-              I am a Principal Engineer at{" "}
+              I’m Vinit. I build software, maintain open source, and write down
+              what I learn.
+            </p>
+          </div>
+
+          <figure className="about-portrait">
+            <div className="about-portrait-frame">
+              <img
+                alt="A black and white portrait of Vinit Kumar"
+                src={portrait}
+              />
+            </div>
+            <figcaption>That’s me. No generated pixels.</figcaption>
+          </figure>
+
+          <div className="about-intro-prose">
+            <p>
+              I’m a programmer who likes code that lasts. I care about the small
+              details, but I care even more about shipping useful software that
+              stays calm in production.
+            </p>
+            <p>
+              I’m a Principal Engineer at{" "}
               <a
                 href="https://scalefusion.com"
                 target="_blank"
@@ -133,17 +152,17 @@ const AboutIndex = (props) => {
               >
                 Django CMS Fellow
               </a>
-              . My work sits where product engineering, open-source maintenance,
-              infrastructure, developer tools, and judgment-heavy AI workflows
-              meet.
+              . My work moves between product engineering, infrastructure,
+              developer tools, and the unglamorous maintenance that keeps a
+              mature open-source project healthy.
+            </p>
+            <p>
+              I’ve been building professionally since February 2013. I still
+              enjoy opening a blank file, understanding a difficult system, and
+              leaving it a little simpler than I found it. This site is where I
+              keep the lessons.
             </p>
           </div>
-
-          <img
-            alt="Vinit Kumar"
-            src="https://github.com/vinitkumar.png"
-            className="about-avatar"
-          />
         </header>
 
         <section className="about-metrics" aria-label="About summary">
