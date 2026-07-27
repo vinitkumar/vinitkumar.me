@@ -1080,42 +1080,79 @@ h6 {
    =========================================== */
 .about-page {
   margin: 0 auto;
-  max-width: 72rem;
+  max-width: var(--max-width);
 }
 
-.about-hero {
-  align-items: end;
+.about-intro {
   border-bottom: 1px solid var(--gray-line);
+  column-gap: clamp(2rem, 4vw, 4rem);
   display: grid;
-  gap: 2rem;
-  grid-template-columns: minmax(0, 1fr) auto;
-  margin: 1.5rem 0;
-  padding-bottom: 1.5rem;
+  grid-template-areas:
+    "heading portrait"
+    "prose portrait";
+  grid-template-columns: minmax(0, 0.92fr) minmax(20rem, 1.08fr);
+  grid-template-rows: auto 1fr;
+  margin: 2.5rem 0;
+  padding-bottom: 3rem;
+  row-gap: 2rem;
 }
 
-.about-hero-copy {
-  max-width: 58rem;
-}
-
-.about-hero h1 {
-  font-size: clamp(2.1rem, 5vw, 4.6rem);
-  line-height: 1.04;
-  margin-bottom: 1rem;
-  max-width: 17ch;
-}
-
-.about-hero p:not(.eyebrow) {
-  color: var(--text-muted);
-  font-size: 1.12rem;
-  max-width: 48rem;
-}
-
-.about-avatar {
-  aspect-ratio: 1;
-  border: 1px solid var(--gray-line);
-  border-radius: 50%;
+.about-intro-heading {
+  align-self: start;
+  grid-area: heading;
   margin: 0;
-  width: clamp(8rem, 14vw, 12rem);
+}
+
+.about-intro h1 {
+  font-size: clamp(4.75rem, 11vw, 9.5rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.78;
+  margin: 0 0 1.4rem;
+}
+
+.about-intro-heading > p {
+  color: var(--text-muted);
+  font-size: clamp(1.35rem, 2.5vw, 2.15rem);
+  line-height: 1.12;
+  margin: 0;
+  max-width: 18ch;
+}
+
+.about-portrait {
+  grid-area: portrait;
+  margin: 0;
+}
+
+.about-portrait-frame {
+  background: var(--gray-100);
+  border-radius: 1.35rem;
+  overflow: hidden;
+}
+
+.about-portrait img {
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+}
+
+.about-intro-prose {
+  align-self: start;
+  grid-area: prose;
+}
+
+.about-intro-prose p {
+  color: var(--text-muted);
+  font-size: clamp(1.05rem, 1.5vw, 1.22rem);
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  max-width: 38rem;
+}
+
+.about-intro-prose p:last-child {
+  margin-bottom: 0;
 }
 
 .about-metrics {
@@ -1157,15 +1194,13 @@ h6 {
   padding-bottom: 1.5rem;
 }
 
-.about-section h2,
-.about-contact h2 {
+.about-section h2 {
   font-size: clamp(1.45rem, 3vw, 2.35rem);
   line-height: 1.12;
   margin-bottom: 0.75rem;
 }
 
-.about-section p,
-.about-contact p {
+.about-section p {
   color: var(--text-muted);
   font-size: 1.05rem;
   margin-bottom: 0.75rem;
@@ -1173,8 +1208,7 @@ h6 {
 }
 
 .about-section a,
-.about-contact a,
-.about-hero a {
+.about-intro a {
   border-bottom: 1px solid
     color-mix(in srgb, var(--link-color) 45%, transparent);
   color: var(--link-color);
@@ -1182,7 +1216,8 @@ h6 {
 
 .about-now,
 .about-split,
-.about-contact {
+.about-career,
+.about-elsewhere {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: minmax(14rem, 0.45fr) minmax(0, 1fr);
@@ -1216,6 +1251,62 @@ h6 {
 .about-principles {
   display: grid;
   gap: 0.75rem;
+}
+
+.about-career {
+  grid-template-columns: minmax(14rem, 0.55fr) minmax(0, 1fr);
+}
+
+.about-career-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-career-list li {
+  align-items: baseline;
+  border-bottom: 1px solid var(--gray-line);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  padding: 0.75rem 0;
+}
+
+.about-career-list li:first-child {
+  padding-top: 0;
+}
+
+.about-career-position {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.65rem;
+}
+
+.about-career-position strong {
+  color: var(--text);
+}
+
+.about-career-position span,
+.about-career-period {
+  color: var(--text-muted);
+}
+
+.about-career-position a {
+  color: var(--text);
+}
+
+.about-career-period {
+  font-family: var(--font-family-code);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.about-career-education {
+  border-left: 2px solid var(--gray-line);
+  font-size: 0.92rem !important;
+  margin: 1rem 0 0 !important;
+  padding-left: 0.75rem;
 }
 
 .about-work-grid {
@@ -1253,13 +1344,38 @@ h6 {
   margin: 0;
 }
 
-.about-contact {
-  align-items: start;
-  background: var(--gray-bg);
-  border: 1px solid var(--gray-line);
-  border-radius: var(--radius-small);
-  margin-top: 1.5rem;
-  padding: 1.25rem;
+.about-link-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.about-link-list li {
+  margin: 0;
+}
+
+.about-link-list a {
+  align-items: baseline;
+  border-bottom: 1px solid var(--gray-line);
+  color: var(--text);
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 6rem minmax(0, 1fr) auto;
+  padding: 0.65rem 0;
+  text-decoration: none;
+}
+
+.about-link-list a:hover {
+  border-color: var(--link-color);
+}
+
+.about-link-list span:first-child {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.about-link-list strong {
+  overflow-wrap: anywhere;
 }
 
 /* ===========================================
@@ -1590,7 +1706,7 @@ h6 {
    Recommendations Grid
    =========================================== */
 .recommendations-container {
-  max-width: 72rem;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
 
@@ -1786,7 +1902,7 @@ h6 {
    Stats Page
    =========================================== */
 .stats-page {
-  max-width: 72rem;
+  max-width: var(--max-width);
   margin: 0 auto;
 }
 
@@ -2569,20 +2685,32 @@ h6 {
     grid-template-columns: 1fr;
   }
 
-  .about-hero,
+  .about-intro,
   .about-now,
   .about-split,
-  .about-contact,
+  .about-career,
+  .about-elsewhere,
   .about-work-grid {
     grid-template-columns: 1fr;
   }
 
-  .about-hero {
-    align-items: start;
+  .about-intro {
+    grid-template-areas:
+      "heading"
+      "portrait"
+      "prose";
+    grid-template-rows: auto;
+    margin: 2rem 0;
+    padding-bottom: 2.5rem;
+    row-gap: 2rem;
   }
 
-  .about-avatar {
-    width: 8rem;
+  .about-intro-heading {
+    margin: 0;
+  }
+
+  .about-portrait {
+    margin: 0;
   }
 
   .about-metrics,
@@ -2635,5 +2763,37 @@ h6 {
 
   .nav-separator {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-now-list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-career-list li {
+    gap: 0.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .about-link-list a {
+    gap: 0.2rem 0.75rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .about-link-list span:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .about-link-list strong {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .about-link-list span:last-child {
+    align-self: center;
+    grid-column: 2;
+    grid-row: 1 / span 2;
   }
 }
