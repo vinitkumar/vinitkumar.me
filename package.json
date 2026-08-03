@@ -8,7 +8,6 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@deckdeckgo/highlight-code": "^4.4.0",
     "@vercel/analytics": "^1.6.1",
     "cookie": "^1.1.1",
     "gatsby": "^5.16.1",
@@ -22,7 +21,6 @@
     "gatsby-plugin-twitter": "^5.16.0",
     "gatsby-plugin-typography": "^5.16.0",
     "gatsby-remark-copy-linked-files": "^6.16.0",
-    "gatsby-remark-highlight-code": "^3.3.0",
     "gatsby-remark-images": "^7.16.0",
     "gatsby-remark-prismjs": "^7.16.0",
     "gatsby-remark-responsive-iframe": "^6.16.0",

@@ -1,0 +1,98 @@
+/* Base16 Bright by Chris Kempson, applied to Prism's generated token classes. */
+.gatsby-highlight {
+  --base16-bright-00: #000000;
+  --base16-bright-01: #303030;
+  --base16-bright-03: #b0b0b0;
+  --base16-bright-05: #e0e0e0;
+  --base16-bright-08: #fb0120;
+  --base16-bright-09: #fc6d24;
+  --base16-bright-0a: #fda331;
+  --base16-bright-0b: #a1c659;
+  --base16-bright-0c: #76c7b7;
+  --base16-bright-0d: #6fb3d2;
+  --base16-bright-0e: #d381c3;
+  --base16-bright-0f: #be643c;
+  background: var(--base16-bright-00);
+  border: 1px solid var(--base16-bright-01);
+  color: var(--base16-bright-05);
+  text-shadow: none;
+}
+
+.gatsby-highlight :where(code[class*="language-"], pre[class*="language-"]) {
+  color: var(--base16-bright-05);
+  text-shadow: none;
+  tab-size: 2;
+  hyphens: none;
+}
+
+.gatsby-highlight .token.comment,
+.gatsby-highlight .token.prolog,
+.gatsby-highlight .token.doctype,
+.gatsby-highlight .token.cdata {
+  color: var(--base16-bright-03);
+}
+
+.gatsby-highlight .token.punctuation {
+  color: var(--base16-bright-05);
+}
+
+.gatsby-highlight .token.property,
+.gatsby-highlight .token.tag,
+.gatsby-highlight .token.symbol,
+.gatsby-highlight .token.deleted {
+  color: var(--base16-bright-08);
+}
+
+.gatsby-highlight .token.boolean,
+.gatsby-highlight .token.number,
+.gatsby-highlight .token.constant {
+  color: var(--base16-bright-09);
+}
+
+.gatsby-highlight .token.class-name {
+  color: var(--base16-bright-0a);
+}
+
+.gatsby-highlight .token.selector,
+.gatsby-highlight .token.attr-name,
+.gatsby-highlight .token.string,
+.gatsby-highlight .token.char,
+.gatsby-highlight .token.builtin,
+.gatsby-highlight .token.inserted {
+  color: var(--base16-bright-0b);
+}
+
+.gatsby-highlight .token.operator,
+.gatsby-highlight .token.entity,
+.gatsby-highlight .token.url,
+.gatsby-highlight .token.regex {
+  color: var(--base16-bright-0c);
+}
+
+.gatsby-highlight .token.function {
+  color: var(--base16-bright-0d);
+}
+
+.gatsby-highlight .token.atrule,
+.gatsby-highlight .token.attr-value,
+.gatsby-highlight .token.keyword {
+  color: var(--base16-bright-0e);
+}
+
+.gatsby-highlight .token.variable,
+.gatsby-highlight .token.important {
+  color: var(--base16-bright-0f);
+}
+
+.gatsby-highlight .token.bold,
+.gatsby-highlight .token.important {
+  font-weight: 700;
+}
+
+.gatsby-highlight .token.italic {
+  font-style: italic;
+}
+
+.gatsby-highlight .token.entity {
+  cursor: help;
+}

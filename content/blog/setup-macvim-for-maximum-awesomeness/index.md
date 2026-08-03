@@ -14,7 +14,9 @@ following guide is only for macs. Sorry GVIM users!
 Here is the latest screenshot of my macvim:![Macvim](/public/img/Vim. png) As you can see, it has a nice Filebrowser that is way more clean and
 intuitive than NERDTree. ## installation First and foremost down this build of Macvim from alloy's fork:
 [Macvim](https://github.com/alloy/macvim/releases/download/snapshot-71/MacVim-71-20130920.zip)
-Unzip it and then put the `Macvim. app` into your `applications`. Follow these instructions to have the same in your Mac. First of all do this: ```sh
+Unzip it and then put the `Macvim. app` into your `applications`. Follow these instructions to have the same in your Mac. First of all do this:
+
+```sh
 Git clone Git@GitHub. com: vinitkumar/.Vim. Git
 git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 cd. Vim

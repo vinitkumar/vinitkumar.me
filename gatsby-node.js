@@ -196,6 +196,96 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 const trimSlash = value => value.replace(/\/$/, "")
 
+const inspectCodeFences = markdown => {
+  const issues = []
+  let openFence = null
+
+  markdown.split(`\n`).forEach((line, index) => {
+    if (openFence) {
+      const possibleFence = line
+        .replace(/^\s{0,3}/, ``)
+        .match(/^(`+|~+)/)?.[1]
+
+      if (
+        possibleFence &&
+        possibleFence[0] === openFence.marker &&
+        possibleFence.length >= openFence.length
+      ) {
+        const validClosingFence = new RegExp(
+          `^${openFence.marker}{${openFence.length},}\\s*$`
+        )
+
+        if (validClosingFence.test(line.replace(/^\s{0,3}/, ``))) {
+          openFence = null
+        } else {
+          issues.push(index + 1)
+        }
+      }
+      return
+    }
+
+    const openingFence = line.match(
+      /^\s{0,3}(`{3,}|~{3,})(?:[A-Za-z0-9_+.#-]+)?(?:\{[^}\n]*\})*\s*$/
+    )
+    if (openingFence) {
+      openFence = {
+        marker: openingFence[1][0],
+        length: openingFence[1].length,
+        line: index + 1,
+      }
+    } else if (line.includes(`\`\`\``) || line.includes(`~~~`)) {
+      issues.push(index + 1)
+    }
+  })
+
+  if (openFence) issues.push(openFence.line)
+
+  return issues
+}
+
+const verifyCodeBlockRendering = (publicDir, posts, reporter) => {
+  const fenceIssues = posts.flatMap(post =>
+    inspectCodeFences(post.rawMarkdownBody).map(
+      line => `${post.fields.slug} (Markdown line ${line})`
+    )
+  )
+  const codePosts = posts.filter(post =>
+    /^\s{0,3}(?:`{3,}|~{3,})[^\n]*$/m.test(post.rawMarkdownBody)
+  )
+  const invalidPosts = codePosts.filter(post => {
+    const htmlPath = path.join(
+      publicDir,
+      trimSlash(post.fields.slug).replace(/^\//, ""),
+      `index.html`
+    )
+    const html = fs.readFileSync(htmlPath, `utf8`)
+
+    return (
+      html.includes(`<deckgo-highlight-code`) ||
+      !html.includes(`<div class="gatsby-highlight"`) ||
+      !html.includes(`<pre class="language-`) ||
+      !html.includes(`<code class="language-`)
+    )
+  })
+
+  if (fenceIssues.length > 0 || invalidPosts.length > 0) {
+    reporter.panicOnBuild(
+      [
+        fenceIssues.length > 0
+          ? `Malformed code fences: ${fenceIssues.join(", ")}`
+          : null,
+        invalidPosts.length > 0
+          ? `Invalid rendered code blocks: ${invalidPosts
+              .map(post => post.fields.slug)
+              .join(", ")}`
+          : null,
+      ]
+        .filter(Boolean)
+        .join(`. `)
+    )
+  }
+}
+
 const markdownForPost = (siteUrl, post) => {
   const canonicalPath = post.frontmatter.canonicalPath || post.fields.slug
   const url = `${siteUrl}${canonicalPath}`
@@ -351,4 +441,5 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
   ].join(`\n`)
 
   fs.writeFileSync(path.join(publicDir, `llms-full.txt`), llmsFull)
+  verifyCodeBlockRendering(publicDir, posts, reporter)
 }

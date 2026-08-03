@@ -461,9 +461,8 @@ samp {
   font-size: 14px;
 }
 
-code,
-pre {
-  white-space: pre-wrap;
+code {
+  white-space: break-spaces;
   padding: 0.15em 0.3em;
 }
 
@@ -488,24 +487,35 @@ pre {
   margin: 1.5rem 0;
 }
 
-deckgo-highlight-code,
 .gatsby-highlight {
   display: block;
   margin: 1.5rem 0;
 }
 
-deckgo-highlight-code {
-  --deckgo-highlight-code-carbon-header-font-family: var(--font-family-code);
-  --deckgo-highlight-code-ubuntu-header-font-family: var(--font-family-code);
-  font-family: var(--font-family-code);
+.gatsby-highlight {
+  border-radius: var(--radius-small);
+  max-width: 100%;
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
 }
 
-deckgo-highlight-code [slot="code"],
-.gatsby-highlight pre,
-.gatsby-highlight code,
-pre[class*="language-"],
-code[class*="language-"] {
-  font-family: var(--font-family-code) !important;
+.gatsby-highlight pre[class*="language-"] {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  min-width: 100%;
+  overflow: visible;
+  width: max-content;
+}
+
+.gatsby-highlight code[class*="language-"] {
+  display: block;
+  font-family: var(--font-family-code);
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 pre code {
@@ -513,6 +523,7 @@ pre code {
   border: none;
   padding: 0;
   font-size: inherit;
+  white-space: inherit;
 }
 
 pre + h1,
@@ -520,11 +531,6 @@ pre + h2,
 pre + h3,
 pre + h4,
 pre + h5,
-deckgo-highlight-code + h1,
-deckgo-highlight-code + h2,
-deckgo-highlight-code + h3,
-deckgo-highlight-code + h4,
-deckgo-highlight-code + h5,
 .gatsby-highlight + h1,
 .gatsby-highlight + h2,
 .gatsby-highlight + h3,
@@ -813,6 +819,8 @@ h6 {
 .post-shell {
   margin-top: 1.5rem;
   max-width: 48rem;
+  min-width: 0;
+  width: 100%;
 }
 
 .post-shell.starikov-post-accent {
@@ -886,6 +894,7 @@ h6 {
   font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.125rem);
   line-height: 1.72;
   max-width: 65ch;
+  min-width: 0;
 }
 
 .post-content :where(p, li, blockquote) {

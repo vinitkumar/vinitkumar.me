@@ -13,5 +13,7 @@ name, album URL and access-token and you are good to go.
 It is also available to everyone on pypi, In order to install just do:
 ```
 pip install cmsplugin-fbalbum
-``` It is under heavy development and still in beta, but can be used. Any sort of contribution is welcome. [googlecl](https://GitHub. com/vinitcool76/googlecl): It is another dear project of mine, it was previously being developed by Google Engineer, Tom. H.Miller. Since he is quite busy nowadays and could not contribute actively, I have decided to maintain this project on GitHub and add features/bugfixes and refactoring. I am happy to have these two projects in progress and will open source
+```
+
+It is under heavy development and still in beta, but can be used. Any sort of contribution is welcome. [googlecl](https://GitHub. com/vinitcool76/googlecl): It is another dear project of mine, it was previously being developed by Google Engineer, Tom. H.Miller. Since he is quite busy nowadays and could not contribute actively, I have decided to maintain this project on GitHub and add features/bugfixes and refactoring. I am happy to have these two projects in progress and will open source
 more of my stuff in future. Though I regret not blogging that often these days.

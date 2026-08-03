@@ -89,10 +89,13 @@ module.exports = {
         gfm: true,
         plugins: [
           {
-            resolve: `gatsby-remark-highlight-code`,
+            resolve: `gatsby-remark-prismjs`,
             options: {
-              terminal: "carbon",
-              theme: "blackboard",
+              aliases: {
+                cron: `bash`,
+                diagram: `text`,
+                zsh: `bash`,
+              },
             },
           },
           {
@@ -107,7 +110,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          // `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
