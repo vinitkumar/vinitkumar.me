@@ -84,7 +84,7 @@
     "postcss": "^8.5.22",
     "qs": "^6.15.2",
     "serialize-javascript": "^7.0.5",
-    "socket.io-parser": "^4.2.6",
+    "socket.io-parser": "^4.2.7",
     "svgo": "^2.8.1",
     "tar-fs": "^3.1.1",
     "tmp": "^0.2.7",
