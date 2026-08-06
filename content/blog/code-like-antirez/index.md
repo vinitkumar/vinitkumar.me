@@ -1,125 +1,93 @@
 ---
-title: "Redis Creator's Code Philosophy: 10 Programming Principles from Antirez"
+title: "What Antirez Taught Me About Writing Understandable Code"
 date: "2025-05-09"
-description: "Coding tips from blogs of Antirez, the creator of Redis. Learn how to improve your coding following his principles"
+description: "Ten practical lessons on comments, data structures, simplicity, and code clarity drawn from antirez's essays and open source work."
 featured: true
 ---
 
-Antirez is one programmer I respect a lot. He has a singular approach and style of programming that is both effective and efficient. I have been following him and his blogs for over an decade and its amazing how much you can learn watching him work. He is recently very active on 📺 [Youtube](https://www.youtube.com/@antirez) and I would highly recommend watching him code and explain.
+Salvatore Sanfilippo, better known as antirez, writes code with unusual clarity. I have followed his work for more than a decade, from Redis and its supporting data structures to smaller projects such as the Kilo editor. His code rewards reading because the implementation and the explanation reinforce each other.
 
+He also publishes thoughtful essays and coding sessions on [YouTube](https://www.youtube.com/@antirez). The lessons below draw primarily from his essay [“Writing system software: code comments”](https://antirez.com/news/124) and from reading the [Redis source](https://github.com/redis/redis).
 
-This tips are compiled from this blogs and his code on Github.
+![Salvatore Sanfilippo, known as antirez](../../assets/antirez.png)
 
-![antirez](../../assets/antirez.png)
+## 1. Give every comment a job
 
-## 🧠 Write Code Like Salvatore Sanfilippo (antirez)
+Sanfilippo describes nine kinds of comments: function, design, why, teacher, guide, checklist, trivial, debt, and backup. The first six help readers; the final three often reveal clutter or unfinished code.
 
-- Drawn from Salvatore Sanfilippo's [blog post on comments](https://antirez.com/news/124) and the [Redis source code](https://github.com/redis/redis).
-- Each tip includes concrete actions and examples for you to follow.
+Before keeping a comment, ask what job it performs. If it merely repeats the next line, remove it. If it preserves reasoning that the code cannot express, make it precise.
 
+## 2. Explain the design where readers need it
 
-## 1. Write Comments with a Purpose Class – Not a Reflex
+A nontrivial file often benefits from a short design comment near the top. Explain how the component works, which constraints shaped it, and why this approach won over plausible alternatives.
 
-Sanfilippo categorizes comments into nine types:
+The goal is not a fixed line count or a miniature specification. It is to give readers the model they need before they encounter the details.
 
-- ✅ Function
-- ✅ Design
-- ✅ Why
-- ✅ Teacher
-- ✅ Guide
-- ✅ Checklist
-- ❌ Trivial
-- ❌ Debt
-- ❌ Backup
+## 3. Preserve hidden reasoning
 
-**✅ Action →** Before committing code, mentally label every new comment. Keep it only if it fits in the first six.
+A conditional, ordering constraint, or constant may look arbitrary even when it protects a protocol rule or performance property. A good “why” comment records that invisible constraint.
 
+Write the comment when a future maintainer could simplify apparently awkward code and accidentally reintroduce the bug it prevents.
 
-## 2. Put a Design Comment at the Top of Every Non-Trivial File
+## 4. Use guide comments as signposts
 
-He often opens a file with a short essay on **how** the piece works and **why** the chosen algorithm won.
+Long functions sometimes contain several coherent phases that do not deserve separate functions. Short guide comments can mark those phases and make the control flow easier to scan.
 
-**✅ Action →** Start new modules with a 10–20 line *"README-inside-the-file"* explaining the approach and discarded alternatives.
+Use them to reveal structure, not to narrate every statement.
 
+## 5. Show state that is hard to reconstruct
 
-## 3. Use "Why Comments" to Freeze Hidden Reasoning
+Code involving stacks, parsers, buffers, or compact encodings can force readers to simulate several transformations in their heads. A compact annotation showing the state after each important change reduces that burden.
 
-Lines that seem obvious in a diff often hide performance traps or protocol quirks. He documents those explicitly.
+The best comment saves the reader from doing error-prone mental execution.
 
-**✅ Action →** Anytime you touch a conditional or a magic constant, ask: *"Will future-me remember why?"* If not, write a Why comment.
+## 6. Keep the build and dependency surface small
 
+[Kilo](https://github.com/antirez/kilo) demonstrates how much a compact codebase can teach. Redis likewise keeps a straightforward build despite its sophistication.
 
-## 4. Lower Cognitive Load with Guide Comments and Vertical Rhythm
+A small surface is not a rule against dependencies. It is a demand that every dependency and build step earn its cost in capability, maintenance, and understanding.
 
-Redis files often have simple headers like:
+## 7. Treat code as rewriting
 
-```c
-/* Free the query buffer */
-```
+Clear code rarely arrives in its final form. The first implementation teaches you the shape of the problem; the next pass lets you express that shape more directly.
 
-These serve as section dividers to help skimming.
+Budget time to rename, reorder, remove, and simplify after the behavior works.
 
-**✅ Action →** When a function exceeds ~40 lines, break it into visual blocks using one-line `Guide` comments.
+## 8. Make functions tell the story
 
+Names such as `raxSeekGreatest` and `clientHasPendingReplies` communicate an action and a subject. Small, focused functions then let those names form a readable sequence.
 
-## 5. Annotate Dynamic State *In Situ*
+Do not chase an arbitrary line limit. Split a function when doing so creates a meaningful abstraction or makes its control flow easier to understand.
 
-In Redis Lua helpers, he prints the Lua stack after every mutation—so readers never reconstruct it mentally.
+## 9. Let data structures shape the design
 
-**✅ Action →** For code that mutates state (stack, buffer, etc.), add live commentary after each transformation.
+Projects such as [SDS](https://github.com/redis/redis/blob/unstable/src/sds.c) and [Rax](https://github.com/antirez/rax) show the leverage of choosing—or building—the right representation.
 
-## 6. Keep the File/Build Surface Tiny
+Before adding layers of control flow, sketch the data and its operations. A representation that matches the problem can remove whole categories of special cases.
 
-[Kilo](https://github.com/antirez/kilo), his text editor, is <1000 LOC. Redis builds with one `make`. He avoids unnecessary complexity.
+## 10. Use explanation as a test
 
-**✅ Action →**
-- Favor plain C/C++ (or Go/Rust) and the standard library unless a third-party dependency buys *a lot*.
-- Resist new build steps. If one is needed, explain it in the Design comment.
+Writing a design or “why” comment forces you to state what you believe the code does. If the explanation becomes vague, defensive, or surprisingly long, the design may still need work.
 
-## 7. Model First, Code Later – "Code is Rewriting"
+Comments are therefore not only documentation. They are an instrument for thinking.
 
-He compares coding to rewriting paragraphs in a novel—iterate until it reads well.
+## A practical review loop
 
-**✅ Action →** For greenfield components, plan to rewrite the first version at least once before merging.
+When reviewing a module:
 
-## 8. Short, Single-Purpose Functions with CamelCase Names
+1. Write down its purpose and governing constraints.
+2. Read each function as part of the module's story.
+3. Remove comments that translate syntax into English.
+4. Add context where the reasoning would otherwise disappear.
+5. Simplify code that needs an apology instead of an explanation.
 
-Redis helpers like `raxSeekGreatest` or `clientHasPendingReplies` are clear, action-oriented, and do one thing.
+The larger lesson is not to imitate the surface style of Redis. It is to respect the reader. Good code exposes its structure, good comments preserve its reasoning, and good design reduces how much of either we need.
 
-**✅ Action →**
-- Keep functions <100 LOC; if it grows, split it.
-- Use `UpperCamelCase` for functions and `lowerCamelCase` for variables.
+## Further reading
 
-## 9. Prefer Data-Structure-Driven Design
-
-He crafts his own arrays ([SDS](https://github.com/redis/redis/blob/unstable/src/sds.c)), radix trees ([Rax](https://github.com/antirez/rax)), and vectors instead of using generic containers.
-
-**✅ Action →**
-- Sketch your data structure on paper.
-- If generic containers hide too much logic or performance, implement a slim, focused version and document it.
-
-## 10. Use Comments as an Analysis Tool
-
-He sees comments as a tool for **rubber-duck debugging**—if you can't explain it clearly, it's not ready.
-
-**✅ Action →** Don't commit until you can explain every non-trivial function in 2–3 sentences that feel *obviously true*.
-
-## 🛠️ Putting It into Practice
-
-1. **Start** each file with a **Design comment**.
-2. **Code** small, single-purpose functions; separate logic using **Guide comments**.
-3. **Review** all comments: label them, trim the unnecessary ones, add Why or Teacher comments as needed.
-4. **Refactor** if a comment feels like an apology or excuse—make the code speak for itself.
-5. **Commit** with a message that reflects what changed and *why*, ideally mirroring your Why comments.
-
-> Follow this loop and your codebase will begin to read like Redis:
-> **direct**, **self-narrating**, and friendly to the next engineer—quite possibly *future-you*.
-
-### 📚 Further Reading & Resources
-
-- 📝 [Salvatore's blog post on comments](https://antirez.com/news/124)
-- 🧠 [Redis source code (GitHub)](https://github.com/redis/redis)
-- ✏️ [Rax: A radix tree implementation](https://github.com/antirez/rax)
-- 📃 [SDS (Simple Dynamic Strings) in Redis](https://github.com/redis/redis/blob/unstable/src/sds.c)
-- 💡 [Kilo — 1K LOC text editor](https://github.com/antirez/kilo)
-- 📺 [Youtube Channel](https://www.youtube.com/@antirez)
+- [Writing system software: code comments](https://antirez.com/news/124)
+- [Redis source code](https://github.com/redis/redis)
+- [Rax: a radix tree implementation](https://github.com/antirez/rax)
+- [SDS: Simple Dynamic Strings](https://github.com/redis/redis/blob/unstable/src/sds.c)
+- [Kilo: a small text editor](https://github.com/antirez/kilo)
+- [Antirez on YouTube](https://www.youtube.com/@antirez)

@@ -1,69 +1,70 @@
 ---
-title: "Influential Programmers: A Personal Tribute to 10 Open Source Leaders"
+title: "Ten Programmers Who Shaped How I Think About Software"
 date: "2020-01-23"
 featured: true
-description: "A personal tribute to influential programmers who have shaped my career and coding philosophy. From CURL creator Daniel Stenberg to Python's Guido Van Rossum, these talented developers demonstrate excellence in their craft while inspiring others."
+description: "A personal tribute to ten open source programmers whose code, teaching, and values have influenced my career."
 ---
 
-Everyone has their heroes. Even programmers have their heroes. This is
-a small list of programming heroes I admire. I don't claim that these are the best, their might be many others but these are the one I know from my limited experience. So takes this list with a grain of salt.
+Programmers have heroes too. Mine are people whose code, teaching, and public work changed how I think about the craft.
 
-## Heroes
+This is a personal list, not a ranking. It reflects the people I encountered during my own path through Python, JavaScript, C, systems programming, and open source.
 
-- [Daniel Stenberg (C)](https://twitter.com/bagder)
+## Daniel Stenberg
 
-Daniel is the lead developer and creator of the CURL project. If you deal with any web-services either as a developer or end-user, you have used his code. He also livestreams some of his coding sessions on stream and they are informative and fun to watch.
+[Daniel Stenberg](https://twitter.com/bagder) created and leads curl, software that quietly powers an enormous part of the networked world. His command of C, networking, HTTP, and long-term maintenance is remarkable. His livestreams also make difficult engineering work accessible and enjoyable to watch.
 
-Daniel is excellent at Systems programming, Network, http and ofcourse a master "C" developer.
+Daniel demonstrates that foundational software can remain dependable for decades when its maintainers combine technical depth with patient stewardship.
 
-- [Brad FitzPatrick (Go)](https://twitter.com/bradfitz)
+## Brad Fitzpatrick
 
-Brad currently works with ~the Go team~ TailScale. In a previous life, he founded LiveJournal, wrote Memcached and many other free software. He is probably my favorite of the lot and I really like his personality.
+[Brad Fitzpatrick](https://twitter.com/bradfitz) founded LiveJournal, created Memcached, contributed extensively to Go, and later joined Tailscale. Few programmers have built so many tools that became part of other people's infrastructure.
 
-He is one of the most accomplished programmers of the recent generation, and he just keeps on writing code that matters and gives it away for free.
+I admire both the range of his work and his habit of releasing useful software into the world. His public personality also suggests that ambitious engineering and an engaged family life can coexist.
 
-Brad also seems like an excellent dad and family man (from his twitter feed) and it is especially inspiring to me as a new Dad.
+## Salvatore Sanfilippo (antirez)
 
-- [Salvatore Sanfilippo aka antirez (C)](https://twitter.com/antirez)
+[Salvatore Sanfilippo](https://twitter.com/antirez), better known as antirez, created Redis. His C often reads with a clarity that makes sophisticated systems work feel approachable.
 
-Antirez is the lead and creator of popular Open Source database Redis. He is a great programmer and very humble in person. I learned so much from him. Just read this blog post and you will understand what I am talking about http://antirez.com/news/124
+His writing about code, comments, data structures, and work-life balance has taught me as much as the software itself. Redis, [Kilo](https://github.com/antirez/kilo), and [Rax](https://github.com/antirez/rax) all reward close reading.
 
-He writes his code in C "that almost reads like poetry" in Vim. He is very strong in networking, data structures, and algorithms. You can learn more by reading his code and blogs than any other book in the field of system programming. He is also a family man and often advocates having a healthy work-life balance and it is almost inspiring to emulate his journey.
+## Jonathan Blow
 
+[Jonathan Blow](https://twitter.com/Jonathan_Blow) created games including *Braid* and *The Witness* and has spent years developing the Jai programming language. He speaks directly about programming language design, game engines, and the costs of complexity.
 
-- [Jonathan Blow (Jai, The Witness game)](https://twitter.com/Jonathan_Blow)
+I do not agree with every opinion he expresses, but his insistence on thinking from first principles pushes me to examine assumptions I might otherwise accept.
 
-Game developer of great games like "The Witness", he is highly opinionated, charismatic and speaks what's on his mind. He mostly has very good advice about programming and doesn't hesitate to call a spade a spade. In addition to working on this new game, he has also been writing a new programming language called Jai. It's a Systems programming language that compiles fast and aims to replace C++ for writing the game engines. He also regularly live-streams his coding sessions, where he sometimes works on the engine and on the compiler.
+## David Beazley
 
-Listening and reading to him, inspires me to think deeply and work hard on improving my craft.
+[David Beazley](https://twitter.com/dabeaz) is one of the finest Python teachers I have encountered. His courses and talks combine deep language knowledge, curiosity, humor, and a willingness to build difficult ideas from the ground up.
 
-- [David Beazely (Python)](https://twitter.com/dabeaz)
+Because Python has anchored much of my career, his work has had an especially direct influence on me. He makes advanced topics feel like invitations to experiment.
 
-David Beazely is one of the best teachers of Python in the world. He is like this mad Computer Scientist that just keeps on producing great software and resources regularly and every time he surpasses his past standards that are already very high.
+## Raymond Hettinger
 
-I also relate and learn more from him as he is a Python Guru and Python has been the source of most of my income to date. His enthusiasm and spirit towards programming and Python are infectious and I just love watching his talks.
+[Raymond Hettinger](https://twitter.com/raymondh) has contributed to Python for decades and has an exceptional gift for explaining how to write clear, idiomatic code.
 
-- [Raymond hettinger (Python)](https://twitter.com/raymondh)
+His talks reveal not only language features but the design ideas behind them. For self-taught programmers, educators who make that depth freely available are invaluable.
 
-Raymond as been a Python Core Developer for over a decade or more and is a fantastic Python educator. His talks show his deep knowledge of Python and programming in general.
-Plus, he is a fantastic speaker. He is probably one of my favorite speakers in any programming language community. People like him are a gift for people like me who are self-taught
-and can't afford the costly training materials or courses.
+## Bryan Cantrill
 
-- [Bryan Cantrill (C, Dtrace)](https://twitter.com/bcantrill)
+[Bryan Cantrill](https://twitter.com/bcantrill) helped create DTrace and has worked across operating systems, distributed systems, and Rust. His talks pair technical intensity with a vivid sense of computing history.
 
-He is probably one of the most gifted systems programmer. Recently, he has been programming a lot in Rust and his talks are always filled with a lot of useful information.
-I have not done a lot of System Programming in my daily work but it always fancies me, and I am sure going to do more of it in the future.
+Systems programming is not the center of my daily work, but Cantrill's enthusiasm makes me want to understand the layers below my applications.
 
-- [Guido Van Rossum](https://twitter.com/gvanrossum)
+## Guido van Rossum
 
-Guido is simply amazing. His work changed the lives of many people including me. In a world filled with difficult programming languages, he made a simple and powerful programming language
-that was welcoming and gave me the confidence of implementing my ideas into code. He is not just very technically strong, but he is also a very nice person and is doing a lot for diversity and inclusiveness. He also gave up his BDFL status last year and Python is being run by an elected group of people (core devs).
+[Guido van Rossum](https://twitter.com/gvanrossum) created Python, the language that gave me confidence to turn ideas into working software. Python has supported my career and helped me provide for my family; that makes Guido's work personal to me.
 
-Python has been the key point in my life. It has provided me with a respectable job and has enabled me to provide for my family. I will always thank Guido for that.
+I also admire the humane values around the language: readability, approachability, and a community capable of evolving beyond a single leader.
 
-- [Remy Sharp](https://twitter.com/rem)
+## Remy Sharp
 
-Remy is an awesome British programmer and an all-around great guy. He runs his own company and has been one of most influential JavaScript programmers. He writes useful tools and services (like nodemon, jsbin and gives it all for free). His livestreams are also informative and there is a lot you can learn from watching him code and debug. I give him credit for a lot of my JS knowledge. I have been following and learning from him a lot from the start of my professional programming journey since(2012) and remember him using Chrome dev tools as an editor for development. He is also a family man and is a great chap to look up to.
+[Remy Sharp](https://twitter.com/rem) has created practical JavaScript tools such as nodemon and JS Bin while teaching openly through articles, talks, and livestreams.
 
+I learned a great deal about JavaScript and browser development by following his work early in my career. Watching a skilled programmer debug in public is a powerful form of teaching because it exposes the process, not merely the finished answer.
 
+## The people behind the code
 
+What connects these programmers is not a language or a particular style. They build useful things, explain what they learn, and make other programmers more capable.
+
+That is the standard I want to carry into my own work: technical depth without needless obscurity, generosity without performance, and software that continues helping people long after the first release.

@@ -18,7 +18,7 @@ Recently, I needed to combine multiple PDF files into a single document. Like ma
 Then I discovered something interesting - macOS actually has a built-in PDF joining utility! It's located at:
 
 
-`/System/Library/Automator/Combine PDF Pages.action/Contents/MacOS/join`. What my utility does is that it adds a nice interface on top of it and you can just it like this:
+`/System/Library/Automator/Combine PDF Pages.action/Contents/MacOS/join`. What my utility does is that it adds a nice interface on top of it and you can use it like this:
 
 
 ## Source Code
@@ -27,7 +27,7 @@ You can browse the source code here: https://github.com/vinitkumar/pdf-joiner
 
 ## Installation
 
-You can install it directly from Github Release be following the above steps. This assumes you have wget installed
+You can install it directly from GitHub Releases by following the above steps. This assumes you have wget installed
 on your local machine, if not please run `brew install wget`
 
 ```

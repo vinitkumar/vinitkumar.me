@@ -1,21 +1,22 @@
 ---
-title: 2024 in Review
+title: "2024 in Review"
 date: "2025-01-11"
 featured: true
-description: "Just refecting on how 2024 was for me and what changes I brought in my life"
+description: "A year of family milestones, a first career move, renewed technical ambition, and a clearer sense of what needs to change."
 ---
 
-2024 was one of the most interesting years of my life.
+2024 was one of the most eventful years of my life.
 
-Family-wise, it was pretty good, and I got to spend time with family and friends. My kid started Grade 1, and it's so much fun watching him make new friends and have fun with his friends. I also bought a new Guitar and started going to the same Music class my kid goes to for learning Piano. I always had a desire to learn it during college, but I couldn't afford to do that. My wife has a big role in pushing me to pursue my interest in this.
+At home, it was a happy year. My son started Grade 1, and watching him make friends and discover school has been a joy. I bought a guitar and joined the same music school where he learns piano—something I had wanted to do since college but could not afford then. My wife deserves much of the credit for pushing me to pursue that old interest.
 
-I also had the first job change of my career. I worked on my last company for almost 12 years and around September 2024, I was informed that my time there was ending. It was a bittersweet moment since the original company was acquired 2 years ago, and the new work was not as fun. I quickly found a great company based in Pune and I am happy to say that I get to do cutting-edge work every day and I am treated very well by my colleagues and the management. Also, after a very long time, I get to work on some pretty challenging stuff and my neurons are firing again like crazy.
+The year also brought the first job change of my career. I had spent almost twelve years at my previous company when I learned, in September, that my time there was ending. The news was bittersweet. The original company had been acquired two years earlier, and the work no longer felt the same.
 
-My wife and I also made a habit of walking like 5-6km every day after dropping my kid to School and that is one thing I enjoyed the most during the day.
+I soon joined a company in Pune where I now tackle difficult, modern engineering problems and feel respected by both my colleagues and management. After a long stretch without enough technical challenge, I can feel my curiosity returning.
 
-One thing that didn't turn out great was my time management and sleep. I had a horrible year of sleep and I would really like to focus on getting some good sleep and enjoying life more. I also sometimes let the work dictate my mood and well-being a lot and I would really like to just cut this habit out completely. Also, I want to cut Social Media by a significant percentage and use that time to do something productive or at least fun.
-Finance-wise, it was an okay-ish year and I want to do better this year.
+Some of my favorite hours were also the simplest. After dropping our son at school, my wife and I developed a habit of walking five or six kilometers together. That daily ritual gave us movement, conversation, and a steady beginning to the day.
 
-My Goal this year is to just enjoy life a bit more and be happy. I also want to avoid people who don't bring joy to my life and surround myself with family and good friends. I am going to do a tonne of OSS work as that is the kind of work I always love doing. I also want to write more and more every day. I believe I can bring a huge change if I am just reasonably consistent and honest with my pursuits.
+Not everything went well. My sleep was poor, my time management slipped, and I too often allowed work to dictate my mood. I also gave social media more attention than it deserved. These are the habits I most want to change.
 
+My intention for the coming year is not complicated: enjoy life more. I want to protect my sleep, spend time with family and close friends, distance myself from relationships that consistently drain me, and approach work with greater emotional balance.
 
+I also want to contribute substantially to open source and write more often. Both practices make me feel connected to a larger community and help turn scattered effort into something useful. I do not need a dramatic reinvention. Consistency, honesty, and enough room for joy will take me a long way.

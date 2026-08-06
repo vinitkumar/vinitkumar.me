@@ -6,7 +6,7 @@ description: "How did I spent my last year"
 category: articles
 tags: life general
 comments: false
---- 
+---
 
 2013 is easily one of the most amazing year of my life. In January I
 interviewed for my current company and was offered to join them in Feb
@@ -40,12 +40,12 @@ rewrite this app in this month.
 - offline-sync: This again helps you to build HTML5 apps with offline
 sync capability. - cmsplugin-fbalbum: This was my first attempt at writing Django CMS
 plugin. This plugin helps you to use Facebook as your media source and
-image upload service. So you save your valueable money and time.
+image upload service. So you save your valuable money and time.
 - crawler: Rewrote a crawler in Python, that I have written earlier.
 Much cleaner and maintainable.
 - project boilerplate: Nodejs project boilerplate
 - todoapp: Todoapp built with angularjs in the beginning of year. - JSON2XML: A very handy, lightweight and efficient module written in
-in Python to convery JSON data to XML. You can check all of them on my GitHub profile.
+in Python to convert JSON data to XML. You can check all of them on my GitHub profile.
 [@vinitkumar](http://GitHub. com/vinitkumar) During the course of their development, collaborated with a lot of
 people across the globe and made some nice friendship. In everyway this
 year has been a really nice and special one for me and I would thank

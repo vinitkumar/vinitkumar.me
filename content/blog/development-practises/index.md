@@ -20,7 +20,7 @@ The guide is divided into following sections:
 Mastering version control such as Git is very important. Following are some tips and techniques to get better at using Git.
 
 
-- Commit early, commit often. There is no shame in committing code that is work in progress. Infact, early commits help spot design issues very early in the development.
+- Commit early, commit often. There is no shame in committing code that is work in progress. In fact, early commits help spot design issues very early in the development.
 - Make a Draft PR as soon as you have a POC(proof of concept) ready and invite one of your peers to review the code. Early feedback helps spot issues, obvious mistakes and even typos early.
 - Make atomic commits(meaning the code in the commit is doing one thing). Do not add a diff of 20 files doing all different things. It just make things very noisy and makes hard for reviewer to do their job.
 - Avoid doing multiple things and do things in a proper flow.
@@ -54,7 +54,7 @@ Reported-by: team member <teammember@example.com>
 Signed-off-by: Vinit Kumar <mail@vinitkumar.me>
 ```
 
-You this template while commiting like this:
+You this template while committing like this:
 
 Edit your `~/.gitconfig` file
 
@@ -88,12 +88,12 @@ Some ground rules are:
 - Upstream contains only three branches at any time. (develop, staging, master)
 - Anything on upstream develop is releasable to testing/develop server and is testable for the team other than the dev
 themselves.
-- Anything on upstream staging is releasable to staging and is of atleast beta-quality.
+- Anything on upstream staging is releasable to staging and is of at least beta-quality.
 - Anything on master is releasable to production.
 - The default branch of all projects is develop (on upstream). This means all Pull Requests are made to develop.
-- In case any urgent fix(hotfix) needs to be made from staging or master, the branches are made from upstream staging/master and the pull request is made to **master** or **staging** and not to to the develop branch. The fixes are then merged downwards from master -> staging -> develop.
+- In case any urgent fix(hotfix) needs to be made from staging or master, the branches are made from upstream staging/master and the pull request is made to **master** or **staging** and not to the develop branch. The fixes are then merged downwards from master -> staging -> develop.
 - We follow semantic versioning here so vX.Y.Z (X is Major, Y is Minor, Z is Patch version) only.
-- Releases can be created from staging and master. With cleary indicating that if it is a stable release or release candidate.
+- Releases can be created from staging and master. With clearly indicating that if it is a stable release or release candidate.
 - Always keep your develop in sync with the upstream develop repo.
 
 Following are some commands for day to day work:
@@ -123,7 +123,7 @@ git checkout -b feature/get-user-data
 ...
 ...
 # get work done, commit code
-# push the code to your brach
+# push the code to your branch
 git push origin HEAD
 # make pull request to the upstream develop
 

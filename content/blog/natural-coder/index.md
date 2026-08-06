@@ -1,17 +1,18 @@
 ---
-title: Natural Coder
+title: "Coding Naturally Again"
 date: "2025-04-02"
 featured: true
-description: "Returning to coding for enjoyment rather than external validation or pressure. Embracing my natural abilities while avoiding burnout and dopamine-seeking behaviors."
+description: "A return to writing software from curiosity and enjoyment instead of pressure, comparison, or external validation."
 ---
 
+I am at my best when I write software because I enjoy the work.
 
-I am a natural coder. I have always been someone who writes software because I enjoy it. I have over a decade of experience with Python and JavaScript, but I enjoy working with any language or framework and quickly become proficient. However, of late, I have struggled with some aspects, and upon introspection, I realize it boils down to trying to copy others' styles and ways of working rather than honing my natural abilities and doing something for enjoyment rather than for other goals.
+After more than a decade with Python and JavaScript, I know I can learn unfamiliar languages and frameworks. Yet lately, I have made programming harder than it needs to be. I have compared my process with other people's, copied styles that do not suit me, and attached too much importance to proving myself—at a new job, in open source, and to myself.
 
-Goals such as trying to prove myself at a new job or cementing my role as an OSS community leader. The problem with these is that I constantly feel under pressure and am not doing it for fun. This will only lead to burnout.
+That pressure changes the nature of the work. Curiosity becomes performance, and a craft I love starts to feel like a test I can fail. Sustained for long enough, that path leads to burnout.
 
-I just want to be my own cheerleader and a reasonable critic, doing honest work every day. On top of these things, I will focus on activities that I enjoy and only spend a limited amount of time on them so that I crave them more and more.
+I want a simpler relationship with programming: do honest work, stay curious, and judge the result without attacking the person who made it. I can be my own cheerleader and still remain a clear-eyed critic.
 
-I hate the constant feeding frenzy that short-form content has made us addicted to. So, no more constant dopamine-seeking; I want to do it for fun and enjoyment while writing the best possible code with the tools at hand.
+That also means protecting my attention. Short-form content has trained many of us to seek a constant stream of novelty. I do not want that habit shaping how I code. I want to spend focused, limited time on projects I care about, stop while the work still feels alive, and return eager to continue.
 
-That's it. That's the goal. Wish me luck!!
+The goal is simple: enjoy the process, use the best tools available, and write the best code I can without turning every project into a referendum on my worth.

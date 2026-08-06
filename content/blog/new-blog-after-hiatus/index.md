@@ -1,25 +1,23 @@
 ---
-title: "New Blog After a Hiatus"
+title: "Returning After a Hiatus"
 date: "2026-02-24"
 featured: true
-description: "Wrote a blog after a break"
+description: "Why I stepped away from writing, what the break restored, and what I want to write next."
 ---
 
-I have not written a blog in some weeks.
-
-## What Happened
-
-I worked on a big feature at work that took me some months of work and last couple of weeks where we took it live to production. There was an extensive round of testing and that took all my energy and attention.
+I have not published here for several weeks. The pause was unplanned, but necessary.
 
 ## Why I Stepped Away
 
-I realised I was doing a lot of work at work and also on open source and I started feeling a wee-bit exhausted so I thought it was best to take a break and go easy on myself. And, I am glad that I did that. All my experience tells when to step back and go easy on myself.
+A major feature at work demanded months of development, followed by an intense production launch and an extensive round of testing. At the same time, I was maintaining my open source commitments. Together, they consumed more energy and attention than I had available.
 
-## What Changed
+Once I noticed the exhaustion, I decided to stop treating every empty hour as an opportunity to produce more. Experience has taught me that stepping back early is wiser than waiting for burnout to make the decision for me.
 
-Now, as the dust has settled from the deployment, I am going to be more active in my blogs. I am also thinking of writing more general topics and not just mostly tech posts.
+## What the Break Gave Me
 
-I also went on a couple vacations. Here are some picture from the same. Enjoy! :)
+The deployment has settled, and a couple of vacations gave me room to recover. More importantly, the break reminded me that writing should help me notice and understand my life—not become another obligation inside it.
+
+Here are a few photographs from those trips:
 
 ![Vacation photo 1](../../assets/image1.jpg)
 
@@ -33,10 +31,8 @@ I also went on a couple vacations. Here are some picture from the same. Enjoy! :
 
 ![Vacation photo 6](../../assets/IMG_5091.jpg)
 
-## What's Next
+## What Comes Next
 
-I am looking forward to writing more regularly and sharing my thoughts and experiences with all of you.
+I am ready to write again, but I want to widen the lens. Technical essays will remain part of this site; I also want to write more about work, creativity, family, and the lessons that do not fit inside a code block.
 
-## Closing Thoughts
-
-Thank you for sticking with me during the hiatus. I hope you enjoy the content I write going forward.
+Thank you for reading. It is good to be back.
