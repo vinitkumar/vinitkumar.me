@@ -1,35 +1,56 @@
 ---
-title: "Remote Work Success Guide: 7 Years of Practical Experience and Best Practices"
+title: "Seven Lessons from Seven Years of Remote Work"
 date: "2020-03-26"
 featured: true
-description: "The blog offers practical tips for efficiently navigating the challenges of remote work, particularly relevant during the COVID-19 pandemic. The author, drawing from seven years of remote work experience, emphasizes the importance of quality hardware, efficient software usage, and establishing a routine. The blog underscores effective communication practices, urging over-communication to bridge the gap in remote collaboration. It stresses the significance of documentation, testing, and delivering tangible results in a remote work setting. The author also shares insights from Mitchell Hashimoto, highlighting the transformative potential of remote work for those who adapt effectively."
+description: "Practical lessons on equipment, routine, communication, documentation, and boundaries from seven years of remote engineering."
 ---
 
-Covid-19 has forced all Software companies to adopt **Remote Work** for their workforce.
-Anybody who has experience with remote work will tell you that it's not _easy_ to be productive working remotely. I have had the opportunity of working remotely (The company that I work for is the Netherlands based) and I have been working remotely from Pune for a period of more than 7 years. I think this experience gives me some sort of authority to speak on this matter.
+In 2020, COVID-19 forced software companies around the world to adopt remote work almost overnight. Working from home can look easy from the outside, but sustained remote work demands deliberate habits.
 
-The Following are some tips I can give to people who are new to this kind of lifestyle and mode of working:
+By then, I had worked from Pune for a Netherlands-based company for more than seven years. These are the practices that helped me most.
 
-The Following are some tips I can give to people who are new to this kind of lifestyle and mode of working:
+## 1. Start with dependable equipment
 
-- Hardware: The first advice I would give is to invest in good and fast hardware. The companies should give their developers a decently fast machine and also reimburse the Internet connection at the employees' home. Internet Speed on the upwards of (100 Mbps) should be good. It is also important for calls and meetings over the internet to go smoothly. Imagine someone building their docker containers on a shitty 3g connection. They will lose all hope and motivation from their life. Also, invest in yourself. Buy a good monitor/monitors (I feel 24 inches and higher is good and 27 inches is probably the best bet), a good keyboard and gaming mouse (better ergonomics) and a good chair. Believe me, you will be way more productive when you are not wrestling with back and hand pain because of poor ergonomics.
+Companies should provide a capable computer and reimburse a reliable home internet connection. Video calls, container builds, deployments, and large downloads quickly expose weak hardware or an unstable network.
 
-- Software: Use software like (rescuetime, wakatime) to track how much of your time is spent and where it is spent.
+Ergonomics matter just as much. A good monitor, keyboard, mouse, and chair reduce the physical strain of spending an entire workday in one place. You do not need a luxurious office, but you do need a setup that does not fight you.
 
-- Limit the use of Social Media on your phone or just budget that time, so that you can only use like 15 mins of your time daily on Social Media.
+## 2. Learn where your time goes
 
-- Routine: The most important thing to remember while working remotely is to follow a routine. People think that working remotely can get rid of their 9-5 routine and work at their own time. This might be true but not advisable. You need to stick to a routine and work only during those hours so that office work doesn't intrude on your time with family. Try to start your workday as early as possible to do work without interruptions. This also helps if your teammates are in a different time zone than you. Also, if you need to step out of the house, let your team know so that they won't be waiting for a reply from you while you're away.
+Tools such as RescueTime or WakaTime can reveal patterns that intuition misses. The goal is not to account for every minute. It is to notice recurring distractions, unproductive context switching, and the hours when focused work comes most naturally.
 
-- Communication: This is the most important thing to remember while you are working remotely. Be explicit and as verbose as possible. Over-communication is better than no communication while working remotely. If something works, update it. If something doesn't work, make sure you communicate as soon as possible so that team members can help you.
-I also recently started daily update standups every evening (since all our team is remote because of Covid-19) and I could already see things moving better and clearer.
+Social media deserves an explicit budget. Without one, a quick check can quietly fragment the entire day.
 
-- Documentation & Testing: While working remotely, you need to do better work. To do better and more correct work, you need to write good code that is documented properly and works correctly (tests to enforce that). With remote work, the only thing that shows you did something is your work and not just you coming to the office. This also means at the end of the day, you need to have something to show for what you achieved/solved that day. This is very hard. If you are having a bad/anxiety-filled day, let your managers know. It's okay to have a bad day when nothing goes your way. Also, to enable async communication, having good docs with the code is very important. If something can be learned by just reading the docs, then it should be that way.
+## 3. Keep a routine
 
+Remote work removes the commute, not the need for structure. Choose regular working hours and protect both ends of them. A predictable start helps you enter work; a predictable finish keeps work from consuming family time.
 
+Starting early can create a valuable block of uninterrupted focus, especially when teammates work in another time zone. If you need to leave during the day, tell the team when you will return so nobody waits for a reply that cannot come.
 
+## 4. Communicate before silence becomes ambiguity
 
-Also, came across this wonderful list of tips by [Mitchell Hashimoto](https://twitter.com/mitchellh). These tips come from real experience and are very nice.
+Remote colleagues cannot see whether you are concentrating, blocked, or away from your desk. Make the invisible visible.
 
+Share progress, raise blockers early, and confirm decisions in writing. When something works, update the issue. When it fails, explain what you tried and where you need help. Brief daily updates can keep a distributed team aligned without adding another meeting.
+
+## 5. Write for asynchronous work
+
+Good documentation lets a teammate move forward while you sleep. Record the context behind decisions, explain how to run and test the code, and keep project status somewhere the team can find it.
+
+Documentation does not need to be exhaustive. It needs to answer the next person's likely questions without requiring a call.
+
+## 6. Let the work speak clearly
+
+In an office, presence can be mistaken for progress. Remote work makes outcomes more visible. Small commits, tested code, updated issues, and clear handoffs show what changed and why.
+
+That does not mean every day must produce a dramatic result. Some days are spent investigating, recovering from mistakes, or dealing with anxiety. Say so. Honest status is more useful than manufactured activity.
+
+## 7. Protect the boundary
+
+A home office can make work feel permanently unfinished. Shut down the computer, leave the desk, and give the rest of your life a clear beginning. Sustainable remote work depends as much on stopping well as starting well.
+
+Remote work is not office work performed over video calls. It is a different operating model: more written context, more explicit trust, and more responsibility for managing attention. Teams that accept that difference can become calmer and more effective than they were in the office.
+
+I also found this observation from [Mitchell Hashimoto](https://twitter.com/mitchellh) useful:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The force to remote for much of the workforce is going to be very positive but also create a ton of FUD. Lots will "get it" and it'll work for them and they'll be forever changed. Many will realize it isn't as simple as pretending your at-home desk is your in-office desk.</p>&mdash; Mitchell Hashimoto (@mitchellh) <a href="https://twitter.com/mitchellh/status/1237532491285577728?ref_src=twsrc%5Etfw">March 11, 2020</a></blockquote>
-

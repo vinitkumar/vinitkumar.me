@@ -39,4 +39,4 @@ Command-line AI tools offer several advantages:
 
 The future of AI-assisted development isn't about cramming AI into every editor. It's about creating flexible workflows that let developers use AI tools in the way that works best for their individual preferences and development style.
 
-I also could just swap Vim with Pycharm,WebStorm or any other **Proper** IDE and the workflow would still stay the same and modular. This is the most important part of this workflow. Tommorrow, I could just switch the AI assistant to Claude Code and Gemini CLI and nothing would change for me.
+I also could just swap Vim with Pycharm,WebStorm or any other **Proper** IDE and the workflow would still stay the same and modular. This is the most important part of this workflow. Tomorrow, I could just switch the AI assistant to Claude Code and Gemini CLI and nothing would change for me.

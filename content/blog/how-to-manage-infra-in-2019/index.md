@@ -2,8 +2,9 @@
 layout: post
 title: How To Manage Infra in 2019
 date: 2019-04-05 12:49 +0530
+description: "A 2019 perspective on simplifying infrastructure with containers, orchestration, CI, and explicit operational practices."
 tags: tech infra cloud devops
---- 
+---
 
 Infrastructure is one of the most hotly discussed topics in Software development these days. There are so many tools,
 so much to learn that very few people actually know what to do and what the best practices are. Everyone wants

@@ -2,7 +2,15 @@
 date: 2015-08-06
 layout: post
 title: "Why I Write Code"
-description: "My Why"
+description: "The joy of solving difficult problems and the childhood curiosity that became my profession."
 tags: code programming self-improvements
 comments: false
---- I think I was hardly 10 years old when I wrote my first line of code. It was probably some IBM PC and the language was LOGO. It was so much fun. Next, It was GW Basic, then Java and then C/C++/Python. I have been writing code professionally for 5 years now and I still enjoy writing code. I enjoy solving tough problems with code. It gives such a great high when I solve something that seems very difficult at the moment. Last year has been very hectic and I haven't given much time on writing code on things I enjoy personally the most(side projects). Well, I am still figuring out my dreams at the moment but very soon I will have a clear idea of how and what I want to become in future. But there is one thing that is sure, I would change the world for better than how I found it. 
+---
+
+I was about ten years old when I wrote my first line of code. The computer was probably an IBM PC, and the language was Logo. I remember the delight of giving the machine an instruction and watching something happen.
+
+Logo led to GW-BASIC, then Java, C, C++, and Python. By the time I wrote this, I had been programming professionally for five years, and the same feeling still pulled me toward the keyboard.
+
+I write code because I enjoy solving difficult problems. A problem can look impossible at first; then, through patient experiments, the shape of a solution begins to appear. Few experiences match the satisfaction of crossing that gap.
+
+The previous year had been hectic, and I had given too little time to side projects—the work I choose only because it interests me. I was still unsure about the precise direction of my career, but one ambition felt clear: I wanted to use software to leave some part of the world better than I found it.

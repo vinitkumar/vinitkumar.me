@@ -13,7 +13,7 @@ Here he basically talks about his process of building non-trivial software that 
 of hard work. He gives some very nice tips about how to approach such tasks and succeed in finishing them.
 
 I really like these tips and I wanted to note down some actionable items based on what he wrote. These
-tips are something we can incorportate in our daily routine.
+tips are something we can incorporate in our daily routine.
 
 1. Break down large tasks: When faced with a large project or task, break it down into smaller, more manageable chunks. This will allow you to see tangible progress and stay motivated throughout the project.
 

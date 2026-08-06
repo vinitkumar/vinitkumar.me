@@ -6,7 +6,7 @@ description: "Finding how you are tracked on Android"
 category: articles
 tags: Android gps Python
 comments: false
---- 
+---
 
 Like everybody else, I have an Android phone too. If you are a developer you must have noticed a file called as GPS. LOG. It is the one file which has all your GPS logs in it. This weekend I spend couple of hours hacking with it. He is the outcome. ## How you get tracked First of all, connect your Android device to your computer and copy the gps. log file into your desktop:
 
@@ -24,7 +24,7 @@ The cleangps. log file contains only data that has coordinates on it. Now, creat
 
 ```sh
 cat ~/cleangps. log | awk '{print $3, $4}' > ~/gpscord. log
-# notice the new file is nothing but values seperated by commas, hence write them as csv
+# notice the new file is nothing but values separated by commas, hence write them as csv
 cat ~/gpscord. log > ~/gps. csv
 ```
 This csv file is the basis we use to find that location the GPS log was taken. Prepare virtualenv and install googlemaps:

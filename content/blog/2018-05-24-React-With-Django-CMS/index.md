@@ -63,7 +63,7 @@ class App extends Component {
 ReactDOM.render(<App/>, document.getElementByID("root"))
 ```
 
-This used to work perfectly with the old djangoCMS since everytime you edit a content, there would be a reload and because of that the `componentDidMount()` will be called and hence there would be an API call and the React app would be rendered.
+This used to work perfectly with the old djangoCMS since every time you edit a content, there would be a reload and because of that the `componentDidMount()` will be called and hence there would be an API call and the React app would be rendered.
 
 However, due to the change in the way frontend editing works now, this is no longer the case by default and it cause strange behaviour to occur.
 
@@ -77,7 +77,7 @@ This is their suggested solution:
 
 ```js
 // catch the cms-content-refresh event and use it
-// to trigger actions that are not done due to to Hot SWAP of the HTML
+// to trigger actions that are not done due to the hot swap of the HTML
 CMS.$(window).on('cms-content-refresh', function () {
   // Render React Again?
 });
@@ -101,7 +101,7 @@ So if you look at the above piece of code, notice that I used plain JS to look f
 
 The logic to look for "DomContentLoaded" event is that the global variable `CMS` won't be available unless all content is loaded and we require it to watch for the `cms-content-refresh` event. So as a solution we **hook up the ReactDOM render method whenever we get catch a refresh event from the CMS.**
 
-Following is the updated React App code after accomodating changes for this event handling.
+Following is the updated React App code after accommodating changes for this event handling.
 
 
 ```jsx

@@ -6,7 +6,7 @@ description: "Guide to setup readonly mode for some users in Django admin"
 category: articles
 tags: Python Django Django-admin
 comments: false
---- 
+---
 
 Last week, I came across an interesting problem at work. The problem was: > To get read only users in a Django based application. But doing so was not very simple because there is no read only mode for users
 in Django. In order to solve this, I first started reading answers on stack
@@ -40,7 +40,7 @@ from model import Cars class CarAdmin(admin. ModelAdmin): date_hierarchy = 'date
 
 Okay, so now we have a robust system in place to ensure whichever user has
 readonly permission on Cars Model would only be able to see the model data in
-Readonly mode. But this is not it. Here is the part where templates are overridden. First of all save and cancel button on buttom needs to go as we don't need
+Readonly mode. But this is not it. Here is the part where templates are overridden. First of all save and cancel button on button needs to go as we don't need
 them. For that, create a new template in templates folder. The templates name is ` change_form. HTML`.
 Hence the full pathname is ` carapp/templates/admin/change_form. HTML`. Copy the content from the default Django template (/admin/change_form. HTML) in Django project
 add replace this content with this gist: <script src="https://gist. GitHub. com/vinitkumar/48a9cd0c2e35e033659c. JS"></script> This will ensure that the selected user with this readonly only permissions won't be able

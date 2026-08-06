@@ -1,7 +1,7 @@
 ---
 title: "Daily Blog May 28"
 date: "2026-05-28"
-description: ""
+description: "A morning walk, a demanding engineering problem, and the ideas I want to return to in longer essays."
 ---
 
 This morning I woke up a bit late since I was feeling unwell the night before.

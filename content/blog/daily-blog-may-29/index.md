@@ -1,7 +1,7 @@
 ---
 title: "Daily Blog May 29"
 date: "2026-05-29"
-description: ""
+description: "Notes from May 29 on work, daily routines, and the thoughts worth carrying into tomorrow."
 ---
 
 Things are finally settling down for me. I was facing quite some burnout, but

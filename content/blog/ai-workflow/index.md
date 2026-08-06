@@ -1,25 +1,23 @@
 ---
-title: "Balancing AI Tools in Development: A Practical Workflow Guide"
+title: "A Deliberate Workflow for AI-Assisted Development"
 date: "2025-05-07"
 featured: true
-description: "How I think I would be using AI in my day to day life"
+description: "How I use AI for planning, research, and review without surrendering the judgment that makes me a better programmer."
 ---
 
-I have been using to do my professional work since 2 years when Github Copilot was launched and we got an official subscription from work. Since they I have used Claude, ChatGPT and more recently Cursor AI.
+I started using GitHub Copilot at work a few years ago. Since then, I have also worked with Claude, ChatGPT, and Cursor. These tools can accelerate software development, but speed alone does not make the work better.
 
-However, these days I am getting mixed feelings about it. I believe getting AI to work in Agent Mode will basically cause brain atrophy and you will loose your ability to reason and program well. So solve this, I would use AI more as a pair programmer or research assistant and not as a code generator. And even in the case, it generates the code it has to to pass all benchmarks and code standards.
-It is very easy to get overwhelmed by AI and the amount of code it generates.
+Agent mode gives me mixed feelings. Delegating an entire problem can produce a large amount of plausible code before I have understood the design. Used carelessly, that convenience weakens the reasoning and programming skills I want to preserve.
 
+I would rather use AI as a pair programmer and research assistant than as an unsupervised code generator. When it does generate code, that code must meet the same tests, benchmarks, and standards as anything I write myself.
 
-So from now on, this will be my workflow:
+My workflow now looks like this:
 
-- Take the problem statement and think hard about it. Come up with a plan.
-- Ask the same problem to the AI and use their thinking mode to come up with a plan. See if the plan is similar to mine and if mine can use some ideas from it.
-- Once the plan is complete, start writing the code with a fast feedback loop and preferably in a test driven way to ensure the code written is correct.
-- Once the code is written, ask the AI to review the code and suggest improvements. Again, no agentic mode here and I want to write all the code committed from my name. AI can be used to generate documentation but has to be critically reviewed.
-- Finally, make a MR/PR and then get the review done and there would be cycle of QAs to check my work.
-- I believe I can use the AI to its strengths and at the same time now weaken my abilities by over relying on it.
+1. **Think before prompting.** I read the problem, identify the constraints, and draft my own plan.
+2. **Compare approaches.** I ask the AI to analyze the same problem, then compare its plan with mine. I borrow useful ideas without treating its answer as authoritative.
+3. **Build through a tight feedback loop.** I implement the plan in small steps, preferably test-first, and verify each step before moving on.
+4. **Use AI as a reviewer.** Once the code works, I ask the AI to challenge the design, find edge cases, and suggest simpler alternatives.
+5. **Review every generated artifact.** Code and documentation remain my responsibility, regardless of who—or what—produced the first draft.
+6. **Put the work through human review and QA.** A pull request, peer review, and product testing remain essential.
 
-
-That's it folks! Maybe you get smarter and prosper.
-
+The goal is not to avoid AI. It is to use AI where it has leverage while keeping judgment, understanding, and accountability firmly with the engineer.

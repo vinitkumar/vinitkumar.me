@@ -54,7 +54,7 @@ class App extends Component {
 ReactDOM.render(<App/>, document.getElementById("root"))
 ```
 
-This used to work perfectly with the old djangoCMS since everytime you edit a content, there would be a reload and because of that the `componentDidMount()` will be called and hence there would be an API call and the React app would be rendered.
+This used to work perfectly with the old djangoCMS since every time you edit a content, there would be a reload and because of that the `componentDidMount()` will be called and hence there would be an API call and the React app would be rendered.
 
 However, due to the change in the way frontend editing works now, this is no longer the case by default and it causes strange behaviour to occur. For example: You filled up the djangoCMS plugin that implemented this React Plugin and it is rendered properly. Now, you wanted to do change in other plugin like Text Plugin. So as a result, as soon as you submit save button for the text plugin after doing the change, the CMS JavaScript sends a request for the server rendered HTML and replaces it in place for the page.
 
@@ -64,7 +64,7 @@ Now, the good folks at djangoCMS are kind enough to make a note of it in their d
 
 ```javascript
 // catch the cms-content-refresh event and use it
-// to trigger actions that are not done due to to Hot SWAP of the HTML
+// to trigger actions that are not done due to the hot swap of the HTML
 CMS.$(window).on('cms-content-refresh', function () {
     // Render React Again?
 });

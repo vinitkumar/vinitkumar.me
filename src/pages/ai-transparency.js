@@ -6,33 +6,38 @@ const AITransparencyPage = ({ location }) => {
     <Layout location={location} title="AI Transparency">
       <h1>AI Transparency</h1>
       <p>
-        I believe in being transparent about the use of AI tools in my work and on this website.
+        I use AI tools in both writing and software development. This page
+        explains where they help and where I draw the line.
       </p>
 
-      <h2>Content Creation</h2>
+      <h2>Writing</h2>
       <p>
-        All blog posts and articles on this site are written by me. I may use AI tools like
-        Amp, ChatGPT, or Cursor Code to help with editing, proofreading, or brainstorming ideas,
-        but the core ideas and writing are my own.
+        The experiences, arguments, and editorial decisions in every article are
+        mine. I may use tools such as ChatGPT, Claude, or Cursor to explore an
+        idea, challenge a draft, proofread prose, or suggest a clearer
+        structure. I review and revise every word before publication.
       </p>
 
       <h2>Code</h2>
       <p>
-        I use AI-assisted coding tools (like Amp and Cursor Code) to help write code faster.
-        All code is reviewed and tested by me before being published or deployed.
+        AI assistants help me research APIs, test alternatives, review changes,
+        and sometimes draft code. I remain responsible for understanding,
+        testing, and maintaining everything I publish or deploy. Generated code
+        receives the same review as code written by hand.
       </p>
 
-      <h2>Website Development</h2>
+      <h2>This Website</h2>
       <p>
-        This website is built with Gatsby and has been developed with occasional assistance from
-        AI coding assistants for debugging, styling, and implementing features.
+        I have occasionally used AI coding assistants while debugging, styling,
+        and implementing this Gatsby site. They are tools in the development
+        process, not autonomous authors or maintainers.
       </p>
 
-      <h2>My Stance</h2>
+      <h2>My Standard</h2>
       <p>
-        I view AI as a tool that can augment human creativity and productivity when used responsibly.
-        I always maintain editorial control over what gets published and take full responsibility
-        for the content on this site.
+        AI can extend human creativity and productivity, but it cannot inherit
+        accountability. I keep editorial control, verify factual claims, and
+        take responsibility for everything published under my name.
       </p>
     </Layout>
   )
