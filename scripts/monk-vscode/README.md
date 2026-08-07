@@ -13,6 +13,8 @@ curl -fsSL https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516d
 
 The installer supports macOS and Linux. It requires `code`, `curl`, and `sqlite3`. It creates or updates only a profile named `Monk`, installs VSCodeVim in that profile, copies the complete `settings.json`, and disables the built-in IDE and color-theme extensions listed in the script. Existing Monk settings and state databases are backed up before replacement.
 
+On the first run, the installer deliberately opens an empty VS Code window. VS Code creates a missing profile only when it opens a window or folder with that profile; extension-management commands cannot create it. Leave the window open while the installer finishes. Later runs can update the existing profile without this creation step.
+
 Set `MONK_PROFILE_NAME` to use another profile name:
 
 ```sh

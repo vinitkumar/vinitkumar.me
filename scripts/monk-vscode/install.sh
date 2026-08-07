@@ -29,7 +29,21 @@ else
   esac
 fi
 
-printf 'Creating the %s profile and installing VSCodeVim...\n' "$PROFILE_NAME"
+profile_window_opened=0
+if ! code --profile "$PROFILE_NAME" --list-extensions >/dev/null 2>&1; then
+  printf 'Opening VS Code once to create the %s profile...\n' "$PROFILE_NAME"
+  code --profile "$PROFILE_NAME" --new-window >/dev/null 2>&1
+  profile_window_opened=1
+
+  attempt=0
+  while ! code --profile "$PROFILE_NAME" --list-extensions >/dev/null 2>&1; do
+    attempt=$((attempt + 1))
+    [ "$attempt" -lt 30 ] || fail "VS Code did not create the $PROFILE_NAME profile"
+    sleep 1
+  done
+fi
+
+printf 'Installing VSCodeVim in the %s profile...\n' "$PROFILE_NAME"
 code --profile "$PROFILE_NAME" --install-extension vscodevim.vim --force >/dev/null
 
 storage_json="$code_user_home/globalStorage/storage.json"
@@ -102,6 +116,6 @@ SQL
 printf 'Installed Monk in %s\n' "$profile_dir"
 printf 'Backups use the suffix .backup.%s when prior files existed.\n' "$timestamp"
 
-if [ "${MONK_NO_OPEN:-0}" != "1" ]; then
+if [ "${MONK_NO_OPEN:-0}" != "1" ] && [ "$profile_window_opened" = "0" ]; then
   code --profile "$PROFILE_NAME" --new-window >/dev/null 2>&1 &
 fi
