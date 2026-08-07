@@ -127,14 +127,16 @@ I published the [complete Monk profile as a GitHub Gist](https://gist.github.com
 Read the revision-pinned script first:
 
 ```sh
-curl -fsSL https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/86c45543167d49f347c8bd7801ebf879e25cffc6/install.sh | less
+curl -fsSL https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/455e0b112268ef6574215f280bc404d2952ccba6/install.sh | less
 ```
 
 Then install it:
 
 ```sh
-curl -fsSL https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/86c45543167d49f347c8bd7801ebf879e25cffc6/install.sh | sh
+curl -fsSL https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/455e0b112268ef6574215f280bc404d2952ccba6/install.sh | sh
 ```
+
+One CLI detail is easy to miss: VS Code creates a missing profile only when it opens a window or folder with that profile. Running an extension command against a nonexistent profile fails with `Profile 'Monk' not found.` The installer therefore opens an empty Monk window on the first run and waits until VS Code has registered the profile before installing VSCodeVim. Leave that window open while the script finishes. On later runs, the profile already exists and this creation step is skipped.
 
 The script supports macOS and Linux and requires the `code`, `curl`, and `sqlite3` commands. It creates or updates only a profile named `Monk`, installs VSCodeVim there, verifies the downloaded settings with SHA-256, and backs up existing Monk settings and state before replacing them. It does not modify the default profile.
 
