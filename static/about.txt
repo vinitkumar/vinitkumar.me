@@ -1,6 +1,6 @@
 Typography attribution:
 
 - Prose font: Berka Text
-- Code font: Berka Mono Focus
+- Code font: Berka Mono Instrument
 - Source: https://github.com/vinitkumar/berka-mono-closer
 - License: SIL Open Font License 1.1

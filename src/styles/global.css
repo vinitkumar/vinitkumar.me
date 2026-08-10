@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-Book.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-Book.woff2") format("woff2");
   font-weight: 450;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-BookItalic.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-BookItalic.woff2") format("woff2");
   font-weight: 450;
   font-style: italic;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-Regular.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-Italic.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-Medium.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-MediumItalic.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-MediumItalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
   font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-SemiBold.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-SemiBoldItalic.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-SemiBoldItalic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-Bold.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -72,15 +72,15 @@
 
 @font-face {
   font-family: "Berka Text";
-  src: url("../fonts/berka-text/BerkaText-BoldItalic.woff2") format("woff2");
+  src: url("../fonts/woff2-text/BerkaText-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-Book.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-Book.woff2")
     format("woff2");
   font-weight: 450;
   font-style: normal;
@@ -88,8 +88,8 @@
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-BookItalic.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-BookItalic.woff2")
     format("woff2");
   font-weight: 450;
   font-style: italic;
@@ -97,8 +97,8 @@
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-Regular.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-Regular.woff2")
     format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -106,8 +106,8 @@
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-Italic.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-Italic.woff2")
     format("woff2");
   font-weight: 400;
   font-style: italic;
@@ -115,8 +115,8 @@
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-Medium.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-Medium.woff2")
     format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -124,8 +124,8 @@
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-MediumItalic.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-MediumItalic.woff2")
     format("woff2");
   font-weight: 500;
   font-style: italic;
@@ -133,8 +133,8 @@
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-SemiBold.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-SemiBold.woff2")
     format("woff2");
   font-weight: 600;
   font-style: normal;
@@ -142,8 +142,8 @@
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-SemiBoldItalic.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-SemiBoldItalic.woff2")
     format("woff2");
   font-weight: 600;
   font-style: italic;
@@ -151,8 +151,8 @@
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-Bold.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-Bold.woff2")
     format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -160,8 +160,8 @@
 }
 
 @font-face {
-  font-family: "Berka Mono Focus";
-  src: url("../fonts/berka-mono-focus/BerkaMonoFocus-BoldItalic.woff2")
+  font-family: "Berka Mono Instrument";
+  src: url("../fonts/woff2-instrument/BerkaMonoInstrument-BoldItalic.woff2")
     format("woff2");
   font-weight: 700;
   font-style: italic;
@@ -213,7 +213,7 @@ body {
     "Berka Text", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
   --font-family-code:
-    "Berka Mono Focus", SFMono-Regular, Consolas, Menlo, monospace;
+    "Berka Mono Instrument", SFMono-Regular, Consolas, Menlo, monospace;
 
   /* Layout */
   --width: 575px;

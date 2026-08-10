@@ -77,7 +77,7 @@ const Footer = () => {
         >
           Berka Text
         </a>{" "}
-        for prose and Berka Mono Focus for code.
+        for prose and Berka Mono Instrument for code.
       </p>
       <p className="footer-theme">
         <span>Theme:</span>
