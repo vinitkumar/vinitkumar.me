@@ -161,3 +161,27 @@ Fast software is pleasant, but predictable software is calming. A tool becomes p
 My final VS Code setup is almost comically plain: Quiet Light, a large font, Vim keys, a white status bar, and a text buffer. That is exactly what I wanted.
 
 The editor is no longer the workspace. It is simply the place where text changes.
+
+---
+
+## Update: a dark-only Monk profile
+
+_August 12, 2026:_ I have added **Monk Dark** for people who want the same quiet editor without the white canvas. It is a separate profile, so the original Quiet Light version remains unchanged and both can live beside a normal VS Code setup.
+
+![Monk Dark keeps the same minimal VS Code layout](./quiet-vscode-dark.png)
+
+Monk Dark uses VS Code's built-in **Dark Modern** theme and a neutral dark status bar. Automatic color-scheme switching remains off. Everything else follows the original profile: an 18-pixel font, Vim motions, no activity bar or tabs, no Git integration, no AI, no language servers, no completion popups, and the same watcher and search exclusions. VSCodeVim is still the only installed extension.
+
+The existing [Monk Gist](https://gist.github.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd) now includes the complete [`settings-dark.json`](https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/42bfe5567d3f583e765635bbaafab9190d525826/settings-dark.json) and a single installer for both variants. Read the revision-pinned installer first:
+
+```sh
+curl -fsSL https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/28bb2656d92c64c76f648d7096f6bb0e45cb1e7c/install.sh | less
+```
+
+Then create or update the separate `Monk Dark` profile:
+
+```sh
+curl -fsSL https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/28bb2656d92c64c76f648d7096f6bb0e45cb1e7c/install.sh | MONK_VARIANT=dark sh
+```
+
+The default remains the light `Monk` profile. `MONK_VARIANT=dark` is the only extra switch needed for the dark version, and the installer keeps its existing checksum verification and backup behavior.
