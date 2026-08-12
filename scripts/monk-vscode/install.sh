@@ -16,7 +16,7 @@ case "$VARIANT" in
     ;;
   dark)
     default_profile_name='Monk Dark'
-    default_settings_url=https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/settings-dark.json
+    default_settings_url=https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/42bfe5567d3f583e765635bbaafab9190d525826/settings-dark.json
     default_settings_sha256=cc817e791be1fecaf6616df9303fad89dd887e01f6dd404d2a8f0ae3fac82fbf
     ;;
   *) fail "unknown variant: $VARIANT (expected light or dark)" ;;
