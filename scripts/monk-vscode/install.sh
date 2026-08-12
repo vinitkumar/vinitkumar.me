@@ -2,14 +2,29 @@
 
 set -eu
 
-PROFILE_NAME=${MONK_PROFILE_NAME:-Monk}
-SETTINGS_URL=${MONK_SETTINGS_URL:-https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/05202fb9db9e6eda315105f6a7cfc25d4e0e9735/settings.json}
-SETTINGS_SHA256=${MONK_SETTINGS_SHA256:-4f01f930f388d8544672c40108a5752b136477f97eaf11331a68bae965e05856}
-
 fail() {
   printf 'monk-vscode: %s\n' "$1" >&2
   exit 1
 }
+
+VARIANT=${MONK_VARIANT:-light}
+case "$VARIANT" in
+  light)
+    default_profile_name=Monk
+    default_settings_url=https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/05202fb9db9e6eda315105f6a7cfc25d4e0e9735/settings.json
+    default_settings_sha256=4f01f930f388d8544672c40108a5752b136477f97eaf11331a68bae965e05856
+    ;;
+  dark)
+    default_profile_name='Monk Dark'
+    default_settings_url=https://gist.githubusercontent.com/vinitkumar/0a6940afafc25b1f905516dfb4b41dbd/raw/settings-dark.json
+    default_settings_sha256=cc817e791be1fecaf6616df9303fad89dd887e01f6dd404d2a8f0ae3fac82fbf
+    ;;
+  *) fail "unknown variant: $VARIANT (expected light or dark)" ;;
+esac
+
+PROFILE_NAME=${MONK_PROFILE_NAME:-$default_profile_name}
+SETTINGS_URL=${MONK_SETTINGS_URL:-$default_settings_url}
+SETTINGS_SHA256=${MONK_SETTINGS_SHA256:-$default_settings_sha256}
 
 for command_name in code curl sqlite3 awk; do
   command -v "$command_name" >/dev/null 2>&1 || fail "missing required command: $command_name"
@@ -107,6 +122,10 @@ if [ -f "$state_db" ]; then
 fi
 
 disabled_extensions='[{"id":"github.copilot-chat"},{"id":"ms-vscode.js-debug"},{"id":"ms-vscode.js-debug-companion"},{"id":"ms-vscode.vscode-js-profile-table"},{"id":"vscode.configuration-editing"},{"id":"vscode.css-language-features"},{"id":"vscode.debug-auto-launch"},{"id":"vscode.debug-server-ready"},{"id":"vscode.emmet"},{"id":"vscode.extension-editing"},{"id":"vscode.git"},{"id":"vscode.git-base"},{"id":"vscode.github"},{"id":"vscode.github-authentication"},{"id":"vscode.grunt"},{"id":"vscode.gulp"},{"id":"vscode.html-language-features"},{"id":"vscode.ipynb"},{"id":"vscode.jake"},{"id":"vscode.json-language-features"},{"id":"vscode.markdown-language-features"},{"id":"vscode.markdown-math"},{"id":"vscode.media-preview"},{"id":"vscode.merge-conflict"},{"id":"vscode.mermaid-markdown-features"},{"id":"vscode.microsoft-authentication"},{"id":"vscode.npm"},{"id":"vscode.php-language-features"},{"id":"vscode.references-view"},{"id":"vscode.search-result"},{"id":"vscode.simple-browser"},{"id":"vscode.terminal-suggest"},{"id":"vscode.theme-abyss"},{"id":"vscode.theme-defaults"},{"id":"vscode.theme-kimbie-dark"},{"id":"vscode.theme-monokai"},{"id":"vscode.theme-monokai-dimmed"},{"id":"vscode.theme-red"},{"id":"vscode.theme-solarized-dark"},{"id":"vscode.theme-solarized-light"},{"id":"vscode.theme-tomorrow-night-blue"},{"id":"vscode.tunnel-forwarding"},{"id":"vscode.typescript-language-features"}]'
+
+if [ "$VARIANT" = dark ]; then
+  disabled_extensions=$(printf '%s' "$disabled_extensions" | sed 's/,{"id":"vscode.theme-defaults"}//')
+fi
 
 sqlite3 "$state_db" <<SQL
 CREATE TABLE IF NOT EXISTS ItemTable (key TEXT UNIQUE ON CONFLICT REPLACE, value BLOB);
