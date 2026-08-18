@@ -16,17 +16,17 @@ export const onRenderBody = ({ setHeadComponents, setPreBodyComponents }) => {
     <meta
       key="theme-color-light"
       name="theme-color"
-      content="#F9F6EE"
+      content="#FFF8E7"
       media="(prefers-color-scheme: light)"
     />,
     <meta
       key="theme-color-dark"
       name="theme-color"
-      content="#000000"
+      content="#111215"
       media="(prefers-color-scheme: dark)"
     />,
   ])
-  
+
   setPreBodyComponents([
     <script
       key="theme-script"

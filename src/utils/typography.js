@@ -1,9 +1,9 @@
 import Typography from "typography"
 const typography = new Typography({
   baseFontSize: "16px",
-  baseLineHeight: 1.6,
-  headerFontFamily: ["Berka Text", "system-ui", "sans-serif"],
-  bodyFontFamily: ["Berka Text", "system-ui", "sans-serif"],
+  baseLineHeight: 1.625,
+  headerFontFamily: ["Berka Mono Instrument", "ui-monospace", "monospace"],
+  bodyFontFamily: ["Berka Mono Instrument", "ui-monospace", "monospace"],
 })
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

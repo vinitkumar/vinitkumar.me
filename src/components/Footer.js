@@ -75,9 +75,9 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Berka Text
+          Berka Mono Instrument
         </a>{" "}
-        for prose and Berka Mono Instrument for code.
+        throughout.
       </p>
       <p className="footer-theme">
         <span>Theme:</span>
