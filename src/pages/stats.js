@@ -4,17 +4,27 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { getPostTitle, getTopicSlug } from "../utils/content"
+import { getLanguageAlternates, getLocale } from "../utils/i18n"
 
-const formatNumber = (value) => value.toLocaleString("en-US")
+const formatNumber = (value, locale) =>
+  value.toLocaleString(locale === "ja" ? "ja-JP" : "en-US")
 
-const formatDate = (date) =>
-  new Date(date).toLocaleDateString("en-US", {
+const formatDate = (date, locale) =>
+  new Date(date).toLocaleDateString(locale === "ja" ? "ja-JP" : "en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
   })
 
-const getEra = (year) => {
+const getEra = (year, locale) => {
+  if (locale === "ja") {
+    if (year <= 2015) return "基礎を磨く"
+    if (year <= 2018) return "フルスタックの成長"
+    if (year <= 2021) return "システムとリーダーシップ"
+    if (year <= 2024) return "プリンシパルエンジニア"
+    return "オープンソースとAI"
+  }
+
   if (year <= 2015) return "Early Craft"
   if (year <= 2018) return "Full-Stack Growth"
   if (year <= 2021) return "Systems & Leadership"
@@ -22,7 +32,80 @@ const getEra = (year) => {
   return "Open Source & AI"
 }
 
+const statsCopy = {
+  en: {
+    ariaLabel: "Writing summary",
+    averageLength: "Average length",
+    averageRead: "Average read",
+    cadence: "Cadence",
+    currentEra: "Current era",
+    depth: "Depth",
+    essays: "Essays",
+    featuredPosts: "Featured posts",
+    heroEyebrow: "Writing Stats",
+    heroText:
+      "A quantitative view of the site: publishing cadence, topic weight, long-form depth, and the themes that keep showing up over time.",
+    heroTitle: "The archive as a map of long-running technical taste.",
+    longestEssays: "Longest essays",
+    mostActiveYear: "Most active year",
+    posts: (count) => `${count} post${count === 1 ? "" : "s"}`,
+    postsByYear: "Posts by year",
+    publishedPieces: "Published pieces",
+    quickRead: "Quick Read",
+    readingHours: "Reading hours",
+    signals: "Signals",
+    startHere: "Start Here",
+    themes: "Themes",
+    tilNotes: "TIL notes",
+    timeline: "Timeline",
+    topTopics: "Most written about topics",
+    totalWords: "Total words",
+    words: (count) => `${count} words`,
+    wordsPerPiece: (count) => `${count} words per piece`,
+    minutes: (count) => `${count} minutes`,
+    yearsPeak: (years, peak) => `${years} years · peak ${peak}`,
+    activeYear: (year, count) => `${year} with ${count} posts`,
+    writingEras: "Writing eras",
+  },
+  ja: {
+    ariaLabel: "執筆統計の概要",
+    averageLength: "平均の長さ",
+    averageRead: "平均読了時間",
+    cadence: "公開ペース",
+    currentEra: "現在の時期",
+    depth: "深さ",
+    essays: "エッセイ",
+    featuredPosts: "注目の記事",
+    heroEyebrow: "執筆統計",
+    heroText:
+      "公開ペース、トピックの比重、長文記事の深さ、そして長年にわたり繰り返し現れるテーマから、このサイトを数字で眺めます。",
+    heroTitle: "長年にわたる技術的な関心を、アーカイブから読み解く。",
+    longestEssays: "最も長いエッセイ",
+    mostActiveYear: "最も活発な年",
+    posts: (count) => `${count}件の記事`,
+    postsByYear: "年別の記事数",
+    publishedPieces: "公開コンテンツ",
+    quickRead: "概要",
+    readingHours: "読了時間",
+    signals: "主な数字",
+    startHere: "はじめに",
+    themes: "テーマ",
+    tilNotes: "TILメモ",
+    timeline: "年表",
+    topTopics: "最も多く書いたトピック",
+    totalWords: "総単語数",
+    words: (count) => `${count}語`,
+    wordsPerPiece: (count) => `1件あたり${count}語`,
+    minutes: (count) => `${count}分`,
+    yearsPeak: (years, peak) => `${years}年間 · 最多 ${peak}年`,
+    activeYear: (year, count) => `${year}年、${count}件`,
+    writingEras: "執筆の時期",
+  },
+}
+
 const StatsIndex = (props) => {
+  const locale = getLocale(props.location.pathname)
+  const copy = statsCopy[locale]
   const data = useStaticQuery(graphql`
     query StatsQuery {
       site {
@@ -89,7 +172,7 @@ const StatsIndex = (props) => {
     .map(([year, count]) => ({
       year: Number(year),
       count,
-      era: getEra(Number(year)),
+      era: getEra(Number(year), locale),
     }))
     .sort((a, b) => a.year - b.year)
 
@@ -116,27 +199,24 @@ const StatsIndex = (props) => {
   const readingHours = Math.round(totals.readTime / 60)
 
   const metrics = [
-    { label: "Published pieces", value: formatNumber(posts.length) },
-    { label: "Essays", value: formatNumber(blogPosts.length) },
-    { label: "TIL notes", value: formatNumber(tilPosts.length) },
-    { label: "Total words", value: formatNumber(totals.words) },
-    { label: "Reading hours", value: `${readingHours}h` },
-    { label: "Featured posts", value: formatNumber(totals.featured) },
+    { label: copy.publishedPieces, value: formatNumber(posts.length, locale) },
+    { label: copy.essays, value: formatNumber(blogPosts.length, locale) },
+    { label: copy.tilNotes, value: formatNumber(tilPosts.length, locale) },
+    { label: copy.totalWords, value: formatNumber(totals.words, locale) },
+    { label: copy.readingHours, value: `${readingHours}h` },
+    { label: copy.featuredPosts, value: formatNumber(totals.featured, locale) },
   ]
 
   return (
     <Layout location={props.location} title={title}>
       <div className="stats-page">
         <header className="stats-hero">
-          <p className="eyebrow">Writing Stats</p>
-          <h1>The archive as a map of long-running technical taste.</h1>
-          <p>
-            A quantitative view of the site: publishing cadence, topic weight,
-            long-form depth, and the themes that keep showing up over time.
-          </p>
+          <p className="eyebrow">{copy.heroEyebrow}</p>
+          <h1>{copy.heroTitle}</h1>
+          <p>{copy.heroText}</p>
         </header>
 
-        <section className="stats-metrics" aria-label="Writing summary">
+        <section className="stats-metrics" aria-label={copy.ariaLabel}>
           {metrics.map((metric) => (
             <div key={metric.label}>
               <strong>{metric.value}</strong>
@@ -149,11 +229,11 @@ const StatsIndex = (props) => {
           <div className="stats-panel stats-panel-large">
             <div className="section-heading">
               <div>
-                <p className="eyebrow">Cadence</p>
-                <h2>Posts by year</h2>
+                <p className="eyebrow">{copy.cadence}</p>
+                <h2>{copy.postsByYear}</h2>
               </div>
               <span className="stats-note">
-                {writingYears} years · peak {mostActiveYear?.year}
+                {copy.yearsPeak(writingYears, mostActiveYear?.year)}
               </span>
             </div>
             <div className="year-bars">
@@ -177,28 +257,30 @@ const StatsIndex = (props) => {
           <aside className="stats-panel">
             <div className="section-heading">
               <div>
-                <p className="eyebrow">Quick Read</p>
-                <h2>Signals</h2>
+                <p className="eyebrow">{copy.quickRead}</p>
+                <h2>{copy.signals}</h2>
               </div>
             </div>
             <dl className="stats-facts">
               <div>
-                <dt>Most active year</dt>
+                <dt>{copy.mostActiveYear}</dt>
                 <dd>
-                  {mostActiveYear?.year} with {mostActiveYear?.count} posts
+                  {copy.activeYear(mostActiveYear?.year, mostActiveYear?.count)}
                 </dd>
               </div>
               <div>
-                <dt>Average length</dt>
-                <dd>{formatNumber(avgWordsPerPost)} words per piece</dd>
+                <dt>{copy.averageLength}</dt>
+                <dd>
+                  {copy.wordsPerPiece(formatNumber(avgWordsPerPost, locale))}
+                </dd>
               </div>
               <div>
-                <dt>Average read</dt>
-                <dd>{avgReadTime} minutes</dd>
+                <dt>{copy.averageRead}</dt>
+                <dd>{copy.minutes(avgReadTime)}</dd>
               </div>
               <div>
-                <dt>Current era</dt>
-                <dd>{getEra(endYear)}</dd>
+                <dt>{copy.currentEra}</dt>
+                <dd>{getEra(endYear, locale)}</dd>
               </div>
             </dl>
           </aside>
@@ -207,8 +289,8 @@ const StatsIndex = (props) => {
         <section className="stats-panel">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Themes</p>
-              <h2>Most written about topics</h2>
+              <p className="eyebrow">{copy.themes}</p>
+              <h2>{copy.topTopics}</h2>
             </div>
           </div>
           <div className="topic-cloud stats-topic-cloud">
@@ -224,8 +306,8 @@ const StatsIndex = (props) => {
         <section className="stats-panel">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Timeline</p>
-              <h2>Writing eras</h2>
+              <p className="eyebrow">{copy.timeline}</p>
+              <h2>{copy.writingEras}</h2>
             </div>
           </div>
           <div className="era-grid">
@@ -233,9 +315,7 @@ const StatsIndex = (props) => {
               <div className="era-card" key={entry.year}>
                 <span>{entry.year}</span>
                 <strong>{entry.era}</strong>
-                <p>
-                  {entry.count} post{entry.count === 1 ? "" : "s"}
-                </p>
+                <p>{copy.posts(entry.count)}</p>
               </div>
             ))}
           </div>
@@ -245,8 +325,8 @@ const StatsIndex = (props) => {
           <div className="stats-panel">
             <div className="section-heading">
               <div>
-                <p className="eyebrow">Depth</p>
-                <h2>Longest essays</h2>
+                <p className="eyebrow">{copy.depth}</p>
+                <h2>{copy.longestEssays}</h2>
               </div>
             </div>
             <div className="compact-post-list">
@@ -256,8 +336,14 @@ const StatsIndex = (props) => {
                   to={post.fields.slug}
                   className="compact-post-link"
                 >
-                  <span>{formatNumber(post.wordCount?.words || 0)} words</span>
-                  <strong>{getPostTitle(post)}</strong>
+                  <span>
+                    {copy.words(
+                      formatNumber(post.wordCount?.words || 0, locale)
+                    )}
+                  </span>
+                  <strong lang={locale === "ja" ? "en" : undefined}>
+                    {getPostTitle(post)}
+                  </strong>
                 </Link>
               ))}
             </div>
@@ -266,8 +352,8 @@ const StatsIndex = (props) => {
           <div className="stats-panel">
             <div className="section-heading">
               <div>
-                <p className="eyebrow">Start Here</p>
-                <h2>Featured posts</h2>
+                <p className="eyebrow">{copy.startHere}</p>
+                <h2>{copy.featuredPosts}</h2>
               </div>
             </div>
             <div className="compact-post-list">
@@ -277,8 +363,10 @@ const StatsIndex = (props) => {
                   to={post.fields.slug}
                   className="compact-post-link"
                 >
-                  <span>{formatDate(post.frontmatter.date)}</span>
-                  <strong>{getPostTitle(post)}</strong>
+                  <span>{formatDate(post.frontmatter.date, locale)}</span>
+                  <strong lang={locale === "ja" ? "en" : undefined}>
+                    {getPostTitle(post)}
+                  </strong>
                 </Link>
               ))}
             </div>
@@ -291,10 +379,20 @@ const StatsIndex = (props) => {
 
 export default StatsIndex
 
-export const Head = ({ location }) => (
-  <Seo
-    title="Writing Stats"
-    description="A data view of Vinit Kumar's essays, technical notes, topics, writing history, and featured posts."
-    pathname={location.pathname}
-  />
-)
+export const Head = ({ location }) => {
+  const locale = getLocale(location.pathname)
+
+  return (
+    <Seo
+      alternates={getLanguageAlternates(location.pathname)}
+      title={locale === "ja" ? "執筆統計" : "Writing Stats"}
+      description={
+        locale === "ja"
+          ? "Vinit Kumarのエッセイ、技術メモ、トピック、執筆履歴、注目記事を数字で紹介します。"
+          : "A data view of Vinit Kumar's essays, technical notes, topics, writing history, and featured posts."
+      }
+      lang={locale}
+      pathname={location.pathname}
+    />
+  )
+}

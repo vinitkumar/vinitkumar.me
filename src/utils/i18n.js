@@ -1,6 +1,11 @@
 const DEFAULT_LOCALE = "en"
 const JAPANESE_LOCALE = "ja"
-const TRANSLATED_PATHS = new Set(["/", "/about/"])
+const TRANSLATED_PATHS = new Set([
+  "/",
+  "/about/",
+  "/recommendations/",
+  "/stats/",
+])
 
 const normalizePath = (pathname = "/") => {
   const path = pathname.split(/[?#]/, 1)[0] || "/"

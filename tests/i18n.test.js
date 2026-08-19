@@ -26,10 +26,14 @@ test("language switch returns the matching translated page when available", () =
   assert.equal(getLanguageSwitchPath("/", "ja"), "/ja/")
   assert.equal(getLanguageSwitchPath("/about/", "ja"), "/ja/about/")
   assert.equal(getLanguageSwitchPath("/ja/about/", "en"), "/about/")
+  assert.equal(getLanguageSwitchPath("/stats/", "ja"), "/ja/stats/")
+  assert.equal(
+    getLanguageSwitchPath("/ja/recommendations/", "en"),
+    "/recommendations/"
+  )
 })
 
 test("language switch falls back to the locale home for untranslated pages", () => {
-  assert.equal(getLanguageSwitchPath("/stats/", "ja"), "/ja/")
   assert.equal(getLanguageSwitchPath("/some-essay/", "ja"), "/ja/")
 })
 
@@ -39,5 +43,10 @@ test("returns hreflang alternates only for translated page pairs", () => {
     { lang: "ja", path: "/ja/about/" },
     { lang: "x-default", path: "/about/" },
   ])
-  assert.deepEqual(getLanguageAlternates("/stats/"), [])
+  assert.deepEqual(getLanguageAlternates("/stats/"), [
+    { lang: "en", path: "/stats/" },
+    { lang: "ja", path: "/ja/stats/" },
+    { lang: "x-default", path: "/stats/" },
+  ])
+  assert.deepEqual(getLanguageAlternates("/some-essay/"), [])
 })
