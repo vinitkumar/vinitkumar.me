@@ -1,12 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import BlogIndex, { Head } from "../index"
+import BlogIndex, { Head as HomeHead } from "../index"
 
 const JapaneseHome = (props) => <BlogIndex {...props} locale="ja" />
 
 export default JapaneseHome
-export { Head }
+
+export const Head = (props) => <HomeHead {...props} />
 
 export const pageQuery = graphql`
   query JapaneseHomeQuery {

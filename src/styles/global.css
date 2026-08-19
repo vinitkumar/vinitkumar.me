@@ -1482,6 +1482,42 @@ h6 {
   font-size: 0.9rem;
 }
 
+.social-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.language-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.75rem;
+  min-height: 1.75rem;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.language-flag:hover,
+.language-flag[aria-current="page"] {
+  border-color: var(--gray-line);
+  color: var(--text);
+}
+
+.language-flag:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
 /* Navigation link colors with brand colors */
 .nav-link--about,
 .nav-link--til,
