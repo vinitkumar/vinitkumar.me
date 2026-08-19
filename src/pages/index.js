@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import Search from "../components/Search"
 import Pagination from "../components/Pagination"
 import { getPostTitle, getTopicSlug, normalizeTags } from "../utils/content"
-import { getLocale } from "../utils/i18n"
+import { getLanguageAlternates, getLocale } from "../utils/i18n"
 
 const POSTS_PER_PAGE = 5
 
@@ -372,6 +372,7 @@ export const Head = ({ location }) => {
 
   return (
     <Seo
+      alternates={getLanguageAlternates(location.pathname)}
       title={locale === "ja" ? "ホーム" : "Home"}
       description={
         locale === "ja"

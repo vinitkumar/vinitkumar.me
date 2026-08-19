@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 function Seo({
+  alternates = [],
   canonicalPath,
   date,
   description = ``,
@@ -119,6 +120,14 @@ function Seo({
       <html lang={lang} />
       <title>{`${title} | ${site.title}`}</title>
       <link rel="canonical" href={canonical} />
+      {alternates.map((alternate) => (
+        <link
+          key={alternate.lang}
+          rel="alternate"
+          hrefLang={alternate.lang}
+          href={`${site.siteUrl}${alternate.path}`}
+        />
+      ))}
       {markdownPath && (
         <link rel="alternate" type="text/markdown" href={markdownPath} />
       )}
@@ -132,6 +141,12 @@ function Seo({
 }
 
 Seo.propTypes = {
+  alternates: PropTypes.arrayOf(
+    PropTypes.shape({
+      lang: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
+    })
+  ),
   canonicalPath: PropTypes.string,
   date: PropTypes.string,
   description: PropTypes.string,

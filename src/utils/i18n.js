@@ -45,9 +45,25 @@ const getLanguageSwitchPath = (pathname, targetLocale) => {
   return getLocalizedPath(basePath, targetLocale)
 }
 
+const getLanguageAlternates = (pathname) => {
+  const basePath = getBasePath(pathname)
+
+  if (!TRANSLATED_PATHS.has(basePath)) return []
+
+  return [
+    { lang: DEFAULT_LOCALE, path: getLocalizedPath(basePath, DEFAULT_LOCALE) },
+    {
+      lang: JAPANESE_LOCALE,
+      path: getLocalizedPath(basePath, JAPANESE_LOCALE),
+    },
+    { lang: "x-default", path: getLocalizedPath(basePath, DEFAULT_LOCALE) },
+  ]
+}
+
 module.exports = {
   DEFAULT_LOCALE,
   JAPANESE_LOCALE,
+  getLanguageAlternates,
   getLanguageSwitchPath,
   getLocale,
   getLocalizedPath,

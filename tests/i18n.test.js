@@ -2,6 +2,7 @@ const test = require("node:test")
 const assert = require("node:assert/strict")
 
 const {
+  getLanguageAlternates,
   getLanguageSwitchPath,
   getLocale,
   getLocalizedPath,
@@ -30,4 +31,13 @@ test("language switch returns the matching translated page when available", () =
 test("language switch falls back to the locale home for untranslated pages", () => {
   assert.equal(getLanguageSwitchPath("/stats/", "ja"), "/ja/")
   assert.equal(getLanguageSwitchPath("/some-essay/", "ja"), "/ja/")
+})
+
+test("returns hreflang alternates only for translated page pairs", () => {
+  assert.deepEqual(getLanguageAlternates("/ja/about/"), [
+    { lang: "en", path: "/about/" },
+    { lang: "ja", path: "/ja/about/" },
+    { lang: "x-default", path: "/about/" },
+  ])
+  assert.deepEqual(getLanguageAlternates("/stats/"), [])
 })

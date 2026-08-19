@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import portrait from "../../content/assets/vinitgreynew.png"
+import { getLanguageAlternates } from "../utils/i18n"
 
 const startDate = new Date("2013-02-01")
 
@@ -433,6 +434,7 @@ export default AboutIndex
 
 export const Head = ({ location }) => (
   <Seo
+    alternates={getLanguageAlternates(location.pathname)}
     title="About"
     description="About Vinit Kumar, Principal Engineer, Django CMS Fellow, open-source maintainer, writer, and builder of developer tools."
     pathname={location.pathname}
