@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { getLanguageAlternates, getLocale } from "../utils/i18n"
 
 const recommendations = [
   {
@@ -304,41 +305,90 @@ const parseRecommendationDate = (value) => {
   return new Date(fullYear, month - 1, day)
 }
 
-const formatRecommendationDate = (value) =>
-  parseRecommendationDate(value).toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  })
+const formatRecommendationDate = (value, locale) =>
+  parseRecommendationDate(value).toLocaleDateString(
+    locale === "ja" ? "ja-JP" : "en-US",
+    {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+    }
+  )
 
 const getInitials = (rec) =>
   `${rec.firstName?.[0] || ""}${rec.lastName?.[0] || ""}`.toUpperCase()
 
 const getPersonName = (rec) => `${rec.firstName} ${rec.lastName}`.trim()
 
-const getRoleLine = (rec) =>
-  [rec.jobTitle, rec.Company].filter(Boolean).join(" at ")
+const getRoleLine = (rec, locale) =>
+  [rec.jobTitle, rec.Company]
+    .filter(Boolean)
+    .join(locale === "ja" ? "、" : " at ")
 
 const themeSignals = [
   {
     label: "Systems builder",
+    labelJa: "システム構築者",
     terms: ["django", "python", "systems", "architecture", "technical"],
   },
   {
     label: "Mentor",
+    labelJa: "メンター",
     terms: ["mentor", "guidance", "learned", "taught", "help"],
   },
   {
     label: "Reliable teammate",
+    labelJa: "信頼できるチームメイト",
     terms: ["reliable", "team", "collaborating", "collaboration", "remote"],
   },
   {
     label: "Pragmatic problem solver",
+    labelJa: "実践的な問題解決者",
     terms: ["problem", "solve", "debugging", "pragmatic", "approach"],
   },
 ]
 
+const recommendationsCopy = {
+  en: {
+    allRecommendations: "All recommendations",
+    archive: "Archive",
+    ariaLabel: "Recommendation summary",
+    heroEyebrow: "Recommendations",
+    heroText:
+      "A decade-plus record from founders, product leaders, engineers, open source maintainers, support teams, and mentees across startups, remote teams, and community projects.",
+    heroTitle: "What colleagues say after working with me.",
+    organizations: "organizations",
+    originalLanguageNote: null,
+    patterns: "Patterns across the recommendations",
+    recentProof: "Recent Proof",
+    recommendations: "recommendations",
+    recurringSignals: "Recurring Signals",
+    selectedRecommendations: "Selected recommendations",
+    workingHistory: "working history",
+  },
+  ja: {
+    allRecommendations: "すべての推薦文",
+    archive: "アーカイブ",
+    ariaLabel: "推薦文の概要",
+    heroEyebrow: "推薦文",
+    heroText:
+      "スタートアップ、リモートチーム、コミュニティプロジェクトで共に働いた創業者、プロダクトリーダー、エンジニア、オープンソースメンテナー、サポートチーム、メンティーから寄せられた10年以上の記録です。",
+    heroTitle: "一緒に働いた仲間からの言葉。",
+    organizations: "組織",
+    originalLanguageNote:
+      "推薦者の言葉と意図を正確に保つため、推薦文の本文は原文の英語で掲載しています。",
+    patterns: "推薦文に繰り返し現れる評価",
+    recentProof: "最近の評価",
+    recommendations: "推薦文",
+    recurringSignals: "共通する評価",
+    selectedRecommendations: "主な推薦文",
+    workingHistory: "活動期間",
+  },
+}
+
 const ValueComponent = (props) => {
+  const locale = getLocale(props.location.pathname)
+  const copy = recommendationsCopy[locale]
   const data = useStaticQuery(graphql`
     query RecommendationsQuery {
       site {
@@ -376,47 +426,41 @@ const ValueComponent = (props) => {
     <Layout location={props.location} title={title}>
       <div className="recommendations-container">
         <header className="recommendations-hero">
-          <p className="eyebrow">Recommendations</p>
-          <h1>What colleagues say after working with me.</h1>
-          <p>
-            A decade-plus record from founders, product leaders, engineers, open
-            source maintainers, support teams, and mentees across startups,
-            remote teams, and community projects.
-          </p>
+          <p className="eyebrow">{copy.heroEyebrow}</p>
+          <h1>{copy.heroTitle}</h1>
+          <p>{copy.heroText}</p>
+          {copy.originalLanguageNote && <p>{copy.originalLanguageNote}</p>}
         </header>
 
-        <section
-          className="recommendation-metrics"
-          aria-label="Recommendation summary"
-        >
+        <section className="recommendation-metrics" aria-label={copy.ariaLabel}>
           <div>
             <strong>{recommendations.length}</strong>
-            <span>recommendations</span>
+            <span>{copy.recommendations}</span>
           </div>
           <div>
             <strong>{companies.size}</strong>
-            <span>organizations</span>
+            <span>{copy.organizations}</span>
           </div>
           <div>
             <strong>
               {startYear}-{endYear}
             </strong>
-            <span>working history</span>
+            <span>{copy.workingHistory}</span>
           </div>
         </section>
 
         <section className="recommendation-themes">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Recurring Signals</p>
-              <h2>Patterns across the recommendations</h2>
+              <p className="eyebrow">{copy.recurringSignals}</p>
+              <h2>{copy.patterns}</h2>
             </div>
           </div>
           <div className="recommendation-theme-grid">
             {themeCounts.map((theme) => (
               <div className="recommendation-theme" key={theme.label}>
                 <span>{theme.count}</span>
-                <strong>{theme.label}</strong>
+                <strong>{locale === "ja" ? theme.labelJa : theme.label}</strong>
               </div>
             ))}
           </div>
@@ -425,8 +469,8 @@ const ValueComponent = (props) => {
         <section className="recommendation-spotlight">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Recent Proof</p>
-              <h2>Selected recommendations</h2>
+              <p className="eyebrow">{copy.recentProof}</p>
+              <h2>{copy.selectedRecommendations}</h2>
             </div>
           </div>
           <div className="recommendation-spotlight-grid">
@@ -435,14 +479,18 @@ const ValueComponent = (props) => {
                 className="recommendation-spotlight-card"
                 key={`${rec.firstName}-${rec.lastName}-${rec.creationDate}`}
               >
-                <blockquote>{rec.text}</blockquote>
+                <blockquote lang={locale === "ja" ? "en" : undefined}>
+                  {rec.text}
+                </blockquote>
                 <footer>
                   <div className="avatar" aria-hidden="true">
                     {getInitials(rec)}
                   </div>
                   <div>
                     <strong>{getPersonName(rec)}</strong>
-                    <span>{getRoleLine(rec)}</span>
+                    <span lang={locale === "ja" ? "en" : undefined}>
+                      {getRoleLine(rec, locale)}
+                    </span>
                   </div>
                 </footer>
               </article>
@@ -453,8 +501,8 @@ const ValueComponent = (props) => {
         <section className="recommendation-list-section">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Archive</p>
-              <h2>All recommendations</h2>
+              <p className="eyebrow">{copy.archive}</p>
+              <h2>{copy.allRecommendations}</h2>
             </div>
           </div>
           <div className="recommendations-list">
@@ -469,17 +517,24 @@ const ValueComponent = (props) => {
                   </div>
                   <div>
                     <h3>{getPersonName(rec)}</h3>
-                    <p>{getRoleLine(rec)}</p>
+                    <p lang={locale === "ja" ? "en" : undefined}>
+                      {getRoleLine(rec, locale)}
+                    </p>
                     <time
                       dateTime={parseRecommendationDate(
                         rec.creationDate
                       ).toISOString()}
                     >
-                      {formatRecommendationDate(rec.creationDate)}
+                      {formatRecommendationDate(rec.creationDate, locale)}
                     </time>
                   </div>
                 </div>
-                <p className="recommendation-text">{rec.text}</p>
+                <p
+                  className="recommendation-text"
+                  lang={locale === "ja" ? "en" : undefined}
+                >
+                  {rec.text}
+                </p>
               </article>
             ))}
           </div>
@@ -491,10 +546,20 @@ const ValueComponent = (props) => {
 
 export default ValueComponent
 
-export const Head = ({ location }) => (
-  <Seo
-    title="Recommendations"
-    description="Recommendations from colleagues, founders, engineers, product leaders, and open source collaborators who have worked with Vinit Kumar."
-    pathname={location.pathname}
-  />
-)
+export const Head = ({ location }) => {
+  const locale = getLocale(location.pathname)
+
+  return (
+    <Seo
+      alternates={getLanguageAlternates(location.pathname)}
+      title={locale === "ja" ? "推薦文" : "Recommendations"}
+      description={
+        locale === "ja"
+          ? "Vinit Kumarと働いた同僚、創業者、エンジニア、プロダクトリーダー、オープンソースの協力者からの推薦文。"
+          : "Recommendations from colleagues, founders, engineers, product leaders, and open source collaborators who have worked with Vinit Kumar."
+      }
+      lang={locale}
+      pathname={location.pathname}
+    />
+  )
+}
