@@ -6,13 +6,33 @@ import {
   normalizeTags,
 } from "../utils/content"
 
-const Search = ({ posts }) => {
+const searchCopy = {
+  en: {
+    ariaLabel: "Search posts",
+    clear: "Clear search",
+    featured: "Featured",
+    noResults: (query) => `No posts found for “${query}”`,
+    placeholder: "Search posts...",
+    results: (count) => `${count} result${count === 1 ? "" : "s"} found`,
+  },
+  ja: {
+    ariaLabel: "記事を検索",
+    clear: "検索をクリア",
+    featured: "注目",
+    noResults: (query) => `「${query}」に一致する記事はありません`,
+    placeholder: "記事を検索...",
+    results: (count) => `${count}件の記事が見つかりました`,
+  },
+}
+
+const Search = ({ locale = "en", posts }) => {
   const [query, setQuery] = useState("")
   const [isOpen, setIsOpen] = useState(false)
   const [results, setResults] = useState([])
   const [activeIndex, setActiveIndex] = useState(-1)
   const inputRef = useRef(null)
   const containerRef = useRef(null)
+  const copy = searchCopy[locale]
 
   useEffect(() => {
     if (query.length < 2) {
@@ -117,13 +137,13 @@ const Search = ({ posts }) => {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Search posts..."
+          placeholder={copy.placeholder}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={handleFocus}
           onKeyDown={handleKeyDown}
           className="search-input"
-          aria-label="Search posts"
+          aria-label={copy.ariaLabel}
           role="combobox"
           aria-expanded={isOpen && query.length >= 2}
           aria-controls="site-search-results"
@@ -138,7 +158,7 @@ const Search = ({ posts }) => {
               setQuery("")
               inputRef.current?.focus()
             }}
-            aria-label="Clear search"
+            aria-label={copy.clear}
           >
             ×
           </button>
@@ -150,7 +170,7 @@ const Search = ({ posts }) => {
           {results.length > 0 ? (
             <>
               <div className="search-results-header">
-                {results.length} result{results.length !== 1 ? "s" : ""} found
+                {copy.results(results.length)}
               </div>
               {results.map(({ node }, index) => (
                 <Link
@@ -162,25 +182,31 @@ const Search = ({ posts }) => {
                   role="option"
                   aria-selected={index === activeIndex}
                 >
-                  <div className="search-result-title">
+                  <div
+                    className="search-result-title"
+                    lang={locale === "ja" ? "en" : undefined}
+                  >
                     {getPostTitle(node)}
                     {node.frontmatter.featured && (
-                      <span className="search-result-featured">Featured</span>
+                      <span className="search-result-featured">
+                        {copy.featured}
+                      </span>
                     )}
                   </div>
                   <div className="search-result-date">
                     {node.frontmatter.date}
                   </div>
-                  <p className="search-result-description">
+                  <p
+                    className="search-result-description"
+                    lang={locale === "ja" ? "en" : undefined}
+                  >
                     {getPostDescription(node)}
                   </p>
                 </Link>
               ))}
             </>
           ) : (
-            <div className="search-no-results">
-              No posts found for "{query}"
-            </div>
+            <div className="search-no-results">{copy.noResults(query)}</div>
           )}
         </div>
       )}

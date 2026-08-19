@@ -1,25 +1,35 @@
 import React from "react"
 import ThemeToggle from "./ThemeToggle"
 
-const Footer = () => {
+const Footer = ({ locale = "en" }) => {
+  const isJapanese = locale === "ja"
+
   return (
     <footer className="site-footer">
       <p className="footer-copyright">
-        © Copyright {new Date().getFullYear()} by Vinit Kumar.
+        {isJapanese
+          ? `© ${new Date().getFullYear()} Vinit Kumar.`
+          : `© Copyright ${new Date().getFullYear()} by Vinit Kumar.`}
       </p>
       <p className="footer-license">
-        Content licensed under the{" "}
+        {isJapanese
+          ? "コンテンツのライセンス："
+          : "Content licensed under the "}
         <a
           href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Creative Commons attribution-noncommercial-sharealike License
+          {isJapanese
+            ? "クリエイティブ・コモンズ 表示—非営利—継承 4.0"
+            : "Creative Commons attribution-noncommercial-sharealike License"}
         </a>
-        .
+        {isJapanese ? "。" : "."}
       </p>
       <p className="footer-contact">
-        Contact me via <a href="mailto:mail@vinitkumar.me">mail</a>,{" "}
+        {isJapanese ? "連絡先：" : "Contact me via "}
+        <a href="mailto:mail@vinitkumar.me">{isJapanese ? "メール" : "mail"}</a>
+        {isJapanese ? "、" : ", "}
         <a
           href="https://bsky.app/profile/vinitkme.bsky.social"
           target="_blank"
@@ -27,7 +37,7 @@ const Footer = () => {
         >
           bluesky
         </a>
-        ,{" "}
+        {isJapanese ? "、" : ", "}
         <a
           href="https://fosstodon.org/@vinitkme"
           target="_blank"
@@ -35,7 +45,7 @@ const Footer = () => {
         >
           mastodon
         </a>
-        ,{" "}
+        {isJapanese ? "、" : ", "}
         <a
           href="https://x.com/intent/user?screen_name=vinitkme"
           target="_blank"
@@ -43,7 +53,7 @@ const Footer = () => {
         >
           x
         </a>
-        , or{" "}
+        {isJapanese ? "、" : ", or "}
         <a
           href="https://github.com/vinitkumar"
           target="_blank"
@@ -51,10 +61,10 @@ const Footer = () => {
         >
           github
         </a>
-        .
+        {isJapanese ? "。" : "."}
       </p>
       <p className="footer-sponsor">
-        You can sponsor me on{" "}
+        {isJapanese ? "スポンサー：" : "You can sponsor me on "}
         <a
           href="https://github.com/sponsors/vinitkumar"
           target="_blank"
@@ -62,26 +72,32 @@ const Footer = () => {
         >
           github
         </a>
-        .
+        {isJapanese ? "。" : "."}
       </p>
       <p className="footer-info">
-        More info: <a href="/ai-transparency">AI transparency</a>. Subscribe via{" "}
-        <a href="/rss.xml">RSS</a>.
+        {isJapanese ? "詳細：" : "More info: "}
+        <a href="/ai-transparency">
+          {isJapanese ? "AI利用の透明性 (EN)" : "AI transparency"}
+        </a>
+        {isJapanese ? "。購読：" : ". Subscribe via "}
+        <a href="/rss.xml">RSS</a>
+        {isJapanese ? "。" : "."}
       </p>
       <p className="footer-fonts">
-        Set in{" "}
+        {isJapanese ? "使用フォント：" : "Set in "}
         <a
           href="https://github.com/vinitkumar/berka-mono-closer"
           target="_blank"
           rel="noopener noreferrer"
         >
           Berka Mono Instrument
-        </a>{" "}
-        throughout.
+        </a>
+        {isJapanese ? "" : " "}
+        {isJapanese ? "。" : "throughout."}
       </p>
       <p className="footer-theme">
-        <span>Theme:</span>
-        <ThemeToggle />
+        <span>{isJapanese ? "テーマ：" : "Theme:"}</span>
+        <ThemeToggle locale={locale} />
       </p>
     </footer>
   )

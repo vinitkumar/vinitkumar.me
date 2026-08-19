@@ -1,7 +1,14 @@
 import React from "react"
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+const Pagination = ({
+  currentPage,
+  locale = "en",
+  totalPages,
+  onPageChange,
+}) => {
   if (totalPages <= 1) return null
+
+  const isJapanese = locale === "ja"
 
   const getPageNumbers = () => {
     const pages = []
@@ -14,7 +21,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
       }
     } else {
       pages.push(1)
-      
+
       if (showEllipsisStart) {
         pages.push("...")
       }
@@ -41,18 +48,21 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
   }
 
   return (
-    <nav className="pagination" aria-label="Blog pagination">
+    <nav
+      className="pagination"
+      aria-label={isJapanese ? "記事一覧のページ移動" : "Blog pagination"}
+    >
       <button
         className="pagination-btn pagination-prev"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        aria-label="Previous page"
+        aria-label={isJapanese ? "前のページ" : "Previous page"}
       >
-        ← Prev
+        ← {isJapanese ? "前へ" : "Prev"}
       </button>
 
       <div className="pagination-numbers">
-        {getPageNumbers().map((page, index) => (
+        {getPageNumbers().map((page, index) =>
           page === "..." ? (
             <span key={`ellipsis-${index}`} className="pagination-ellipsis">
               ...
@@ -62,22 +72,22 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
               key={page}
               className={`pagination-number ${currentPage === page ? "active" : ""}`}
               onClick={() => onPageChange(page)}
-              aria-label={`Page ${page}`}
+              aria-label={isJapanese ? `${page}ページ` : `Page ${page}`}
               aria-current={currentPage === page ? "page" : undefined}
             >
               {page}
             </button>
           )
-        ))}
+        )}
       </div>
 
       <button
         className="pagination-btn pagination-next"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        aria-label="Next page"
+        aria-label={isJapanese ? "次のページ" : "Next page"}
       >
-        Next →
+        {isJapanese ? "次へ" : "Next"} →
       </button>
     </nav>
   )

@@ -1,7 +1,33 @@
 import React, { useState, useEffect } from "react"
 
-const ThemeToggle = ({ compact = false }) => {
+const labels = {
+  en: {
+    auto: "Auto",
+    autoAria: "Auto theme (follows system)",
+    autoTitle: "Follow system preference",
+    dark: "Dark",
+    darkAria: "Dark theme",
+    darkTitle: "Dark mode",
+    light: "Light",
+    lightAria: "Light theme",
+    lightTitle: "Light mode",
+  },
+  ja: {
+    auto: "自動",
+    autoAria: "自動テーマ（システム設定に従う）",
+    autoTitle: "システム設定に従う",
+    dark: "ダーク",
+    darkAria: "ダークテーマ",
+    darkTitle: "ダークモード",
+    light: "ライト",
+    lightAria: "ライトテーマ",
+    lightTitle: "ライトモード",
+  },
+}
+
+const ThemeToggle = ({ compact = false, locale = "en" }) => {
   const [colorScheme, setColorScheme] = useState("auto")
+  const copy = labels[locale]
 
   useEffect(() => {
     const saved = localStorage.getItem("colorScheme") || "auto"
@@ -30,24 +56,24 @@ const ThemeToggle = ({ compact = false }) => {
         <button
           className={`theme-btn ${colorScheme === "auto" ? "active" : ""}`}
           onClick={() => handleSchemeChange("auto")}
-          aria-label="Auto theme"
-          title="Follow system"
+          aria-label={copy.autoAria}
+          title={copy.autoTitle}
         >
           ◐
         </button>
         <button
           className={`theme-btn ${colorScheme === "light" ? "active" : ""}`}
           onClick={() => handleSchemeChange("light")}
-          aria-label="Light theme"
-          title="Light mode"
+          aria-label={copy.lightAria}
+          title={copy.lightTitle}
         >
           ☀
         </button>
         <button
           className={`theme-btn ${colorScheme === "dark" ? "active" : ""}`}
           onClick={() => handleSchemeChange("dark")}
-          aria-label="Dark theme"
-          title="Dark mode"
+          aria-label={copy.darkAria}
+          title={copy.darkTitle}
         >
           ☽
         </button>
@@ -60,26 +86,29 @@ const ThemeToggle = ({ compact = false }) => {
       <button
         className={`theme-btn ${colorScheme === "auto" ? "active" : ""}`}
         onClick={() => handleSchemeChange("auto")}
-        aria-label="Auto theme (follows system)"
-        title="Follow system preference"
+        aria-label={copy.autoAria}
+        title={copy.autoTitle}
       >
-        <span className="theme-btn-icon">◐</span>Auto
+        <span className="theme-btn-icon">◐</span>
+        {copy.auto}
       </button>
       <button
         className={`theme-btn ${colorScheme === "light" ? "active" : ""}`}
         onClick={() => handleSchemeChange("light")}
-        aria-label="Light theme"
-        title="Light mode"
+        aria-label={copy.lightAria}
+        title={copy.lightTitle}
       >
-        <span className="theme-btn-icon">☀</span>Light
+        <span className="theme-btn-icon">☀</span>
+        {copy.light}
       </button>
       <button
         className={`theme-btn ${colorScheme === "dark" ? "active" : ""}`}
         onClick={() => handleSchemeChange("dark")}
-        aria-label="Dark theme"
-        title="Dark mode"
+        aria-label={copy.darkAria}
+        title={copy.darkTitle}
       >
-        <span className="theme-btn-icon">☽</span>Dark
+        <span className="theme-btn-icon">☽</span>
+        {copy.dark}
       </button>
     </span>
   )

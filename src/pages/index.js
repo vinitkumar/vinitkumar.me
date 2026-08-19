@@ -6,16 +6,74 @@ import Seo from "../components/seo"
 import Search from "../components/Search"
 import Pagination from "../components/Pagination"
 import { getPostTitle, getTopicSlug, normalizeTags } from "../utils/content"
+import { getLocale } from "../utils/i18n"
 
 const POSTS_PER_PAGE = 5
 
-const BlogIndex = ({ data, location }) => {
+const homeCopy = {
+  en: {
+    allPosts: (count) => `All Posts (${count})`,
+    allTil: "All TIL",
+    eyebrow: "Principal Engineer · Django CMS Fellow",
+    explore: "Explore",
+    featured: "Featured",
+    featuredDescription: "Showing my most valuable and impactful writing",
+    featuredPosts: (count) => `Featured Posts (${count})`,
+    featuredWriting: "Featured Writing",
+    intro:
+      "Writing about robust systems, open source, tools, AI workflows, and engineering craft.",
+    noFeatured: "No featured posts found.",
+    originalLanguage: null,
+    shortNotes: "Short Notes",
+    showAll: "Show All Posts",
+    showFeatured: "Show Featured Only",
+    startHere: "Start Here",
+    summary: (start, end, total, featured) =>
+      `Showing ${start}–${end} of ${total} posts • ${featured} featured`,
+    til: "Today I Learned",
+    topics: "Topics",
+    translationNote: null,
+    viewAll: "View all",
+  },
+  ja: {
+    allPosts: (count) => `すべての記事 (${count})`,
+    allTil: "TILをすべて見る",
+    eyebrow: "プリンシパルエンジニア · Django CMS フェロー",
+    explore: "探す",
+    featured: "注目",
+    featuredDescription: "特に価値が高く、影響力のある記事を表示しています",
+    featuredPosts: (count) => `注目の記事 (${count})`,
+    featuredWriting: "注目の記事",
+    intro:
+      "堅牢なシステム、オープンソース、開発ツール、AIを活用したワークフロー、そしてエンジニアリングの技術について書いています。",
+    noFeatured: "注目の記事はまだありません。",
+    originalLanguage: "英語",
+    shortNotes: "短いメモ",
+    showAll: "すべての記事を表示",
+    showFeatured: "注目の記事のみ表示",
+    startHere: "はじめに",
+    summary: (start, end, total, featured) =>
+      `${total}件中${start}–${end}件を表示 • 注目記事${featured}件`,
+    til: "今日学んだこと",
+    topics: "トピック",
+    translationNote:
+      "サイトの案内は日本語に翻訳されています。記事本文は原文の英語で掲載しています。",
+    viewAll: "すべて見る",
+  },
+}
+
+const BlogIndex = ({
+  data,
+  location,
+  locale = getLocale(location.pathname),
+}) => {
   const [showFeaturedOnly, setShowFeaturedOnly] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
 
   const siteTitle = data.site.siteMetadata.title
   const allPosts = data.allMarkdownRemark.edges
   const tilPosts = data.allTil.edges
+  const copy = homeCopy[locale]
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -96,11 +154,9 @@ const BlogIndex = ({ data, location }) => {
     <HomeLayout location={location} title={siteTitle}>
       <section className="home-intro">
         <div className="home-intro-copy">
-          <p className="eyebrow">Principal Engineer · Django CMS Fellow</p>
-          <p>
-            Writing about robust systems, open source, tools, AI workflows, and
-            engineering craft.
-          </p>
+          <p className="eyebrow">{copy.eyebrow}</p>
+          <p>{copy.intro}</p>
+          {copy.translationNote && <p>{copy.translationNote}</p>}
         </div>
         <div className="home-intro-actions">
           <a href="/rss.xml" className="text-action">
@@ -109,7 +165,7 @@ const BlogIndex = ({ data, location }) => {
         </div>
       </section>
 
-      <Search posts={allPosts} />
+      <Search locale={locale} posts={allPosts} />
 
       <section className="home-section writing-index">
         <div className="filter-controls">
@@ -123,9 +179,9 @@ const BlogIndex = ({ data, location }) => {
               }}
             >
               {showFeaturedOnly ? (
-                <>Featured Posts ({featuredCount})</>
+                <>{copy.featuredPosts(featuredCount)}</>
               ) : (
-                <>All Posts ({allPosts.length})</>
+                <>{copy.allPosts(allPosts.length)}</>
               )}
             </h3>
             <p
@@ -136,8 +192,13 @@ const BlogIndex = ({ data, location }) => {
               }}
             >
               {showFeaturedOnly
-                ? "Showing my most valuable and impactful writing"
-                : `Showing ${startIndex + 1}–${Math.min(startIndex + POSTS_PER_PAGE, filteredPosts.length)} of ${filteredPosts.length} posts • ${featuredCount} featured`}
+                ? copy.featuredDescription
+                : copy.summary(
+                    startIndex + 1,
+                    Math.min(startIndex + POSTS_PER_PAGE, filteredPosts.length),
+                    filteredPosts.length,
+                    featuredCount
+                  )}
             </p>
           </div>
 
@@ -145,7 +206,7 @@ const BlogIndex = ({ data, location }) => {
             onClick={toggleFeaturedFilter}
             className={`filter-btn ${showFeaturedOnly ? "filter-btn--active" : ""}`}
           >
-            {showFeaturedOnly ? <>Show All Posts</> : <>Show Featured Only</>}
+            {showFeaturedOnly ? copy.showAll : copy.showFeatured}
           </button>
         </div>
 
@@ -162,18 +223,36 @@ const BlogIndex = ({ data, location }) => {
                 <div className="blog-post-row-header">
                   <div className="blog-post-row-meta">
                     {node.frontmatter.featured && (
-                      <span className="blog-post-row-featured" title="Featured">
-                        Featured
+                      <span
+                        className="blog-post-row-featured"
+                        title={copy.featured}
+                      >
+                        {copy.featured}
                       </span>
                     )}
-                    <h2 className="blog-post-row-title">{title}</h2>
+                    {copy.originalLanguage && (
+                      <span className="blog-post-row-featured">
+                        {copy.originalLanguage}
+                      </span>
+                    )}
+                    <h2
+                      className="blog-post-row-title"
+                      lang={locale === "ja" ? "en" : undefined}
+                    >
+                      {title}
+                    </h2>
                   </div>
                   <span className="blog-post-row-arrow">→</span>
                 </div>
                 <span className="blog-post-row-date">
                   {node.frontmatter.date}
                 </span>
-                <p className="blog-post-row-excerpt">{excerpt}</p>
+                <p
+                  className="blog-post-row-excerpt"
+                  lang={locale === "ja" ? "en" : undefined}
+                >
+                  {excerpt}
+                </p>
               </Link>
             )
           })}
@@ -182,6 +261,7 @@ const BlogIndex = ({ data, location }) => {
         {/* Pagination */}
         <Pagination
           currentPage={currentPage}
+          locale={locale}
           totalPages={totalPages}
           onPageChange={handlePageChange}
         />
@@ -195,7 +275,7 @@ const BlogIndex = ({ data, location }) => {
               color: "var(--text-muted)",
             }}
           >
-            <p style={{ fontSize: "1.1rem" }}>No featured posts found.</p>
+            <p style={{ fontSize: "1.1rem" }}>{copy.noFeatured}</p>
           </div>
         )}
       </section>
@@ -205,8 +285,8 @@ const BlogIndex = ({ data, location }) => {
           <div className="discovery-panel start-here-panel">
             <div className="section-heading">
               <div>
-                <p className="eyebrow">Start Here</p>
-                <h2>Featured Writing</h2>
+                <p className="eyebrow">{copy.startHere}</p>
+                <h2>{copy.featuredWriting}</h2>
               </div>
               <button
                 onClick={() => {
@@ -216,7 +296,7 @@ const BlogIndex = ({ data, location }) => {
                 }}
                 className="text-button"
               >
-                View all
+                {copy.viewAll}
               </button>
             </div>
             <div className="compact-post-list">
@@ -227,7 +307,9 @@ const BlogIndex = ({ data, location }) => {
                   className="compact-post-link"
                 >
                   <span>{node.frontmatter.date}</span>
-                  <strong>{getPostTitle(node)}</strong>
+                  <strong lang={locale === "ja" ? "en" : undefined}>
+                    {getPostTitle(node)}
+                  </strong>
                 </Link>
               ))}
             </div>
@@ -237,8 +319,8 @@ const BlogIndex = ({ data, location }) => {
         <div className="discovery-panel topics-panel">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Explore</p>
-              <h2>Topics</h2>
+              <p className="eyebrow">{copy.explore}</p>
+              <h2>{copy.topics}</h2>
             </div>
           </div>
           <div className="topic-cloud">
@@ -255,11 +337,11 @@ const BlogIndex = ({ data, location }) => {
           <div className="discovery-panel til-panel">
             <div className="section-heading">
               <div>
-                <p className="eyebrow">Today I Learned</p>
-                <h2>Short Notes</h2>
+                <p className="eyebrow">{copy.til}</p>
+                <h2>{copy.shortNotes}</h2>
               </div>
               <Link to="/til" className="text-action">
-                All TIL
+                {copy.allTil}
               </Link>
             </div>
             <div className="compact-post-list">
@@ -270,7 +352,9 @@ const BlogIndex = ({ data, location }) => {
                   className="compact-post-link"
                 >
                   <span>{node.frontmatter.date}</span>
-                  <strong>{getPostTitle(node)}</strong>
+                  <strong lang={locale === "ja" ? "en" : undefined}>
+                    {getPostTitle(node)}
+                  </strong>
                 </Link>
               ))}
             </div>
@@ -283,26 +367,36 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const Head = ({ location }) => (
-  <Seo
-    title="Home"
-    pathname={location.pathname}
-    meta={[
-      {
-        name: "google-site-verification",
-        content: "aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI",
-      },
-      {
-        name: "msvalidate.01",
-        content: "9BD6B4DCA2B9F88A132B7DDCA1578919",
-      },
-      {
-        name: "fediverse:creator",
-        content: "@vinitkme@fosstodon.org",
-      },
-    ]}
-  />
-)
+export const Head = ({ location }) => {
+  const locale = getLocale(location.pathname)
+
+  return (
+    <Seo
+      title={locale === "ja" ? "ホーム" : "Home"}
+      description={
+        locale === "ja"
+          ? "Vinit Kumarの日本語サイト。堅牢なシステム、オープンソース、開発ツール、AIワークフローについて紹介します。"
+          : undefined
+      }
+      lang={locale}
+      pathname={location.pathname}
+      meta={[
+        {
+          name: "google-site-verification",
+          content: "aAxhI-I1HmxoEa86D9zHsMBtY7sfAVgyX_HfqMSSCCI",
+        },
+        {
+          name: "msvalidate.01",
+          content: "9BD6B4DCA2B9F88A132B7DDCA1578919",
+        },
+        {
+          name: "fediverse:creator",
+          content: "@vinitkme@fosstodon.org",
+        },
+      ]}
+    />
+  )
+}
 
 export const pageQuery = graphql`
   {
