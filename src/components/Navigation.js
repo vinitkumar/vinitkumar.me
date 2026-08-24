@@ -5,11 +5,6 @@ import { getLanguageSwitchPath } from "../utils/i18n"
 
 const externalLinks = [
   {
-    href: "https://vinitkumar.github.io/vinitkumar.pdf",
-    label: "Resume",
-    className: "nav-link--resume",
-  },
-  {
     href: "https://www.linkedin.com/in/vinitatlinkedin/",
     label: "LinkedIn",
     icon: "linkedin",
@@ -34,6 +29,7 @@ const navigationCopy = {
     ariaLabel: "Main navigation",
     internalLinks: [
       { to: "/about", label: "About", className: "nav-link--about" },
+      { to: "/resume", label: "Resume", className: "nav-link--resume" },
       { to: "/til", label: "TIL", className: "nav-link--til" },
       { to: "/stats", label: "Stats", className: "nav-link--stats" },
       {
@@ -52,6 +48,7 @@ const navigationCopy = {
         label: "プロフィール",
         className: "nav-link--about",
       },
+      { to: "/resume", label: "履歴書", className: "nav-link--resume" },
       { to: "/til", label: "TIL (EN)", className: "nav-link--til" },
       {
         to: "/ja/stats/",
@@ -96,11 +93,6 @@ const SocialIcon = ({ name }) => {
  */
 const Navigation = ({ locale = "en", pathname = "/" }) => {
   const copy = navigationCopy[locale]
-  const localizedExternalLinks = externalLinks.map((link) => ({
-    ...link,
-    label: locale === "ja" && link.label === "Resume" ? "履歴書" : link.label,
-  }))
-
   return (
     <nav className="site-nav" aria-label={copy.ariaLabel}>
       {copy.internalLinks.map((link) => (
@@ -116,7 +108,7 @@ const Navigation = ({ locale = "en", pathname = "/" }) => {
 
       <span className="nav-separator" aria-hidden="true" />
 
-      {localizedExternalLinks.map((link) => (
+      {externalLinks.map((link) => (
         <a
           key={link.href}
           href={link.href}

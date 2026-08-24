@@ -20,6 +20,7 @@ function Seo({
   markdownPath,
   noindex = false,
   pathname = `/`,
+  structuredData = [],
   tags = [],
   title,
   type = `website`,
@@ -136,6 +137,12 @@ function Seo({
         return <meta key={key} {...entry} />
       })}
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      {/* Extra schema.org graphs, e.g. ProfilePage/Person on /about and /resume. */}
+      {structuredData.map((graph, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(graph)}
+        </script>
+      ))}
     </>
   )
 }
@@ -154,6 +161,7 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   markdownPath: PropTypes.string,
+  structuredData: PropTypes.arrayOf(PropTypes.object),
   noindex: PropTypes.bool,
   pathname: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),

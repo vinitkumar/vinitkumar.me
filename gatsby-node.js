@@ -1,6 +1,8 @@
 const path = require(`path`)
 const fs = require(`fs`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const resumeData = require(`./src/data/resume`)
+const aboutData = require(`./src/data/about`)
 
 const normalizeTag = tag =>
   String(tag || "")
@@ -286,6 +288,86 @@ const verifyCodeBlockRendering = (publicDir, posts, reporter) => {
   }
 }
 
+// /resume.md and /about.md — Markdown mirrors of the two JS pages, so the
+// llms.txt tooling and assistants can read them the same way as articles.
+const markdownForResume = siteUrl => {
+  const entry = item => {
+    const where = item.location ? ` (${item.location})` : ``
+    return [
+      ``,
+      `### ${item.organization} — ${item.role}${where}`,
+      `${item.period}`,
+      ...(item.points.length > 0 ? [``, ...item.points.map(p => `- ${p}`)] : []),
+    ]
+  }
+
+  return [
+    `# ${resumeData.profile.name} — Resume`,
+    ``,
+    `Source URL: ${siteUrl}/resume/`,
+    `PDF: ${siteUrl}/resume.pdf`,
+    `Role: ${resumeData.profile.jobTitle} at ${resumeData.profile.employer}`,
+    `Location: ${resumeData.profile.location}`,
+    `Contact: ${resumeData.profile.email}`,
+    ``,
+    `${resumeData.profile.summary}`,
+    ``,
+    `## Skills`,
+    ``,
+    ...resumeData.skills.map(row => `- **${row.label}:** ${row.value}`),
+    ``,
+    `## Experience`,
+    ...resumeData.experience.flatMap(entry),
+    ``,
+    `## Education`,
+    ...resumeData.education.flatMap(entry),
+    ``,
+    `## Recommendations`,
+    ``,
+    ...resumeData.recommendations.map(r => `- [${r.label}](${r.href})`),
+    ``,
+  ].join(`\n`)
+}
+
+const markdownForAbout = siteUrl =>
+  [
+    `# About Vinit Kumar`,
+    ``,
+    `Source URL: ${siteUrl}/about/`,
+    `Resume: ${siteUrl}/resume/`,
+    ``,
+    `${aboutData.summary}`,
+    ``,
+    `## Current Focus`,
+    ``,
+    ...aboutData.currentFocus.map(item => `- ${item}`),
+    ``,
+    `## Principles`,
+    ``,
+    ...aboutData.principles.map(item => `- ${item}`),
+    ``,
+    `## Career`,
+    ``,
+    ...aboutData.career.map(
+      item => `- **${item.organization}** — ${item.role} (${item.period})`
+    ),
+    ``,
+    `Education: ${aboutData.educationLine}`,
+    ``,
+    `## Selected Work`,
+    ``,
+    ...aboutData.selectedWork.map(
+      item => `- [${item.title}](${siteUrl}${item.href}) - ${item.body}`
+    ),
+    ``,
+    `## Elsewhere`,
+    ``,
+    ...aboutData.elsewhereLinks.map(
+      item => `- ${item.label}: ${item.value} (${item.href})`
+    ),
+    ``,
+  ].join(`\n`)
+
 const markdownForPost = (siteUrl, post) => {
   const canonicalPath = post.frontmatter.canonicalPath || post.fields.slug
   const url = `${siteUrl}${canonicalPath}`
@@ -362,6 +444,15 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
     fs.writeFileSync(outputPath, markdownForPost(site.siteUrl, post))
   })
 
+  fs.writeFileSync(
+    path.join(publicDir, `resume.md`),
+    markdownForResume(site.siteUrl)
+  )
+  fs.writeFileSync(
+    path.join(publicDir, `about.md`),
+    markdownForAbout(site.siteUrl)
+  )
+
   const featuredPosts = posts.slice(0, 25)
   const topicMap = posts.reduce((topics, post) => {
     normalizeTags(post.frontmatter.tags).forEach(tag => {
@@ -386,6 +477,7 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
     ``,
     `- [Home](${site.siteUrl}/)`,
     `- [About](${site.siteUrl}/about/)`,
+    `- [Resume](${site.siteUrl}/resume/)`,
     `- [Today I Learned](${site.siteUrl}/til/)`,
     `- [Recommendations](${site.siteUrl}/recommendations/)`,
     `- [RSS feed](${site.siteUrl}/rss.xml)`,
@@ -408,6 +500,17 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
     `## Markdown Mirrors`,
     ``,
     `Most article pages expose a clean Markdown alternate at the same URL with a \`.md\` suffix. Example: ${site.siteUrl}/memory-efficient-python.md`,
+    ``,
+    `The profile pages do the same: ${site.siteUrl}/about.md and ${site.siteUrl}/resume.md.`,
+    ``,
+    `## Author Profile`,
+    ``,
+    `- Name: ${resumeData.profile.name}`,
+    `- Role: ${resumeData.profile.jobTitle} at ${resumeData.profile.employer} (${resumeData.profile.employerUrl})`,
+    `- Also: Django CMS Fellow, Django Software Foundation individual member`,
+    `- Location: ${resumeData.profile.location}`,
+    `- Contact: ${resumeData.profile.email}`,
+    `- Resume PDF: ${site.siteUrl}/resume.pdf`,
     ``,
   ].join(`\n`)
 

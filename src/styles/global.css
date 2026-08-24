@@ -3522,3 +3522,223 @@ blockquote,
     font-size: 16px;
   }
 }
+
+/* ===========================================
+   Resume Page
+   Mirrors the LaTeX layout in resume/vinit-kumar.tex
+   =========================================== */
+.resume-page {
+  margin: 0 auto;
+  max-width: 46rem;
+}
+
+.resume-header {
+  align-items: flex-end;
+  border-bottom: 2px solid var(--signal);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: space-between;
+  padding-bottom: 0.9rem;
+}
+
+.resume-identity h1 {
+  font-size: clamp(2rem, 6vw, 2.75rem);
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.resume-tagline {
+  color: var(--text-muted);
+  margin: 0.35rem 0 0;
+}
+
+.resume-tagline span {
+  color: var(--signal);
+}
+
+/* Download button: solid ink, inverts on hover, no radius like the rest. */
+.resume-download {
+  background: var(--text);
+  border: 1px solid var(--text);
+  color: var(--background);
+  display: inline-block;
+  font-size: var(--font-small);
+  letter-spacing: 0.04em;
+  padding: 0.6rem 1.1rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.resume-download:hover,
+.resume-download:focus-visible {
+  background: var(--signal);
+  border-color: var(--signal);
+  color: #fff8e7;
+}
+
+.resume-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.5rem;
+  font-size: var(--font-smaller);
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+}
+
+.resume-section {
+  margin-top: 2rem;
+}
+
+/* Section label plus a hairline running to the right edge. */
+.resume-section-title {
+  align-items: center;
+  color: var(--signal);
+  display: flex;
+  font-size: var(--font-smaller);
+  font-weight: 700;
+  gap: 0.75rem;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+}
+
+.resume-section-title::after {
+  background: var(--gray-line);
+  content: "";
+  flex: 1;
+  height: 1px;
+}
+
+.resume-summary {
+  margin: 0;
+  max-width: 68ch;
+}
+
+.resume-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resume-entries > li + li {
+  margin-top: 1.2rem;
+}
+
+.resume-entry-head {
+  align-items: baseline;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 1rem;
+  justify-content: space-between;
+}
+
+.resume-entry-head strong {
+  color: var(--text);
+  display: block;
+}
+
+.resume-entry-role {
+  color: var(--text-muted);
+  display: block;
+}
+
+/* Separates role from location, matching the LaTeX bullet. */
+.resume-entry-dot {
+  color: var(--signal);
+  padding: 0 0.4rem;
+}
+
+.resume-entry-period {
+  color: var(--text-muted);
+  font-size: var(--font-smaller);
+  white-space: nowrap;
+}
+
+.resume-points {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.resume-points li {
+  margin-bottom: 0.35rem;
+  max-width: 72ch;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.resume-points li::before {
+  color: var(--signal);
+  content: "\2022";
+  left: 0;
+  position: absolute;
+}
+
+.resume-skills {
+  display: grid;
+  gap: 0.6rem 1.5rem;
+  grid-template-columns: minmax(0, 1fr);
+  margin: 0;
+}
+
+.resume-skills > div {
+  display: grid;
+  gap: 0.15rem 1.5rem;
+  grid-template-columns: 7.5rem minmax(0, 1fr);
+}
+
+.resume-skills dt {
+  color: var(--text-muted);
+  font-size: var(--font-smaller);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.resume-skills dd {
+  margin: 0;
+  max-width: 68ch;
+}
+
+.resume-footer {
+  align-items: center;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+}
+
+.resume-footer p {
+  color: var(--text-muted);
+  font-size: var(--font-smaller);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .resume-skills > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .resume-entry-head {
+    flex-direction: column;
+  }
+}
+
+/* Printing the web page should produce the same one-pager, minus chrome. */
+@media print {
+  .site-nav,
+  .site-header,
+  .resume-download,
+  .resume-footer {
+    display: none;
+  }
+
+  .resume-page {
+    max-width: none;
+  }
+}

@@ -1,0 +1,154 @@
+% Vinit Kumar — resume
+% Build: ./scripts/build-resume.sh  (tectonic, XeTeX engine)
+% Classic LaTeX article typography: Latin Modern, no colour, TeX default rules.
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[
+  a4paper,
+  top=13mm, bottom=13mm, left=16mm, right=16mm,
+  footskip=8mm
+]{geometry}
+
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{0.98}\selectfont
+
+\hypersetup{
+  pdftitle={Vinit Kumar — Resume},
+  pdfauthor={Vinit Kumar},
+  pdfsubject={Principal Engineer, Django CMS Fellow},
+}
+
+% Small-caps heading over a full-width rule: the standard LaTeX resume idiom.
+\titleformat{\section}
+  {\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{3pt}
+
+% --- Experience entry -------------------------------------------------------
+% #1 organisation  #2 role  #3 location (may be empty)  #4 period
+\newcommand{\role}[4]{%
+  \par\vspace{3pt}%
+  \textbf{#1}\hfill\textit{#4}\par
+  \textit{#2\if\relax\detokenize{#3}\relax\else, #3\fi}\par
+  \vspace{1pt}%
+}
+
+% --- Tight bullet list ------------------------------------------------------
+\newenvironment{points}
+  {\begin{itemize}[leftmargin=1.4em, itemsep=0.5pt, topsep=2pt, parsep=0pt]}
+  {\end{itemize}}
+
+\begin{document}
+
+% ============================ HEADER =======================================
+\begin{center}
+  {\LARGE\bfseries Vinit Kumar}\\[3pt]
+  \small
+  \href{mailto:mail@vinitkumar.me}{mail@vinitkumar.me} $\vert$
+  +91 8554862210 $\vert$
+  \href{https://vinitkumar.me}{vinitkumar.me} $\vert$
+  \href{https://github.com/vinitkumar}{GitHub} $\vert$
+  \href{https://www.linkedin.com/in/vinitatlinkedin/}{LinkedIn}
+\end{center}
+
+\vspace{-2pt}
+
+% ============================ SKILLS =======================================
+\section*{Skills}
+
+\textbf{Programming:} Go, Python, JavaScript, TypeScript, Ruby on Rails, PHP, C \\
+\textbf{DevOps:} AWS, Google Cloud Platform, DigitalOcean, CI/CD (GitHub
+Actions, Bitbucket Pipelines) \\
+\textbf{Web Development:} Django, FastAPI, Laravel, Express.js, Ruby on Rails,
+PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, React \\
+\textbf{Testing:} Unit testing, TDD (Pytest, Vitest, PHPUnit)
+
+% ============================ EXPERIENCE ===================================
+\section*{Experience}
+
+\role{Scalefusion}{Principal Engineer}{Pune, India}{Nov 2024 -- Present}
+\begin{points}
+  \item Lead architecture and development of large-scale distributed systems
+        using Go, solving complex engineering challenges with precision.
+  \item Design and optimize high-performance back-end systems, ensuring
+        seamless scalability and reliability.
+  \item Collaborate cross-functionally to improve system efficiency,
+        implementing solutions that improve performance.
+  \item Develop and maintain core services in Go, TypeScript, and Ruby on
+        Rails, ensuring high availability and fault tolerance.
+  \item Optimize cloud infrastructure and CI/CD pipelines, improving
+        deployment efficiency and reducing downtime.
+\end{points}
+
+\role{django CMS}{Django CMS Fellow}{}{Nov 2024 -- Present}
+\begin{points}
+  \item Paid fellowship contributing to the django CMS core and its plugin
+        ecosystem.
+\end{points}
+
+\role{Django Software Foundation}{Individual Member}{}{Feb 2024 -- Present}
+
+\role{KidsKonnect}{Staff Software Engineer}{Pune, India}{Feb 2023 -- Nov 2024}
+% TODO(vinit): the nine bullets below cover the whole Social Schools +
+% KidsKonnect tenure. Move the ones earned after Feb 2023 up into this entry.
+
+\role{Social Schools}{Staff / Senior Software Engineer}{Pune, India}%
+  {Feb 2013 -- Feb 2023}
+\begin{points}
+  \item Designed and implemented a highly scalable distributed multitenant CMS
+        in Python, managing more than 2,500 domains and improving page load
+        speeds by 35\%.
+  \item Led development of an Enrollment Form \& CRM system, reducing
+        onboarding time by 40\% and increasing customer sign-ups by 25\%.
+  \item Built an internal monitoring tool, reducing downtime incidents by 30\%
+        through real-time uptime tracking.
+  \item Developed a Go-based analytics tracker, reducing data processing time
+        by 50\% and improving the efficiency of the system.
+  \item Created a Celery \& RabbitMQ-based distributed task queue, reducing job
+        execution time by 45\% and handling 3x more concurrent tasks.
+  \item Optimized cloud infrastructure, reducing AWS costs by 20\% through
+        auto-scaling and right-sizing instances.
+  \item Spearheaded performance improvements, cutting API response times from
+        400\,ms to 120\,ms, improving user experience.
+  \item Led containerization efforts (Docker, Kubernetes), enabling seamless
+        local development across different OS environments.
+  \item Mentored junior developers on Django and React, fostering a culture of
+        best practices and continuous learning.
+\end{points}
+
+\role{Open Source}{Software Developer}{Remote}{2010 -- Present}
+\begin{points}
+  \item Principal author of \texttt{json2xml}, used by engineers from Google,
+        Amazon, and NASA.
+  \item Developed a chat-bot in C with a lightweight NLP engine.
+  \item Created \texttt{node-twitter}, a Twitter clone using Node.js and
+        MongoDB.
+  \item Designed ``white paper,'' a top-10 Jekyll theme with thousands of
+        downloads.
+\end{points}
+
+% ============================ EDUCATION ====================================
+\section*{Education}
+
+\role{Birla Institute of Technology, Mesra}%
+  {B.E. (Specialization: Python programming, Linux, C)}{Ranchi, India}%
+  {Jul 2008 -- Apr 2012}
+\begin{points}
+  \item \textbf{Graduation project:} applied genetic algorithms to predict
+        sedimentation rates in reservoirs in India.
+\end{points}
+
+% ============================ RECOMMENDATIONS ==============================
+\section*{Recommendations}
+
+Available on
+\href{https://www.linkedin.com/in/vinitatlinkedin/details/recommendations/}{LinkedIn}
+and \href{https://github.com/vinitkumar}{GitHub}.
+
+\end{document}
