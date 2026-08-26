@@ -34,7 +34,7 @@ const contact = [
 const skills = [
   {
     label: "Programming",
-    value: "Go, Python, JavaScript, TypeScript, Ruby on Rails, PHP, C",
+    value: "Go, Python, JavaScript, TypeScript, Ruby, PHP, C",
   },
   {
     label: "DevOps",
@@ -44,7 +44,7 @@ const skills = [
   {
     label: "Web",
     value:
-      "Django, FastAPI, Laravel, Express.js, Ruby on Rails, PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, React",
+      "Django, FastAPI, Ruby on Rails, Laravel, Express.js, PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, React",
   },
   { label: "Testing", value: "Unit testing, TDD (Pytest, Vitest, PHPUnit)" },
 ]
