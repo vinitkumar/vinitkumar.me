@@ -205,7 +205,7 @@ body {
   /* Typography */
   --font-base: 1rem;
   --font-small: 0.875rem;
-  --font-smaller: 0.75rem;
+  --font-smaller: 0.8125rem;
   --font-family-heading:
     "Berka Text", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -384,7 +384,7 @@ svg rect[fill*="blue"],
 html,
 body {
   font-family: var(--font-family-body);
-  font-size: 16px;
+  font-size: 100%;
   font-weight: 400;
   height: 100%;
   line-height: 1.58;
@@ -458,7 +458,7 @@ kbd,
 pre,
 samp {
   font-family: var(--font-family-code);
-  font-size: 14px;
+  font-size: 0.9375rem;
 }
 
 code {
@@ -1415,7 +1415,7 @@ h6 {
 }
 
 .nav-group-label {
-  font-size: 0.65rem;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -2150,7 +2150,7 @@ h6 {
   color: var(--text-muted);
   display: inline-flex;
   font-family: var(--font-family-code);
-  font-size: 0.72rem;
+  font-size: 0.8125rem;
   height: 1.15rem;
   justify-content: center;
   width: 1.15rem;
@@ -2248,7 +2248,7 @@ h6 {
   border: 1px solid var(--gray-line);
   border-radius: 4px;
   color: var(--text-muted);
-  font-size: 0.72rem;
+  font-size: 0.8125rem;
   padding: 0.05rem 0.3rem;
 }
 
@@ -2954,12 +2954,18 @@ h6 {
   }
 }
 
+/* Fluid root: 16px at a 600px viewport, 19px at 1600px and wider.
+   The em base keeps the browser's own default font-size setting effective,
+   so text still resizes for users who raise it (WCAG 1.4.4). */
+html:root {
+  font-size: clamp(1em, 0.8875em + 0.3vw, 1.1875em);
+}
+
 html,
 body {
   font-family: var(--font-family-body);
-  font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 1.625;
   font-variant-ligatures: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2974,7 +2980,7 @@ select {
 
 p,
 li {
-  line-height: 26px;
+  line-height: 1.625;
 }
 
 ::selection {
@@ -2984,7 +2990,7 @@ li {
 
 .site-shell {
   margin-inline: auto;
-  max-width: 960px;
+  max-width: 78rem;
   padding: 40px;
 }
 
@@ -3042,22 +3048,22 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family-heading);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
 h1 {
-  font-size: 22px;
-  line-height: 30px;
+  font-size: 1.375rem;
+  line-height: 1.36;
 }
 
 .site-title {
-  font-size: 16px;
+  font-size: 1rem;
   letter-spacing: 0.04em;
-  line-height: 24px;
+  line-height: 1.5;
   margin: 0 0 20px;
   text-transform: uppercase;
 }
@@ -3086,9 +3092,9 @@ h1 {
 }
 
 .nav-link {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 1.45;
   padding: 0;
   text-transform: uppercase;
 }
@@ -3112,8 +3118,8 @@ h1 {
 .theme-btn,
 .theme-toggle-compact .theme-btn {
   border-radius: 0;
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 0.8125rem;
+  line-height: 1.55;
   padding: 2px 6px;
 }
 
@@ -3124,10 +3130,10 @@ h1 {
 }
 
 .eyebrow {
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  line-height: 22px;
+  line-height: 1.7;
 }
 
 .eyebrow::before {
@@ -3142,18 +3148,18 @@ h1 {
 }
 
 .home-intro-copy p:not(.eyebrow) {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 28px;
-  max-width: 62ch;
+  line-height: 1.55;
+  max-width: 68ch;
 }
 
 .text-action,
 .text-button {
   color: var(--link-color);
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 22px;
+  line-height: 1.6;
   text-transform: uppercase;
 }
 
@@ -3161,8 +3167,8 @@ h1 {
   background: transparent;
   border-color: var(--gray-line);
   border-radius: 0;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 1rem;
+  line-height: 1.625;
   padding-block: 8px;
 }
 
@@ -3193,14 +3199,14 @@ h1 {
 }
 
 .filter-controls h3 {
-  font-size: 14px !important;
-  line-height: 22px !important;
+  font-size: 0.875rem !important;
+  line-height: 1.6 !important;
   text-transform: uppercase;
 }
 
 .filter-controls p {
-  font-size: 14px !important;
-  line-height: 22px;
+  font-size: 0.875rem !important;
+  line-height: 1.6;
 }
 
 .filter-btn {
@@ -3208,9 +3214,9 @@ h1 {
   border: 0;
   border-radius: 0;
   color: var(--link-color);
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 1.6;
   min-height: 0;
   padding: 0;
   text-decoration: underline;
@@ -3245,17 +3251,17 @@ h1 {
 }
 
 .blog-post-row-title {
-  font-size: 16px;
+  font-size: 1.125rem;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 1.35;
   text-transform: uppercase;
 }
 
 .blog-post-row-date,
 .blog-post-row-featured,
 .blog-post-row-arrow {
-  font-size: 13px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.45;
 }
 
 .blog-post-row-featured {
@@ -3266,8 +3272,8 @@ h1 {
 
 .blog-post-row-excerpt {
   color: var(--text);
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 1rem;
+  line-height: 1.625;
 }
 
 .pagination {
@@ -3280,8 +3286,8 @@ h1 {
   background: transparent;
   border: 0;
   border-radius: 0;
-  font-size: 13px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.6;
   padding: 0 4px;
 }
 
@@ -3314,8 +3320,8 @@ h1 {
 
 .section-heading h2,
 .compact-post-link strong {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
@@ -3324,9 +3330,9 @@ h1 {
 }
 
 .compact-post-link span {
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 1.6;
 }
 
 .topic-cloud {
@@ -3338,10 +3344,10 @@ h1 {
   background: transparent;
   border: 0;
   border-radius: 0;
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 600;
   gap: 6px;
-  line-height: 22px;
+  line-height: 1.6;
   min-height: 0;
   padding: 0;
   text-decoration: underline;
@@ -3360,7 +3366,7 @@ h1 {
   border-radius: 0;
   color: var(--text);
   margin-top: 0;
-  max-width: 700px;
+  max-width: 56rem;
   padding: 0;
 }
 
@@ -3370,38 +3376,38 @@ h1 {
 }
 
 .post-header h1 {
-  font-size: 28px;
-  line-height: 36px;
+  font-size: 2rem;
+  line-height: 1.15;
   margin-bottom: 12px;
-  max-width: 34ch;
+  max-width: 38ch;
 }
 
 .post-meta {
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 1.6;
 }
 
 .post-content {
   color: var(--text);
-  font-size: 17px;
-  line-height: 28px;
-  max-width: 68ch;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  max-width: 80ch;
 }
 
 .post-content :where(p, li, blockquote) {
-  line-height: 28px;
+  line-height: 1.65;
 }
 
 .post-content h2 {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.5rem;
+  line-height: 1.25;
   margin-top: 40px;
 }
 
 .post-content h3 {
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 1.1875rem;
+  line-height: 1.35;
   margin-top: 36px;
 }
 
@@ -3417,8 +3423,8 @@ kbd,
 pre,
 samp,
 .post-content :where(code, pre) {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
 }
 
 pre,
@@ -3436,34 +3442,34 @@ blockquote,
 
 .toc a,
 .post-nav span {
-  font-size: 13px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.6;
   text-transform: uppercase;
 }
 
 .about-intro h1,
 .recommendations-hero h1,
 .stats-hero h1 {
-  font-size: 28px;
+  font-size: 2rem;
   letter-spacing: 0;
-  line-height: 36px;
-  max-width: 34ch;
+  line-height: 1.15;
+  max-width: 38ch;
   text-transform: uppercase;
 }
 
 .about-intro-heading > p,
 .recommendations-hero p:not(.eyebrow),
 .stats-hero p:not(.eyebrow) {
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 
 .about-intro-prose p,
 .about-section p,
 .recommendation-text {
   color: var(--text);
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 
 .recommendations-hero p:not(.eyebrow),
@@ -3474,8 +3480,8 @@ blockquote,
 .about-section h2,
 .recommendation-metrics strong,
 .stats-metrics strong {
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 1.375rem;
+  line-height: 1.3;
 }
 
 .recommendation-metrics,
@@ -3488,14 +3494,14 @@ blockquote,
 }
 
 .site-footer {
-  font-size: 13px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.6;
   margin-top: 60px;
   padding-top: 20px;
 }
 
 .site-footer p {
-  line-height: 22px;
+  line-height: 1.6;
   margin: 0;
 }
 
@@ -3510,7 +3516,7 @@ blockquote,
   }
 
   .nav-link {
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 0;
   }
 
@@ -3519,7 +3525,7 @@ blockquote,
   }
 
   .blog-post-row-title {
-    font-size: 16px;
+    font-size: 1.0625rem;
   }
 }
 
@@ -3527,9 +3533,12 @@ blockquote,
    Resume Page
    Mirrors the LaTeX layout in resume/vinit-kumar.tex
    =========================================== */
+/* Flush left, like every other page. Auto margins would inset the column
+   from the site header, since 56rem is narrower than the 78rem shell. */
 .resume-page {
-  margin: 0 auto;
-  max-width: 46rem;
+  font-size: 1.0625rem;
+  margin: 0;
+  max-width: 56rem;
 }
 
 .resume-header {
@@ -3583,7 +3592,7 @@ blockquote,
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 1.5rem;
-  font-size: var(--font-smaller);
+  font-size: var(--font-small);
   list-style: none;
   margin: 0.85rem 0 0;
   padding: 0;
@@ -3615,7 +3624,7 @@ blockquote,
 
 .resume-summary {
   margin: 0;
-  max-width: 68ch;
+  max-width: 74ch;
 }
 
 .resume-entries {
@@ -3666,7 +3675,7 @@ blockquote,
 
 .resume-points li {
   margin-bottom: 0.35rem;
-  max-width: 72ch;
+  max-width: 76ch;
   padding-left: 1.1rem;
   position: relative;
 }
@@ -3700,7 +3709,7 @@ blockquote,
 
 .resume-skills dd {
   margin: 0;
-  max-width: 68ch;
+  max-width: 74ch;
 }
 
 .resume-footer {
@@ -3715,7 +3724,7 @@ blockquote,
 
 .resume-footer p {
   color: var(--text-muted);
-  font-size: var(--font-smaller);
+  font-size: var(--font-small);
   margin: 0;
 }
 
@@ -3731,6 +3740,12 @@ blockquote,
 
 /* Printing the web page should produce the same one-pager, minus chrome. */
 @media print {
+  /* Pin the root on paper: the fluid vw term resolves against page width,
+     which would size the printed resume by paper format. */
+  html:root {
+    font-size: 100%;
+  }
+
   .site-nav,
   .site-header,
   .resume-download,
@@ -3739,6 +3754,7 @@ blockquote,
   }
 
   .resume-page {
+    font-size: 1rem;
     max-width: none;
   }
 }
