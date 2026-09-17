@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { rhythm } from "../utils/typography"
 import { getPostTitle, getTopicSlug, normalizeTags } from "../utils/content"
 
 const postAccentByTag = {
@@ -83,6 +82,44 @@ const postAccentByTag = {
 const getPostAccentColor = (tags) =>
   tags.map((tag) => postAccentByTag[tag]).find(Boolean) || "#C4B7FF"
 
+// Share of the viewport, from the bottom, ignored when picking the active
+// heading. A heading counts once it enters the top 30% of the screen.
+const ACTIVE_HEADING_MARGIN = "0px 0px -70% 0px"
+
+// Tracks which h2 the reader is in, so the contents rail can highlight it.
+const useActiveHeading = (headingIds) => {
+  const [activeId, setActiveId] = React.useState(null)
+
+  React.useEffect(() => {
+    if (!("IntersectionObserver" in window)) {
+      return undefined
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id)
+          }
+        })
+      },
+      { rootMargin: ACTIVE_HEADING_MARGIN }
+    )
+
+    headingIds.forEach((id) => {
+      const heading = document.getElementById(id)
+
+      if (heading) {
+        observer.observe(heading)
+      }
+    })
+
+    return () => observer.disconnect()
+  }, [headingIds])
+
+  return activeId
+}
+
 const BlogPostTemplate = ({ data, location, pageContext }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
@@ -92,6 +129,11 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
   const relatedPosts = data.relatedPosts.edges.filter(
     ({ node }) => node.fields.slug !== post.fields.slug
   )
+  const headingIds = React.useMemo(
+    () => post.headings.map((heading) => heading.id),
+    [post.headings]
+  )
+  const activeHeadingId = useActiveHeading(headingIds)
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -100,15 +142,18 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
         style={{ "--post-accent": postAccentColor }}
       >
         <header className="post-header">
-          <p className="eyebrow">Essay</p>
-          <h1>{post.frontmatter.title}</h1>
+          {/* Date first: it is the least important line, so it sits small
+              above the title instead of competing below it. */}
           <div className="post-meta">
-            <span>{post.frontmatter.date}</span>
+            <time dateTime={post.frontmatter.dateISO}>
+              {post.frontmatter.date}
+            </time>
             <span>{post.timeToRead} min read</span>
-            {post.wordCount?.words && (
-              <span>{post.wordCount.words.toLocaleString()} words</span>
-            )}
           </div>
+          <h1>{post.frontmatter.title}</h1>
+          {post.frontmatter.description && (
+            <p className="post-lede">{post.frontmatter.description}</p>
+          )}
           {tags.length > 0 && (
             <div className="post-tags">
               {tags.map((tag) => (
@@ -120,27 +165,33 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
           )}
         </header>
 
-        {post.headings.length > 2 && (
-          <nav className="toc" aria-label="Table of contents">
-            <p className="eyebrow">Contents</p>
-            {post.headings.map((heading) => (
-              <a key={heading.id} href={`#${heading.id}`}>
-                {heading.value}
-              </a>
-            ))}
-          </nav>
-        )}
+        {/* Grid wrapper: on wide screens the contents move into a sticky
+            rail beside the prose; below that they stack above it. */}
+        <div className="post-body">
+          {post.headings.length > 2 && (
+            <nav className="toc" aria-label="Table of contents">
+              <p className="eyebrow">Contents</p>
+              {post.headings.map((heading) => (
+                <a
+                  key={heading.id}
+                  href={`#${heading.id}`}
+                  aria-current={
+                    heading.id === activeHeadingId ? "location" : undefined
+                  }
+                >
+                  {heading.value}
+                </a>
+              ))}
+            </nav>
+          )}
 
-        <div
-          className="post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
+          <div
+            className="post-content"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        </div>
       </article>
-      <hr
-        style={{
-          marginBottom: rhythm(1),
-        }}
-      />
+      <hr className="post-end" />
       {relatedPosts.length > 0 && (
         <section className="related-posts">
           <div className="section-heading">
@@ -229,9 +280,6 @@ export const pageQuery = graphql`
         value
       }
       timeToRead
-      wordCount {
-        words
-      }
       fields {
         slug
         markdownPath

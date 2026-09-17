@@ -16,12 +16,13 @@ const TilPostTemplate = ({ data, location, pageContext }) => {
     <Layout location={location} title={siteTitle}>
       <article className="post-shell til-post">
         <header className="post-header">
-          <p className="eyebrow">Today I Learned</p>
-          <h1>{post.frontmatter.title}</h1>
+          {/* Same order as blog posts: meta line, then title. */}
           <div className="post-meta">
+            <span>Today I Learned</span>
             <span>{post.frontmatter.date}</span>
             <span>{post.timeToRead || 2} min read</span>
           </div>
+          <h1>{post.frontmatter.title}</h1>
           {tags.length > 0 && (
             <div className="post-tags">
               {tags.map((tag) => (

@@ -872,12 +872,6 @@ h6 {
   line-height: 1.5;
 }
 
-.post-meta span + span::before {
-  color: var(--gray-line);
-  content: "/";
-  margin-right: 1rem;
-}
-
 .post-tags {
   display: flex;
   flex-wrap: wrap;
@@ -2717,15 +2711,6 @@ h6 {
     flex-direction: column;
   }
 
-  .post-meta {
-    flex-direction: column;
-  }
-
-  .post-meta span + span::before {
-    content: none;
-    margin-right: 0;
-  }
-
   .post-nav {
     grid-template-columns: 1fr;
   }
@@ -2863,38 +2848,48 @@ h6 {
   --font-family-code:
     "Berka Mono Instrument", ui-monospace, SFMono-Regular, Consolas, Menlo,
     monospace;
-  --text: #17120b;
-  --text-muted: #5d5142;
-  --background: #fff8e7;
-  --background-card: #fffdf5;
-  --accent: #17120b;
+  /* Anything meant to be read, as opposed to scanned, is set in this. */
+  --font-family-prose:
+    "Berka Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Running text: darker ink and Medium weight, because antialiased
+     rendering thins strokes on a light ground. */
+  --prose-ink: #0d0c09;
+  --prose-weight: 500;
+  --text: #15130f;
+  --text-muted: #5b564d;
+  --background: #fcfbf8;
+  --background-card: #ffffff;
+  --accent: #15130f;
   --accent-hover: #164bc7;
   --signal: #e94f2d;
-  --gray-text: #5d5142;
-  --gray-line: #dccca9;
-  --gray-bg: #f8edcf;
-  --gray-100: #f5e8c4;
-  --gray-200: #ead9af;
-  --gray-300: #d4c18f;
+  --gray-text: #5b564d;
+  --gray-line: #e4dfd4;
+  --gray-bg: #f5f2eb;
+  --gray-100: #f2eee6;
+  --gray-200: #e6e0d3;
+  --gray-300: #cfc7b6;
   --link-color: #164bc7;
-  --gray-border: #dccca9;
-  --code-bg: #f6e9c7;
-  --code-text: #17120b;
-  --code-border: #dccca9;
-  --blockquote-bg: #f6e9c7;
+  --gray-border: #e4dfd4;
+  --code-bg: #f2eee6;
+  --code-text: #15130f;
+  --code-border: #e4dfd4;
+  --blockquote-bg: #f2eee6;
   --blockquote-border: #e94f2d;
-  --reading-surface: #fffdf5;
-  --reading-text: #17120b;
-  --reading-text-muted: #5d5142;
+  --reading-surface: #ffffff;
+  --reading-text: #15130f;
+  --reading-text-muted: #5b564d;
   --reading-link: #164bc7;
-  --reading-line: #dccca9;
-  --reading-subtle: #f6e9c7;
+  --reading-line: #e4dfd4;
+  --reading-subtle: #f2eee6;
   --radius: 0;
   --radius-small: 0;
   --radius-pill: 0;
 }
 
 :root[data-theme="dark"] {
+  /* Light text on dark blooms, so it stays at Book weight. */
+  --prose-ink: #f8f5ed;
+  --prose-weight: 450;
   --text: #f8f5ed;
   --text-muted: #c8c3b8;
   --background: #111215;
@@ -2925,6 +2920,8 @@ h6 {
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
+    --prose-ink: #f8f5ed;
+    --prose-weight: 450;
     --text: #f8f5ed;
     --text-muted: #c8c3b8;
     --background: #111215;
@@ -2995,25 +2992,25 @@ li {
 }
 
 .site-header {
-  --text: #17120b;
-  --text-muted: #5d5142;
-  --background: #fff8e7;
-  --background-card: #fffdf5;
-  --gray-line: #dccca9;
-  --gray-100: #f5e8c4;
-  --gray-300: #d4c18f;
+  --text: #15130f;
+  --text-muted: #5b564d;
+  --background: #fcfbf8;
+  --background-card: #ffffff;
+  --gray-line: #e4dfd4;
+  --gray-100: #f2eee6;
+  --gray-300: #cfc7b6;
   --link-color: #164bc7;
   background: transparent;
 }
 
 :root[data-theme="light"] .site-header {
-  --text: #17120b;
-  --text-muted: #5d5142;
-  --background: #fff8e7;
-  --background-card: #fffdf5;
-  --gray-line: #dccca9;
-  --gray-100: #f5e8c4;
-  --gray-300: #d4c18f;
+  --text: #15130f;
+  --text-muted: #5b564d;
+  --background: #fcfbf8;
+  --background-card: #ffffff;
+  --gray-line: #e4dfd4;
+  --gray-100: #f2eee6;
+  --gray-300: #cfc7b6;
   --link-color: #164bc7;
 }
 
@@ -3359,6 +3356,8 @@ h1 {
   color: var(--link-color);
 }
 
+/* Post page: mono stays on the chrome (date, tags, contents), the title and
+   prose switch to Berka Text, which is what that family was drawn for. */
 .post-shell,
 .post-shell.starikov-post-accent {
   background: transparent;
@@ -3366,49 +3365,174 @@ h1 {
   border-radius: 0;
   color: var(--text);
   margin-top: 0;
-  max-width: 56rem;
+  max-width: 40rem;
   padding: 0;
 }
 
 .post-header {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-}
-
-.post-header h1 {
-  font-size: 2rem;
-  line-height: 1.15;
-  margin-bottom: 12px;
-  max-width: 38ch;
+  border-bottom: 0;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0;
 }
 
 .post-meta {
-  font-size: 0.875rem;
-  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  gap: 0 0.75rem;
+  letter-spacing: 0.06em;
   line-height: 1.6;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.post-meta > * + *::before {
+  color: var(--signal);
+  content: "\00b7";
+  margin-right: 0.75rem;
+}
+
+.post-header h1 {
+  color: var(--prose-ink);
+  font-family: var(--font-family-prose);
+  font-size: clamp(1.875rem, 1.4rem + 1.8vw, 2.4rem);
+  font-weight: 600;
+  letter-spacing: -0.028em;
+  line-height: 1.1;
+  margin: 0;
+  max-width: none;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+/* Standfirst: the frontmatter description, one step quieter than the title. */
+.post-lede {
+  color: var(--text-muted);
+  font-family: var(--font-family-prose);
+  font-size: 1.15rem;
+  font-weight: 450;
+  line-height: 1.45;
+  margin: 1rem 0 0;
+  max-width: 36rem;
+  text-wrap: pretty;
+}
+
+.post-tags {
+  gap: 0.25rem 1rem;
+  margin-top: 1.5rem;
+}
+
+.post-tags .topic-pill {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-decoration-color: var(--gray-300);
+}
+
+.post-tags .topic-pill:hover {
+  color: var(--link-color);
 }
 
 .post-content {
-  color: var(--text);
-  font-size: 1.0625rem;
-  line-height: 1.65;
-  max-width: 80ch;
+  color: var(--prose-ink);
+  font-family: var(--font-family-prose);
+  font-size: 1rem;
+  /* Snap to whole pixels. The fluid root yields sizes like 18.52px, and
+     fractional sizes rasterise softer. Browsers without round() keep 1rem. */
+  font-size: round(1rem, 1px);
+  font-synthesis: none;
+  font-variant-ligatures: common-ligatures;
+  font-weight: var(--prose-weight);
+  /* Berka Text is spaced loosely by default; pull it in for running text. */
+  letter-spacing: -0.004em;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+  max-width: 36rem;
+  text-wrap: pretty;
 }
 
 .post-content :where(p, li, blockquote) {
-  line-height: 1.65;
+  line-height: 1.6;
+}
+
+.post-content p {
+  margin: 0 0 1.35em;
+}
+
+.post-content :where(h2, h3) {
+  color: var(--prose-ink);
+  font-family: var(--font-family-prose);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  text-wrap: balance;
 }
 
 .post-content h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.25;
-  margin-top: 40px;
+  margin: 2.75rem 0 0.75rem;
 }
 
 .post-content h3 {
-  font-size: 1.1875rem;
-  line-height: 1.35;
-  margin-top: 36px;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin: 2rem 0 0.5rem;
+}
+
+.post-content :where(ul, ol) {
+  margin: 0 0 1.35em;
+  padding-left: 1.25em;
+}
+
+.post-content li {
+  margin: 0.4em 0;
+}
+
+.post-content li::marker {
+  color: var(--signal);
+}
+
+.post-content blockquote {
+  background: transparent;
+  border-left: 2px solid var(--signal);
+  color: var(--text-muted);
+  font-style: italic;
+  margin: 2rem 0;
+  padding: 0 0 0 1.25rem;
+}
+
+.post-content hr {
+  background: var(--gray-line);
+  border: 0;
+  height: 1px;
+  margin: 3rem 0;
+}
+
+/* gatsby-remark-images centres its wrapper inline; the site is flush left. */
+.post-content .gatsby-resp-image-wrapper {
+  margin: 2.25rem 0 !important;
+  max-width: 100% !important;
+}
+
+.post-content .gatsby-highlight {
+  margin: 1.75rem 0;
+}
+
+/* Prose turns ligatures on; code must show its characters literally. */
+.post-content :where(code, pre, kbd) {
+  font-variant-ligatures: none;
+  letter-spacing: 0;
+}
+
+.post-content pre,
+.post-content pre code {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.post-content :not(pre) > code {
+  font-size: 0.85em;
 }
 
 .post-content a,
@@ -3416,6 +3540,15 @@ h1 {
   color: var(--link-color);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+}
+
+.post-content a {
+  text-decoration-color: color-mix(in srgb, var(--link-color) 40%, transparent);
+}
+
+.post-content a:hover {
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
 }
 
 code,
@@ -3435,12 +3568,6 @@ blockquote,
   border-radius: 0;
 }
 
-.toc {
-  background: transparent;
-  padding: 12px;
-}
-
-.toc a,
 .post-nav span {
   font-size: 0.875rem;
   line-height: 1.6;
@@ -3530,6 +3657,461 @@ blockquote,
 }
 
 /* ===========================================
+   Reading system
+
+   Mono is for things you scan: dates, labels, navigation, code.
+   Berka Text is for things you read: titles, excerpts, prose.
+   =========================================== */
+
+/* Header: one row. Name left, navigation right. */
+.site-header {
+  align-items: center;
+  border-bottom: 1px solid var(--gray-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 32px;
+  justify-content: space-between;
+  margin-bottom: 56px;
+  padding-bottom: 20px;
+}
+
+.site-title {
+  margin: 0;
+}
+
+.site-nav {
+  border: 0;
+  gap: 4px 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+}
+
+/* Social links keep their accessible name but show only the icon. */
+.nav-link-label {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.nav-separator {
+  background: var(--gray-line);
+}
+
+/* Home intro */
+.home-intro-copy p:not(.eyebrow) {
+  font-family: var(--font-family-prose);
+  font-size: 1.3rem;
+  font-weight: 450;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  max-width: 34rem;
+  text-wrap: balance;
+}
+
+/* Post index: date in a mono gutter, title and excerpt in prose. */
+.blog-post-row {
+  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  padding: 1.5rem 0;
+}
+
+.blog-post-row-date {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  padding-top: 0.4rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.blog-post-row-header {
+  grid-column: 2;
+  grid-row: 1;
+  margin-bottom: 0.35rem;
+}
+
+.blog-post-row-meta {
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+}
+
+.blog-post-row-title {
+  font-family: var(--font-family-prose);
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+.blog-post-row-featured {
+  color: var(--signal);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.blog-post-row-excerpt {
+  color: var(--text-muted);
+  font-family: var(--font-family-prose);
+  font-size: 1rem;
+  font-weight: 450;
+  grid-column: 2;
+  grid-row: 2;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 36rem;
+  text-wrap: pretty;
+}
+
+.blog-post-row-arrow {
+  color: var(--gray-400);
+}
+
+/* Compact lists (featured, TIL, related): same split. */
+.compact-post-link {
+  grid-template-columns: 11rem minmax(0, 1fr);
+  padding: 0.85rem 0;
+}
+
+.compact-post-link span {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.compact-post-link strong {
+  font-family: var(--font-family-prose);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+/* Contents: a quiet numbered list with a hairline, no box. */
+.toc {
+  background: transparent;
+  border: 0;
+  border-left: 1px solid var(--gray-line);
+  counter-reset: toc;
+  gap: 0;
+  margin: 0 0 3rem;
+  max-width: 36rem;
+  padding: 0.25rem 0;
+}
+
+.toc .eyebrow {
+  margin: 0 0 0.5rem 1.25rem;
+}
+
+.toc a {
+  border-left: 1px solid transparent;
+  color: var(--text-muted);
+  counter-increment: toc;
+  /* Number column, so wrapped titles hang under the text, not the number. */
+  display: grid;
+  grid-template-columns: 1.75rem minmax(0, 1fr);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-left: -1px;
+  padding: 0.3rem 0 0.3rem 1.25rem;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* 01, 02, ... */
+.toc a::before {
+  color: var(--gray-400);
+  content: counter(toc, decimal-leading-zero);
+  font-size: 0.75rem;
+  line-height: 1.625;
+}
+
+.toc a:hover {
+  color: var(--text);
+}
+
+/* Section the reader is in; set by useActiveHeading in blog-post.js. */
+.toc a[aria-current="location"] {
+  border-left-color: var(--signal);
+  color: var(--text);
+}
+
+.toc a[aria-current="location"]::before {
+  color: var(--signal);
+}
+
+.post-content :where(h2, h3) {
+  scroll-margin-top: 2rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:root {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Wide screens: contents leave the column and follow the reader in a rail,
+   using the space to the right that a flush-left layout leaves empty. */
+@media (min-width: 72rem) {
+  .post-shell,
+  .post-shell.starikov-post-accent {
+    max-width: none;
+  }
+
+  .post-header h1 {
+    max-width: 40rem;
+  }
+
+  .post-body {
+    align-items: start;
+    column-gap: 5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 36rem) minmax(0, 15rem);
+  }
+
+  .post-body .post-content {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .post-body .toc {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0.5rem 0 0;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+/* End of post */
+.post-end {
+  background: var(--gray-line);
+  border: 0;
+  height: 1px;
+  margin: 4rem 0 2.5rem;
+}
+
+.post-nav {
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.post-nav a {
+  border: 0;
+  gap: 0.5rem;
+  min-height: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.post-nav span {
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.post-nav strong {
+  font-family: var(--font-family-prose);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  text-wrap: balance;
+}
+
+.post-nav a:hover strong {
+  color: var(--link-color);
+}
+
+/* Footer: who, where else, site links; legal line and theme in a slim bar. */
+.site-footer {
+  border-top: 1px solid var(--gray-line);
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+}
+
+.footer-main {
+  display: grid;
+  gap: 2rem 4rem;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+}
+
+.footer-name {
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.site-footer .footer-tagline {
+  font-family: var(--font-family-prose);
+  font-size: 1rem;
+  font-weight: 450;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  max-width: 24rem;
+  text-wrap: pretty;
+}
+
+.footer-group {
+  display: grid;
+  align-content: start;
+  gap: 0.4rem;
+  min-width: 9rem;
+}
+
+.site-footer .footer-label {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.site-footer a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.footer-bar {
+  align-items: center;
+  border-top: 1px solid var(--gray-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding: 1.25rem 0 0;
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0;
+}
+
+.footer-legal > * + *::before {
+  color: var(--signal);
+  content: "\00b7";
+  margin: 0 0.75rem;
+}
+
+.footer-legal a {
+  color: inherit;
+}
+
+.footer-theme {
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.site-footer .footer-theme .footer-label {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    margin-bottom: 36px;
+  }
+
+  .site-nav {
+    gap: 6px 16px;
+    margin-bottom: 0;
+  }
+
+  .blog-post-row,
+  .compact-post-link {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .blog-post-row-date,
+  .blog-post-row-header,
+  .blog-post-row-excerpt {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .blog-post-row-date {
+    order: -1;
+    padding: 0 0 0.35rem;
+  }
+
+  .compact-post-link {
+    gap: 0.15rem;
+  }
+
+  .post-header h1 {
+    font-size: 1.875rem;
+  }
+
+  .post-lede {
+    font-size: 1.125rem;
+  }
+
+  /* Root is 16px here, so step up to keep body text at 17px. */
+  .post-content {
+    font-size: 1.0625rem;
+    font-size: round(1.0625rem, 1px);
+  }
+
+  .post-nav {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .post-nav a:last-child {
+    text-align: left;
+  }
+
+  .site-footer {
+    margin-top: 3.5rem;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-about {
+    grid-column: 1 / -1;
+  }
+
+  /* Stacked, so no separator dot ends up leading a wrapped line. */
+  .footer-legal {
+    flex-direction: column;
+  }
+
+  .footer-legal > * + *::before {
+    content: none;
+  }
+}
+
+/* ===========================================
    Resume Page
    Mirrors the LaTeX layout in resume/vinit-kumar.tex
    =========================================== */
@@ -3585,7 +4167,7 @@ blockquote,
 .resume-download:focus-visible {
   background: var(--signal);
   border-color: var(--signal);
-  color: #fff8e7;
+  color: #fcfbf8;
 }
 
 .resume-contact {

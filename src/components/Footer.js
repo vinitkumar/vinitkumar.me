@@ -1,104 +1,99 @@
 import React from "react"
 import ThemeToggle from "./ThemeToggle"
 
+const LICENSE_URL = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+const FONTS_URL = "https://github.com/vinitkumar/berka-mono-closer"
+
+const footerCopy = {
+  en: {
+    tagline:
+      "Writing about robust systems, open source, tools, AI workflows, and engineering craft.",
+    elsewhere: "Elsewhere",
+    site: "Site",
+    mail: "Mail",
+    rss: "RSS feed",
+    aiTransparency: "AI transparency",
+    sponsor: "Sponsor on GitHub",
+    license: "CC BY-NC-SA 4.0",
+    setIn: "Set in ",
+    fonts: "Berka Text & Berka Mono",
+    theme: "Theme",
+  },
+  ja: {
+    tagline:
+      "堅牢なシステム、オープンソース、開発ツール、AIを活用したワークフロー、そしてエンジニアリングの技術について書いています。",
+    elsewhere: "リンク",
+    site: "サイト",
+    mail: "メール",
+    rss: "RSSフィード",
+    aiTransparency: "AI利用の透明性 (EN)",
+    sponsor: "GitHubでスポンサー",
+    license: "CC BY-NC-SA 4.0",
+    setIn: "使用フォント：",
+    fonts: "Berka Text & Berka Mono",
+    theme: "テーマ",
+  },
+}
+
+const elsewhereLinks = [
+  { href: "https://github.com/vinitkumar", label: "GitHub" },
+  { href: "https://bsky.app/profile/vinitkme.bsky.social", label: "Bluesky" },
+  { href: "https://fosstodon.org/@vinitkme", label: "Mastodon" },
+  { href: "https://x.com/intent/user?screen_name=vinitkme", label: "X" },
+]
+
+const ExternalLink = ({ href, children }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    {children}
+  </a>
+)
+
 const Footer = ({ locale = "en" }) => {
-  const isJapanese = locale === "ja"
+  const copy = footerCopy[locale] || footerCopy.en
 
   return (
     <footer className="site-footer">
-      <p className="footer-copyright">
-        {isJapanese
-          ? `© ${new Date().getFullYear()} Vinit Kumar.`
-          : `© Copyright ${new Date().getFullYear()} by Vinit Kumar.`}
-      </p>
-      <p className="footer-license">
-        {isJapanese
-          ? "コンテンツのライセンス："
-          : "Content licensed under the "}
-        <a
-          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {isJapanese
-            ? "クリエイティブ・コモンズ 表示—非営利—継承 4.0"
-            : "Creative Commons attribution-noncommercial-sharealike License"}
-        </a>
-        {isJapanese ? "。" : "."}
-      </p>
-      <p className="footer-contact">
-        {isJapanese ? "連絡先：" : "Contact me via "}
-        <a href="mailto:mail@vinitkumar.me">{isJapanese ? "メール" : "mail"}</a>
-        {isJapanese ? "、" : ", "}
-        <a
-          href="https://bsky.app/profile/vinitkme.bsky.social"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          bluesky
-        </a>
-        {isJapanese ? "、" : ", "}
-        <a
-          href="https://fosstodon.org/@vinitkme"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          mastodon
-        </a>
-        {isJapanese ? "、" : ", "}
-        <a
-          href="https://x.com/intent/user?screen_name=vinitkme"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          x
-        </a>
-        {isJapanese ? "、" : ", or "}
-        <a
-          href="https://github.com/vinitkumar"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          github
-        </a>
-        {isJapanese ? "。" : "."}
-      </p>
-      <p className="footer-sponsor">
-        {isJapanese ? "スポンサー：" : "You can sponsor me on "}
-        <a
-          href="https://github.com/sponsors/vinitkumar"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          github
-        </a>
-        {isJapanese ? "。" : "."}
-      </p>
-      <p className="footer-info">
-        {isJapanese ? "詳細：" : "More info: "}
-        <a href="/ai-transparency">
-          {isJapanese ? "AI利用の透明性 (EN)" : "AI transparency"}
-        </a>
-        {isJapanese ? "。購読：" : ". Subscribe via "}
-        <a href="/rss.xml">RSS</a>
-        {isJapanese ? "。" : "."}
-      </p>
-      <p className="footer-fonts">
-        {isJapanese ? "使用フォント：" : "Set in "}
-        <a
-          href="https://github.com/vinitkumar/berka-mono-closer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Berka Mono Instrument
-        </a>
-        {isJapanese ? "" : " "}
-        {isJapanese ? "。" : "throughout."}
-      </p>
-      <p className="footer-theme">
-        <span>{isJapanese ? "テーマ：" : "Theme:"}</span>
-        <ThemeToggle locale={locale} />
-      </p>
+      <div className="footer-main">
+        <div className="footer-about">
+          <p className="footer-name">Vinit Kumar</p>
+          <p className="footer-tagline">{copy.tagline}</p>
+        </div>
+
+        <nav className="footer-group" aria-label={copy.elsewhere}>
+          <p className="footer-label">{copy.elsewhere}</p>
+          <a href="mailto:mail@vinitkumar.me">{copy.mail}</a>
+          {elsewhereLinks.map((link) => (
+            <ExternalLink key={link.href} href={link.href}>
+              {link.label}
+            </ExternalLink>
+          ))}
+        </nav>
+
+        <nav className="footer-group" aria-label={copy.site}>
+          <p className="footer-label">{copy.site}</p>
+          <a href="/rss.xml">{copy.rss}</a>
+          <a href="/ai-transparency">{copy.aiTransparency}</a>
+          <ExternalLink href="https://github.com/sponsors/vinitkumar">
+            {copy.sponsor}
+          </ExternalLink>
+        </nav>
+      </div>
+
+      {/* Legal line and theme switch share one quiet row. */}
+      <div className="footer-bar">
+        <p className="footer-legal">
+          <span>© {new Date().getFullYear()} Vinit Kumar</span>
+          <ExternalLink href={LICENSE_URL}>{copy.license}</ExternalLink>
+          <span>
+            {copy.setIn}
+            <ExternalLink href={FONTS_URL}>{copy.fonts}</ExternalLink>
+          </span>
+        </p>
+        <div className="footer-theme">
+          <span className="footer-label">{copy.theme}</span>
+          <ThemeToggle locale={locale} />
+        </div>
+      </div>
     </footer>
   )
 }
