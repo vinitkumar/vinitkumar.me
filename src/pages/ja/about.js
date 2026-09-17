@@ -4,7 +4,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import { getLanguageAlternates } from "../../utils/i18n"
-import portrait from "../../../content/assets/vinitgreynew.png"
+import portrait from "../../../content/assets/vinitkumar.jpg"
 
 const startDate = new Date("2013-02-01")
 

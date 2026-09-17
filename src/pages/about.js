@@ -2,7 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import portrait from "../../content/assets/vinitgreynew.png"
+import portrait from "../../content/assets/vinitkumar.jpg"
 import { getLanguageAlternates } from "../utils/i18n"
 import {
   career,
