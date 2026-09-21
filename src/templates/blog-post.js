@@ -134,6 +134,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
     [post.headings]
   )
   const activeHeadingId = useActiveHeading(headingIds)
+  const hasTableOfContents = post.headings.length > 2
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -167,8 +168,12 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
 
         {/* Grid wrapper: on wide screens the contents move into a sticky
             rail beside the prose; below that they stack above it. */}
-        <div className="post-body">
-          {post.headings.length > 2 && (
+        <div
+          className={`post-body${
+            hasTableOfContents ? " post-body--with-toc" : ""
+          }`}
+        >
+          {hasTableOfContents && (
             <nav className="toc" aria-label="Table of contents">
               <p className="eyebrow">Contents</p>
               {post.headings.map((heading) => (

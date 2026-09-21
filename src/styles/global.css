@@ -3365,7 +3365,7 @@ h1 {
   border-radius: 0;
   color: var(--text);
   margin-top: 0;
-  max-width: 40rem;
+  max-width: 52rem;
   padding: 0;
 }
 
@@ -3413,7 +3413,7 @@ h1 {
   font-weight: 450;
   line-height: 1.45;
   margin: 1rem 0 0;
-  max-width: 36rem;
+  max-width: 48rem;
   text-wrap: pretty;
 }
 
@@ -3447,7 +3447,7 @@ h1 {
   letter-spacing: -0.004em;
   text-rendering: optimizeLegibility;
   line-height: 1.6;
-  max-width: 36rem;
+  max-width: 52rem;
   text-wrap: pretty;
 }
 
@@ -3875,22 +3875,30 @@ blockquote,
   }
 
   .post-header h1 {
-    max-width: 40rem;
+    max-width: 52rem;
   }
 
-  .post-body {
+  .post-body--with-toc {
     align-items: start;
-    column-gap: 5rem;
+    column-gap: 4rem;
     display: grid;
-    grid-template-columns: minmax(0, 36rem) minmax(0, 15rem);
+    grid-template-columns: minmax(0, 46rem) minmax(0, 15rem);
   }
 
-  .post-body .post-content {
+  .post-body--with-toc .post-content {
     grid-column: 1;
     grid-row: 1;
+    max-width: 46rem;
   }
 
-  .post-body .toc {
+  .post-body:not(.post-body--with-toc)
+    .post-content
+    > p:has(> .gatsby-resp-image-wrapper) {
+    max-width: none;
+    width: min(calc(100vw - 80px), calc(78rem - 80px));
+  }
+
+  .post-body--with-toc .toc {
     grid-column: 2;
     grid-row: 1;
     margin: 0.5rem 0 0;

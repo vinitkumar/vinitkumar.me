@@ -107,7 +107,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 1600,
               // Default is white, which frames transparent PNGs in dark mode.
               backgroundColor: `transparent`,
             },
