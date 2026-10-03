@@ -66,13 +66,15 @@ Shift-Command-F hides the feed and article lists and leaves a single centered co
 
 An empty library used to be a blank window. Now it opens with a welcome panel that lists every shortcut: Command-N to add a feed, Command-F to search, Shift-Command-F for Zen, Command-R to refresh, Command-Comma for Settings. The sidebar offers Add Feed and Browse Suggestions, so you can start from a URL or from the curated list. Command-N also adds a feed now, instead of opening a second window.
 
-### Settings, and soon an appearance of your own
+### A Settings screen
 
-![Settings with the appearance picker and the full-article default](./appearance.png)
+1.3.0 also added Settings, on Command-Comma on the Mac and under More on iPhone and iPad. It started with one option: open articles on the publisher's page by default instead of the feed's summary. Each article can still switch back.
 
-1.3.0 added a Settings screen with one option: open articles on the publisher's page by default instead of the feed's summary. Each article can still switch back.
+## Coming in the next release: Light, Dark, or System
 
-The next release adds Light, Dark, or System, independent of the system setting and following it by default. On the Mac it sets the appearance for the whole app, so every window switches at once, the Settings window included, and article content renders to match.
+![Settings with the new appearance picker set to Dark](./appearance.png)
+
+The next release adds an appearance choice to Settings: Light, Dark, or System. It follows the system by default, so nothing changes until you pick something else. On the Mac it sets the appearance for the whole app, so every window switches at once, the Settings window included, and article content renders to match.
 
 ## Tests, for an RSS reader
 
