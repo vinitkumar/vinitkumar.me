@@ -48,107 +48,100 @@
 
 % ============================ HEADER =======================================
 \begin{center}
-  {\LARGE\bfseries Vinit Kumar}\\[3pt]
+  {\LARGE\bfseries Vinit Kumar}\\[2pt]
+  {\normalsize Principal Engineer $\cdot$ Django CMS Fellow}\\[3pt]
   \small
+  Pune, India $\vert$
   \href{mailto:mail@vinitkumar.me}{mail@vinitkumar.me} $\vert$
-  +91 8554862210 $\vert$
+  +91 85548 62210 $\vert$
   \href{https://vinitkumar.me}{vinitkumar.me} $\vert$
-  \href{https://github.com/vinitkumar}{GitHub} $\vert$
+  \href{https://github.com/vinitkumar}{github.com/vinitkumar} $\vert$
   \href{https://www.linkedin.com/in/vinitatlinkedin/}{LinkedIn}
 \end{center}
 
 \vspace{-2pt}
 
-% ============================ SKILLS =======================================
-\section*{Skills}
+% ============================ SUMMARY ======================================
+\section*{Summary}
 
-\textbf{Programming:} Go, Python, JavaScript, TypeScript, Ruby, PHP, C \\
-\textbf{DevOps:} AWS, Google Cloud Platform, DigitalOcean, CI/CD (GitHub
-Actions, Bitbucket Pipelines) \\
-\textbf{Web Development:} Django, FastAPI, Ruby on Rails, Laravel, Express.js,
-PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, React \\
-\textbf{Testing:} Unit testing, TDD (Pytest, Vitest, PHPUnit)
+Principal Engineer with 13 years of building and running production back-end
+systems in Go and Python. Django CMS Fellow maintaining a mature open-source
+ecosystem, and author of \texttt{json2xml} (180k+ PyPI downloads a month).
 
 % ============================ EXPERIENCE ===================================
 \section*{Experience}
 
 \role{Scalefusion}{Principal Engineer}{Pune, India}{Nov 2024 -- Present}
 \begin{points}
-  \item Lead architecture and development of large-scale distributed systems
-        using Go, solving complex engineering challenges with precision.
-  \item Design and optimize high-performance back-end systems, ensuring
-        seamless scalability and reliability.
-  \item Collaborate cross-functionally to improve system efficiency,
-        implementing solutions that improve performance.
-  \item Develop and maintain core services in Go, TypeScript, and Ruby on
-        Rails, ensuring high availability and fault tolerance.
-  \item Optimize cloud infrastructure and CI/CD pipelines, improving
-        deployment efficiency and reducing downtime.
+  \item Wrote the Linux client from scratch and own it end to end, supporting 22 Linux distribution and display environment combinations.
+  \item Building the new Remote Cast solution with rooms, live annotation, and adaptive bitrate based on the display.
+  \item Built the back end for the live SSH terminal service.
+  \item Lead architecture of distributed back-end services in Go and TypeScript.
 \end{points}
 
-\role{django CMS}{Django CMS Fellow}{}{Nov 2024 -- Present}
+\role{django CMS}{Django CMS Fellow (paid fellowship)}{Remote}%
+  {Nov 2024 -- Present}
 \begin{points}
-  \item Paid fellowship contributing to the django CMS core and its plugin
-        ecosystem.
+  \item Maintain django CMS core, django-filer, and the plugin ecosystem;
+        merged 52 pull requests across 29 repositories.
+  \item Reviewed 330+ contributor pull requests; lead modernisation and
+        compatibility work for new Django and Python versions.
 \end{points}
 
-\role{Django Software Foundation}{Individual Member}{}{Feb 2024 -- Present}
+\role{KidsKonnect}{Staff Software Engineer, Tech Lead (Websites \& Onboarding)}%
+  {Pune, India}{Feb 2023 -- Nov 2024}
+\begin{points}
+  \item Tech lead of the five-person Websites and Onboarding team, including QA; set the code review standards the team worked to.
+  \item Owned the multitenant CMS behind 2,500+ customer domains: tenant provisioning, routing, and template isolation.
+  \item Owned customer onboarding end to end, so new sites went live with no manual steps.
+  \item Improved performance across the domain fleet, instrumented with New Relic and Sentry; built REST APIs with Django REST Framework.
+  \item Managed cloud capacity and spend through auto-scaling and right-sizing, working with the hosting provider's DevOps team.
+  \item Took on the legacy parts of the platform others avoided and left them easier to change.
+\end{points}
 
-\role{KidsKonnect}{Staff Software Engineer}{Pune, India}{Feb 2023 -- Nov 2024}
-% TODO(vinit): the nine bullets below cover the whole Social Schools +
-% KidsKonnect tenure. Move the ones earned after Feb 2023 up into this entry.
-
-\role{Social Schools}{Staff / Senior Software Engineer}{Pune, India}%
+\role{Social Schools}{Senior to Staff Software Engineer}{Pune, India}%
   {Feb 2013 -- Feb 2023}
 \begin{points}
-  \item Designed and implemented a highly scalable distributed multitenant CMS
-        in Python, managing more than 2,500 domains and improving page load
-        speeds by 35\%.
-  \item Led development of an Enrollment Form \& CRM system, reducing
-        onboarding time by 40\% and increasing customer sign-ups by 25\%.
-  \item Built an internal monitoring tool, reducing downtime incidents by 30\%
-        through real-time uptime tracking.
-  \item Developed a Go-based analytics tracker, reducing data processing time
-        by 50\% and improving the efficiency of the system.
-  \item Created a Celery \& RabbitMQ-based distributed task queue, reducing job
-        execution time by 45\% and handling 3x more concurrent tasks.
-  \item Optimized cloud infrastructure, reducing AWS costs by 20\% through
-        auto-scaling and right-sizing instances.
-  \item Spearheaded performance improvements, cutting API response times from
-        400\,ms to 120\,ms, improving user experience.
-  \item Led containerization efforts (Docker, Kubernetes), enabling seamless
-        local development across different OS environments.
-  \item Mentored junior developers on Django and React, fostering a culture of
-        best practices and continuous learning.
+  \item Designed and built a multitenant CMS in Python serving 2,500+ school
+        domains; cut page load times by 35\%.
+  \item Cut API response times from 400\,ms to 120\,ms.
+  \item Led the enrolment form and CRM system: onboarding time down 40\%,
+        customer sign-ups up 25\%.
+  \item Built a distributed task queue on Celery and RabbitMQ: job execution
+        time down 45\%, 3x concurrent task capacity.
+  \item Wrote a Go analytics tracker that halved data processing time.
+  \item Reduced AWS costs by 20\% through auto-scaling and instance
+        right-sizing; built uptime monitoring that cut incidents by 30\%.
+  \item Led containerisation with Docker and Kubernetes for consistent local
+        development; mentored engineers on Django and React.
 \end{points}
 
-\role{Open Source}{Software Developer}{Remote}{2010 -- Present}
+% ============================ OPEN SOURCE ==================================
+\section*{Open Source \& Community}
+
 \begin{points}
-  \item Principal author of \texttt{json2xml}, used by engineers from Google,
-        Amazon, and NASA.
-  \item Developed a chat-bot in C with a lightweight NLP engine.
-  \item Created \texttt{node-twitter}, a Twitter clone using Node.js and
-        MongoDB.
-  \item Designed ``white paper,'' a top-10 Jekyll theme with thousands of
+  \item \textbf{json2xml} (author and maintainer): Python library with 180k+
+        PyPI downloads a month and 110 GitHub stars; ported to Go and Zig.
+  \item \textbf{white paper}: top-10 Jekyll theme with thousands of
         downloads.
+  \item Individual Member, Django Software Foundation (since Feb 2024).
 \end{points}
+
+% ============================ SKILLS =======================================
+\section*{Skills}
+
+\textbf{Languages:} Go, Python, TypeScript, JavaScript, Ruby, C \\
+\textbf{Back end:} Django, FastAPI, Celery, RabbitMQ,
+PostgreSQL, MySQL, Redis, Elasticsearch \\
+\textbf{Infrastructure:} AWS, Google Cloud, Docker, Kubernetes, GitHub Actions,
+Bitbucket Pipelines \\
+\textbf{Practices:} System design, performance profiling, TDD (Pytest, Vitest),
+code review, mentoring
 
 % ============================ EDUCATION ====================================
 \section*{Education}
 
-\role{Birla Institute of Technology, Mesra}%
-  {B.E. (Specialization: Python programming, Linux, C)}{Ranchi, India}%
-  {Jul 2008 -- Apr 2012}
-\begin{points}
-  \item \textbf{Graduation project:} applied genetic algorithms to predict
-        sedimentation rates in reservoirs in India.
-\end{points}
-
-% ============================ RECOMMENDATIONS ==============================
-\section*{Recommendations}
-
-Available on
-\href{https://www.linkedin.com/in/vinitatlinkedin/details/recommendations/}{LinkedIn}
-and \href{https://github.com/vinitkumar}{GitHub}.
+\textbf{Birla Institute of Technology, Mesra} --- B.E., Civil Engineering
+\hfill\textit{2008 -- 2012}
 
 \end{document}

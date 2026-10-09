@@ -94,6 +94,14 @@ const ResumePage = ({ location }) => (
         ))}
       </ul>
 
+      <Section title="Summary">
+        <p className="resume-summary">{profile.summary}</p>
+      </Section>
+
+      <Section title="Experience">
+        <EntryList entries={experience} />
+      </Section>
+
       <Section title="Skills">
         <dl className="resume-skills">
           {skills.map((row) => (
@@ -103,10 +111,6 @@ const ResumePage = ({ location }) => (
             </div>
           ))}
         </dl>
-      </Section>
-
-      <Section title="Experience">
-        <EntryList entries={experience} />
       </Section>
 
       <Section title="Education">

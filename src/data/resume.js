@@ -15,7 +15,7 @@ const profile = {
   location: "Pune, India",
   email: "mail@vinitkumar.me",
   summary:
-    "Principal Engineer at Scalefusion and Django CMS Fellow. Builds large-scale distributed systems in Go and Python, maintains open-source infrastructure, and writes about engineering craft.",
+    "Principal Engineer with 13 years of building and running production back-end systems in Go and Python. Django CMS Fellow maintaining a mature open-source ecosystem, and author of json2xml (180k+ PyPI downloads a month).",
 }
 
 const contact = [
@@ -32,21 +32,22 @@ const contact = [
 ]
 
 const skills = [
+  { label: "Languages", value: "Go, Python, TypeScript, JavaScript, Ruby, C" },
   {
-    label: "Programming",
-    value: "Go, Python, JavaScript, TypeScript, Ruby, PHP, C",
-  },
-  {
-    label: "DevOps",
+    label: "Back end",
     value:
-      "AWS, Google Cloud Platform, DigitalOcean, CI/CD (GitHub Actions, Bitbucket Pipelines)",
+      "Django, FastAPI, Celery, RabbitMQ, PostgreSQL, MySQL, Redis, Elasticsearch",
   },
   {
-    label: "Web",
+    label: "Infrastructure",
     value:
-      "Django, FastAPI, Ruby on Rails, Laravel, Express.js, PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, React",
+      "AWS, Google Cloud, Docker, Kubernetes, GitHub Actions, Bitbucket Pipelines",
   },
-  { label: "Testing", value: "Unit testing, TDD (Pytest, Vitest, PHPUnit)" },
+  {
+    label: "Practices",
+    value:
+      "System design, performance profiling, TDD (Pytest, Vitest), code review, mentoring",
+  },
 ]
 
 const experience = [
@@ -57,66 +58,61 @@ const experience = [
     period: "Nov 2024 — Present",
     href: "https://scalefusion.com",
     points: [
-      "Lead architecture and development of large-scale distributed systems using Go, solving complex engineering challenges with precision.",
-      "Design and optimize high-performance back-end systems, ensuring seamless scalability and reliability.",
-      "Collaborate cross-functionally to improve system efficiency, implementing solutions that improve performance.",
-      "Develop and maintain core services in Go, TypeScript, and Ruby on Rails, ensuring high availability and fault tolerance.",
-      "Optimize cloud infrastructure and CI/CD pipelines, improving deployment efficiency and reducing downtime.",
+      "Wrote the Linux client from scratch and own it end to end, supporting 22 Linux distribution and display environment combinations.",
+      "Building the new Remote Cast solution with rooms, live annotation, and adaptive bitrate based on the display.",
+      "Built the back end for the live SSH terminal service.",
+      "Lead architecture of distributed back-end services in Go and TypeScript.",
     ],
   },
   {
     organization: "django CMS",
-    role: "Django CMS Fellow",
+    role: "Django CMS Fellow (paid fellowship)",
+    location: "Remote",
     period: "Nov 2024 — Present",
     href: "https://www.django-cms.org/en/blog/2024/11/07/welcoming-vinit-kumar-as-the-newest-django-cms-fellow/",
     points: [
-      "Paid fellowship contributing to the django CMS core and its plugin ecosystem.",
+      "Maintain django CMS core, django-filer, and the plugin ecosystem; merged 52 pull requests across 29 repositories.",
+      "Reviewed 330+ contributor pull requests; lead modernisation and compatibility work for new Django and Python versions.",
     ],
-  },
-  {
-    organization: "Django Software Foundation",
-    role: "Individual Member",
-    period: "Feb 2024 — Present",
-    href: "https://www.djangoproject.com/foundation/individual-members/",
-    points: [],
   },
   {
     organization: "KidsKonnect",
-    role: "Staff Software Engineer",
+    role: "Staff Software Engineer, Tech Lead (Websites & Onboarding)",
     location: "Pune, India",
     period: "Feb 2023 — Nov 2024",
-    // TODO(vinit): bullets below sit on Social Schools; move the post-Feb-2023
-    // ones up into this entry.
-    points: [],
-  },
-  {
-    organization: "Social Schools",
-    role: "Staff / Senior Software Engineer",
-    location: "Pune, India",
-    period: "Feb 2013 — Feb 2023",
     points: [
-      "Designed and implemented a highly scalable distributed multitenant CMS in Python, managing more than 2,500 domains and improving page load speeds by 35%.",
-      "Led development of an Enrollment Form & CRM system, reducing onboarding time by 40% and increasing customer sign-ups by 25%.",
-      "Built an internal monitoring tool, reducing downtime incidents by 30% through real-time uptime tracking.",
-      "Developed a Go-based analytics tracker, reducing data processing time by 50% and improving the efficiency of the system.",
-      "Created a Celery & RabbitMQ-based distributed task queue, reducing job execution time by 45% and handling 3x more concurrent tasks.",
-      "Optimized cloud infrastructure, reducing AWS costs by 20% through auto-scaling and right-sizing instances.",
-      "Spearheaded performance improvements, cutting API response times from 400 ms to 120 ms, improving user experience.",
-      "Led containerization efforts (Docker, Kubernetes), enabling seamless local development across different OS environments.",
-      "Mentored junior developers on Django and React, fostering a culture of best practices and continuous learning.",
+      "Tech lead of the five-person Websites and Onboarding team, including QA; set the code review standards the team worked to.",
+      "Owned the multitenant CMS behind 2,500+ customer domains: tenant provisioning, routing, and template isolation.",
+      "Owned customer onboarding end to end, so new sites went live with no manual steps.",
+      "Improved performance across the domain fleet, instrumented with New Relic and Sentry; built REST APIs with Django REST Framework.",
+      "Managed cloud capacity and spend through auto-scaling and right-sizing, working with the hosting provider's DevOps team.",
+      "Took on the legacy parts of the platform others avoided and left them easier to change.",
     ],
   },
   {
-    organization: "Open Source",
-    role: "Software Developer",
-    location: "Remote",
+    organization: "Social Schools",
+    role: "Senior to Staff Software Engineer",
+    location: "Pune, India",
+    period: "Feb 2013 — Feb 2023",
+    points: [
+      "Designed and built a multitenant CMS in Python serving 2,500+ school domains; cut page load times by 35%.",
+      "Cut API response times from 400 ms to 120 ms.",
+      "Led the enrolment form and CRM system: onboarding time down 40%, customer sign-ups up 25%.",
+      "Built a distributed task queue on Celery and RabbitMQ: job execution time down 45%, 3x concurrent task capacity.",
+      "Wrote a Go analytics tracker that halved data processing time.",
+      "Reduced AWS costs by 20% through auto-scaling and instance right-sizing; built uptime monitoring that cut incidents by 30%.",
+      "Led containerisation with Docker and Kubernetes for consistent local development; mentored engineers on Django and React.",
+    ],
+  },
+  {
+    organization: "Open Source & Community",
+    role: "Author and maintainer",
     period: "2010 — Present",
     href: "https://github.com/vinitkumar",
     points: [
-      "Principal author of json2xml, used by engineers from Google, Amazon, and NASA.",
-      "Developed a chat-bot in C with a lightweight NLP engine.",
-      "Created node-twitter, a Twitter clone using Node.js and MongoDB.",
-      "Designed “white paper,” a top-10 Jekyll theme with thousands of downloads.",
+      "json2xml: Python library with 180k+ PyPI downloads a month and 110 GitHub stars; ported to Go and Zig.",
+      "white paper: top-10 Jekyll theme with thousands of downloads.",
+      "Individual Member, Django Software Foundation (since Feb 2024).",
     ],
   },
 ]
@@ -124,12 +120,10 @@ const experience = [
 const education = [
   {
     organization: "Birla Institute of Technology, Mesra",
-    role: "B.E. (Python programming, Linux, C)",
+    role: "B.E., Civil Engineering",
     location: "Ranchi, India",
-    period: "Jul 2008 — Apr 2012",
-    points: [
-      "Graduation project: applied genetic algorithms to predict sedimentation rates in reservoirs in India.",
-    ],
+    period: "2008 — 2012",
+    points: [],
   },
 ]
 
