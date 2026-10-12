@@ -293,5 +293,7 @@ Then ask two questions: *how large can this get*, and *does the inner work touch
 
 The full suite (1,916 tests) is green, and the change has been backported to the 5.0.x and 5.1.x release branches, so you don't need to wait for a major release to benefit.
 
+Published here as well: https://www.django-cms.org/resources/blog/2026/10/11/hunting-down-quadratic-loops-in-django-cms/
+
 
 
