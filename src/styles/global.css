@@ -4348,3 +4348,290 @@ blockquote,
     max-width: none;
   }
 }
+
+/* ===========================================
+   Feyro product pages (/feyro, /feyro/support, /feyro/privacy)
+   =========================================== */
+.feyro-page {
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+.feyro-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--font-small);
+  font-weight: 700;
+  gap: 0.25rem 1.25rem;
+  letter-spacing: 0.04em;
+  margin: 0 0 2rem;
+  text-transform: uppercase;
+}
+
+.feyro-subnav a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.feyro-subnav a:hover,
+.feyro-subnav a[aria-current="page"] {
+  color: var(--link-color);
+}
+
+/* Hero: name, subtitle and intro first, then the wide photograph. */
+.feyro-hero {
+  border-bottom: 1px solid var(--gray-line);
+  margin: 0 0 2.5rem;
+  padding: 0 0 2.5rem;
+}
+
+.feyro-hero-copy {
+  max-width: 46rem;
+}
+
+.feyro-hero h1 {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  margin: 0 0 0.75rem;
+}
+
+.feyro-hero-subtitle {
+  color: var(--text);
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-weight: 650;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+}
+
+.feyro-hero-intro {
+  color: var(--text-muted);
+  font-family: var(--font-family-prose);
+  font-size: 1.1rem;
+  font-weight: var(--prose-weight);
+  line-height: 1.55;
+  margin: 0 0 1.5rem;
+}
+
+.feyro-hero-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin: 0 0 2rem;
+}
+
+/* Stands where the App Store badge will go once the app is live. */
+.feyro-cta-placeholder {
+  border: 1px dashed var(--gray-300);
+  color: var(--text-muted);
+  display: inline-block;
+  font-size: var(--font-small);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+}
+
+.feyro-hero-platform {
+  color: var(--text-muted);
+  font-size: var(--font-small);
+}
+
+.feyro-hero-image {
+  margin: 0;
+}
+
+.feyro-hero-image img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.feyro-hero-image figcaption,
+.feyro-screen-strip figcaption {
+  color: var(--text-muted);
+  font-size: var(--font-smaller);
+  margin-top: 0.5rem;
+}
+
+.feyro-section {
+  border-bottom: 1px solid var(--gray-line);
+  margin: 0 0 2.5rem;
+  padding: 0 0 2.5rem;
+}
+
+.feyro-section--last {
+  border-bottom: 0;
+}
+
+.feyro-section > h2 {
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+  line-height: 1.12;
+  margin: 0 0 0.75rem;
+}
+
+.feyro-section-lede {
+  color: var(--text-muted);
+  font-family: var(--font-family-prose);
+  font-size: 1.05rem;
+  font-weight: var(--prose-weight);
+  line-height: 1.55;
+  margin: 0 0 1.75rem;
+  max-width: 46rem;
+}
+
+.feyro-features {
+  display: grid;
+  gap: 1.75rem 2.5rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.feyro-feature .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.feyro-feature ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feyro-feature li {
+  line-height: 1.5;
+  margin: 0 0 0.5rem;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.feyro-feature li::before {
+  color: var(--signal);
+  content: "•";
+  left: 0;
+  position: absolute;
+}
+
+.feyro-feature p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.feyro-feature a {
+  color: var(--link-color);
+}
+
+/* Screenshots: one horizontal, snap-scrolling strip. */
+.feyro-screen-strip {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  overflow-x: auto;
+  padding: 0 0 1rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.feyro-screen-strip li {
+  flex: 0 0 auto;
+  margin: 0;
+  scroll-snap-align: start;
+  width: clamp(11rem, 20vw, 14rem);
+}
+
+.feyro-screen-strip figure {
+  margin: 0;
+}
+
+.feyro-screen-strip img {
+  border: 1px solid var(--gray-line);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.feyro-plans {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 0 1.5rem;
+}
+
+.feyro-plan {
+  border: 1px solid var(--gray-line);
+  padding: 1.25rem;
+}
+
+.feyro-plan h3 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.feyro-plan-price {
+  display: block;
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.05;
+}
+
+.feyro-plan-period {
+  color: var(--text-muted);
+  display: block;
+  font-size: var(--font-small);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.feyro-plan p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.feyro-terms {
+  color: var(--text-muted);
+  font-family: var(--font-family-prose);
+  font-size: 0.95rem;
+  font-weight: var(--prose-weight);
+  line-height: 1.55;
+  max-width: 52rem;
+}
+
+.feyro-terms p {
+  margin: 0 0 0.75rem;
+}
+
+.feyro-terms a {
+  color: var(--link-color);
+}
+
+/* Support and privacy: a short header, then the site's reading styles. */
+.feyro-doc-header {
+  margin: 0 0 1.5rem;
+}
+
+.feyro-doc-header h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0 0 0.5rem;
+}
+
+.feyro-doc-meta {
+  color: var(--text-muted);
+  font-size: var(--font-small);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .feyro-features,
+  .feyro-plans {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .feyro-screen-strip li {
+    width: 11rem;
+  }
+}
