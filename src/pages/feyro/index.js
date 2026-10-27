@@ -18,10 +18,6 @@ import {
   subtitle,
 } from "../../data/feyro"
 import hero from "../../../content/assets/feyro/hero.jpg"
-import viewfinder from "../../../content/assets/feyro/01-viewfinder.jpg"
-import manualExposure from "../../../content/assets/feyro/02-manual-exposure.jpg"
-import manualFocusLoupe from "../../../content/assets/feyro/03-manual-focus-loupe.jpg"
-import rgbHistogram from "../../../content/assets/feyro/04-rgb-histogram.jpg"
 import captureFormats from "../../../content/assets/feyro/05-capture-formats.jpg"
 import reviewPlant from "../../../content/assets/feyro/06-photo-review-plant.jpg"
 import reviewLavender from "../../../content/assets/feyro/07-photo-review-lavender.jpg"
@@ -32,10 +28,6 @@ import library from "../../../content/assets/feyro/10-library.jpg"
 // App Store screenshots, resized to 600px wide. Captions are the file names
 // without their ordering number.
 const screenshots = [
-  { src: viewfinder, caption: "Viewfinder" },
-  { src: manualExposure, caption: "Manual exposure" },
-  { src: manualFocusLoupe, caption: "Manual focus loupe" },
-  { src: rgbHistogram, caption: "RGB histogram" },
   { src: captureFormats, caption: "Capture formats" },
   { src: reviewPlant, caption: "Photo review plant" },
   { src: reviewLavender, caption: "Photo review lavender" },
