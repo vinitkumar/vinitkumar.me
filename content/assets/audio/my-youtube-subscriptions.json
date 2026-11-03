@@ -1,0 +1,47 @@
+{
+  "hash": "149861b3239d5f5d7d4abe462a835ef06895a97e1e0fc5ca8e1031554eeec9b3",
+  "durationSeconds": 723,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "the-quick-stats",
+      "startSeconds": 43.4
+    },
+    {
+      "id": "a-video-from-each-shelf",
+      "startSeconds": 115.3
+    },
+    {
+      "id": "technology-programming-and-software-craft",
+      "startSeconds": 139.6
+    },
+    {
+      "id": "art-sketching-and-visual-taste",
+      "startSeconds": 235.1
+    },
+    {
+      "id": "music-guitar-and-performance",
+      "startSeconds": 292.6
+    },
+    {
+      "id": "essays-podcasts-and-reflective-culture",
+      "startSeconds": 340.1
+    },
+    {
+      "id": "playful-internet-sports-and-gaming",
+      "startSeconds": 383.7
+    },
+    {
+      "id": "why-i-pay-for-youtube-premium",
+      "startSeconds": 419.6
+    },
+    {
+      "id": "the-full-genre-map",
+      "startSeconds": 501.1
+    },
+    {
+      "id": "what-this-list-says",
+      "startSeconds": 689.7
+    }
+  ]
+}

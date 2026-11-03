@@ -1,0 +1,19 @@
+{
+  "hash": "2f23984bef137177efbd6aa39f59a85318fea9b87c4b6bd507c7ab55784d0edd",
+  "durationSeconds": 82,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "why-i-stepped-away",
+      "startSeconds": 8.5
+    },
+    {
+      "id": "what-the-break-gave-me",
+      "startSeconds": 42.6
+    },
+    {
+      "id": "what-comes-next",
+      "startSeconds": 62.4
+    }
+  ]
+}

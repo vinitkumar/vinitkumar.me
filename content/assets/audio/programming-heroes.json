@@ -1,0 +1,47 @@
+{
+  "hash": "9919037cd2976c769a607bdb9fafa4cd9dfe18e6ce9a91a5358b15fdacb19b6d",
+  "durationSeconds": 296,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "daniel-stenberg",
+      "startSeconds": 23.2
+    },
+    {
+      "id": "brad-fitzpatrick",
+      "startSeconds": 55.5
+    },
+    {
+      "id": "salvatore-sanfilippo-antirez",
+      "startSeconds": 86.0
+    },
+    {
+      "id": "jonathan-blow",
+      "startSeconds": 111.5
+    },
+    {
+      "id": "david-beazley",
+      "startSeconds": 139.0
+    },
+    {
+      "id": "raymond-hettinger",
+      "startSeconds": 166.0
+    },
+    {
+      "id": "bryan-cantrill",
+      "startSeconds": 188.9
+    },
+    {
+      "id": "guido-van-rossum",
+      "startSeconds": 213.9
+    },
+    {
+      "id": "remy-sharp",
+      "startSeconds": 241.0
+    },
+    {
+      "id": "the-people-behind-the-code",
+      "startSeconds": 269.7
+    }
+  ]
+}

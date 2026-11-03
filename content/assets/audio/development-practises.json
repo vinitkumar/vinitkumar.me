@@ -1,0 +1,23 @@
+{
+  "hash": "a46d41ec9d2b2d2a4d5f8944b753ba3f026569ec7cca667754171cc3b8f2aa77",
+  "durationSeconds": 757,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "hotfix-workflow",
+      "startSeconds": 351.1
+    },
+    {
+      "id": "benefits",
+      "startSeconds": 361.3
+    },
+    {
+      "id": "frontend-development-guidelines",
+      "startSeconds": 550.2
+    },
+    {
+      "id": "devops",
+      "startSeconds": 675.5
+    }
+  ]
+}

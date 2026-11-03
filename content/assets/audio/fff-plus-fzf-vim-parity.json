@@ -1,0 +1,35 @@
+{
+  "hash": "c30f2a49187db6535af61aa6942e6b080c078c0321aba24c2e4e49df29140d2f",
+  "durationSeconds": 347,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "see-it-in-action",
+      "startSeconds": 46.8
+    },
+    {
+      "id": "an-audit-before-implementation",
+      "startSeconds": 57.1
+    },
+    {
+      "id": "gfiles-now-means-tracked-files",
+      "startSeconds": 130.0
+    },
+    {
+      "id": "shared-actions-across-file-like-pickers",
+      "startSeconds": 187.9
+    },
+    {
+      "id": "better-ranking-and-long-list-behavior",
+      "startSeconds": 213.4
+    },
+    {
+      "id": "fullscreen-layouts-and-useful-git-previews",
+      "startSeconds": 262.8
+    },
+    {
+      "id": "the-extension-stays-deliberately-small",
+      "startSeconds": 284.4
+    }
+  ]
+}

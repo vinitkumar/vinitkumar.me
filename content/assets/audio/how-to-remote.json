@@ -1,0 +1,35 @@
+{
+  "hash": "cbd1898e9db5670042025b3a7cd3c852f83e7492f10465c3094946c7871962ee",
+  "durationSeconds": 267,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "1-start-with-dependable-equipment",
+      "startSeconds": 27.7
+    },
+    {
+      "id": "2-learn-where-your-time-goes",
+      "startSeconds": 60.6
+    },
+    {
+      "id": "3-keep-a-routine",
+      "startSeconds": 88.2
+    },
+    {
+      "id": "4-communicate-before-silence-becomes-ambiguity",
+      "startSeconds": 120.8
+    },
+    {
+      "id": "5-write-for-asynchronous-work",
+      "startSeconds": 149.8
+    },
+    {
+      "id": "6-let-the-work-speak-clearly",
+      "startSeconds": 174.6
+    },
+    {
+      "id": "7-protect-the-boundary",
+      "startSeconds": 204.9
+    }
+  ]
+}

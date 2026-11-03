@@ -1,0 +1,35 @@
+{
+  "hash": "4c1c249a5d31c80682bb834261afde8e6e6912281726972c0a54a400ba33a436",
+  "durationSeconds": 286,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "why-another-monokai-theme",
+      "startSeconds": 47.9
+    },
+    {
+      "id": "six-filters-six-moods",
+      "startSeconds": 85.0
+    },
+    {
+      "id": "installation-and-usage",
+      "startSeconds": 152.1
+    },
+    {
+      "id": "technical-implementation",
+      "startSeconds": 165.9
+    },
+    {
+      "id": "design-philosophy",
+      "startSeconds": 211.5
+    },
+    {
+      "id": "future-development",
+      "startSeconds": 241.4
+    },
+    {
+      "id": "try-it-today",
+      "startSeconds": 263.9
+    }
+  ]
+}

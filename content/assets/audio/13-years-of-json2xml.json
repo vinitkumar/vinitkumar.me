@@ -1,0 +1,35 @@
+{
+  "hash": "527eb7053c0efd37612b283794f053be28bb5743ecd7af02b4261023016fe772",
+  "durationSeconds": 982,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "millions-of-downloads-one-small-job",
+      "startSeconds": 54.2
+    },
+    {
+      "id": "a-small-job-with-a-long-tail",
+      "startSeconds": 128.7
+    },
+    {
+      "id": "2026-more-ways-to-run-it-fewer-reasons-to-wait",
+      "startSeconds": 222.1
+    },
+    {
+      "id": "what-100-coverage-means-here",
+      "startSeconds": 456.2
+    },
+    {
+      "id": "the-recent-releases-are-about-predictable-behaviour",
+      "startSeconds": 585.3
+    },
+    {
+      "id": "where-the-library-turns-up",
+      "startSeconds": 698.1
+    },
+    {
+      "id": "the-value-of-staying-with-a-project",
+      "startSeconds": 869.4
+    }
+  ]
+}

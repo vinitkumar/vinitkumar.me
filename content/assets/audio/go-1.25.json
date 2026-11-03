@@ -1,0 +1,47 @@
+{
+  "hash": "56500622ed6c034573970503d309d0780f3fa7c45e56e41a92eb9629f12cc1b2",
+  "durationSeconds": 822,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "revolutionary-runtime-container-aware-gomaxprocs",
+      "startSeconds": 67.3
+    },
+    {
+      "id": "experimental-garbage-collector-10-40-performance-boost",
+      "startSeconds": 193.8
+    },
+    {
+      "id": "trace-flight-recorder-debugging-rare-events",
+      "startSeconds": 301.1
+    },
+    {
+      "id": "enhanced-development-tools",
+      "startSeconds": 379.6
+    },
+    {
+      "id": "comprehensive-standard-library-improvements",
+      "startSeconds": 438.4
+    },
+    {
+      "id": "platform-and-architecture-updates",
+      "startSeconds": 506.1
+    },
+    {
+      "id": "critical-compiler-bug-fix",
+      "startSeconds": 570.2
+    },
+    {
+      "id": "should-you-upgrade-to-go-125",
+      "startSeconds": 596.9
+    },
+    {
+      "id": "migration-strategy",
+      "startSeconds": 692.2
+    },
+    {
+      "id": "conclusion-a-runtime-revolution",
+      "startSeconds": 743.3
+    }
+  ]
+}

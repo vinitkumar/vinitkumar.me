@@ -1,0 +1,43 @@
+{
+  "hash": "145b2a0aef6df170d412a44f3e0a9c19b774eab6f330353578ef3986156d497a",
+  "durationSeconds": 359,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "introduction",
+      "startSeconds": 3.1
+    },
+    {
+      "id": "dont-skip-the-fundamentals",
+      "startSeconds": 29.9
+    },
+    {
+      "id": "a-practical-workflow-for-ai-assisted-development",
+      "startSeconds": 121.1
+    },
+    {
+      "id": "read-good-code-and-build-judgment",
+      "startSeconds": 206.4
+    },
+    {
+      "id": "know-ais-strengths-and-limits",
+      "startSeconds": 232.8
+    },
+    {
+      "id": "be-honest-about-attribution",
+      "startSeconds": 251.8
+    },
+    {
+      "id": "the-competitive-advantage",
+      "startSeconds": 271.9
+    },
+    {
+      "id": "conclusion",
+      "startSeconds": 294.2
+    },
+    {
+      "id": "related-ai-posts",
+      "startSeconds": 319.4
+    }
+  ]
+}

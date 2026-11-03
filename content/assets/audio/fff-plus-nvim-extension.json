@@ -1,0 +1,31 @@
+{
+  "hash": "39061e1b92889bf6607dd18f7503e10882a0de9f7986863f96b7a147ef159aef",
+  "durationSeconds": 407,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "the-fork-proved-the-workflow",
+      "startSeconds": 61.6
+    },
+    {
+      "id": "the-problem-with-owning-the-whole-fork",
+      "startSeconds": 129.8
+    },
+    {
+      "id": "what-fff-plusnvim-does",
+      "startSeconds": 188.3
+    },
+    {
+      "id": "why-this-is-a-better-idea",
+      "startSeconds": 229.2
+    },
+    {
+      "id": "the-tradeoff",
+      "startSeconds": 326.7
+    },
+    {
+      "id": "try-it",
+      "startSeconds": 366.0
+    }
+  ]
+}
