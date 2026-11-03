@@ -3433,6 +3433,173 @@ h1 {
   color: var(--link-color);
 }
 
+/* Listen and Share controls under the post tags. */
+.post-actions {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.post-action,
+.post-share-item {
+  align-items: center;
+  background: var(--background-card);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-family-heading);
+  font-size: 0.875rem;
+  font-weight: 650;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.85rem;
+  text-decoration: none;
+}
+
+/* The same colours in both themes, since white text passes contrast on each. */
+.post-action--primary,
+.post-action--stop {
+  --action-color: #15803d;
+  --action-hover: #166534;
+  background: var(--action-color);
+  border-color: var(--action-color);
+  color: #ffffff;
+}
+
+.post-action--stop {
+  --action-color: #b91c1c;
+  --action-hover: #991b1b;
+}
+
+/* Stays in the window while audio is active. The inner width matches the
+   site shell, so the controls line up with the flush-left content. */
+.post-audio-dock {
+  background: var(--reading-surface);
+  border-top: 1px solid var(--gray-line);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  z-index: 20;
+}
+
+.post-audio-dock .post-audio-dock-inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  margin-inline: auto;
+  max-width: 78rem;
+  padding: 0.5rem 40px;
+}
+
+/* Idle, the same elements sit in the header row as if they were not there. */
+.post-audio-slot,
+.post-audio-slot .post-audio-dock-inner {
+  display: contents;
+}
+
+/* Keeps the end of the page clear of the dock. */
+body:has(.post-audio-dock) {
+  padding-bottom: 8rem;
+}
+
+@media (max-width: 640px) {
+  .post-audio-dock .post-audio-dock-inner {
+    padding-inline: 20px;
+  }
+}
+
+/* Takes the remaining width, and wraps below the buttons on narrow screens. */
+.post-audio-progress {
+  align-items: center;
+  color: var(--text-muted);
+  display: flex;
+  flex: 1 1 16rem;
+  font-family: var(--font-family-heading);
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  min-width: 0;
+}
+
+.post-audio-progress input {
+  accent-color: var(--text);
+  cursor: pointer;
+  flex: 1;
+  margin: 0;
+  min-width: 0;
+}
+
+.post-audio-progress input:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 4px;
+}
+
+.post-audio-time {
+  white-space: nowrap;
+}
+
+.post-action-detail {
+  font-weight: 450;
+  opacity: 0.75;
+}
+
+.post-action:hover,
+.post-share-item:hover {
+  border-color: var(--link-color);
+  color: var(--link-color);
+}
+
+.post-action--primary:hover,
+.post-action--stop:hover {
+  background: var(--action-hover);
+  border-color: var(--action-hover);
+  color: #ffffff;
+}
+
+.post-action:focus-visible,
+.post-share-item:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.post-share {
+  position: relative;
+}
+
+.post-share-panel {
+  background: var(--background-card);
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius-small);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  left: 0;
+  margin-top: 0.25rem;
+  max-width: calc(100vw - 2rem);
+  min-width: 12rem;
+  padding: 0.25rem;
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+}
+
+.post-share-panel[hidden] {
+  display: none;
+}
+
+.post-share-item {
+  border-color: transparent;
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
 .post-content {
   color: var(--prose-ink);
   font-family: var(--font-family-prose);
@@ -4338,6 +4505,7 @@ blockquote,
 
   .site-nav,
   .site-header,
+  .post-actions,
   .resume-download,
   .resume-footer {
     display: none;

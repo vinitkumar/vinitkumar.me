@@ -3,6 +3,7 @@ const fs = require(`fs`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const resumeData = require(`./src/data/resume`)
 const aboutData = require(`./src/data/about`)
+const { getAudioName, readAudioMeta } = require(`./scripts/article-audio`)
 
 const normalizeTag = tag =>
   String(tag || "")
@@ -113,6 +114,8 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === blogPosts.length - 1 ? null : blogPosts[index + 1].node
       const next = index === 0 ? null : blogPosts[index - 1].node
 
+      const audioMeta = readAudioMeta(post.node.fields.slug)
+
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
@@ -120,6 +123,12 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           tags: normalizeTags(post.node.frontmatter.tags),
           noindex: Boolean(post.node.frontmatter.noindex),
+          // An empty path matches no file, while a null filter matches any.
+          audioPath: audioMeta
+            ? `audio/${getAudioName(post.node.fields.slug)}.mp3`
+            : "",
+          audioDurationSeconds: audioMeta ? audioMeta.durationSeconds : 0,
+          audioSections: audioMeta ? audioMeta.sections : [],
           previous,
           next,
         },
