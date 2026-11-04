@@ -1,0 +1,39 @@
+{
+  "hash": "4433f2d8c9035898626fa632f1df3c9e6c4211645154b7270f212e813ac13a24",
+  "durationSeconds": 420,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "the-upstream-story",
+      "startSeconds": 41.0
+    },
+    {
+      "id": "the-fork-vinitkumarfffnvim",
+      "startSeconds": 84.7
+    },
+    {
+      "id": "buffer-picker-fffbuffers",
+      "startSeconds": 141.3
+    },
+    {
+      "id": "git-files-picker-gfiles",
+      "startSeconds": 220.0
+    },
+    {
+      "id": "colors-picker-colors",
+      "startSeconds": 274.6
+    },
+    {
+      "id": "what-i-didnt-touch",
+      "startSeconds": 333.3
+    },
+    {
+      "id": "why-not-just-use-telescope",
+      "startSeconds": 363.2
+    },
+    {
+      "id": "try-it-out",
+      "startSeconds": 388.0
+    }
+  ]
+}

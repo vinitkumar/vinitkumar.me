@@ -1,0 +1,35 @@
+{
+  "hash": "e45dd35e4d09cfe808e41dbcc7bb815bdee58147b08033fa43d657f2e112b07b",
+  "durationSeconds": 295,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "-focus-productivity--deep-work",
+      "startSeconds": 22.2
+    },
+    {
+      "id": "-self-mastery--personal-growth",
+      "startSeconds": 62.5
+    },
+    {
+      "id": "-psychology-communication--money",
+      "startSeconds": 103.9
+    },
+    {
+      "id": "-life-philosophy--memoir",
+      "startSeconds": 139.7
+    },
+    {
+      "id": "-software-engineering-mastery",
+      "startSeconds": 176.6
+    },
+    {
+      "id": "\ufe0f-systems-programming--compilers",
+      "startSeconds": 215.5
+    },
+    {
+      "id": "-go-programming-track",
+      "startSeconds": 247.7
+    }
+  ]
+}

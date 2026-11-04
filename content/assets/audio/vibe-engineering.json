@@ -1,0 +1,27 @@
+{
+  "hash": "dd6f9a0511c0118d931ed5d297a087a676f7b2225808a4fc197e11671abd1017",
+  "durationSeconds": 492,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "what-is-vibe-engineering",
+      "startSeconds": 48.3
+    },
+    {
+      "id": "the-rise-of-coding-agents",
+      "startSeconds": 88.0
+    },
+    {
+      "id": "best-practices-for-agent-assisted-development",
+      "startSeconds": 124.5
+    },
+    {
+      "id": "the-vibe-engineering-mindset",
+      "startSeconds": 422.7
+    },
+    {
+      "id": "why-this-matters-now",
+      "startSeconds": 451.9
+    }
+  ]
+}

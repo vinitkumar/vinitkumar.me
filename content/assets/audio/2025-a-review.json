@@ -1,0 +1,35 @@
+{
+  "hash": "f26f5efe6800569f2e5ad7fdb67dc052dd59f9844a8cf21cb77754b86f21303a",
+  "durationSeconds": 503,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "the-great-tooling-migration",
+      "startSeconds": 36.0
+    },
+    {
+      "id": "the-ai-inflection-point",
+      "startSeconds": 117.3
+    },
+    {
+      "id": "go-125-a-runtime-revolution",
+      "startSeconds": 226.1
+    },
+    {
+      "id": "books-focus-and-the-deeper-work",
+      "startSeconds": 272.2
+    },
+    {
+      "id": "what-i-learned",
+      "startSeconds": 314.9
+    },
+    {
+      "id": "whats-next",
+      "startSeconds": 381.4
+    },
+    {
+      "id": "conclusion",
+      "startSeconds": 441.6
+    }
+  ]
+}

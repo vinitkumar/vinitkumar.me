@@ -1,0 +1,31 @@
+{
+  "hash": "8b4cd3ed5b7166e315b7fa0e33b43ee2cc699492db071bd8a404f3d3f3f8de83",
+  "durationSeconds": 459,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "the-problem",
+      "startSeconds": 60.8
+    },
+    {
+      "id": "what-it-does",
+      "startSeconds": 137.4
+    },
+    {
+      "id": "the-stack",
+      "startSeconds": 181.8
+    },
+    {
+      "id": "design-choices",
+      "startSeconds": 244.7
+    },
+    {
+      "id": "why-a-tui",
+      "startSeconds": 353.1
+    },
+    {
+      "id": "where-it-goes-next",
+      "startSeconds": 407.0
+    }
+  ]
+}

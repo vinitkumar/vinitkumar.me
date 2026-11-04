@@ -43,6 +43,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "parse5": "7.3.0",
     "prettier": "^3.9.9",
     "trim": "^1.0.1"
   },
@@ -60,6 +61,8 @@
     "build": "GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby clean && GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby build",
     "develop": "GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
+    "audio:check": "node scripts/generate-article-audio.js --check",
+    "audio:generate": "node scripts/generate-article-audio.js",
     "new:post": "node scripts/new-blog-post.js",
     "start": "npm run develop",
     "serve": "GATSBY_TELEMETRY_DISABLED=1 NODE_OPTIONS=\"${NODE_OPTIONS:-} --require=./scripts/use-userland-punycode.js\" gatsby serve",

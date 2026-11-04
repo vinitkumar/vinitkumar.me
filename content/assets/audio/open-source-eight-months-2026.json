@@ -1,0 +1,55 @@
+{
+  "hash": "f4e798dc829cc31dc5633a5d2ae43a6c34f41a33ff9fce2e39db5e6318dbdcf5",
+  "durationSeconds": 882,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "the-main-thread-json2xml",
+      "startSeconds": 42.0
+    },
+    {
+      "id": "taking-json2xml-beyond-python",
+      "startSeconds": 157.9
+    },
+    {
+      "id": "django-cms-fellowship-work",
+      "startSeconds": 216.1
+    },
+    {
+      "id": "reviews-the-invisible-part",
+      "startSeconds": 332.5
+    },
+    {
+      "id": "editor-work-neovim-vim-themes-and-daily-tools",
+      "startSeconds": 385.6
+    },
+    {
+      "id": "github-pr-attention",
+      "startSeconds": 484.9
+    },
+    {
+      "id": "personal-site-work",
+      "startSeconds": 526.0
+    },
+    {
+      "id": "other-personal-projects",
+      "startSeconds": 581.9
+    },
+    {
+      "id": "contributions-outside-my-own-repositories",
+      "startSeconds": 646.3
+    },
+    {
+      "id": "new-public-repositories",
+      "startSeconds": 722.6
+    },
+    {
+      "id": "the-shape-of-the-work",
+      "startSeconds": 744.5
+    },
+    {
+      "id": "what-i-learned",
+      "startSeconds": 821.0
+    }
+  ]
+}

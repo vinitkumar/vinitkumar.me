@@ -1,0 +1,35 @@
+{
+  "hash": "5ab2e06827fcc2a513364a821d3d7c9668009dec726334db58518b3e5b552559",
+  "durationSeconds": 151,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "quick-setup",
+      "startSeconds": 29.9
+    },
+    {
+      "id": "first-run-setup",
+      "startSeconds": 68.3
+    },
+    {
+      "id": "supported-linux-distributions",
+      "startSeconds": 86.7
+    },
+    {
+      "id": "usage-examples",
+      "startSeconds": 89.5
+    },
+    {
+      "id": "pdf-tools-used",
+      "startSeconds": 99.6
+    },
+    {
+      "id": "troubleshooting",
+      "startSeconds": 116.2
+    },
+    {
+      "id": "build-from-source-optional",
+      "startSeconds": 123.7
+    }
+  ]
+}

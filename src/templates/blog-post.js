@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import PostActions from "../components/PostActions"
 import Seo from "../components/seo"
 import { getPostTitle, getTopicSlug, normalizeTags } from "../utils/content"
 
@@ -133,13 +134,22 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
     () => post.headings.map((heading) => heading.id),
     [post.headings]
   )
-  const activeHeadingId = useActiveHeading(headingIds)
+  const scrolledHeadingId = useActiveHeading(headingIds)
+  // While audio is active it decides the highlight, including null in the intro.
+  const [audioSectionId, setAudioSectionId] = React.useState(undefined)
+  const activeHeadingId =
+    audioSectionId === undefined ? scrolledHeadingId : audioSectionId
   const hasTableOfContents = post.headings.length > 2
+  const contentRef = React.useRef(null)
+  const postUrl = `${data.site.siteMetadata.siteUrl}${
+    post.frontmatter.canonicalPath || post.fields.slug
+  }`
 
   return (
     <Layout location={location} title={siteTitle}>
       <article
         className="post-shell starikov-post-accent"
+        data-featured={post.frontmatter.featured ? "true" : undefined}
         style={{ "--post-accent": postAccentColor }}
       >
         <header className="post-header">
@@ -164,6 +174,15 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
               ))}
             </div>
           )}
+          <PostActions
+            contentRef={contentRef}
+            title={post.frontmatter.title}
+            url={postUrl}
+            audioUrl={data.articleAudio?.publicURL}
+            audioDurationSeconds={pageContext.audioDurationSeconds}
+            audioSections={pageContext.audioSections}
+            onAudioSectionChange={setAudioSectionId}
+          />
         </header>
 
         {/* Grid wrapper: on wide screens the contents move into a sticky
@@ -192,6 +211,7 @@ const BlogPostTemplate = ({ data, location, pageContext }) => {
 
           <div
             className="post-content"
+            ref={contentRef}
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </div>
@@ -269,11 +289,18 @@ export const Head = ({ data, location }) => {
 }
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!, $tags: [String]) {
+  query BlogPostBySlug($slug: String!, $tags: [String], $audioPath: String!) {
+    articleAudio: file(
+      sourceInstanceName: { eq: "assets" }
+      relativePath: { eq: $audioPath }
+    ) {
+      publicURL
+    }
     site {
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -295,6 +322,7 @@ export const pageQuery = graphql`
         dateISO: date(formatString: "YYYY-MM-DD")
         description
         canonicalPath
+        featured
         noindex
         tags
       }

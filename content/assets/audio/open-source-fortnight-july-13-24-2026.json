@@ -1,0 +1,35 @@
+{
+  "hash": "14ae1cd5c83194aa52e84408af312290b6a524a39af697edd2be30b17ec4c16c",
+  "durationSeconds": 652,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "profiling-json2xml-instead-of-guessing",
+      "startSeconds": 64.8
+    },
+    {
+      "id": "removing-n1-queries-from-django-cms",
+      "startSeconds": 188.7
+    },
+    {
+      "id": "making-vim-and-neovim-start-faster",
+      "startSeconds": 253.3
+    },
+    {
+      "id": "simplifying-systems-and-improving-the-surface",
+      "startSeconds": 336.9
+    },
+    {
+      "id": "the-17-merged-pull-requests",
+      "startSeconds": 394.5
+    },
+    {
+      "id": "review-is-open-source-work-too",
+      "startSeconds": 498.9
+    },
+    {
+      "id": "what-i-am-taking-from-these-two-weeks",
+      "startSeconds": 611.5
+    }
+  ]
+}

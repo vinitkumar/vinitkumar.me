@@ -1,0 +1,39 @@
+{
+  "hash": "f9b2d1f03fa6ae366d635b646d58996adaaf0b4ff4812edf005fa9e2ed39e80c",
+  "durationSeconds": 1092,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "about-the-django-cms-fellowship-program",
+      "startSeconds": 32.0
+    },
+    {
+      "id": "-community-collaboration-the-heart-of-open-source",
+      "startSeconds": 75.2
+    },
+    {
+      "id": "fellow-contributions",
+      "startSeconds": 331.4
+    },
+    {
+      "id": "repositories-impacted",
+      "startSeconds": 753.1
+    },
+    {
+      "id": "major-milestones-in-2025",
+      "startSeconds": 831.9
+    },
+    {
+      "id": "the-impact-of-the-fellowship-program",
+      "startSeconds": 914.0
+    },
+    {
+      "id": "looking-ahead",
+      "startSeconds": 972.7
+    },
+    {
+      "id": "supporting-django-cms",
+      "startSeconds": 1019.4
+    }
+  ]
+}

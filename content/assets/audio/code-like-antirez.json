@@ -1,0 +1,55 @@
+{
+  "hash": "16e38010e1c3c54de4ad9aa5d1932366f398b97b5806a865f7ead9a26f938322",
+  "durationSeconds": 335,
+  "voice": "af_heart",
+  "sections": [
+    {
+      "id": "1-give-every-comment-a-job",
+      "startSeconds": 37.7
+    },
+    {
+      "id": "2-explain-the-design-where-readers-need-it",
+      "startSeconds": 66.9
+    },
+    {
+      "id": "3-preserve-hidden-reasoning",
+      "startSeconds": 92.6
+    },
+    {
+      "id": "4-use-guide-comments-as-signposts",
+      "startSeconds": 117.0
+    },
+    {
+      "id": "5-show-state-that-is-hard-to-reconstruct",
+      "startSeconds": 137.6
+    },
+    {
+      "id": "6-keep-the-build-and-dependency-surface-small",
+      "startSeconds": 161.8
+    },
+    {
+      "id": "7-treat-code-as-rewriting",
+      "startSeconds": 186.3
+    },
+    {
+      "id": "8-make-functions-tell-the-story",
+      "startSeconds": 206.2
+    },
+    {
+      "id": "9-let-data-structures-shape-the-design",
+      "startSeconds": 231.6
+    },
+    {
+      "id": "10-use-explanation-as-a-test",
+      "startSeconds": 253.8
+    },
+    {
+      "id": "a-practical-review-loop",
+      "startSeconds": 275.2
+    },
+    {
+      "id": "further-reading",
+      "startSeconds": 314.6
+    }
+  ]
+}
