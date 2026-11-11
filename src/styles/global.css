@@ -4592,15 +4592,22 @@ blockquote,
 }
 
 /* Stands where the App Store badge will go once the app is live. */
-.feyro-cta-placeholder {
-  border: 1px dashed var(--gray-300);
-  color: var(--text-muted);
+/* App Store link, styled as the page's primary button. */
+.feyro-cta {
+  background: var(--accent);
+  border-radius: 2px;
+  color: white;
   display: inline-block;
   font-size: var(--font-small);
   font-weight: 700;
   letter-spacing: 0.04em;
   padding: 0.6rem 1rem;
+  text-decoration: none;
   text-transform: uppercase;
+}
+
+.feyro-cta:hover {
+  color: var(--terminal-green);
 }
 
 .feyro-hero-platform {
@@ -4619,7 +4626,7 @@ blockquote,
 }
 
 .feyro-hero-image figcaption,
-.feyro-screen-strip figcaption {
+.feyro-gallery figcaption {
   color: var(--text-muted);
   font-size: var(--font-smaller);
   margin-top: 0.5rem;
@@ -4690,31 +4697,18 @@ blockquote,
   color: var(--link-color);
 }
 
-/* Screenshots: one horizontal, snap-scrolling strip. */
-.feyro-screen-strip {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  overflow-x: auto;
-  padding: 0 0 1rem;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+/* Sample photographs: a masonry of columns that keeps each aspect ratio. */
+.feyro-gallery {
+  column-gap: 1rem;
+  columns: 3;
 }
 
-.feyro-screen-strip li {
-  flex: 0 0 auto;
-  margin: 0;
-  scroll-snap-align: start;
-  width: clamp(11rem, 20vw, 14rem);
+.feyro-gallery figure {
+  break-inside: avoid;
+  margin: 0 0 1.25rem;
 }
 
-.feyro-screen-strip figure {
-  margin: 0;
-}
-
-.feyro-screen-strip img {
-  border: 1px solid var(--gray-line);
+.feyro-gallery img {
   display: block;
   height: auto;
   width: 100%;
@@ -4799,7 +4793,7 @@ blockquote,
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .feyro-screen-strip li {
-    width: 11rem;
+  .feyro-gallery {
+    columns: 2;
   }
 }

@@ -5,7 +5,8 @@ import Seo from "../../components/seo"
 import FeyroNav from "../../components/FeyroNav"
 import { SITE_URL } from "../../data/person"
 import {
-  appStoreStatus,
+  appStoreLabel,
+  appStoreUrl,
   appleTermsUrl,
   features,
   intro,
@@ -18,22 +19,42 @@ import {
   subtitle,
 } from "../../data/feyro"
 import hero from "../../../content/assets/feyro/hero.jpg"
-import captureFormats from "../../../content/assets/feyro/05-capture-formats.jpg"
-import reviewPlant from "../../../content/assets/feyro/06-photo-review-plant.jpg"
-import reviewLavender from "../../../content/assets/feyro/07-photo-review-lavender.jpg"
-import reviewRoses from "../../../content/assets/feyro/08-photo-review-roses.jpg"
-import reviewCactus from "../../../content/assets/feyro/09-photo-review-cactus.jpg"
-import library from "../../../content/assets/feyro/10-library.jpg"
+import balconyLantern from "../../../content/assets/feyro/shot-balcony-lantern.jpg"
+import nachtleven from "../../../content/assets/feyro/shot-nachtleven.jpg"
+import stickyRice from "../../../content/assets/feyro/shot-sticky-rice.jpg"
+import icedGlass from "../../../content/assets/feyro/shot-iced-glass.jpg"
 
-// App Store screenshots, resized to 600px wide. Captions are the file names
-// without their ordering number.
-const screenshots = [
-  { src: captureFormats, caption: "Capture formats" },
-  { src: reviewPlant, caption: "Photo review plant" },
-  { src: reviewLavender, caption: "Photo review lavender" },
-  { src: reviewRoses, caption: "Photo review roses" },
-  { src: reviewCactus, caption: "Photo review cactus" },
-  { src: library, caption: "Library" },
+// Photographs taken with Feyro, resized to 1400px on the long edge. The
+// gallery flows in columns, so the order here sets each column's contents.
+// Only the night shot carries a caption: its settings are the selling point.
+// The fog, balcony and crow photos are in the cover strip, so they are not
+// repeated here.
+const shots = [
+  {
+    src: icedGlass,
+    width: 647,
+    height: 1400,
+    alt: "An iced drink in a cut-glass tumbler casting a long shadow on a wooden table",
+  },
+  {
+    src: balconyLantern,
+    width: 1050,
+    height: 1400,
+    alt: "An iced coffee held up under a yellow fringed lantern and star lights at night",
+    caption: "48 MP, handheld at 1/33 s, ISO 500",
+  },
+  {
+    src: nachtleven,
+    width: 1400,
+    height: 1050,
+    alt: "A brick facade with the word Nachtleven arched over the entrance",
+  },
+  {
+    src: stickyRice,
+    width: 1050,
+    height: 1400,
+    alt: "Mango sticky rice on a blue and white plate",
+  },
 ]
 
 const FeyroPage = ({ location }) => (
@@ -43,12 +64,19 @@ const FeyroPage = ({ location }) => (
 
       <header className="feyro-hero">
         <div className="feyro-hero-copy">
-          <p className="eyebrow">iPhone camera app</p>
+          <p className="eyebrow">Camera for iPhone</p>
           <h1>{name}</h1>
           <p className="feyro-hero-subtitle">{subtitle}</p>
           <p className="feyro-hero-intro">{intro}</p>
           <div className="feyro-hero-actions">
-            <span className="feyro-cta-placeholder">{appStoreStatus}</span>
+            <a
+              className="feyro-cta"
+              href={appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {appStoreLabel}
+            </a>
             <span className="feyro-hero-platform">{platform}</span>
           </div>
         </div>
@@ -58,16 +86,35 @@ const FeyroPage = ({ location }) => (
             src={hero}
             width="1600"
             height="686"
-            alt="A field of lavender in bloom, photographed with Feyro"
+            alt="Three photographs taken with Feyro: a train in fog at a station platform, an iced coffee held up on a balcony at night, and a model crow on a green bookshop shelf"
           />
-          <figcaption>Lavender, photographed with Feyro.</figcaption>
+          <figcaption>
+            Fog, a handheld night shot at 1/25 s and ISO 640, and a bookshop
+            shelf, all shot on Feyro.
+          </figcaption>
         </figure>
       </header>
 
-      <section className="feyro-section" aria-labelledby="feyro-features">
-        <h2 id="feyro-features">What it does</h2>
-        <p className="feyro-section-lede">{promo}</p>
+      <section className="feyro-section" aria-labelledby="feyro-shots">
+        <h2 id="feyro-shots">Shot on Feyro</h2>
+        <div className="feyro-gallery">
+          {shots.map((shot) => (
+            <figure key={shot.src}>
+              <img
+                src={shot.src}
+                width={shot.width}
+                height={shot.height}
+                loading="lazy"
+                alt={shot.alt}
+              />
+              {shot.caption && <figcaption>{shot.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
+      </section>
 
+      <section className="feyro-section" aria-labelledby="feyro-features">
+        <h2 id="feyro-features">Built for photographers</h2>
         <div className="feyro-features">
           {features.map((feature) => (
             <div className="feyro-feature" key={feature.title}>
@@ -90,34 +137,13 @@ const FeyroPage = ({ location }) => (
         </div>
       </section>
 
-      <section className="feyro-section" aria-labelledby="feyro-screens">
-        <h2 id="feyro-screens">Screens</h2>
-        <ul className="feyro-screen-strip">
-          {screenshots.map((shot) => (
-            <li key={shot.caption}>
-              <figure>
-                <img
-                  src={shot.src}
-                  width="600"
-                  height="1304"
-                  loading="lazy"
-                  alt={`Feyro screenshot: ${shot.caption}`}
-                />
-                <figcaption>{shot.caption}</figcaption>
-              </figure>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       <section
         className="feyro-section feyro-section--last"
         aria-labelledby="feyro-pro"
       >
         <h2 id="feyro-pro">Feyro Pro</h2>
         <p className="feyro-section-lede">
-          Manual exposure, manual focus, white balance, RAW formats and the
-          shooting tools are part of Feyro Pro.
+          Unlocks manual controls, RAW and ProRAW, and the exposure tools.
         </p>
 
         <div className="feyro-plans">
