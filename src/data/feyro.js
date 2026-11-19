@@ -48,13 +48,24 @@ const features = [
   },
   {
     title: "Exposure",
-    items: ["Histogram, waveform and zebras"],
+    items: [
+      "Histogram, waveform and zebras",
+      "Meter tripod exposure for a still subject in low light",
+    ],
   },
   {
     title: "Capture",
     items: [
       "48 MP HEIF, ProRAW, RAW (DNG) and JPEG",
+      "Lossless ProRAW at the camera's highest bit depth",
       "No filters or re-processing",
+    ],
+  },
+  {
+    title: "Review",
+    items: [
+      "Compare SDR, Gentle HDR and Full HDR",
+      "Framed exports keep HDR highlights",
     ],
   },
   {
