@@ -29,6 +29,7 @@ const navigationCopy = {
     ariaLabel: "Main navigation",
     internalLinks: [
       { to: "/about", label: "About", className: "nav-link--about" },
+      { to: "/feyro/", label: "Feyro", className: "nav-link--feyro" },
       { to: "/resume", label: "Resume", className: "nav-link--resume" },
       { to: "/til", label: "TIL", className: "nav-link--til" },
       { to: "/stats", label: "Stats", className: "nav-link--stats" },
@@ -48,6 +49,7 @@ const navigationCopy = {
         label: "プロフィール",
         className: "nav-link--about",
       },
+      { to: "/feyro/", label: "Feyro (EN)", className: "nav-link--feyro" },
       { to: "/resume", label: "履歴書", className: "nav-link--resume" },
       { to: "/til", label: "TIL (EN)", className: "nav-link--til" },
       {

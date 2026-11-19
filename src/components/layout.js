@@ -14,9 +14,10 @@ const Layout = ({ location, title, children }) => {
   return (
     <div className="site-shell">
       <header className="site-header">
-        <h1 className="site-title">
+        {/* A paragraph, not a heading: each inner page has its own h1. */}
+        <p className="site-title">
           <Link to={getLocalizedPath("/", locale)}>{title}</Link>
-        </h1>
+        </p>
         <Navigation locale={locale} pathname={location.pathname} />
       </header>
 

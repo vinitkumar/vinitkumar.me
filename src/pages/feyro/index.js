@@ -5,16 +5,23 @@ import Seo from "../../components/seo"
 import FeyroNav from "../../components/FeyroNav"
 import { SITE_URL } from "../../data/person"
 import {
+  appStoreId,
   appStoreLabel,
   appStoreUrl,
   appleTermsUrl,
+  buildAppSchema,
+  buildFaqSchema,
+  description,
   features,
   intro,
+  kind,
   name,
   plans,
   platform,
   privacyNote,
-  promo,
+  questions,
+  seoFullTitle,
+  seoTitle,
   subscriptionTerms,
   subtitle,
 } from "../../data/feyro"
@@ -64,8 +71,12 @@ const FeyroPage = ({ location }) => (
 
       <header className="feyro-hero">
         <div className="feyro-hero-copy">
-          <p className="eyebrow">Camera for iPhone</p>
-          <h1>{name}</h1>
+          {/* One heading: the name, then what the app is. The CSS shows the
+              second line above the name, as the eyebrow. */}
+          <h1 className="feyro-hero-title">
+            <span className="feyro-hero-name">{name}</span>{" "}
+            <span className="eyebrow">{kind}</span>
+          </h1>
           <p className="feyro-hero-subtitle">{subtitle}</p>
           <p className="feyro-hero-intro">{intro}</p>
           <div className="feyro-hero-actions">
@@ -137,6 +148,18 @@ const FeyroPage = ({ location }) => (
         </div>
       </section>
 
+      <section className="feyro-section" aria-labelledby="feyro-questions">
+        <h2 id="feyro-questions">Questions</h2>
+        <div className="feyro-faq">
+          {questions.map((item) => (
+            <React.Fragment key={item.question}>
+              <h3>{item.question}</h3>
+              <p>{item.answer}</p>
+            </React.Fragment>
+          ))}
+        </div>
+      </section>
+
       <section
         className="feyro-section feyro-section--last"
         aria-labelledby="feyro-pro"
@@ -177,9 +200,20 @@ export default FeyroPage
 
 export const Head = ({ location }) => (
   <Seo
-    title={name}
-    description={`${subtitle} ${promo}`}
+    title={seoTitle}
+    fullTitle={seoFullTitle}
+    description={description}
     pathname={location.pathname}
     image={`${SITE_URL}${hero}`}
+    markdownPath="/feyro.md"
+    schemaType="WebPage"
+    structuredData={[
+      buildAppSchema({ siteUrl: SITE_URL, image: `${SITE_URL}${hero}` }),
+      buildFaqSchema(questions),
+    ]}
+    meta={[
+      // Safari on iPhone shows a banner that opens the App Store listing.
+      { name: "apple-itunes-app", content: `app-id=${appStoreId}` },
+    ]}
   />
 )

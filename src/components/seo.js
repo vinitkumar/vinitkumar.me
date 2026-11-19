@@ -14,12 +14,14 @@ function Seo({
   canonicalPath,
   date,
   description = ``,
+  fullTitle,
   image,
   lang = `en`,
   meta = [],
   markdownPath,
   noindex = false,
   pathname = `/`,
+  schemaType,
   structuredData = [],
   tags = [],
   title,
@@ -47,7 +49,7 @@ function Seo({
   const imageUrl = image || `${site.siteUrl}${data.avatar.publicURL}`
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": type === "article" ? "BlogPosting" : "WebSite",
+    "@type": schemaType || (type === "article" ? "BlogPosting" : "WebSite"),
     headline: title,
     description: metaDescription,
     url: canonical,
@@ -114,12 +116,17 @@ function Seo({
       name: `twitter:description`,
       content: metaDescription,
     },
+    {
+      name: `twitter:image`,
+      content: imageUrl,
+    },
   ].concat(meta)
 
   return (
     <>
       <html lang={lang} />
-      <title>{`${title} | ${site.title}`}</title>
+      {/* fullTitle replaces the "Page | Site" pattern, e.g. on product pages. */}
+      <title>{fullTitle || `${title} | ${site.title}`}</title>
       <link rel="canonical" href={canonical} />
       {alternates.map((alternate) => (
         <link
@@ -157,6 +164,7 @@ Seo.propTypes = {
   canonicalPath: PropTypes.string,
   date: PropTypes.string,
   description: PropTypes.string,
+  fullTitle: PropTypes.string,
   image: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
@@ -164,6 +172,7 @@ Seo.propTypes = {
   structuredData: PropTypes.arrayOf(PropTypes.object),
   noindex: PropTypes.bool,
   pathname: PropTypes.string,
+  schemaType: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
   type: PropTypes.string,

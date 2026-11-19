@@ -1514,6 +1514,7 @@ h6 {
 
 /* Navigation link colors with brand colors */
 .nav-link--about,
+.nav-link--feyro,
 .nav-link--til,
 .nav-link--stats,
 .nav-link--recommendations,
@@ -3058,7 +3059,9 @@ h1 {
 }
 
 .site-title {
+  font-family: var(--font-family-heading);
   font-size: 1rem;
+  font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.5;
   margin: 0 0 20px;
@@ -4565,6 +4568,17 @@ blockquote,
   margin: 0 0 0.75rem;
 }
 
+/* The h1 holds the name and the "what it is" line. The markup puts the name
+   first, and column-reverse draws the line above it as the eyebrow. */
+.feyro-hero-title {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.feyro-hero-title > span {
+  display: block;
+}
+
 .feyro-hero-subtitle {
   color: var(--text);
   font-family: var(--font-family-heading);
@@ -4712,6 +4726,31 @@ blockquote,
   display: block;
   height: auto;
   width: 100%;
+}
+
+/* Questions: question and answer pairs in one reading column. */
+.feyro-faq {
+  max-width: 46rem;
+}
+
+.feyro-faq h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 0.35rem;
+  text-transform: none;
+}
+
+.feyro-faq p {
+  color: var(--text-muted);
+  font-family: var(--font-family-prose);
+  font-size: 1.05rem;
+  font-weight: var(--prose-weight);
+  line-height: 1.55;
+  margin: 0 0 1.5rem;
+}
+
+.feyro-faq p:last-child {
+  margin-bottom: 0;
 }
 
 .feyro-plans {

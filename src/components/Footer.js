@@ -12,6 +12,7 @@ const footerCopy = {
     site: "Site",
     mail: "Mail",
     rss: "RSS feed",
+    feyro: "Feyro camera app",
     aiTransparency: "AI transparency",
     sponsor: "Sponsor on GitHub",
     license: "CC BY-NC-SA 4.0",
@@ -26,6 +27,7 @@ const footerCopy = {
     site: "サイト",
     mail: "メール",
     rss: "RSSフィード",
+    feyro: "Feyro カメラアプリ (EN)",
     aiTransparency: "AI利用の透明性 (EN)",
     sponsor: "GitHubでスポンサー",
     license: "CC BY-NC-SA 4.0",
@@ -72,6 +74,7 @@ const Footer = ({ locale = "en" }) => {
         <nav className="footer-group" aria-label={copy.site}>
           <p className="footer-label">{copy.site}</p>
           <a href="/rss.xml">{copy.rss}</a>
+          <a href="/feyro/">{copy.feyro}</a>
           <a href="/ai-transparency">{copy.aiTransparency}</a>
           <ExternalLink href="https://github.com/sponsors/vinitkumar">
             {copy.sponsor}

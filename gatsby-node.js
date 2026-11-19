@@ -3,6 +3,7 @@ const fs = require(`fs`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const resumeData = require(`./src/data/resume`)
 const aboutData = require(`./src/data/about`)
+const feyroData = require(`./src/data/feyro`)
 const { getAudioName, readAudioMeta } = require(`./scripts/article-audio`)
 
 const normalizeTag = tag =>
@@ -377,6 +378,52 @@ const markdownForAbout = siteUrl =>
     ``,
   ].join(`\n`)
 
+// /feyro.md — the Feyro landing and support pages as one Markdown file, so an
+// assistant can read what the app is, what it costs and how to get help
+// without parsing the HTML.
+const markdownForFeyro = siteUrl => {
+  const qa = item => [`### ${item.question}`, ``, item.answer, ``]
+
+  return [
+    `# ${feyroData.seoTitle}`,
+    ``,
+    `Source URL: ${siteUrl}/feyro/`,
+    `App Store: ${feyroData.appStoreUrl}`,
+    `Support: ${siteUrl}/feyro/support/`,
+    `Privacy policy: ${siteUrl}/feyro/privacy/`,
+    `Developer: Vinit Kumar (${siteUrl}/about/)`,
+    `Platform: ${feyroData.platform}`,
+    ``,
+    feyroData.description,
+    ``,
+    `## Features`,
+    ``,
+    ...feyroData.features.flatMap(feature => [
+      `- **${feature.title}:** ${feature.items.join(`. `)}.`,
+    ]),
+    `- **Privacy:** ${feyroData.privacyNote}`,
+    ``,
+    `## Price`,
+    ``,
+    `Feyro is free to download. Feyro Pro unlocks manual controls, RAW and ProRAW, and the exposure tools. US App Store prices:`,
+    ``,
+    ...feyroData.plans.map(
+      plan => `- **${plan.name}:** ${plan.price} ${plan.period}. ${plan.body}`
+    ),
+    ``,
+    feyroData.subscriptionTerms,
+    ``,
+    `## Questions`,
+    ``,
+    ...feyroData.questions.flatMap(qa),
+    `## Support`,
+    ``,
+    ...feyroData.supportQuestions.flatMap(qa),
+    `Contact: ${feyroData.supportEmail}`,
+    ``,
+  ].join(`\n`)
+}
+
 const markdownForPost = (siteUrl, post) => {
   const canonicalPath = post.frontmatter.canonicalPath || post.fields.slug
   const url = `${siteUrl}${canonicalPath}`
@@ -461,6 +508,10 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
     path.join(publicDir, `about.md`),
     markdownForAbout(site.siteUrl)
   )
+  fs.writeFileSync(
+    path.join(publicDir, `feyro.md`),
+    markdownForFeyro(site.siteUrl)
+  )
 
   const featuredPosts = posts.slice(0, 25)
   const topicMap = posts.reduce((topics, post) => {
@@ -489,9 +540,16 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
     `- [Resume](${site.siteUrl}/resume/)`,
     `- [Today I Learned](${site.siteUrl}/til/)`,
     `- [Recommendations](${site.siteUrl}/recommendations/)`,
+    `- [Feyro, a manual camera app for iPhone](${site.siteUrl}/feyro/)`,
     `- [RSS feed](${site.siteUrl}/rss.xml)`,
     `- [Sitemap](${site.siteUrl}/sitemap-index.xml)`,
     `- [Full AI context](${site.siteUrl}/llms-full.txt)`,
+    ``,
+    `## Apps`,
+    ``,
+    `- [Feyro](${site.siteUrl}/feyro/) - ${feyroData.description} Made by ${site.author}. ${feyroData.platform} Free to download; Feyro Pro costs ${feyroData.plans
+      .map(plan => `${plan.price} ${plan.period}`)
+      .join(` or `)}. [App Store](${feyroData.appStoreUrl}), [support](${site.siteUrl}/feyro/support/), [privacy policy](${site.siteUrl}/feyro/privacy/), [Markdown](${site.siteUrl}/feyro.md).`,
     ``,
     `## Important Topics`,
     ``,
@@ -510,7 +568,7 @@ exports.onPostBuild = async ({ graphql, reporter }) => {
     ``,
     `Most article pages expose a clean Markdown alternate at the same URL with a \`.md\` suffix. Example: ${site.siteUrl}/memory-efficient-python.md`,
     ``,
-    `The profile pages do the same: ${site.siteUrl}/about.md and ${site.siteUrl}/resume.md.`,
+    `The profile pages do the same: ${site.siteUrl}/about.md and ${site.siteUrl}/resume.md. The Feyro app pages are at ${site.siteUrl}/feyro.md.`,
     ``,
     `## Author Profile`,
     ``,
